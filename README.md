@@ -5,16 +5,15 @@ PyTorch implementation of ["Metric Learning with Adaptive Density Discrimination
 
 ### Losses
 
-- [ ] Triplet Loss
-- [ ] Magnet Loss
+- [ ] Losses
+  - [ ] Triplet Loss
+  - [ ] Magnet Loss
     - [ ]  Neighborhood Sampling
     - [ ] Cluster index
-
-### Dataset Wrappers
-
-- [ ] Stanford Dogs
-- [ ] Oxford-IIIT Pet
-- [ ] Oxford 102 Flowers
+- [ ] Dataset Wrappers
+  - [ ] Stanford Dogs
+  - [ ] Oxford-IIIT Pet
+  - [ ] Oxford 102 Flowers
 
 ## Introduction
 
