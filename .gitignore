@@ -1,3 +1,8 @@
+trash
+*.npy
+*.pkl
+experiments
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
