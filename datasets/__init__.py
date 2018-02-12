@@ -1,2 +1,1 @@
-from .pascal3d              import *
-from .pascal3d_kp           import *
+from .oxford_iiit_pet       import oxford_iiit_pet
