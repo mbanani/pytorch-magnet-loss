@@ -3,17 +3,25 @@ PyTorch implementation of ["Metric Learning with Adaptive Density Discrimination
 
 ## To Do
 
+1. [ ] Clean up code and get basic pairwise running with Oxford-IIIT
+2. [ ] Get set of experiments run by Magnet Loss and write proposal with set of ideas
+3. [ ] Test pairwise loss
+4. [ ] Implement Triplet Loss
+5. [ ] Implement Magnet Loss
+6. [ ] Get complete results on Oxford-IIIT before moving to other datasets.
+
 ### Losses
 
 - [ ] Losses
-  - [ ] Triplet Loss
-  - [ ] Magnet Loss
-    - [ ]  Neighborhood Sampling
-    - [ ] Cluster index
+    - [x] Pairwise Loss
+    - [ ] Triplet Loss
+    - [ ] Magnet Loss
+        - [ ]  Neighborhood Sampling
+        - [ ] Cluster index
 - [ ] Dataset Wrappers
-  - [ ] Stanford Dogs
-  - [ ] Oxford-IIIT Pet
-  - [ ] Oxford 102 Flowers
+    - [x] Oxford-IIIT Pet
+    - [ ] Stanford Dogs
+    - [ ] Oxford 102 Flowers
 
 ## Introduction
 
