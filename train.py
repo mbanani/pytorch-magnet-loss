@@ -9,8 +9,8 @@ import numpy as np
 import torch
 
 from util                       import ViewpointLoss, Logger, Paths
-from util                       import get_data_loaders, vp_dict, kp_dict
-from models                     import clickhere_cnn, render4cnn
+from util                       import get_data_loaders
+from models                     import 
 from util.torch_utils           import to_var, save_checkpoint
 from torch.optim.lr_scheduler   import MultiStepLR
 
@@ -246,6 +246,12 @@ if __name__ == '__main__':
     parser.add_argument('--evaluate_train',  action="store_true",default=False)
     parser.add_argument('--resume',           type=str, default=None)
     # parser.add_argument('--world_size',      type=int, default=1)
+
+    # Magnet Loss Parameters
+    parser.add_argument('--num_class_cluster',      type=int, default=12)
+    parser.add_argument('--num_cluster_samples',    type=int, default=4)
+
+
 
 
     args = parser.parse_args()
