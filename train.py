@@ -10,46 +10,69 @@ import torch
 
 from util                       import ViewpointLoss, Logger, Paths
 from util                       import get_data_loaders
-from models                     import 
 from util.torch_utils           import to_var, save_checkpoint
 from torch.optim.lr_scheduler   import MultiStepLR
 
 def main(args):
-    initialization_time = time.time()
+    curr_time = time.time()
 
-    print "#############  Read in Database   ##############"
+    print("#############  Read in Database   ##############")
+    # Data loading code (From PyTorch example https://github.com/pytorch/examples/blob/master/imagenet/main.py)
+    data_path = '/z/dat/ImageNet_2012'
+    traindir = os.path.join(args.data, 'train')
+    valdir = os.path.join(args.data, 'validation')
+    normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                     std=[0.229, 0.224, 0.225])
 
-    print "#############  Initiate Model     ##############"
+    train_dataset = datasets.ImageFolder(
+        traindir,
+        transforms.Compose([
+            transforms.RandomResizedCrop(224),
+            transforms.RandomHorizontalFlip(),
+            transforms.ToTensor(),
+            normalize,
+        ]))
 
-    # Loss functions
-    # criterion = ViewpointLoss(num_classes = args.num_classes, weights = None) # train_loader.dataset.loss_weights)
+    train_loader = torch.utils.data.DataLoader(
+        train_dataset, batch_size=args.batch_size, shuffle=(train_sampler is None),
+        num_workers=args.workers, pin_memory=True, sampler=train_sampler)
 
-    # Parameters to train
-    params = list(model.parameters())
+    val_loader = torch.utils.data.DataLoader(
+        datasets.ImageFolder(valdir, transforms.Compose([
+            transforms.Resize(256),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            normalize,
+        ])),
+        batch_size=args.batch_size, shuffle=False,
+        num_workers=args.workers, pin_memory=True)
+
+    print("Time taken:  {} seconds".format(time.time() - curr_time) )
+    curr_time = time.time()
+
+    print("######## Initiate Model and Optimizer   ##############")
+
+    print("Time taken:  {} seconds".format(time.time() - curr_time) )
+    curr_time = time.time()
+
+    criterion = 0                               # Loss Function
+    params  = list(model.parameters())          # Parameters to train
+
 
     # Optimizer
-    if args.optimizer == 'adam':
-        optimizer = torch.optim.Adam(params, lr = args.lr, betas = (0.9, 0.999), eps=1e-8, weight_decay=0)
-    elif args.optimizer == 'sgd':
-        optimizer = torch.optim.SGD(params, lr=args.lr, momentum = 0.9, weight_decay = 0.0005)
-        scheduler = MultiStepLR( optimizer,
-                                 milestones=range(0, args.num_epochs, 5),
-                                 gamma=0.95)
-    else:
-        assert False, "Error: Unknown choice for optimizer."
+    optimizer = torch.optim.SGD(params, lr=args.lr, momentum = args.momentum, weight_decay = 0.0)
+    scheduler = MultiStepLR( optimizer,
+                             milestones=list(range(0, args.num_epochs, 1)),
+                             gamma=args.annealing_factor)
 
-
-    # if args.world_size > 1:
-    #     print "Parallelizing Model"
-    #     model = torch.nn.DataParallel(model, device_ids = range(0, args.world_size))
 
     # Train on GPU if available
     if torch.cuda.is_available():
         model.cuda()
 
 
-    print "Time to initialize take: ", time.time() - initialization_time
-    print "#############  Start Training     ##############"
+    print("Time to initialize take: ", time.time() - initialization_time)
+    print("#############  Start Training     ##############")
     total_step = len(train_loader)
 
     for epoch in range(0, args.num_epochs):
@@ -158,11 +181,11 @@ def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loa
             curr_epoch_time = (time.time() - epoch_time) * (total_step / (i+1.))
             curr_time_left  = (time.time() - epoch_time) * ((total_step - i) / (i+1.))
 
-            print "Epoch [%d/%d] Step [%d/%d]: Training Loss = %2.5f, Batch Time = %.2f sec, Time Left = %.1f mins." %( epoch, args.num_epochs,
+            print("Epoch [%d/%d] Step [%d/%d]: Training Loss = %2.5f, Batch Time = %.2f sec, Time Left = %.1f mins." %( epoch, args.num_epochs,
                                                                                                                         i, total_step,
                                                                                                                         loss_sum / float(counter),
                                                                                                                         curr_batch_time,
-                                                                                                                        curr_time_left / 60.)
+                                                                                                                        curr_time_left / 60.))
 
             logger.add_scalar_value("Misc/batch time (s)",    curr_batch_time,        step=step + i)
             logger.add_scalar_value("Misc/Train_%",           curr_train_per,         step=step + i)
@@ -196,7 +219,7 @@ def eval_step( model, data_loader,  criterion, step, datasplit):
     for i, (images, label) in enumerate(data_loader):
 
         if i % args.log_rate == 0:
-            print "Evaluation of %s [%d/%d] Time Elapsed: %f " % (datasplit, i, total_step, time.time() - start_time)
+            print("Evaluation of %s [%d/%d] Time Elapsed: %f " % (datasplit, i, total_step, time.time() - start_time))
 
         images  = to_var(images, volatile=True)
         label   = to_var(label, volatile=True)
@@ -204,13 +227,6 @@ def eval_step( model, data_loader,  criterion, step, datasplit):
         preds   = model(images)
 
         epoch_loss+= criterion(preds, label)
-
-    #     results_dict.update_dict( object_class.data.cpu().numpy(),
-    #                         [azim.data.cpu().numpy(), elev.data.cpu().numpy(), tilt.data.cpu().numpy()],
-    #                         [azim_label.data.cpu().numpy(), elev_label.data.cpu().numpy(), tilt_label.data.cpu().numpy()])
-    #
-    #
-    # type_accuracy, type_total, type_geo_dist = results_dict.metrics()
 
 
     logger.add_scalar_value("(" + args.dataset + ") Accuracy",     accuracy ,step=step)
@@ -220,6 +236,37 @@ def eval_step( model, data_loader,  criterion, step, datasplit):
     return epoch_loss, w_acc
 
 
+class AverageMeter(object):
+    """Computes and stores the average and current value"""
+    def __init__(self):
+        self.reset()
+
+    def reset(self):
+        self.val = 0
+        self.avg = 0
+        self.sum = 0
+        self.count = 0
+
+    def update(self, val, n=1):
+        self.val = val
+        self.sum += val * n
+        self.count += n
+        self.avg = self.sum / self.count
+
+def accuracy(output, target, topk=(1,)):
+    """Computes the precision@k for the specified values of k"""
+    maxk = max(topk)
+    batch_size = target.size(0)
+
+    _, pred = output.topk(maxk, 1, True, True)
+    pred = pred.t()
+    correct = pred.eq(target.view(1, -1).expand_as(pred))
+
+    res = []
+    for k in topk:
+        correct_k = correct[:k].view(-1).float().sum(0, keepdim=True)
+        res.append(correct_k.mul_(100.0 / batch_size))
+    return res
 
 if __name__ == '__main__':
 
@@ -233,10 +280,11 @@ if __name__ == '__main__':
     parser.add_argument('--num_workers',     type=int, default=7)
 
     # training parameters
-    parser.add_argument('--num_epochs',      type=int, default=100)
-    parser.add_argument('--batch_size',      type=int, default=256)
-    parser.add_argument('--lr',              type=float, default=0.01)
-    parser.add_argument('--optimizer',       type=str,default='sgd')
+    parser.add_argument('--num_epochs',         type=int,   default=100)
+    parser.add_argument('--batch_size',         type=int,   default=256)
+    parser.add_argument('--lr',                 type=float, default=0.01)
+    parser.add_argument('--optimizer',          type=str,   default='sgd')
+    parser.add_argument('--annealing_factor',   type=float, default=0.988)
 
     # experiment details
     parser.add_argument('--dataset',         type=str, default='pascalKP')
@@ -245,13 +293,11 @@ if __name__ == '__main__':
     parser.add_argument('--evaluate_only',   action="store_true",default=False)
     parser.add_argument('--evaluate_train',  action="store_true",default=False)
     parser.add_argument('--resume',           type=str, default=None)
-    # parser.add_argument('--world_size',      type=int, default=1)
 
     # Magnet Loss Parameters
-    parser.add_argument('--num_class_cluster',      type=int, default=12)
-    parser.add_argument('--num_cluster_samples',    type=int, default=4)
-
-
+    parser.add_argument('--M',      type=int, default=12)       # Number of nearest clusters per mini-batch
+    parser.add_argument('--K',      type=int, default=12)       # Number of clusters per class
+    parser.add_argument('--D',      type=int, default=12)       # Number of examples per cluster
 
 
     args = parser.parse_args()
@@ -270,7 +316,7 @@ if __name__ == '__main__':
     if not os.path.exists(args.experiment_path):
         os.makedirs(args.experiment_path)
 
-    print "Experiment path is : ", args.experiment_path
+    print("Experiment path is : ", args.experiment_path)
     print(args)
 
     # Define Logger

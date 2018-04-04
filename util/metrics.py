@@ -51,7 +51,7 @@ def correct_confusion_matrix(conf_matrix):
     for i in range(0, num_labels):
         for j in range(0, num_labels):
             new_conf[results[i][0], results[j][0]] = conf_matrix[results[i][0], results[j][1]]
-    print new_conf
+    print(new_conf)
     return new_conf
 
 def get_hungarian_results(conf_matrix):

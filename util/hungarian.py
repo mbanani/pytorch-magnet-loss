@@ -137,7 +137,7 @@ class Hungarian:
 
                 # Debug
                 import pdb; pdb.set_trace()
-                print len(self._results)
+                print(len(self._results))
 
                 raise HungarianError("Unable to find results. Algorithm has failed.")
 
@@ -156,7 +156,7 @@ class Hungarian:
                 zero_locations[:, column] = False
 
             # Save Results
-            self.__set_results(zip(matched_rows, matched_columns))
+            self.__set_results(list(zip(matched_rows, matched_columns)))
 
         # Calculate total potential
         value = 0

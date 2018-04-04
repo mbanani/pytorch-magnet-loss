@@ -34,7 +34,7 @@ class oxford_iiit_pet(data.Dataset):
             csv_path = os.path.join(dataset_dir, 'oxford_pet_test.txt')
 
         else:
-            print "Error: Invalid dataset choice."
+            print("Error: Invalid dataset choice.")
 
         # END IF
 
@@ -42,7 +42,7 @@ class oxford_iiit_pet(data.Dataset):
         image_file, props, bbs, c_cls, f_cls = self.pandas_csv_to_info(csv_path)
         size_dataset                         = len(image_file)
 
-        print "csv file length: ", size_dataset
+        print("csv file length: ", size_dataset)
 
         #images          = image_file
         #fine_class      = f_cls
@@ -52,12 +52,11 @@ class oxford_iiit_pet(data.Dataset):
         props           = props
         bboxes          = [tuple(bbox) for bbox in bboxes]
 
-        print "Dataset loaded in ", time.time() - curr_time, " secs."
-        print "Dataset size: "    , len(image_file)
+        print("Dataset loaded in ", time.time() - curr_time, " secs.")
+        print("Dataset size: "    , len(image_file))
 
         if len(image_file) == 0:
-            raise(RuntimeError("Found 0 images in subfolders of: " + root + "\n"
-                "Supported image extensions are: " + ",".join(IMG_EXTENSIONS)))
+            raise RuntimeError
 
         # END IF
 
@@ -82,7 +81,7 @@ class oxford_iiit_pet(data.Dataset):
                                                           transforms.Normalize(mean=(0.485, 0.456, 0.406),
                                                           std=(0.229, 0.224, 0.225))])
 
-        print "NOTE: Bounding box information not provided due to missing xml files. Full images shown not object bounded (bbox cropping in pil_loader is commented)."
+        print("NOTE: Bounding box information not provided due to missing xml files. Full images shown not object bounded (bbox cropping in pil_loader is commented).")
 
     def __getitem__(self, index):
         """
@@ -202,7 +201,7 @@ class oxford_iiit_pet(data.Dataset):
 
         valid_size      = int(ratio * self.num_instances)
         train_size      = self.num_instances - valid_size
-        train_instances = range(0, self.num_instances)
+        train_instances = list(range(0, self.num_instances))
         valid_instances = random.sample(train_instances, valid_size)
         train_instances = [x for x in train_instances if x not in valid_instances]
 
