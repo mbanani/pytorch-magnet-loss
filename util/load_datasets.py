@@ -2,10 +2,8 @@ import os,sys, math
 import torch
 import numpy                    as np
 import torchvision.transforms   as transforms
-from datasets                   import pascal3d, pascal3d_kp
 
 root_dir     = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-dataset_root = '/z/home/mbanani/datasets/pascal3d'
 
 
 def get_data_loaders(dataset, batch_size, num_workers, model, valid = 0.0):

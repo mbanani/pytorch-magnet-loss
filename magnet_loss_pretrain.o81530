@@ -1,0 +1,147 @@
+I got allocated the
+/var/spool/torque/mom_priv/jobs/81530.blindspot.SC: line 15: following: command not found
+gpu: 3
+gpu: 2
+gpu: 1
+gpu: 0
+PBS: qsub is running on focus
+PBS: originating queue is batch
+PBS: executing queue is batch
+PBS: working directory is /z/home/mbanani/projects/pytorch-magnet-loss
+PBS: execution mode is PBS_BATCH
+PBS: job identifich_convAtter is 81530.blindspot
+PBS: job name is magnet_loss_pretrain
+PBS: node file is /var/spool/torque/aux//81530.blindspot
+PBS: current home directory is /home/mbanani
+PBS: PATH = /z/home/mbanani/PyTorch3/bin:/z/sw/packages/cuda/8.0.61/bin:/z/home/mbanani/sw/miniconda2/bin:/z/sw/bin/:/z/sw/sbin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+------------------------------------------------------
+Namespace(annealing_factor=1.0, batch_size=256, dataset='oxford', dist_backend='gloo', dist_url='tcp://224.66.41.62:23456', eval_epoch=1, eval_step=1000, evaluate_only=False, evaluate_train=False, experiment_name='train_magnet_test', log_rate=10, lr=0.1, model='inception', momentum=0.9, num_epochs=100, optimizer='sgd', resume=None, save_epoch=10, weight_decay=0.0001, workers=16, world_size=1)
+
+Experiment path is :  /z/home/mbanani/projects/pytorch-magnet-loss/experiments/oxford/exp_04_14_16_11_20_oxford_train_magnet_test
+#############  Read in Database   ##############
+Generating Validation Dataset
+Load pre-existing file structure for datasplit validation
+Generating Training Dataset
+csv file length:  3680
+Dataset loaded in  0.2588515281677246  secs.
+Dataset size:  3680
+NOTE: Bounding box information not provided due to missing xml files. Full images shown not object bounded (bbox cropping in pil_loader is commented).
+csv file length:  3669
+Dataset loaded in  0.08311820030212402  secs.
+Dataset size:  3669
+NOTE: Bounding box information not provided due to missing xml files. Full images shown not object bounded (bbox cropping in pil_loader is commented).
+Generating Data Loaders
+Time taken:  0.42974114418029785 seconds
+######## Initiate Model and Optimizer   ##############
+Time taken:  9.139721632003784 seconds
+#############  Start Training     ##############
+Epoch: [0][10/15]	Time 3.636 (6.168)	Data 0.000 (0.980)	Loss 10.6457 (10.6948)
+Epoch: [1][10/15]	Time 3.209 (3.985)	Data 0.000 (0.515)	Loss 10.5812 (10.6644)
+Epoch: [2][10/15]	Time 3.736 (4.048)	Data 0.000 (0.505)	Loss 10.7063 (10.6644)
+Epoch: [3][10/15]	Time 3.652 (3.973)	Data 0.000 (0.432)	Loss 10.7063 (10.6789)
+Epoch: [4][10/15]	Time 3.164 (3.964)	Data 0.000 (0.471)	Loss 10.6457 (10.6899)
+Epoch: [5][10/15]	Time 3.575 (4.019)	Data 0.000 (0.449)	Loss 10.6765 (10.6813)
+Number of clusters : 4
+Epoch: [6][10/15]	Time 3.810 (4.052)	Data 0.001 (0.422)	Loss 10.7353 (10.6836)
+Epoch: [7][10/15]	Time 3.651 (4.134)	Data 0.000 (0.483)	Loss 10.7063 (10.6895)
+Epoch: [8][10/15]	Time 3.344 (4.060)	Data 0.000 (0.480)	Loss 10.6140 (10.6675)
+Epoch: [9][10/15]	Time 3.751 (4.107)	Data 0.000 (0.394)	Loss 10.7063 (10.6869)
+Epoch: [10][10/15]	Time 3.737 (4.153)	Data 0.000 (0.498)	Loss 10.7063 (10.6840)
+Epoch: [11][10/15]	Time 3.764 (4.140)	Data 0.000 (0.475)	Loss 10.7063 (10.6863)
+Epoch: [12][10/15]	Time 3.528 (4.052)	Data 0.000 (0.500)	Loss 10.6457 (10.6595)
+Epoch: [13][10/15]	Time 3.647 (4.195)	Data 0.000 (0.493)	Loss 10.6765 (10.6948)
+Epoch: [14][10/15]	Time 3.637 (4.168)	Data 0.000 (0.540)	Loss 10.6765 (10.6898)
+Epoch: [15][10/15]	Time 3.795 (4.153)	Data 0.000 (0.542)	Loss 10.7353 (10.6813)
+Epoch: [16][10/15]	Time 3.507 (4.181)	Data 0.000 (0.508)	Loss 10.6457 (10.6841)
+Epoch: [17][10/15]	Time 3.645 (4.045)	Data 0.000 (0.417)	Loss 10.7063 (10.6843)
+Epoch: [18][10/15]	Time 3.687 (4.032)	Data 0.000 (0.444)	Loss 10.7063 (10.6812)
+Epoch: [19][10/15]	Time 3.671 (4.069)	Data 0.000 (0.432)	Loss 10.7063 (10.6844)
+Epoch: [20][10/15]	Time 3.534 (3.991)	Data 0.000 (0.413)	Loss 10.6765 (10.6675)
+Epoch: [21][10/15]	Time 3.479 (4.113)	Data 0.000 (0.528)	Loss 10.6457 (10.6840)
+Epoch: [22][10/15]	Time 3.879 (4.143)	Data 0.000 (0.436)	Loss 10.7353 (10.6919)
+Epoch: [23][10/15]	Time 3.345 (4.020)	Data 0.000 (0.433)	Loss 10.6457 (10.6725)
+Epoch: [24][10/15]	Time 3.514 (4.121)	Data 0.000 (0.497)	Loss 10.6457 (10.6760)
+Epoch: [25][10/15]	Time 3.758 (4.154)	Data 0.000 (0.459)	Loss 10.7063 (10.6841)
+Epoch: [26][10/15]	Time 3.790 (4.094)	Data 0.000 (0.463)	Loss 10.7353 (10.6946)
+Epoch: [27][10/15]	Time 4.021 (4.034)	Data 0.000 (0.407)	Loss 10.7635 (10.6702)
+Epoch: [28][10/15]	Time 3.771 (4.147)	Data 0.000 (0.507)	Loss 10.7063 (10.6790)
+Epoch: [29][10/15]	Time 3.420 (4.082)	Data 0.000 (0.435)	Loss 10.6140 (10.6840)
+Number of clusters : 4
+Epoch: [30][10/15]	Time 3.620 (4.144)	Data 0.000 (0.478)	Loss 10.6765 (10.6947)
+Epoch: [31][10/15]	Time 3.584 (4.072)	Data 0.000 (0.465)	Loss 10.6765 (10.6669)
+Epoch: [32][10/15]	Time 3.606 (4.076)	Data 0.000 (0.484)	Loss 10.6765 (10.6673)
+Epoch: [33][10/15]	Time 3.543 (4.110)	Data 0.000 (0.495)	Loss 10.6765 (10.6815)
+Epoch: [34][10/15]	Time 3.670 (4.115)	Data 0.000 (0.470)	Loss 10.7063 (10.6868)
+Epoch: [35][10/15]	Time 3.662 (4.066)	Data 0.000 (0.404)	Loss 10.6765 (10.6784)
+Epoch: [36][10/15]	Time 3.370 (4.134)	Data 0.000 (0.490)	Loss 10.6140 (10.6838)
+Epoch: [37][10/15]	Time 3.309 (4.097)	Data 0.000 (0.464)	Loss 10.6457 (10.6807)
+Epoch: [38][10/15]	Time 3.842 (4.205)	Data 0.000 (0.564)	Loss 10.7063 (10.6921)
+Epoch: [39][10/15]	Time 3.109 (3.653)	Data 0.000 (0.524)	Loss 10.6765 (10.6754)
+Epoch: [40][10/15]	Time 3.145 (3.739)	Data 0.000 (0.531)	Loss 10.6765 (10.7003)
+Epoch: [41][10/15]	Time 2.935 (3.670)	Data 0.000 (0.457)	Loss 10.6457 (10.6923)
+Epoch: [42][10/15]	Time 2.882 (3.622)	Data 0.000 (0.491)	Loss 10.6140 (10.6614)
+Epoch: [43][10/15]	Time 2.898 (3.626)	Data 0.000 (0.567)	Loss 10.6140 (10.6584)
+Epoch: [44][10/15]	Time 3.001 (3.773)	Data 0.000 (0.560)	Loss 10.6457 (10.7003)
+Epoch: [45][10/15]	Time 3.061 (3.678)	Data 0.000 (0.505)	Loss 10.6765 (10.6784)
+Epoch: [46][10/15]	Time 3.316 (3.639)	Data 0.000 (0.450)	Loss 10.6765 (10.6979)
+Epoch: [47][10/15]	Time 3.005 (3.576)	Data 0.000 (0.446)	Loss 10.6457 (10.6646)
+Epoch: [48][10/15]	Time 3.057 (3.822)	Data 0.000 (0.574)	Loss 10.6765 (10.6952)
+Epoch: [49][10/15]	Time 3.317 (3.678)	Data 0.000 (0.450)	Loss 10.7353 (10.6811)
+Epoch: [50][10/15]	Time 3.299 (3.683)	Data 0.000 (0.456)	Loss 10.6457 (10.6844)
+Epoch: [51][10/15]	Time 3.390 (3.783)	Data 0.000 (0.476)	Loss 10.7063 (10.6949)
+Epoch: [52][10/15]	Time 3.089 (3.584)	Data 0.000 (0.562)	Loss 10.6765 (10.6533)
+Epoch: [53][10/15]	Time 3.304 (3.671)	Data 0.000 (0.566)	Loss 10.7063 (10.6672)
+Epoch: [54][10/15]	Time 3.195 (3.676)	Data 0.000 (0.470)	Loss 10.7063 (10.6863)
+Epoch: [55][10/15]	Time 2.904 (3.563)	Data 0.000 (0.482)	Loss 10.6457 (10.6734)
+Epoch: [56][10/15]	Time 2.971 (3.698)	Data 0.000 (0.544)	Loss 10.6457 (10.6723)
+Epoch: [57][10/15]	Time 2.823 (3.604)	Data 0.000 (0.530)	Loss 10.5812 (10.6586)
+Epoch: [58][10/15]	Time 3.538 (3.754)	Data 0.000 (0.549)	Loss 10.7353 (10.6923)
+Epoch: [59][10/15]	Time 3.098 (3.700)	Data 0.000 (0.523)	Loss 10.6765 (10.6811)
+Epoch: [60][10/15]	Time 3.041 (3.629)	Data 0.000 (0.455)	Loss 10.6140 (10.6706)
+Epoch: [61][10/15]	Time 3.149 (3.628)	Data 0.000 (0.492)	Loss 10.7063 (10.6924)
+Epoch: [62][10/15]	Time 2.786 (3.629)	Data 0.000 (0.510)	Loss 10.6140 (10.6895)
+Epoch: [63][10/15]	Time 3.153 (3.514)	Data 0.000 (0.523)	Loss 10.7063 (10.6469)
+Epoch: [64][10/15]	Time 3.177 (3.677)	Data 0.000 (0.541)	Loss 10.7353 (10.6894)
+Epoch: [65][10/15]	Time 3.113 (3.719)	Data 0.000 (0.525)	Loss 10.6765 (10.6813)
+Epoch: [66][10/15]	Time 3.056 (3.596)	Data 0.000 (0.480)	Loss 10.6765 (10.6842)
+Epoch: [67][10/15]	Time 3.018 (3.613)	Data 0.000 (0.532)	Loss 10.6765 (10.6781)
+Epoch: [68][10/15]	Time 2.994 (3.759)	Data 0.000 (0.530)	Loss 10.6765 (10.6845)
+Epoch: [69][10/15]	Time 3.394 (3.671)	Data 0.000 (0.538)	Loss 10.6765 (10.6728)
+Epoch: [70][10/15]	Time 3.266 (3.602)	Data 0.000 (0.464)	Loss 10.7353 (10.6813)
+Epoch: [71][10/15]	Time 3.114 (3.602)	Data 0.000 (0.471)	Loss 10.6765 (10.6785)
+Epoch: [72][10/15]	Time 3.096 (3.624)	Data 0.000 (0.508)	Loss 10.7063 (10.6700)
+Epoch: [73][10/15]	Time 3.046 (3.618)	Data 0.000 (0.471)	Loss 10.7063 (10.6724)
+Epoch: [74][10/15]	Time 3.067 (3.650)	Data 0.000 (0.526)	Loss 10.7063 (10.6862)
+Epoch: [75][10/15]	Time 3.032 (3.705)	Data 0.001 (0.535)	Loss 10.5812 (10.6893)
+Epoch: [76][10/15]	Time 3.046 (3.603)	Data 0.000 (0.476)	Loss 10.6765 (10.6836)
+Epoch: [77][10/15]	Time 2.741 (3.535)	Data 0.000 (0.478)	Loss 10.5812 (10.6700)
+Epoch: [78][10/15]	Time 3.376 (3.635)	Data 0.000 (0.488)	Loss 10.7063 (10.6841)
+Number of clusters : 4
+Epoch: [79][10/15]	Time 3.188 (3.641)	Data 0.000 (0.500)	Loss 10.6457 (10.6674)
+Epoch: [80][10/15]	Time 3.007 (3.738)	Data 0.000 (0.471)	Loss 10.6765 (10.7030)
+Epoch: [81][10/15]	Time 2.984 (3.568)	Data 0.000 (0.515)	Loss 10.6457 (10.6676)
+Epoch: [82][10/15]	Time 3.387 (3.582)	Data 0.000 (0.460)	Loss 10.7063 (10.6762)
+Epoch: [83][10/15]	Time 3.225 (3.702)	Data 0.000 (0.523)	Loss 10.7353 (10.6869)
+Epoch: [84][10/15]	Time 3.091 (3.752)	Data 0.001 (0.481)	Loss 10.7063 (10.7080)
+Epoch: [85][10/15]	Time 3.110 (3.599)	Data 0.000 (0.494)	Loss 10.6765 (10.6756)
+Epoch: [86][10/15]	Time 3.262 (3.758)	Data 0.000 (0.553)	Loss 10.7353 (10.7003)
+Epoch: [87][10/15]	Time 3.224 (3.745)	Data 0.000 (0.571)	Loss 10.7353 (10.6840)
+Epoch: [88][10/15]	Time 2.899 (3.612)	Data 0.000 (0.538)	Loss 10.6457 (10.6594)
+Epoch: [89][10/15]	Time 3.049 (3.756)	Data 0.000 (0.525)	Loss 10.6765 (10.7059)
+Epoch: [90][10/15]	Time 3.502 (3.701)	Data 0.000 (0.544)	Loss 10.7353 (10.6865)
+Epoch: [91][10/15]	Time 3.407 (3.732)	Data 0.000 (0.532)	Loss 10.7635 (10.6920)
+Epoch: [92][10/15]	Time 3.332 (3.683)	Data 0.000 (0.551)	Loss 10.7635 (10.6644)
+Epoch: [93][10/15]	Time 3.296 (3.750)	Data 0.000 (0.539)	Loss 10.6457 (10.6978)
+Epoch: [94][10/15]	Time 3.125 (3.651)	Data 0.000 (0.500)	Loss 10.7063 (10.6704)
+Epoch: [95][10/15]	Time 2.816 (3.485)	Data 0.000 (0.473)	Loss 10.6140 (10.6418)
+Epoch: [96][10/15]	Time 3.191 (3.605)	Data 0.000 (0.548)	Loss 10.7063 (10.6728)
+Epoch: [97][10/15]	Time 2.922 (3.677)	Data 0.000 (0.529)	Loss 10.6457 (10.6894)
+Epoch: [98][10/15]	Time 3.041 (3.772)	Data 0.000 (0.540)	Loss 10.6765 (10.7032)
+Epoch: [99][10/15]	Time 3.299 (3.702)	Data 0.000 (0.462)	Loss 10.6765 (10.6885)
+Traceback (most recent call last):
+  File "train_magnet.py", line 370, in <module>
+    tensorboard_logdir = '/z/home/mbanani/tensorboard_logs'
+  File "train_magnet.py", line 157, in main
+    optimizer  = optimizer,
+NameError: name 'curr_loss' is not defined
+Done

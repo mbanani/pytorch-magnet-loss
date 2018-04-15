@@ -12,7 +12,7 @@ from IPython import embed
 
 
 class oxford_iiit_pet(data.Dataset):
-    def __init__(self, datasplit, dataset_dir, image_size = 227, transform = None):
+    def __init__(self, datasplit, dataset_dir, transform = None):
         """
         Initialize oxfordiiit dataset class
         Args:
@@ -63,7 +63,6 @@ class oxford_iiit_pet(data.Dataset):
 
         self.image_root     = os.path.join(dataset_dir, "images")
         self.num_classes    = 37
-        self.img_size       = 227
         self.bboxes         = bboxes
         self.fine_class     = f_cls
         self.coarse_class   = c_cls
@@ -102,10 +101,10 @@ class oxford_iiit_pet(data.Dataset):
         if self.transform is not None:
             img = self.transform(img)
 
-        onehot_label           = np.zeros(self.num_classes)
-        onehot_label[fine_cls] = 1
+        # onehot_label           = np.zeros(self.num_classes)
+        # onehot_label[fine_cls] = 1
 
-        return img, [fine_cls, self.coarse_class[index]]
+        return img, self.fine_class[index]
 
     def __len__(self):
         """
@@ -131,7 +130,6 @@ class oxford_iiit_pet(data.Dataset):
             with Image.open(f) as img:
 
                 img = img.convert('RGB')
-                img = img.resize( (self.img_size, self.img_size), Image.LANCZOS)
 
                 return img
             # END WITH
