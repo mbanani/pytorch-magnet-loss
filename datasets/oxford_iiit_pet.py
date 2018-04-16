@@ -69,6 +69,7 @@ class oxford_iiit_pet(data.Dataset):
         self.image_paths    = image_file
         self.loader         = self.pil_loader
         self.num_instances  = len(self.image_paths)
+        self.read_order     = range(0, len(self.image_paths))
 
         # Generate heirarchical labels
         self.heirarchy = self.generate_heirarchy()
@@ -82,7 +83,7 @@ class oxford_iiit_pet(data.Dataset):
 
         print("NOTE: Bounding box information not provided due to missing xml files. Full images shown not object bounded (bbox cropping in pil_loader is commented).")
 
-    def __getitem__(self, index):
+    def __getitem__(self, read_index):
         """
         Function that returns images from oxfordiiit dataset
         Args:
@@ -90,6 +91,9 @@ class oxford_iiit_pet(data.Dataset):
         Returns:
             tuple: (image, target) where target is class_index of the target class.
         """
+
+
+        index       = self.read_order[read_index]
         # Load and transform image
         path        = os.path.join(self.image_root, self.image_paths[index])
 
@@ -104,7 +108,15 @@ class oxford_iiit_pet(data.Dataset):
         # onehot_label           = np.zeros(self.num_classes)
         # onehot_label[fine_cls] = 1
 
-        return img, self.fine_class[index]
+        return img, self.fine_class[index], index
+
+
+    def update_read_order(self, new_order):
+        self.read_order = new_order
+
+
+    def default_read_order(self):
+        self.read_order     = range(0, len(self.image_paths))
 
     def __len__(self):
         """
@@ -114,7 +126,7 @@ class oxford_iiit_pet(data.Dataset):
         Returns:
             Number of instances properties
         """
-        return self.num_instances
+        return len(self.read_order)
 
     def pil_loader(self, path, bbox):
         """

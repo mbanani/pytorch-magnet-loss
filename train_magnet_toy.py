@@ -35,7 +35,7 @@ import torch.utils.data.distributed
 from datasets                   import ImageNet, oxford_iiit_pet
 from models                     import magnetInception
 from tensorboardX               import SummaryWriter    as Logger
-from util.torch_utils           import to_var, save_checkpoint
+from util.torch_utils           import to_var, save_checkpoint, AverageMeter, accuracy
 from util                       import magnet_loss
 from torch.optim.lr_scheduler   import MultiStepLR
 from IPython                    import embed
@@ -51,7 +51,7 @@ class Net(torch.nn.Module):
         self.conv2 = nn.Conv2d(10, 20, kernel_size=5)
         self.conv2_drop = nn.Dropout2d()
         self.fc1 = nn.Linear(320, 50)
-        self.fc2 = nn.Linear(50, 10)
+        self.fc2 = nn.Linear(50, 50)
 
     def forward(self, x):
         x = F.relu(F.max_pool2d(self.conv1(x), 2))
@@ -183,16 +183,13 @@ def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loa
 
         # compute output
         output = model(input_var)
-        # loss = criterion(output, target_var)
-        loss = F.nll_loss(output, target_var)
+        loss = criterion(output, target_var)
+        # loss = F.nll_loss(output, target_var)
 
 
         # measure accuracy and record loss
-        prec1, prec5 = accuracy(output.data, target, topk=(1, 5))
 
         losses.update(loss.data[0], input.size(0))
-        top1.update(prec1[0], input.size(0))
-        top5.update(prec5[0], input.size(0))
 
         # compute gradient and do SGD step
         model.zero_grad()
@@ -217,8 +214,9 @@ def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loa
                   'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
                   'Data {data_time.val:.3f} ({data_time.avg:.3f})\t'
                   'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
-                  'Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t'
-                  'Prec@5 {top5.val:.3f} ({top5.avg:.3f})'.format(
+                  # 'Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t'
+                  # 'Prec@5 {top5.val:.3f} ({top5.avg:.3f})'
+                  .format(
                    epoch, i, len(train_loader), batch_time=batch_time,
                    data_time=data_time, loss=losses, top1=top1, top5=top5))
 
@@ -234,13 +232,13 @@ def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loa
 
         end = time.time()
 
-        if valid_loader != None and i % args.eval_step == 0 and i > 0:
-            _, _ = eval_step(   model       = model,
-                                data_loader = valid_loader,
-                                criterion   = criterion,
-                                step        = step + i,
-                                datasplit   = "valid")
-            model.train()
+        # if valid_loader != None and i % args.eval_step == 0 and i > 0:
+        #     _, _ = eval_step(   model       = model,
+        #                         data_loader = valid_loader,
+        #                         criterion   = criterion,
+        #                         step        = step + i,
+        #                         datasplit   = "valid")
+        #     model.train()
 
 
 def eval_step( model, data_loader,  criterion, step, datasplit):
@@ -301,6 +299,7 @@ class AverageMeter(object):
         self.sum += val * n
         self.count += n
         self.avg = self.sum / self.count
+
 
 def accuracy(output, target, topk=(1,)):
     """Computes the precision@k for the specified values of k"""

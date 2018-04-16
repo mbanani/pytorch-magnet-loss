@@ -35,10 +35,12 @@ import torch.utils.data.distributed
 from datasets                   import ImageNet, oxford_iiit_pet
 from models                     import magnetInception
 from tensorboardX               import SummaryWriter    as Logger
-from util.torch_utils           import to_var, save_checkpoint
-from util                       import magnet_loss, triplet_loss
+from util.torch_utils           import to_var, save_checkpoint, AverageMeter, accuracy
+from util                       import magnet_loss, triplet_loss, softkNN_metrics
 from torch.optim.lr_scheduler   import MultiStepLR
 from IPython                    import embed
+from sklearn.cluster            import KMeans
+from torch.utils.data.sampler   import Sampler
 
 
 def main(args):
@@ -46,46 +48,7 @@ def main(args):
 
 
     print("#############  Read in Database   ##############")
-    # Data loading code (From PyTorch example https://github.com/pytorch/examples/blob/master/imagenet/main.py)
-    traindir = os.path.join(args.data_path, 'train')
-    valdir = os.path.join(args.data_path, 'validation')
-    normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                                     std=[0.229, 0.224, 0.225])
-
-    train_transform = transforms.Compose([
-        transforms.RandomResizedCrop(299),
-        transforms.RandomHorizontalFlip(),
-        transforms.ToTensor(),
-        normalize,
-    ])
-
-    valid_transform = transforms.Compose([
-        transforms.Resize((299, 299)),
-        # transforms.CenterCrop(224),
-        transforms.ToTensor(),
-        normalize,
-    ])
-
-
-    print("Generating Validation Dataset")
-    valid_dataset = ImageNet(valdir, )
-
-    print("Generating Training Dataset")
-    train_dataset = oxford_iiit_pet("train", args.data_path, transform = train_transform)
-    valid_dataset = oxford_iiit_pet("test",  args.data_path, transform = valid_transform)
-
-    print("Generating Data Loaders")
-    train_loader = torch.utils.data.DataLoader(
-        train_dataset,
-        batch_size=args.batch_size, shuffle=True,
-        num_workers=args.workers, pin_memory=True
-    )
-
-    valid_loader = torch.utils.data.DataLoader(
-        valid_dataset,
-        batch_size=args.batch_size, shuffle=False,
-        num_workers=args.workers, pin_memory=True
-    )
+    train_loader, valid_loader = get_loaders()
 
     print("Time taken:  {} seconds".format(time.time() - curr_time) )
     curr_time = time.time()
@@ -94,17 +57,20 @@ def main(args):
     # Model - inception_v3 as specified in the paper
     # Note: This is slightly different to the model used by the paper,
     # however, the differences should be minor in terms of implementation and impact on results
-    model   = magnetInception(args.num_classes)
+    model   = magnetInception(args.embedding_size)
     model   = torch.nn.DataParallel(model).cuda()
 
 
     # Criterion was not specified by the paper, it was assumed to be cross entropy (as commonly used)
     if args.loss == "magnet":
-        criterion = magnet_loss(D = 12, M = 4, alpha = 7.18).cuda()    # Loss function
+        criterion = magnet_loss(D = args.D, M = args.M, alpha = args.GAP).cuda()    # Loss function
     elif args.loss == "triplet":
         criterion = triplet_loss(alpha = 0.304).cuda()    # Loss function
     elif args.loss == "softmax":
         criterion =     torch.nn.CrossEntropyLoss().cuda()    # Loss function
+    else:
+        print("Undefined Loss Function")
+        exit()
 
     params  = list(model.parameters())                                      # Parameters to train
 
@@ -126,28 +92,47 @@ def main(args):
     total_step = len(train_loader)
 
 
+    cluster_centers, cluster_assignment = indexing_step(    model = model,
+                                                            data_loader = train_loader,
+                                                            cluster_centers = None)
+
+
+    # curr_loss, curr_wacc = eval_step(   model       = model,
+    #                                     data_loader = valid_loader,
+    #                                     criterion   = criterion,
+    #                                     step        = 0,
+    #                                     datasplit   = "valid")
+
+    loss_vector = None
+
     for epoch in range(0, args.num_epochs):
 
 
         if args.evaluate_only:         exit()
         if args.optimizer == 'sgd':    scheduler.step()
 
-        logger.add_scalar("Misc/Epoch Number", epoch, epoch * total_step)
-        train_step( model        = model,
-                    train_loader = train_loader,
-                    criterion    = criterion,
-                    optimizer    = optimizer,
-                    epoch        = epoch,
-                    step         = epoch * total_step,
-                    valid_loader = valid_loader)
+        order = define_order(cluster_assignment, cluster_centers, loss_vector)
+        train_loader.dataset.update_read_order(order)
 
+        logger.add_scalar("Misc/Epoch Number", epoch, epoch * total_step)
+        loss_vector, stdev = train_step(   model        = model,
+                                    train_loader = train_loader,
+                                    criterion    = criterion,
+                                    optimizer    = optimizer,
+                                    epoch        = epoch,
+                                    step         = epoch * total_step,
+                                    valid_loader = valid_loader,
+                                    assignment   = cluster_assignment)
 
 
         curr_loss, curr_wacc = eval_step(   model       = model,
-                                            data_loader = valid_loader,
+                                            data_loader = train_loader,
                                             criterion   = criterion,
                                             step        = epoch * total_step,
-                                            datasplit   = "valid")
+                                            datasplit   = "train",
+                                            stdev       = stdev)
+
+        cluster_centers, assignment = indexing_step( model = model, data_loader = train_loader, cluster_centers = cluster_centers)
 
         # args = save_checkpoint(  model      = model,
         #                          optimizer  = optimizer,
@@ -168,38 +153,39 @@ def main(args):
                              curr_acc   = curr_wacc,
                              filename   = ('model@epoch%d.pkl' %(epoch)))
 
-def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loader = None):
+def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loader = None, assignment = None):
 
     batch_time = AverageMeter()
     data_time = AverageMeter()
     losses = AverageMeter()
     top1    = AverageMeter()
     top5    = AverageMeter()
+    stdev    = AverageMeter()
 
     # switch to train mode
     model.train()
 
     end = time.time()
-    for i, (input, target) in enumerate(train_loader):
+
+    loss_vector = np.zeros(args.K * args.num_classes)
+    loss_count  = np.zeros(args.K * args.num_classes)
+    for i, (input, target, inst_indices) in enumerate(train_loader):
         # measure data loading time
         data_time.update(time.time() - end)
 
-        target = target.cuda(async=True)
-        # input = input
         input_var = torch.autograd.Variable(input)
-        target_var = torch.autograd.Variable(target)
-
 
         # compute output
-        output, _ = model(input_var)
-        loss = criterion(output, target_var)
+        output = model(input_var)
+        loss, loss_vector, loss_count, c_stdev = criterion(output, list(inst_indices.numpy()), assignment, loss_vector, loss_count)
+        stdev.update(c_stdev, 1)
 
         # measure accuracy and record loss
-        prec1, prec5 = accuracy(output.data, target, topk=(1, 5))
+        # prec1, prec5 = accuracy(output.data, target, topk=(1, 5))
 
         losses.update(loss.data[0], input.size(0))
-        top1.update(prec1[0], input.size(0))
-        top5.update(prec5[0], input.size(0))
+        # top1.update(prec1[0], input.size(0))
+        # top5.update(prec5[0], input.size(0))
 
         # compute gradient and do SGD step
         model.zero_grad()
@@ -216,8 +202,9 @@ def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loa
                   'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
                   'Data {data_time.val:.3f} ({data_time.avg:.3f})\t'
                   'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
-                  'Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t'
-                  'Prec@5 {top5.val:.3f} ({top5.avg:.3f})'.format(
+                  # 'Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t'
+                  # 'Prec@5 {top5.val:.3f} ({top5.avg:.3f})\t'
+                  .format(
                    epoch, i, len(train_loader), batch_time=batch_time,
                    data_time=data_time, loss=losses, top1=top1, top5=top5))
 
@@ -241,87 +228,241 @@ def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loa
                                 datasplit   = "valid")
             model.train()
 
+    for i in range(0, len(loss_vector)):
+        if loss_count[i] != 0.0:
+            loss_vector[i] = loss_vector[i] / loss_count[i]
 
-def eval_step( model, data_loader,  criterion, step, datasplit):
+    loss_sum = np.sum(loss_vector)
+
+    for i in range(0, len(loss_vector)):
+        if loss_count[i] == 0.0:
+            loss_vector[i] = loss_sum
+
+    loss_vector = loss_vector / np.sum(loss_vector)
+
+    return loss_vector, stdev.avg
+
+
+def eval_step( model, data_loader,  criterion, step, datasplit, stdev):
     batch_time = AverageMeter()
     losses = AverageMeter()
-    top1 = AverageMeter()
-    top5 = AverageMeter()
+
+    metrics = softkNN_metrics(num_clusters = args.num_classes * args.K)
 
     # switch to evaluate mode
     model.eval()
 
     end = time.time()
-    for i, (input, target) in enumerate(data_loader):
-        target = target.cuda(async=True)
-        input = input.cuda()
-        input_var = torch.autograd.Variable(input, volatile=True)
-        target_var = torch.autograd.Variable(target, volatile=True)
+    for i, (input, target, inst_indices) in enumerate(data_loader):
+        input_var = torch.autograd.Variable(input.cuda(), volatile=True)
+        target_var = torch.autograd.Variable(target.cuda(async=True), volatile=True)
 
         # compute output
         output = model(input_var)
-        loss = criterion(output, target_var)
 
         # measure accuracy and record loss
-        prec1, prec5 = accuracy(output.data, target, topk=(1, 5))
+        metrics.update(output, target)
 
-        losses.update(loss.data[0], input.size(0))
-        top1.update(prec1[0], input.size(0))
-        top5.update(prec5[0], input.size(0))
+    print("Evaluation: Forward Embedding Calculation (Time Elapsed {time:.3f})".format(time=time.time() - end))
+    curr_time = time.time()
 
-        # measure elapsed time
-        batch_time.update(time.time() - end)
-        end = time.time()
+    acc1, acc5 = metrics.accuracy(stdev = stdev)
 
-        if i % args.log_rate == 0:
-            print('Test: [{0}/{1}]\t'
-                  'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
-                  'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
-                  'Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t'
-                  'Prec@5 {top5.val:.3f} ({top5.avg:.3f})'.format(
-                   i, len(data_loader), batch_time=batch_time, loss=losses
-                   , top1=top1, top5=top5)
-            )
+    print('Test: \t'
+          'Time {test_time:.3f}\t'
+          # 'Loss {loss.avg:.4f}\t'
+          'Prec@1 {top1:.3f}\t'
+          'Prec@5 {top5:.3f}'.format(
+           i, len(data_loader), test_time=time.time() - curr_time, loss=losses
+           , top1=acc1, top5=acc5)
+    )
 
-
-    logger.add_scalar(args.dataset + "/Loss valid  (avg)",   losses.avg, step)
-    logger.add_scalar(args.dataset + "/Perc5 valid (avg)",   top5.avg,   step)
-    logger.add_scalar(args.dataset + "/Perc1 valid (avg)",   top1.avg,   step)
+    # logger.add_scalar(args.dataset + "/Loss valid  (avg)",   losses.avg, step)
+    logger.add_scalar(args.dataset + "/Perc5 valid (avg)",   acc5,   step)
+    logger.add_scalar(args.dataset + "/Perc1 valid (avg)",   acc1,   step)
 
     return losses.avg, 0.0
 
+def indexing_step(model, data_loader, cluster_centers):
 
-class AverageMeter(object):
-    """Computes and stores the average and current value"""
-    def __init__(self):
-        self.reset()
+        model.eval()
+        curr_time = time.time()
 
-    def reset(self):
-        self.val = 0
-        self.avg = 0
-        self.sum = 0
-        self.count = 0
+        t_embeddings  = []
+        t_labels      = []
+        t_indices     = []
 
-    def update(self, val, n=1):
-        self.val = val
-        self.sum += val * n
-        self.count += n
-        self.avg = self.sum / self.count
+        data_loader.dataset.default_read_order()
 
-def accuracy(output, target, topk=(1,)):
-    """Computes the precision@k for the specified values of k"""
-    maxk = max(topk)
-    batch_size = target.size(0)
+        for i, (input, target, indices) in enumerate(data_loader):
+            input_var = torch.autograd.Variable(input, requires_grad=True)
+            # compute output
+            output = model(input_var)
 
-    _, pred = output.topk(maxk, 1, True, True)
-    pred = pred.t()
-    correct = pred.eq(target.view(1, -1).expand_as(pred))
+            t_embeddings += list(output.cpu().data.numpy())
+            t_labels     += list(target.numpy())
+            t_indices    += list(indices.numpy())
+            del input, target, indices
 
-    res = []
-    for k in topk:
-        correct_k = correct[:k].view(-1).float().sum(0, keepdim=True)
-        res.append(correct_k.mul_(100.0 / batch_size))
-    return res
+        # End FOR
+
+        print('KNN: Forward Pass Time   {time:.3f}'.format(time=time.time() - curr_time))
+        curr_time = time.time()
+        cluster_centers, assignment = cluster_assignment(t_indices, t_embeddings, t_labels, init_centers= cluster_centers)
+        print('KNN: Clustering time     {time:.3f}'.format(time=time.time() - curr_time))
+
+        return cluster_centers, assignment
+
+
+def cluster_assignment(indices, embeddings, labels, init_centers):
+    cluster_nums    = args.num_classes * args.K
+
+    assignment      = [-1] * len(indices)
+    cluster_centers = np.zeros((cluster_nums, args.embedding_size))
+    class_dict      = {}
+
+    # Create a class dict and initialize it wiht all the embeddings
+    for i in range(0, args.num_classes):
+        class_dict[i] = {'embeddings' : [], 'indices' : []}
+        for j in range(len(labels)):
+            if labels[j] == i:
+                class_dict[i]['embeddings'].append(embeddings[j])
+                class_dict[i]['indices'].append(indices[j])
+
+        # Convert list to a single array
+        class_dict[i]['embeddings'] = np.asarray(class_dict[i]['embeddings'])
+
+        #Calculate K-Means++ clustering
+        if init_centers is None:
+            c_init_centers = 'k-means++'
+        else:
+            c_init_centers = init_centers[i*args.K:(i+1)*args.K, :]
+
+        kmeans = KMeans(n_clusters=args.K, random_state=0, init = c_init_centers).fit(class_dict[i]['embeddings'])
+        k_labels    = kmeans.labels_
+        k_centers   = kmeans.cluster_centers_
+
+        for k in range(0, args.K):
+            global_k                   = (i * args.K) + k
+            cluster_centers[global_k]  = k_centers[k]
+
+            for l in range(0, class_dict[i]['embeddings'].shape[0] ):
+                if k_labels[l] == k:
+                    try:
+                        assignment[ class_dict[i]['indices'][l] ] = global_k
+                    except:
+                        embed()
+
+    if (-1 in assignment):
+        embed()
+    assert not (-1 in assignment), "Error: Not all indices were assigned!"
+
+    return cluster_centers, assignment
+
+def define_order(cluster_assignment, cluster_centers, loss_vector):
+
+    num_clusters = args.num_classes * args.K
+
+    if loss_vector is None:
+        loss_vector = np.ones(num_clusters) / float(num_clusters)
+        loss_vector = list(loss_vector)
+
+    cluster_distances = np.ones((num_clusters, num_clusters))
+
+    for i in range(0, num_clusters):
+        for j in range(i + 1, num_clusters):
+            d = np.linalg.norm(cluster_centers[i] - cluster_centers[j])
+            cluster_distances[i][j] = d
+            cluster_distances[j][i] = d
+
+    NUM_BATCHES = 100
+
+    #construct useful dict
+    cluster_dict = {}
+    for i in range(0, num_clusters):
+        cluster_dict[i] = []
+
+    for i in range(0, len(cluster_assignment)):
+        cluster_dict[cluster_assignment[i]].append(i)
+
+    cluster_to_remove = []
+    for i in range(0, num_clusters):
+        if len(cluster_dict[i]) < 4:
+            loss_vector[i] = 0.0
+            cluster_to_remove.append(i)
+            # print("Not sampling from cluster " + str(i) + " because it had less that 4 elements ")
+
+    loss_vector = np.asarray(loss_vector)
+    loss_vector = loss_vector / sum(loss_vector)
+    loss_vector = list(loss_vector)
+
+    NONZERO_CLUSTERS = num_clusters - len(cluster_to_remove)
+    print("Number of proper clusters: " + str(NONZERO_CLUSTERS))
+
+    order = []
+    # construct batches
+    for B in range(0, NUM_BATCHES):
+        M0 = np.random.choice(range(0, num_clusters), p = loss_vector)
+        # print("Cluster to deal with is " + str(M0))
+
+        C0K0 = (M0 // args.K) * args.K      #first cluster index in that class
+
+        bad_clusters = cluster_to_remove + list(range(C0K0, C0K0 + args.K))
+
+        near_M = np.argsort(cluster_distances[M0])
+        near_M = [m for m in near_M if m not in bad_clusters]    # Imposter clusters in order of closeness
+
+        near_imposter = near_M[0:args.M-1]
+        near_imposter.append(M0)
+
+        for Mi in near_imposter:
+            samplesMi = np.random.permutation(len(cluster_dict[Mi]))[0:args.D]
+            for s in samplesMi:
+                order.append(cluster_dict[Mi][s])
+
+    return order
+
+
+def get_loaders():
+    # Data loading code (From PyTorch example https://github.com/pytorch/examples/blob/master/imagenet/main.py)
+    traindir = os.path.join(args.data_path, 'train')
+    valdir = os.path.join(args.data_path, 'validation')
+    normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                     std=[0.229, 0.224, 0.225])
+
+    train_transform = transforms.Compose([
+        transforms.RandomResizedCrop(299),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        normalize,
+    ])
+
+    valid_transform = transforms.Compose([
+        transforms.Resize((299, 299)),
+        # transforms.CenterCrop(224),
+        transforms.ToTensor(),
+        normalize,
+    ])
+
+    print("Generating Training Dataset")
+    train_dataset = oxford_iiit_pet("train", args.data_path, transform = train_transform)
+    valid_dataset = oxford_iiit_pet("test",  args.data_path, transform = valid_transform)
+
+    print("Generating Data Loaders")
+    train_loader = torch.utils.data.DataLoader(
+        train_dataset,
+        batch_size=args.batch_size, shuffle=False,
+        num_workers=args.workers, pin_memory=True,
+        drop_last = False
+    )
+
+    valid_loader = torch.utils.data.DataLoader(
+        valid_dataset,
+        batch_size=args.batch_size, shuffle=False,
+        num_workers=args.workers, pin_memory=True
+    )
+
+    return train_loader, valid_loader
 
 if __name__ == '__main__':
 
@@ -336,8 +477,9 @@ if __name__ == '__main__':
     parser.add_argument('--world_size',         type=int, default=1)
 
     # training parameters
-    parser.add_argument('--num_epochs',         type=int,   default=3)
+    parser.add_argument('--num_epochs',         type=int,   default=100)
     parser.add_argument('--num_classes',        type=int,   default=37)
+    parser.add_argument('--embedding_size',     type=int,   default=512)
     parser.add_argument('--batch_size',         type=int,   default=256)
     parser.add_argument('--lr',                 type=float, default=0.1)
     parser.add_argument('--momentum',           type=float, default=0.9)
@@ -360,9 +502,10 @@ if __name__ == '__main__':
                     help='distributed backend')
 
     # Magnet Loss Parameters
-    # parser.add_argument('--M',                  type=int, default=12)       # Number of nearest clusters per mini-batch
-    # parser.add_argument('--K',                  type=int, default=12)       # Number of clusters per class
-    # parser.add_argument('--D',                  type=int, default=12)       # Number of examples per cluster
+    parser.add_argument('--M',                  type=int, default=8)       # Number of nearest clusters per mini-batch
+    parser.add_argument('--K',                  type=int, default=8)       # Number of clusters per class
+    parser.add_argument('--D',                  type=int, default=4)       # Number of examples per cluster
+    parser.add_argument('--GAP',                type=float, default=4)       # Number of examples per cluster
 
 
     args = parser.parse_args()
