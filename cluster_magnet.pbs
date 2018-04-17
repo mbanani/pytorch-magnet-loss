@@ -1,8 +1,8 @@
-#PBS -N magnet_loss_pretrain         # Name of the job
+#PBS -N magnet_loss_train_Pets      # Name of the job
 #PBS -j oe                      # Join output and error in single file
 #PBS -l walltime=3:00:00:00     # walltime requested
 #PBS -l mem=16GB                # memory requested
-#PBS -l nodes=1:pascal:ppn=16:gpus=4    # nodes requested: Processor per node: gpus requested
+#PBS -l nodes=1:pascal:ppn=16:gpus=1    # nodes requested: Processor per node: gpus requested
 #PBS -V                         # Pass current environment variables to the script
 #PBS -S /bin/bash               # Use /bin/bash as the shell
 ##########################################
@@ -32,7 +32,5 @@ echo ------------------------------------------------------
 cd /z/home/mbanani/projects/pytorch-magnet-loss
 source set_env.sh
 
-python train_magnet.py --dataset oxford --batch_size 256 --log_rate 10 --num_epochs 100 --experiment_name train_magnet_test --workers 16
-
-
+python3 train_magnet.py --loss magnet --GAP 2.43 --lr 0.0240 --dataset flowers  --K 1 --M 12 --D 4 --embedding_size 256
 echo Done

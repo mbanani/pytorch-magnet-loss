@@ -1,0 +1,1545 @@
+I got allocated the
+/var/spool/torque/mom_priv/jobs/81636.blindspot.SC: line 15: following: command not found
+gpu: 1
+PBS: qsub is running on focus
+PBS: originating queue is batch
+PBS: executing queue is batch
+PBS: working directory is /z/home/mbanani/projects/pytorch-magnet-loss
+PBS: execution mode is PBS_BATCH
+PBS: job identifich_convAtter is 81636.blindspot
+PBS: job name is magnet_loss_train_Pets
+PBS: node file is /var/spool/torque/aux//81636.blindspot
+PBS: current home directory is /home/mbanani
+PBS: PATH = /z/home/mbanani/sw/miniconda2/bin:/z/sw/bin/:/z/sw/sbin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+------------------------------------------------------
+Namespace(D=4, GAP=2.43, K=1, L=8, M=12, NUM_BATCHES=100, annealing_factor=1.0, dataset='flowers', dist_backend='gloo', dist_url='tcp://224.66.41.62:23456', embedding_size=256, eval_epoch=3, eval_step=1000, evaluate_only=False, evaluate_train=False, experiment_name='Test', log_rate=10, loss='magnet', lr=0.024, model='inception', momentum=0.9, num_epochs=100, optimizer='sgd', resume=None, save_epoch=10, weight_decay=0.0001, workers=7, world_size=1)
+
+Experiment path is :  /z/home/mbanani/projects/pytorch-magnet-loss/experiments/flowers/exp_04_16_23_32_22_flowers_Test
+#############  Read in Database   ##############
+Generating Datasets
+csv file length:  1019
+Dataset loaded in  0.023350000381469727  secs.
+Dataset size:  1019
+csv file length:  1019
+Dataset loaded in  0.02529287338256836  secs.
+Dataset size:  1019
+Generating Data Loaders
+Time taken:  0.0491023063659668 seconds
+######## Initiate Model and Optimizer   ##############
+Time taken:  5.492560625076294 seconds
+#############  Start Training     ##############
+KNN: Forward Pass Time   16.085
+KNN: Clustering time     0.624
+Number of proper clusters: 102
+Epoch: [0][10/100]	Time 0.632 (0.825)	Data 0.001 (0.170)	Loss 4.6554 (4.6572)	
+Epoch: [0][20/100]	Time 0.626 (0.728)	Data 0.001 (0.089)	Loss 4.6673 (4.6587)	
+Epoch: [0][30/100]	Time 0.596 (0.685)	Data 0.001 (0.061)	Loss 4.6554 (4.6583)	
+Epoch: [0][40/100]	Time 0.660 (0.670)	Data 0.001 (0.046)	Loss 4.6657 (4.6571)	
+Epoch: [0][50/100]	Time 0.624 (0.660)	Data 0.001 (0.037)	Loss 4.6749 (4.6574)	
+Epoch: [0][60/100]	Time 0.627 (0.652)	Data 0.001 (0.031)	Loss 4.6604 (4.6568)	
+Epoch: [0][70/100]	Time 0.633 (0.649)	Data 0.001 (0.027)	Loss 4.6522 (4.6566)	
+Epoch: [0][80/100]	Time 0.611 (0.645)	Data 0.001 (0.024)	Loss 4.6568 (4.6557)	
+Epoch: [0][90/100]	Time 0.622 (0.642)	Data 0.000 (0.021)	Loss 4.6618 (4.6556)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.682)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.942)
+Test: 	Time 2.981	Prec@1 20.104	Prec@5 46.833
+KNN: Forward Pass Time   3.159
+KNN: Clustering time     0.267
+Number of proper clusters: 102
+/z/home/mbanani/PyTorch3/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:896: RuntimeWarning: Explicit initial center position passed: performing only one init in k-means instead of n_init=10
+  return_n_iter=True)
+Epoch: [1][10/100]	Time 0.631 (0.737)	Data 0.001 (0.112)	Loss 4.6489 (4.6511)	
+Epoch: [1][20/100]	Time 0.618 (0.679)	Data 0.001 (0.059)	Loss 4.6640 (4.6504)	
+Epoch: [1][30/100]	Time 0.629 (0.660)	Data 0.001 (0.040)	Loss 4.6232 (4.6491)	
+Epoch: [1][40/100]	Time 0.644 (0.653)	Data 0.001 (0.031)	Loss 4.6458 (4.6485)	
+Epoch: [1][50/100]	Time 0.621 (0.646)	Data 0.001 (0.025)	Loss 4.6434 (4.6485)	
+Epoch: [1][60/100]	Time 0.622 (0.647)	Data 0.001 (0.021)	Loss 4.6575 (4.6477)	
+Epoch: [1][70/100]	Time 0.686 (0.648)	Data 0.001 (0.018)	Loss 4.6447 (4.6473)	
+Epoch: [1][80/100]	Time 0.612 (0.648)	Data 0.001 (0.016)	Loss 4.6419 (4.6465)	
+Epoch: [1][90/100]	Time 0.691 (0.647)	Data 0.000 (0.014)	Loss 4.6184 (4.6461)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.985)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.404)
+Test: 	Time 3.461	Prec@1 58.688	Prec@5 85.729
+KNN: Forward Pass Time   3.323
+KNN: Clustering time     0.091
+Number of proper clusters: 102
+Epoch: [2][10/100]	Time 0.649 (0.751)	Data 0.001 (0.094)	Loss 4.6421 (4.6334)	
+Epoch: [2][20/100]	Time 0.628 (0.702)	Data 0.001 (0.050)	Loss 4.6221 (4.6321)	
+Epoch: [2][30/100]	Time 0.586 (0.671)	Data 0.001 (0.034)	Loss 4.6587 (4.6330)	
+Epoch: [2][40/100]	Time 0.635 (0.657)	Data 0.001 (0.026)	Loss 4.6331 (4.6320)	
+Epoch: [2][50/100]	Time 0.659 (0.657)	Data 0.001 (0.021)	Loss 4.6099 (4.6305)	
+Epoch: [2][60/100]	Time 0.596 (0.653)	Data 0.001 (0.018)	Loss 4.6183 (4.6312)	
+Epoch: [2][70/100]	Time 0.629 (0.649)	Data 0.001 (0.015)	Loss 4.6301 (4.6310)	
+Epoch: [2][80/100]	Time 0.651 (0.649)	Data 0.001 (0.013)	Loss 4.6520 (4.6295)	
+Epoch: [2][90/100]	Time 0.645 (0.650)	Data 0.000 (0.012)	Loss 4.6039 (4.6281)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.124)
+Evaluation: Softmax Probability Calculation (Time Elapsed 4.463)
+Test: 	Time 4.547	Prec@1 57.208	Prec@5 84.354
+KNN: Forward Pass Time   3.223
+KNN: Clustering time     0.150
+Number of proper clusters: 102
+Epoch: [3][10/100]	Time 0.645 (0.755)	Data 0.001 (0.102)	Loss 4.6051 (4.6166)	
+Epoch: [3][20/100]	Time 0.646 (0.712)	Data 0.001 (0.054)	Loss 4.5869 (4.6151)	
+Epoch: [3][30/100]	Time 0.661 (0.691)	Data 0.001 (0.037)	Loss 4.6193 (4.6146)	
+Epoch: [3][40/100]	Time 0.636 (0.677)	Data 0.001 (0.028)	Loss 4.5726 (4.6108)	
+Epoch: [3][50/100]	Time 0.652 (0.667)	Data 0.001 (0.023)	Loss 4.6161 (4.6087)	
+Epoch: [3][60/100]	Time 0.603 (0.660)	Data 0.001 (0.019)	Loss 4.6097 (4.6095)	
+Epoch: [3][70/100]	Time 0.630 (0.659)	Data 0.001 (0.017)	Loss 4.5886 (4.6080)	
+Epoch: [3][80/100]	Time 0.636 (0.656)	Data 0.001 (0.015)	Loss 4.6453 (4.6070)	
+Epoch: [3][90/100]	Time 0.684 (0.655)	Data 0.000 (0.013)	Loss 4.6152 (4.6048)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.034)
+Evaluation: Softmax Probability Calculation (Time Elapsed 4.480)
+Test: 	Time 4.535	Prec@1 57.542	Prec@5 83.708
+KNN: Forward Pass Time   3.414
+KNN: Clustering time     0.115
+Number of proper clusters: 102
+Epoch: [4][10/100]	Time 0.665 (0.756)	Data 0.001 (0.114)	Loss 4.6341 (4.6050)	
+Epoch: [4][20/100]	Time 0.615 (0.705)	Data 0.001 (0.060)	Loss 4.6356 (4.6006)	
+Epoch: [4][30/100]	Time 0.605 (0.688)	Data 0.001 (0.041)	Loss 4.6011 (4.6043)	
+Epoch: [4][40/100]	Time 0.678 (0.681)	Data 0.001 (0.031)	Loss 4.6209 (4.6062)	
+Epoch: [4][50/100]	Time 0.574 (0.674)	Data 0.001 (0.025)	Loss 4.5998 (4.6036)	
+Epoch: [4][60/100]	Time 0.631 (0.667)	Data 0.001 (0.021)	Loss 4.5748 (4.6024)	
+Epoch: [4][70/100]	Time 0.614 (0.661)	Data 0.001 (0.018)	Loss 4.6049 (4.6004)	
+Epoch: [4][80/100]	Time 0.590 (0.658)	Data 0.001 (0.016)	Loss 4.6300 (4.5999)	
+Epoch: [4][90/100]	Time 0.639 (0.656)	Data 0.000 (0.014)	Loss 4.5725 (4.5991)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.144)
+Evaluation: Softmax Probability Calculation (Time Elapsed 4.041)
+Test: 	Time 4.124	Prec@1 44.312	Prec@5 75.042
+KNN: Forward Pass Time   3.631
+KNN: Clustering time     0.112
+Number of proper clusters: 102
+Epoch: [5][10/100]	Time 0.647 (0.771)	Data 0.001 (0.123)	Loss 4.6191 (4.5883)	
+Epoch: [5][20/100]	Time 0.656 (0.712)	Data 0.001 (0.065)	Loss 4.6328 (4.5781)	
+Epoch: [5][30/100]	Time 0.648 (0.697)	Data 0.001 (0.044)	Loss 4.6081 (4.5722)	
+Epoch: [5][40/100]	Time 0.679 (0.690)	Data 0.001 (0.034)	Loss 4.6137 (4.5746)	
+Epoch: [5][50/100]	Time 0.631 (0.682)	Data 0.001 (0.027)	Loss 4.6019 (4.5711)	
+Epoch: [5][60/100]	Time 0.633 (0.679)	Data 0.001 (0.023)	Loss 4.5937 (4.5688)	
+Epoch: [5][70/100]	Time 0.657 (0.674)	Data 0.001 (0.020)	Loss 4.5360 (4.5703)	
+Epoch: [5][80/100]	Time 0.645 (0.669)	Data 0.001 (0.018)	Loss 4.5543 (4.5679)	
+Epoch: [5][90/100]	Time 0.616 (0.666)	Data 0.000 (0.016)	Loss 4.5828 (4.5666)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.666)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.903)
+Test: 	Time 3.964	Prec@1 40.438	Prec@5 66.417
+KNN: Forward Pass Time   3.735
+KNN: Clustering time     0.095
+Number of proper clusters: 102
+Epoch: [6][10/100]	Time 0.657 (0.769)	Data 0.001 (0.116)	Loss 4.5714 (4.5611)	
+Epoch: [6][20/100]	Time 0.712 (0.724)	Data 0.001 (0.061)	Loss 4.6078 (4.5605)	
+Epoch: [6][30/100]	Time 0.700 (0.705)	Data 0.001 (0.042)	Loss 4.4836 (4.5537)	
+Epoch: [6][40/100]	Time 0.634 (0.688)	Data 0.001 (0.032)	Loss 4.5172 (4.5494)	
+Epoch: [6][50/100]	Time 0.654 (0.678)	Data 0.001 (0.026)	Loss 4.5135 (4.5433)	
+Epoch: [6][60/100]	Time 0.625 (0.673)	Data 0.001 (0.022)	Loss 4.4306 (4.5430)	
+Epoch: [6][70/100]	Time 0.697 (0.670)	Data 0.001 (0.019)	Loss 4.4679 (4.5396)	
+Epoch: [6][80/100]	Time 0.598 (0.668)	Data 0.001 (0.017)	Loss 4.5403 (4.5392)	
+Epoch: [6][90/100]	Time 0.593 (0.662)	Data 0.001 (0.015)	Loss 4.5647 (4.5385)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.830)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.156)
+Test: 	Time 3.198	Prec@1 36.854	Prec@5 68.667
+KNN: Forward Pass Time   3.171
+KNN: Clustering time     0.150
+Number of proper clusters: 102
+Epoch: [7][10/100]	Time 0.638 (0.742)	Data 0.001 (0.099)	Loss 4.6194 (4.5352)	
+Epoch: [7][20/100]	Time 0.683 (0.701)	Data 0.001 (0.052)	Loss 4.4276 (4.5386)	
+Epoch: [7][30/100]	Time 0.654 (0.684)	Data 0.001 (0.036)	Loss 4.4584 (4.5414)	
+Epoch: [7][40/100]	Time 0.633 (0.674)	Data 0.001 (0.027)	Loss 4.5189 (4.5352)	
+Epoch: [7][50/100]	Time 0.693 (0.667)	Data 0.001 (0.022)	Loss 4.4197 (4.5296)	
+Epoch: [7][60/100]	Time 0.628 (0.663)	Data 0.002 (0.019)	Loss 4.5019 (4.5235)	
+Epoch: [7][70/100]	Time 0.633 (0.661)	Data 0.001 (0.016)	Loss 4.3696 (4.5187)	
+Epoch: [7][80/100]	Time 0.563 (0.659)	Data 0.001 (0.014)	Loss 4.5220 (4.5153)	
+Epoch: [7][90/100]	Time 0.749 (0.661)	Data 0.000 (0.013)	Loss 4.5560 (4.5142)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.846)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.227)
+Test: 	Time 3.267	Prec@1 45.812	Prec@5 75.604
+KNN: Forward Pass Time   3.300
+KNN: Clustering time     0.111
+Number of proper clusters: 102
+Epoch: [8][10/100]	Time 0.607 (0.733)	Data 0.001 (0.090)	Loss 4.3773 (4.5009)	
+Epoch: [8][20/100]	Time 0.614 (0.680)	Data 0.001 (0.047)	Loss 4.3652 (4.4807)	
+Epoch: [8][30/100]	Time 0.609 (0.664)	Data 0.001 (0.032)	Loss 4.3615 (4.4771)	
+Epoch: [8][40/100]	Time 0.612 (0.662)	Data 0.001 (0.025)	Loss 4.5154 (4.4711)	
+Epoch: [8][50/100]	Time 0.632 (0.657)	Data 0.001 (0.020)	Loss 4.5357 (4.4764)	
+Epoch: [8][60/100]	Time 0.637 (0.654)	Data 0.001 (0.017)	Loss 4.3197 (4.4743)	
+Epoch: [8][70/100]	Time 0.622 (0.651)	Data 0.001 (0.015)	Loss 4.4309 (4.4702)	
+Epoch: [8][80/100]	Time 0.656 (0.648)	Data 0.001 (0.013)	Loss 4.3987 (4.4667)	
+Epoch: [8][90/100]	Time 0.671 (0.649)	Data 0.000 (0.012)	Loss 4.4429 (4.4637)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.914)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.354)
+Test: 	Time 3.396	Prec@1 38.875	Prec@5 69.354
+KNN: Forward Pass Time   3.329
+KNN: Clustering time     0.098
+Number of proper clusters: 102
+Epoch: [9][10/100]	Time 0.667 (0.759)	Data 0.001 (0.112)	Loss 4.4557 (4.4274)	
+Epoch: [9][20/100]	Time 0.675 (0.711)	Data 0.001 (0.059)	Loss 4.3362 (4.4410)	
+Epoch: [9][30/100]	Time 0.618 (0.686)	Data 0.001 (0.040)	Loss 4.3782 (4.4297)	
+Epoch: [9][40/100]	Time 0.645 (0.673)	Data 0.001 (0.031)	Loss 4.5116 (4.4205)	
+Epoch: [9][50/100]	Time 0.633 (0.666)	Data 0.001 (0.025)	Loss 4.5945 (4.4233)	
+Epoch: [9][60/100]	Time 0.625 (0.662)	Data 0.001 (0.021)	Loss 4.5149 (4.4190)	
+Epoch: [9][70/100]	Time 0.650 (0.658)	Data 0.001 (0.018)	Loss 4.2521 (4.4114)	
+Epoch: [9][80/100]	Time 0.630 (0.657)	Data 0.001 (0.016)	Loss 4.3936 (4.4063)	
+Epoch: [9][90/100]	Time 0.655 (0.656)	Data 0.000 (0.014)	Loss 4.3280 (4.4046)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.919)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.438)
+Test: 	Time 3.477	Prec@1 31.146	Prec@5 63.604
+KNN: Forward Pass Time   3.293
+KNN: Clustering time     0.147
+Number of proper clusters: 102
+Epoch: [10][10/100]	Time 0.626 (0.739)	Data 0.001 (0.094)	Loss 4.4982 (4.4639)	
+Epoch: [10][20/100]	Time 0.600 (0.687)	Data 0.001 (0.050)	Loss 4.3553 (4.4299)	
+Epoch: [10][30/100]	Time 0.643 (0.669)	Data 0.001 (0.034)	Loss 4.3895 (4.4277)	
+Epoch: [10][40/100]	Time 0.630 (0.657)	Data 0.001 (0.026)	Loss 4.4527 (4.4255)	
+Epoch: [10][50/100]	Time 0.618 (0.652)	Data 0.001 (0.021)	Loss 4.4045 (4.4139)	
+Epoch: [10][60/100]	Time 0.618 (0.648)	Data 0.001 (0.018)	Loss 4.3240 (4.4014)	
+Epoch: [10][70/100]	Time 0.631 (0.647)	Data 0.001 (0.015)	Loss 4.5269 (4.3956)	
+Epoch: [10][80/100]	Time 0.631 (0.646)	Data 0.001 (0.013)	Loss 4.0959 (4.3925)	
+Epoch: [10][90/100]	Time 0.664 (0.646)	Data 0.000 (0.012)	Loss 4.3119 (4.3940)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.981)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.029)
+Test: 	Time 3.068	Prec@1 28.146	Prec@5 59.542
+KNN: Forward Pass Time   3.307
+KNN: Clustering time     0.158
+Number of proper clusters: 102
+Epoch: [11][10/100]	Time 0.603 (0.732)	Data 0.001 (0.101)	Loss 4.2016 (4.3605)	
+Epoch: [11][20/100]	Time 0.626 (0.697)	Data 0.001 (0.053)	Loss 4.4896 (4.3857)	
+Epoch: [11][30/100]	Time 0.620 (0.680)	Data 0.001 (0.036)	Loss 4.2102 (4.3930)	
+Epoch: [11][40/100]	Time 0.580 (0.663)	Data 0.001 (0.028)	Loss 4.5637 (4.3991)	
+Epoch: [11][50/100]	Time 0.640 (0.653)	Data 0.001 (0.022)	Loss 4.1766 (4.3868)	
+Epoch: [11][60/100]	Time 0.635 (0.653)	Data 0.002 (0.019)	Loss 4.5181 (4.3839)	
+Epoch: [11][70/100]	Time 0.626 (0.650)	Data 0.001 (0.016)	Loss 4.4660 (4.3756)	
+Epoch: [11][80/100]	Time 0.651 (0.649)	Data 0.001 (0.014)	Loss 4.2347 (4.3635)	
+Epoch: [11][90/100]	Time 0.689 (0.647)	Data 0.000 (0.013)	Loss 4.4062 (4.3566)	
+train_magnet.py:196: RuntimeWarning: overflow encountered in add
+  loss_vector += c_loss_vector
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.951)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.106)
+Test: 	Time 3.147	Prec@1 17.708	Prec@5 49.896
+KNN: Forward Pass Time   3.437
+KNN: Clustering time     0.112
+Number of proper clusters: 102
+train_magnet.py:398: RuntimeWarning: invalid value encountered in true_divide
+  loss_vector = loss_vector / sum(loss_vector)
+train_magnet.py:407: RuntimeWarning: invalid value encountered in less
+  M0 = np.random.choice(range(0, num_clusters), p = loss_vector)
+Epoch: [12][10/100]	Time 0.678 (0.731)	Data 0.001 (0.080)	Loss 4.3387 (4.4248)	
+Epoch: [12][20/100]	Time 0.648 (0.690)	Data 0.001 (0.042)	Loss 4.0772 (4.3407)	
+Epoch: [12][30/100]	Time 0.695 (0.675)	Data 0.001 (0.029)	Loss 4.0544 (4.2604)	
+Epoch: [12][40/100]	Time 0.659 (0.670)	Data 0.001 (0.022)	Loss 3.8497 (4.1856)	
+Epoch: [12][50/100]	Time 0.625 (0.662)	Data 0.001 (0.018)	Loss 3.7212 (4.1135)	
+Epoch: [12][60/100]	Time 0.701 (0.658)	Data 0.001 (0.015)	Loss 3.6838 (4.0520)	
+Epoch: [12][70/100]	Time 0.701 (0.655)	Data 0.001 (0.013)	Loss 3.7735 (4.0007)	
+Epoch: [12][80/100]	Time 0.628 (0.654)	Data 0.001 (0.012)	Loss 3.6293 (3.9510)	
+Epoch: [12][90/100]	Time 0.735 (0.656)	Data 0.000 (0.010)	Loss 3.4437 (3.9001)	
+train_magnet.py:197: RuntimeWarning: overflow encountered in add
+  loss_count  += c_loss_count
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.786)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.519)
+Test: 	Time 3.561	Prec@1 0.229	Prec@5 2.667
+KNN: Forward Pass Time   3.569
+KNN: Clustering time     0.112
+Number of proper clusters: 102
+train_magnet.py:124: RuntimeWarning: invalid value encountered in true_divide
+  order = define_order(cluster_assignment, cluster_centers, loss_vector/loss_count)
+Epoch: [13][10/100]	Time 0.610 (0.735)	Data 0.001 (0.095)	Loss 4.3136 (4.3130)	
+Epoch: [13][20/100]	Time 0.675 (0.694)	Data 0.001 (0.050)	Loss 4.0084 (4.2006)	
+Epoch: [13][30/100]	Time 0.628 (0.677)	Data 0.001 (0.034)	Loss 3.8333 (4.0722)	
+Epoch: [13][40/100]	Time 0.600 (0.662)	Data 0.001 (0.026)	Loss 3.8627 (3.9916)	
+Epoch: [13][50/100]	Time 0.659 (0.660)	Data 0.001 (0.021)	Loss 3.9862 (3.9313)	
+Epoch: [13][60/100]	Time 0.618 (0.659)	Data 0.001 (0.018)	Loss 3.5951 (3.8578)	
+Epoch: [13][70/100]	Time 0.611 (0.653)	Data 0.001 (0.016)	Loss 3.4010 (3.7909)	
+Epoch: [13][80/100]	Time 0.630 (0.649)	Data 0.001 (0.014)	Loss 3.6778 (3.7418)	
+Epoch: [13][90/100]	Time 0.632 (0.650)	Data 0.001 (0.012)	Loss 3.2495 (3.6891)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.758)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.291)
+Test: 	Time 3.361	Prec@1 0.292	Prec@5 16.354
+KNN: Forward Pass Time   3.417
+KNN: Clustering time     0.173
+Number of proper clusters: 102
+Epoch: [14][10/100]	Time 0.633 (0.738)	Data 0.001 (0.091)	Loss 4.3922 (4.4890)	
+Epoch: [14][20/100]	Time 0.638 (0.697)	Data 0.001 (0.048)	Loss 4.0293 (4.3817)	
+Epoch: [14][30/100]	Time 0.721 (0.682)	Data 0.001 (0.033)	Loss 3.9736 (4.2779)	
+Epoch: [14][40/100]	Time 0.642 (0.672)	Data 0.001 (0.025)	Loss 3.5816 (4.1817)	
+Epoch: [14][50/100]	Time 0.690 (0.674)	Data 0.001 (0.020)	Loss 3.6047 (4.1091)	
+Epoch: [14][60/100]	Time 0.623 (0.671)	Data 0.001 (0.017)	Loss 3.7768 (4.0295)	
+Epoch: [14][70/100]	Time 0.673 (0.668)	Data 0.001 (0.015)	Loss 3.3914 (3.9660)	
+Epoch: [14][80/100]	Time 0.596 (0.664)	Data 0.001 (0.013)	Loss 3.3649 (3.9052)	
+Epoch: [14][90/100]	Time 0.633 (0.661)	Data 0.000 (0.012)	Loss 3.4234 (3.8504)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.952)
+Evaluation: Softmax Probability Calculation (Time Elapsed 4.101)
+Test: 	Time 4.155	Prec@1 0.104	Prec@5 0.729
+KNN: Forward Pass Time   3.355
+KNN: Clustering time     0.115
+Number of proper clusters: 102
+Epoch: [15][10/100]	Time 0.680 (0.732)	Data 0.001 (0.110)	Loss 4.1105 (4.2862)	
+Epoch: [15][20/100]	Time 0.661 (0.690)	Data 0.001 (0.058)	Loss 3.8692 (4.1662)	
+Epoch: [15][30/100]	Time 0.735 (0.678)	Data 0.001 (0.040)	Loss 3.6256 (4.0052)	
+Epoch: [15][40/100]	Time 0.664 (0.673)	Data 0.001 (0.030)	Loss 3.6743 (3.8873)	
+Epoch: [15][50/100]	Time 0.697 (0.668)	Data 0.001 (0.024)	Loss 3.2098 (3.7984)	
+Epoch: [15][60/100]	Time 0.611 (0.665)	Data 0.001 (0.020)	Loss 3.4015 (3.7275)	
+Epoch: [15][70/100]	Time 0.630 (0.661)	Data 0.001 (0.018)	Loss 3.2663 (3.6482)	
+Epoch: [15][80/100]	Time 0.687 (0.658)	Data 0.001 (0.016)	Loss 3.0170 (3.5714)	
+Epoch: [15][90/100]	Time 0.641 (0.656)	Data 0.000 (0.014)	Loss 2.7679 (3.5138)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.859)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.988)
+Test: 	Time 3.027	Prec@1 5.542	Prec@5 9.896
+KNN: Forward Pass Time   3.198
+KNN: Clustering time     0.092
+Number of proper clusters: 102
+Epoch: [16][10/100]	Time 0.641 (0.728)	Data 0.001 (0.095)	Loss 4.1862 (4.4010)	
+Epoch: [16][20/100]	Time 0.615 (0.681)	Data 0.001 (0.050)	Loss 3.7835 (4.2010)	
+Epoch: [16][30/100]	Time 0.670 (0.662)	Data 0.001 (0.034)	Loss 3.5534 (4.0231)	
+Epoch: [16][40/100]	Time 0.641 (0.654)	Data 0.001 (0.026)	Loss 3.1054 (3.9030)	
+Epoch: [16][50/100]	Time 0.627 (0.647)	Data 0.001 (0.021)	Loss 3.1567 (3.7878)	
+Epoch: [16][60/100]	Time 0.654 (0.643)	Data 0.001 (0.018)	Loss 3.1216 (3.6866)	
+Epoch: [16][70/100]	Time 0.646 (0.641)	Data 0.001 (0.015)	Loss 2.9314 (3.6066)	
+Epoch: [16][80/100]	Time 0.630 (0.640)	Data 0.001 (0.014)	Loss 2.8428 (3.5150)	
+Epoch: [16][90/100]	Time 0.615 (0.640)	Data 0.000 (0.012)	Loss 3.0821 (3.4677)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.902)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.178)
+Test: 	Time 3.217	Prec@1 0.000	Prec@5 3.042
+KNN: Forward Pass Time   3.237
+KNN: Clustering time     0.092
+Number of proper clusters: 102
+Epoch: [17][10/100]	Time 0.604 (0.719)	Data 0.001 (0.079)	Loss 3.9290 (4.1776)	
+Epoch: [17][20/100]	Time 0.599 (0.672)	Data 0.001 (0.042)	Loss 3.2841 (3.9098)	
+Epoch: [17][30/100]	Time 0.618 (0.652)	Data 0.001 (0.029)	Loss 2.8588 (3.7188)	
+Epoch: [17][40/100]	Time 0.639 (0.648)	Data 0.001 (0.022)	Loss 3.2421 (3.5831)	
+Epoch: [17][50/100]	Time 0.631 (0.646)	Data 0.001 (0.018)	Loss 2.8718 (3.4752)	
+Epoch: [17][60/100]	Time 0.651 (0.645)	Data 0.001 (0.015)	Loss 3.4294 (3.3959)	
+Epoch: [17][70/100]	Time 0.630 (0.643)	Data 0.001 (0.013)	Loss 2.8432 (3.3200)	
+Epoch: [17][80/100]	Time 0.632 (0.642)	Data 0.001 (0.011)	Loss 3.0915 (3.2674)	
+Epoch: [17][90/100]	Time 0.627 (0.641)	Data 0.000 (0.010)	Loss 2.6503 (3.2138)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.945)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.003)
+Test: 	Time 3.041	Prec@1 4.062	Prec@5 7.875
+KNN: Forward Pass Time   3.241
+KNN: Clustering time     0.099
+Number of proper clusters: 102
+Epoch: [18][10/100]	Time 0.620 (0.712)	Data 0.001 (0.086)	Loss 4.3692 (4.3683)	
+Epoch: [18][20/100]	Time 0.586 (0.670)	Data 0.001 (0.045)	Loss 4.1396 (4.2354)	
+Epoch: [18][30/100]	Time 0.620 (0.656)	Data 0.001 (0.031)	Loss 3.9087 (4.0770)	
+Epoch: [18][40/100]	Time 0.622 (0.651)	Data 0.001 (0.024)	Loss 3.0109 (3.9143)	
+Epoch: [18][50/100]	Time 0.629 (0.647)	Data 0.001 (0.019)	Loss 3.1671 (3.7977)	
+Epoch: [18][60/100]	Time 0.628 (0.645)	Data 0.001 (0.016)	Loss 3.1425 (3.6898)	
+Epoch: [18][70/100]	Time 0.615 (0.643)	Data 0.001 (0.014)	Loss 3.0823 (3.6280)	
+Epoch: [18][80/100]	Time 0.638 (0.641)	Data 0.001 (0.012)	Loss 3.0961 (3.5539)	
+Epoch: [18][90/100]	Time 0.612 (0.639)	Data 0.000 (0.011)	Loss 2.9594 (3.4953)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.942)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.005)
+Test: 	Time 3.044	Prec@1 0.750	Prec@5 14.167
+KNN: Forward Pass Time   3.309
+KNN: Clustering time     0.089
+Number of proper clusters: 102
+Epoch: [19][10/100]	Time 0.614 (0.733)	Data 0.001 (0.102)	Loss 4.3972 (4.4891)	
+Epoch: [19][20/100]	Time 0.625 (0.675)	Data 0.001 (0.054)	Loss 3.7347 (4.2470)	
+Epoch: [19][30/100]	Time 0.634 (0.660)	Data 0.001 (0.037)	Loss 3.9264 (4.0845)	
+Epoch: [19][40/100]	Time 0.612 (0.650)	Data 0.001 (0.028)	Loss 3.5423 (3.9754)	
+Epoch: [19][50/100]	Time 0.608 (0.643)	Data 0.001 (0.023)	Loss 3.6024 (3.8861)	
+Epoch: [19][60/100]	Time 0.621 (0.638)	Data 0.001 (0.019)	Loss 3.6958 (3.8138)	
+Epoch: [19][70/100]	Time 0.633 (0.635)	Data 0.001 (0.016)	Loss 3.0996 (3.7400)	
+Epoch: [19][80/100]	Time 0.631 (0.633)	Data 0.001 (0.015)	Loss 3.4322 (3.7035)	
+Epoch: [19][90/100]	Time 0.641 (0.633)	Data 0.000 (0.013)	Loss 3.4073 (3.6618)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.303)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.948)
+Test: 	Time 2.987	Prec@1 8.562	Prec@5 12.896
+KNN: Forward Pass Time   3.139
+KNN: Clustering time     0.090
+Number of proper clusters: 102
+Epoch: [20][10/100]	Time 0.633 (0.714)	Data 0.001 (0.085)	Loss 4.1613 (4.4030)	
+Epoch: [20][20/100]	Time 0.637 (0.677)	Data 0.001 (0.045)	Loss 4.0627 (4.2636)	
+Epoch: [20][30/100]	Time 0.626 (0.661)	Data 0.001 (0.031)	Loss 3.6314 (4.1320)	
+Epoch: [20][40/100]	Time 0.624 (0.651)	Data 0.001 (0.023)	Loss 3.6545 (4.0255)	
+Epoch: [20][50/100]	Time 0.649 (0.647)	Data 0.001 (0.019)	Loss 3.5177 (3.9439)	
+Epoch: [20][60/100]	Time 0.627 (0.646)	Data 0.001 (0.016)	Loss 3.5705 (3.8870)	
+Epoch: [20][70/100]	Time 0.627 (0.644)	Data 0.001 (0.014)	Loss 3.4882 (3.8167)	
+Epoch: [20][80/100]	Time 0.620 (0.643)	Data 0.001 (0.012)	Loss 3.2691 (3.7665)	
+Epoch: [20][90/100]	Time 0.629 (0.642)	Data 0.000 (0.011)	Loss 3.2809 (3.7063)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.026)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.170)
+Test: 	Time 3.209	Prec@1 8.583	Prec@5 17.271
+KNN: Forward Pass Time   3.314
+KNN: Clustering time     0.107
+Number of proper clusters: 102
+Epoch: [21][10/100]	Time 0.625 (0.704)	Data 0.001 (0.073)	Loss 4.0356 (4.2286)	
+Epoch: [21][20/100]	Time 0.636 (0.674)	Data 0.001 (0.039)	Loss 3.8270 (4.0577)	
+Epoch: [21][30/100]	Time 0.616 (0.660)	Data 0.001 (0.026)	Loss 3.3049 (3.9114)	
+Epoch: [21][40/100]	Time 0.617 (0.647)	Data 0.001 (0.020)	Loss 3.7657 (3.8098)	
+Epoch: [21][50/100]	Time 0.627 (0.646)	Data 0.001 (0.016)	Loss 3.6598 (3.7483)	
+Epoch: [21][60/100]	Time 0.641 (0.643)	Data 0.001 (0.014)	Loss 3.1962 (3.6739)	
+Epoch: [21][70/100]	Time 0.630 (0.642)	Data 0.001 (0.012)	Loss 3.1675 (3.5958)	
+Epoch: [21][80/100]	Time 0.612 (0.641)	Data 0.001 (0.011)	Loss 2.8832 (3.5215)	
+Epoch: [21][90/100]	Time 0.660 (0.639)	Data 0.000 (0.009)	Loss 3.8223 (3.4838)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.167)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.111)
+Test: 	Time 3.152	Prec@1 15.688	Prec@5 23.979
+KNN: Forward Pass Time   3.321
+KNN: Clustering time     0.093
+Number of proper clusters: 102
+Epoch: [22][10/100]	Time 0.647 (0.728)	Data 0.001 (0.084)	Loss 3.6511 (4.2734)	
+Epoch: [22][20/100]	Time 0.640 (0.686)	Data 0.001 (0.045)	Loss 3.2135 (3.9179)	
+Epoch: [22][30/100]	Time 0.657 (0.673)	Data 0.001 (0.030)	Loss 3.3580 (3.7278)	
+Epoch: [22][40/100]	Time 0.642 (0.660)	Data 0.001 (0.023)	Loss 3.4756 (3.5916)	
+Epoch: [22][50/100]	Time 0.667 (0.657)	Data 0.001 (0.019)	Loss 2.7965 (3.4562)	
+Epoch: [22][60/100]	Time 0.650 (0.655)	Data 0.001 (0.016)	Loss 2.7812 (3.3654)	
+Epoch: [22][70/100]	Time 0.617 (0.652)	Data 0.001 (0.014)	Loss 2.7484 (3.3016)	
+Epoch: [22][80/100]	Time 0.643 (0.649)	Data 0.001 (0.012)	Loss 2.8511 (3.2597)	
+Epoch: [22][90/100]	Time 0.602 (0.646)	Data 0.000 (0.011)	Loss 2.7543 (3.2216)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.934)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.032)
+Test: 	Time 3.071	Prec@1 16.521	Prec@5 24.812
+KNN: Forward Pass Time   3.186
+KNN: Clustering time     0.089
+Number of proper clusters: 102
+Epoch: [23][10/100]	Time 0.642 (0.692)	Data 0.001 (0.072)	Loss 3.8653 (4.1882)	
+Epoch: [23][20/100]	Time 0.626 (0.663)	Data 0.001 (0.038)	Loss 3.4671 (4.0222)	
+Epoch: [23][30/100]	Time 0.636 (0.653)	Data 0.001 (0.026)	Loss 3.4988 (3.8782)	
+Epoch: [23][40/100]	Time 0.614 (0.643)	Data 0.001 (0.020)	Loss 2.8691 (3.6949)	
+Epoch: [23][50/100]	Time 0.639 (0.642)	Data 0.001 (0.016)	Loss 3.6700 (3.6040)	
+Epoch: [23][60/100]	Time 0.627 (0.641)	Data 0.001 (0.014)	Loss 3.0638 (3.5212)	
+Epoch: [23][70/100]	Time 0.636 (0.643)	Data 0.001 (0.012)	Loss 2.5931 (3.4614)	
+Epoch: [23][80/100]	Time 0.629 (0.642)	Data 0.001 (0.010)	Loss 2.7830 (3.4066)	
+Epoch: [23][90/100]	Time 0.598 (0.641)	Data 0.000 (0.009)	Loss 2.7644 (3.3796)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.856)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.944)
+Test: 	Time 2.984	Prec@1 6.958	Prec@5 7.229
+KNN: Forward Pass Time   3.234
+KNN: Clustering time     0.094
+Number of proper clusters: 102
+Epoch: [24][10/100]	Time 0.620 (0.716)	Data 0.001 (0.087)	Loss 3.7444 (4.0860)	
+Epoch: [24][20/100]	Time 0.604 (0.669)	Data 0.001 (0.046)	Loss 3.1408 (3.8663)	
+Epoch: [24][30/100]	Time 0.629 (0.652)	Data 0.001 (0.031)	Loss 3.3314 (3.7232)	
+Epoch: [24][40/100]	Time 0.631 (0.648)	Data 0.001 (0.024)	Loss 3.1848 (3.5917)	
+Epoch: [24][50/100]	Time 0.626 (0.645)	Data 0.001 (0.019)	Loss 3.1256 (3.4965)	
+Epoch: [24][60/100]	Time 0.656 (0.645)	Data 0.001 (0.016)	Loss 3.2422 (3.4224)	
+Epoch: [24][70/100]	Time 0.630 (0.642)	Data 0.001 (0.014)	Loss 2.8086 (3.3616)	
+Epoch: [24][80/100]	Time 0.631 (0.641)	Data 0.001 (0.012)	Loss 3.1399 (3.3007)	
+Epoch: [24][90/100]	Time 0.628 (0.641)	Data 0.000 (0.011)	Loss 2.8176 (3.2575)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.934)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.097)
+Test: 	Time 3.137	Prec@1 14.979	Prec@5 15.812
+KNN: Forward Pass Time   3.066
+KNN: Clustering time     0.091
+Number of proper clusters: 102
+Epoch: [25][10/100]	Time 0.629 (0.721)	Data 0.001 (0.084)	Loss 3.8918 (4.0068)	
+Epoch: [25][20/100]	Time 0.612 (0.688)	Data 0.001 (0.045)	Loss 3.4616 (3.7933)	
+Epoch: [25][30/100]	Time 0.621 (0.666)	Data 0.001 (0.030)	Loss 2.9671 (3.5927)	
+Epoch: [25][40/100]	Time 0.630 (0.657)	Data 0.001 (0.023)	Loss 2.8505 (3.4413)	
+Epoch: [25][50/100]	Time 0.636 (0.652)	Data 0.001 (0.019)	Loss 2.8845 (3.3268)	
+Epoch: [25][60/100]	Time 0.641 (0.649)	Data 0.001 (0.016)	Loss 2.9036 (3.2550)	
+Epoch: [25][70/100]	Time 0.599 (0.647)	Data 0.001 (0.014)	Loss 2.8672 (3.1899)	
+Epoch: [25][80/100]	Time 0.637 (0.644)	Data 0.001 (0.012)	Loss 2.8327 (3.1518)	
+Epoch: [25][90/100]	Time 0.635 (0.643)	Data 0.000 (0.011)	Loss 2.9617 (3.1041)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.694)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.023)
+Test: 	Time 3.061	Prec@1 10.938	Prec@5 32.021
+KNN: Forward Pass Time   3.237
+KNN: Clustering time     0.093
+Number of proper clusters: 102
+Epoch: [26][10/100]	Time 0.647 (0.726)	Data 0.001 (0.085)	Loss 4.4041 (4.4546)	
+Epoch: [26][20/100]	Time 0.639 (0.684)	Data 0.001 (0.045)	Loss 4.1540 (4.3541)	
+Epoch: [26][30/100]	Time 0.633 (0.664)	Data 0.001 (0.031)	Loss 3.9967 (4.2398)	
+Epoch: [26][40/100]	Time 0.633 (0.657)	Data 0.001 (0.024)	Loss 3.6121 (4.0905)	
+Epoch: [26][50/100]	Time 0.595 (0.651)	Data 0.001 (0.019)	Loss 3.2540 (3.9680)	
+Epoch: [26][60/100]	Time 0.611 (0.645)	Data 0.001 (0.016)	Loss 3.5947 (3.8523)	
+Epoch: [26][70/100]	Time 0.723 (0.643)	Data 0.001 (0.014)	Loss 3.2078 (3.7509)	
+Epoch: [26][80/100]	Time 0.626 (0.640)	Data 0.001 (0.012)	Loss 3.1185 (3.6850)	
+Epoch: [26][90/100]	Time 0.627 (0.640)	Data 0.000 (0.011)	Loss 3.3541 (3.6307)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.454)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.028)
+Test: 	Time 3.067	Prec@1 16.583	Prec@5 39.500
+KNN: Forward Pass Time   3.153
+KNN: Clustering time     0.098
+Number of proper clusters: 102
+Epoch: [27][10/100]	Time 0.636 (0.710)	Data 0.001 (0.076)	Loss 3.0622 (3.7022)	
+Epoch: [27][20/100]	Time 0.626 (0.674)	Data 0.001 (0.040)	Loss 2.9251 (3.3730)	
+Epoch: [27][30/100]	Time 0.610 (0.654)	Data 0.001 (0.027)	Loss 2.9503 (3.2110)	
+Epoch: [27][40/100]	Time 0.614 (0.648)	Data 0.001 (0.021)	Loss 2.6396 (3.1005)	
+Epoch: [27][50/100]	Time 0.648 (0.645)	Data 0.001 (0.017)	Loss 2.3620 (2.9967)	
+Epoch: [27][60/100]	Time 0.626 (0.644)	Data 0.001 (0.014)	Loss 2.4145 (2.9631)	
+Epoch: [27][70/100]	Time 0.611 (0.643)	Data 0.001 (0.012)	Loss 2.7231 (2.9333)	
+Epoch: [27][80/100]	Time 0.618 (0.640)	Data 0.001 (0.011)	Loss 2.1639 (2.8773)	
+Epoch: [27][90/100]	Time 0.625 (0.637)	Data 0.000 (0.010)	Loss 2.3284 (2.8353)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.844)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.199)
+Test: 	Time 3.239	Prec@1 10.458	Prec@5 28.646
+KNN: Forward Pass Time   3.343
+KNN: Clustering time     0.101
+Number of proper clusters: 102
+Epoch: [28][10/100]	Time 0.628 (0.724)	Data 0.001 (0.086)	Loss 4.1041 (4.3284)	
+Epoch: [28][20/100]	Time 0.651 (0.689)	Data 0.001 (0.045)	Loss 3.9767 (4.2270)	
+Epoch: [28][30/100]	Time 0.641 (0.672)	Data 0.001 (0.031)	Loss 4.0340 (4.1161)	
+Epoch: [28][40/100]	Time 0.636 (0.663)	Data 0.001 (0.024)	Loss 3.6782 (4.0089)	
+Epoch: [28][50/100]	Time 0.598 (0.654)	Data 0.001 (0.019)	Loss 3.3181 (3.8940)	
+Epoch: [28][60/100]	Time 0.616 (0.647)	Data 0.001 (0.016)	Loss 3.1737 (3.8140)	
+Epoch: [28][70/100]	Time 0.664 (0.644)	Data 0.001 (0.014)	Loss 3.0981 (3.7551)	
+Epoch: [28][80/100]	Time 0.668 (0.643)	Data 0.001 (0.012)	Loss 3.2764 (3.6812)	
+Epoch: [28][90/100]	Time 0.654 (0.643)	Data 0.000 (0.011)	Loss 3.1136 (3.6283)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.768)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.107)
+Test: 	Time 3.146	Prec@1 18.583	Prec@5 32.854
+KNN: Forward Pass Time   3.176
+KNN: Clustering time     0.155
+Number of proper clusters: 102
+Epoch: [29][10/100]	Time 0.655 (0.726)	Data 0.001 (0.087)	Loss 4.0454 (4.2583)	
+Epoch: [29][20/100]	Time 0.631 (0.684)	Data 0.001 (0.046)	Loss 3.7350 (4.0180)	
+Epoch: [29][30/100]	Time 0.617 (0.661)	Data 0.001 (0.031)	Loss 3.4102 (3.8235)	
+Epoch: [29][40/100]	Time 0.595 (0.652)	Data 0.001 (0.024)	Loss 3.2889 (3.6999)	
+Epoch: [29][50/100]	Time 0.638 (0.647)	Data 0.001 (0.019)	Loss 3.2364 (3.6024)	
+Epoch: [29][60/100]	Time 0.633 (0.645)	Data 0.001 (0.016)	Loss 2.7263 (3.5168)	
+Epoch: [29][70/100]	Time 0.649 (0.643)	Data 0.001 (0.014)	Loss 2.7554 (3.4342)	
+Epoch: [29][80/100]	Time 0.601 (0.642)	Data 0.001 (0.012)	Loss 3.0730 (3.3736)	
+Epoch: [29][90/100]	Time 0.627 (0.642)	Data 0.000 (0.011)	Loss 3.1362 (3.3405)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.080)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.344)
+Test: 	Time 3.382	Prec@1 16.625	Prec@5 42.188
+KNN: Forward Pass Time   3.377
+KNN: Clustering time     0.092
+Number of proper clusters: 102
+Epoch: [30][10/100]	Time 0.615 (0.714)	Data 0.001 (0.090)	Loss 3.9607 (3.9275)	
+Epoch: [30][20/100]	Time 0.635 (0.676)	Data 0.001 (0.047)	Loss 3.0940 (3.7141)	
+Epoch: [30][30/100]	Time 0.638 (0.662)	Data 0.001 (0.032)	Loss 3.1117 (3.5663)	
+Epoch: [30][40/100]	Time 0.620 (0.655)	Data 0.001 (0.025)	Loss 2.8061 (3.4689)	
+Epoch: [30][50/100]	Time 0.635 (0.651)	Data 0.001 (0.020)	Loss 2.8513 (3.3880)	
+Epoch: [30][60/100]	Time 0.645 (0.649)	Data 0.001 (0.017)	Loss 3.6762 (3.3241)	
+Epoch: [30][70/100]	Time 0.621 (0.647)	Data 0.001 (0.015)	Loss 3.8420 (3.2825)	
+Epoch: [30][80/100]	Time 0.630 (0.646)	Data 0.001 (0.013)	Loss 3.0123 (3.2883)	
+Epoch: [30][90/100]	Time 0.609 (0.644)	Data 0.000 (0.011)	Loss 3.2177 (3.2609)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.006)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.928)
+Test: 	Time 2.967	Prec@1 16.083	Prec@5 30.375
+KNN: Forward Pass Time   3.256
+KNN: Clustering time     0.113
+Number of proper clusters: 102
+Epoch: [31][10/100]	Time 0.619 (0.711)	Data 0.001 (0.081)	Loss 3.2565 (3.6882)	
+Epoch: [31][20/100]	Time 0.624 (0.674)	Data 0.001 (0.043)	Loss 3.2603 (3.4143)	
+Epoch: [31][30/100]	Time 0.620 (0.661)	Data 0.001 (0.029)	Loss 2.6434 (3.2360)	
+Epoch: [31][40/100]	Time 0.655 (0.653)	Data 0.001 (0.022)	Loss 2.6424 (3.1229)	
+Epoch: [31][50/100]	Time 0.608 (0.646)	Data 0.001 (0.018)	Loss 2.6086 (3.0123)	
+Epoch: [31][60/100]	Time 0.661 (0.643)	Data 0.001 (0.015)	Loss 2.7079 (2.9382)	
+Epoch: [31][70/100]	Time 0.653 (0.641)	Data 0.001 (0.013)	Loss 2.7055 (2.8719)	
+Epoch: [31][80/100]	Time 0.651 (0.641)	Data 0.001 (0.012)	Loss 2.4759 (2.8076)	
+Epoch: [31][90/100]	Time 0.652 (0.641)	Data 0.000 (0.010)	Loss 2.2772 (2.7412)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.245)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.045)
+Test: 	Time 3.084	Prec@1 26.417	Prec@5 50.250
+KNN: Forward Pass Time   3.301
+KNN: Clustering time     0.160
+Number of proper clusters: 102
+Epoch: [32][10/100]	Time 0.642 (0.712)	Data 0.001 (0.087)	Loss 3.5356 (3.7398)	
+Epoch: [32][20/100]	Time 0.633 (0.677)	Data 0.001 (0.046)	Loss 3.2611 (3.4956)	
+Epoch: [32][30/100]	Time 0.617 (0.660)	Data 0.001 (0.031)	Loss 2.7276 (3.3440)	
+Epoch: [32][40/100]	Time 0.599 (0.653)	Data 0.001 (0.024)	Loss 2.7951 (3.2295)	
+Epoch: [32][50/100]	Time 0.620 (0.645)	Data 0.001 (0.019)	Loss 3.1023 (3.1543)	
+Epoch: [32][60/100]	Time 0.629 (0.641)	Data 0.001 (0.016)	Loss 3.4375 (3.1131)	
+Epoch: [32][70/100]	Time 0.647 (0.639)	Data 0.001 (0.014)	Loss 2.4726 (3.0775)	
+Epoch: [32][80/100]	Time 0.646 (0.639)	Data 0.001 (0.012)	Loss 2.9445 (3.0235)	
+Epoch: [32][90/100]	Time 0.650 (0.639)	Data 0.000 (0.011)	Loss 2.3462 (2.9688)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.075)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.392)
+Test: 	Time 3.432	Prec@1 20.812	Prec@5 42.062
+KNN: Forward Pass Time   3.198
+KNN: Clustering time     0.096
+Number of proper clusters: 102
+Epoch: [33][10/100]	Time 0.657 (0.714)	Data 0.001 (0.075)	Loss 4.0625 (3.9682)	
+Epoch: [33][20/100]	Time 0.640 (0.676)	Data 0.001 (0.039)	Loss 3.5276 (3.8217)	
+Epoch: [33][30/100]	Time 0.630 (0.660)	Data 0.001 (0.027)	Loss 3.0854 (3.6839)	
+Epoch: [33][40/100]	Time 0.608 (0.653)	Data 0.001 (0.021)	Loss 2.8353 (3.5604)	
+Epoch: [33][50/100]	Time 0.635 (0.651)	Data 0.001 (0.017)	Loss 3.1708 (3.4786)	
+Epoch: [33][60/100]	Time 0.626 (0.647)	Data 0.001 (0.014)	Loss 2.8402 (3.4126)	
+Epoch: [33][70/100]	Time 0.622 (0.643)	Data 0.001 (0.012)	Loss 3.0775 (3.3306)	
+Epoch: [33][80/100]	Time 0.652 (0.643)	Data 0.001 (0.011)	Loss 2.9854 (3.2668)	
+Epoch: [33][90/100]	Time 0.611 (0.640)	Data 0.000 (0.010)	Loss 3.0049 (3.2203)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.808)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.040)
+Test: 	Time 3.081	Prec@1 18.021	Prec@5 46.042
+KNN: Forward Pass Time   3.311
+KNN: Clustering time     0.090
+Number of proper clusters: 102
+Epoch: [34][10/100]	Time 0.657 (0.716)	Data 0.001 (0.076)	Loss 3.8432 (4.0385)	
+Epoch: [34][20/100]	Time 0.637 (0.681)	Data 0.001 (0.040)	Loss 3.1338 (3.7431)	
+Epoch: [34][30/100]	Time 0.629 (0.666)	Data 0.001 (0.028)	Loss 2.9182 (3.4901)	
+Epoch: [34][40/100]	Time 0.636 (0.659)	Data 0.001 (0.021)	Loss 2.7024 (3.3118)	
+Epoch: [34][50/100]	Time 0.608 (0.655)	Data 0.001 (0.017)	Loss 2.6358 (3.1945)	
+Epoch: [34][60/100]	Time 0.604 (0.651)	Data 0.001 (0.014)	Loss 2.4566 (3.0867)	
+Epoch: [34][70/100]	Time 0.600 (0.648)	Data 0.001 (0.012)	Loss 2.4048 (3.0022)	
+Epoch: [34][80/100]	Time 0.622 (0.644)	Data 0.001 (0.011)	Loss 2.3568 (2.9289)	
+Epoch: [34][90/100]	Time 0.609 (0.641)	Data 0.000 (0.010)	Loss 2.3152 (2.8801)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.028)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.008)
+Test: 	Time 3.047	Prec@1 16.438	Prec@5 35.521
+KNN: Forward Pass Time   3.161
+KNN: Clustering time     0.109
+Number of proper clusters: 102
+Epoch: [35][10/100]	Time 0.632 (0.701)	Data 0.001 (0.077)	Loss 3.6170 (3.8432)	
+Epoch: [35][20/100]	Time 0.651 (0.671)	Data 0.001 (0.041)	Loss 3.3220 (3.5961)	
+Epoch: [35][30/100]	Time 0.578 (0.656)	Data 0.001 (0.028)	Loss 3.2725 (3.4401)	
+Epoch: [35][40/100]	Time 0.623 (0.646)	Data 0.001 (0.021)	Loss 3.1554 (3.3705)	
+Epoch: [35][50/100]	Time 0.643 (0.643)	Data 0.001 (0.017)	Loss 3.2128 (3.3359)	
+Epoch: [35][60/100]	Time 0.626 (0.643)	Data 0.001 (0.014)	Loss 2.4281 (3.2806)	
+Epoch: [35][70/100]	Time 0.635 (0.642)	Data 0.001 (0.012)	Loss 3.0615 (3.2240)	
+Epoch: [35][80/100]	Time 0.623 (0.640)	Data 0.001 (0.011)	Loss 2.4619 (3.1571)	
+Epoch: [35][90/100]	Time 0.640 (0.640)	Data 0.000 (0.010)	Loss 2.4470 (3.1183)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.777)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.035)
+Test: 	Time 3.074	Prec@1 18.271	Prec@5 46.604
+KNN: Forward Pass Time   3.331
+KNN: Clustering time     0.143
+Number of proper clusters: 102
+Epoch: [36][10/100]	Time 0.631 (0.715)	Data 0.001 (0.091)	Loss 3.8092 (3.8420)	
+Epoch: [36][20/100]	Time 0.612 (0.674)	Data 0.001 (0.048)	Loss 3.1218 (3.5822)	
+Epoch: [36][30/100]	Time 0.630 (0.662)	Data 0.001 (0.033)	Loss 3.2363 (3.4579)	
+Epoch: [36][40/100]	Time 0.634 (0.656)	Data 0.001 (0.025)	Loss 2.9474 (3.3043)	
+Epoch: [36][50/100]	Time 0.651 (0.653)	Data 0.001 (0.020)	Loss 3.2492 (3.2420)	
+Epoch: [36][60/100]	Time 0.624 (0.649)	Data 0.001 (0.017)	Loss 2.5855 (3.1860)	
+Epoch: [36][70/100]	Time 0.602 (0.647)	Data 0.001 (0.015)	Loss 2.5761 (3.1050)	
+Epoch: [36][80/100]	Time 0.618 (0.647)	Data 0.001 (0.013)	Loss 2.1746 (3.0240)	
+Epoch: [36][90/100]	Time 0.572 (0.641)	Data 0.000 (0.012)	Loss 2.4984 (2.9623)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.034)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.105)
+Test: 	Time 3.144	Prec@1 17.375	Prec@5 40.479
+KNN: Forward Pass Time   3.282
+KNN: Clustering time     0.137
+Number of proper clusters: 102
+Epoch: [37][10/100]	Time 0.622 (0.731)	Data 0.001 (0.097)	Loss 3.8839 (4.0603)	
+Epoch: [37][20/100]	Time 0.638 (0.683)	Data 0.001 (0.051)	Loss 3.4019 (3.8032)	
+Epoch: [37][30/100]	Time 0.614 (0.662)	Data 0.001 (0.035)	Loss 3.1664 (3.6222)	
+Epoch: [37][40/100]	Time 0.624 (0.655)	Data 0.001 (0.026)	Loss 3.0476 (3.4940)	
+Epoch: [37][50/100]	Time 0.654 (0.652)	Data 0.001 (0.021)	Loss 2.6808 (3.3886)	
+Epoch: [37][60/100]	Time 0.636 (0.651)	Data 0.001 (0.018)	Loss 2.9653 (3.3121)	
+Epoch: [37][70/100]	Time 0.651 (0.648)	Data 0.001 (0.016)	Loss 3.1666 (3.2425)	
+Epoch: [37][80/100]	Time 0.607 (0.645)	Data 0.001 (0.014)	Loss 2.3825 (3.1659)	
+Epoch: [37][90/100]	Time 0.640 (0.644)	Data 0.000 (0.012)	Loss 2.5158 (3.1045)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.819)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.005)
+Test: 	Time 3.042	Prec@1 16.833	Prec@5 44.667
+KNN: Forward Pass Time   3.286
+KNN: Clustering time     0.088
+Number of proper clusters: 102
+Epoch: [38][10/100]	Time 0.628 (0.711)	Data 0.001 (0.086)	Loss 3.9489 (4.1120)	
+Epoch: [38][20/100]	Time 0.633 (0.670)	Data 0.001 (0.045)	Loss 3.4857 (3.9367)	
+Epoch: [38][30/100]	Time 0.630 (0.660)	Data 0.001 (0.031)	Loss 3.3767 (3.7513)	
+Epoch: [38][40/100]	Time 0.610 (0.652)	Data 0.001 (0.024)	Loss 2.9841 (3.5794)	
+Epoch: [38][50/100]	Time 0.664 (0.648)	Data 0.001 (0.019)	Loss 2.9456 (3.4687)	
+Epoch: [38][60/100]	Time 0.657 (0.646)	Data 0.001 (0.016)	Loss 2.3434 (3.3773)	
+Epoch: [38][70/100]	Time 0.634 (0.643)	Data 0.001 (0.014)	Loss 2.8258 (3.2956)	
+Epoch: [38][80/100]	Time 0.648 (0.640)	Data 0.001 (0.012)	Loss 2.9752 (3.2587)	
+Epoch: [38][90/100]	Time 0.630 (0.639)	Data 0.000 (0.011)	Loss 2.8075 (3.2013)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.954)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.016)
+Test: 	Time 3.055	Prec@1 15.542	Prec@5 31.625
+KNN: Forward Pass Time   3.391
+KNN: Clustering time     0.097
+Number of proper clusters: 102
+Epoch: [39][10/100]	Time 0.645 (0.710)	Data 0.002 (0.083)	Loss 2.8268 (3.4753)	
+Epoch: [39][20/100]	Time 0.651 (0.676)	Data 0.001 (0.044)	Loss 2.9121 (3.2429)	
+Epoch: [39][30/100]	Time 0.639 (0.661)	Data 0.001 (0.030)	Loss 2.7461 (3.0765)	
+Epoch: [39][40/100]	Time 0.648 (0.655)	Data 0.001 (0.023)	Loss 2.9566 (2.8926)	
+Epoch: [39][50/100]	Time 0.629 (0.650)	Data 0.001 (0.018)	Loss 2.1443 (2.8238)	
+Epoch: [39][60/100]	Time 0.652 (0.645)	Data 0.001 (0.016)	Loss 2.5449 (2.7304)	
+Epoch: [39][70/100]	Time 0.627 (0.644)	Data 0.001 (0.013)	Loss 1.9519 (2.6909)	
+Epoch: [39][80/100]	Time 0.643 (0.643)	Data 0.001 (0.012)	Loss 2.7712 (2.6571)	
+Epoch: [39][90/100]	Time 0.707 (0.642)	Data 0.000 (0.011)	Loss 2.7418 (2.6113)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.924)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.928)
+Test: 	Time 2.970	Prec@1 23.312	Prec@5 55.854
+KNN: Forward Pass Time   3.195
+KNN: Clustering time     0.093
+Number of proper clusters: 102
+Epoch: [40][10/100]	Time 0.633 (0.713)	Data 0.001 (0.077)	Loss 4.0960 (4.0023)	
+Epoch: [40][20/100]	Time 0.640 (0.674)	Data 0.001 (0.040)	Loss 4.0902 (4.1009)	
+Epoch: [40][30/100]	Time 0.622 (0.656)	Data 0.001 (0.028)	Loss 3.7718 (4.0218)	
+Epoch: [40][40/100]	Time 0.638 (0.651)	Data 0.001 (0.021)	Loss 3.3729 (3.8914)	
+Epoch: [40][50/100]	Time 0.642 (0.648)	Data 0.001 (0.017)	Loss 3.6197 (3.7762)	
+Epoch: [40][60/100]	Time 0.633 (0.646)	Data 0.001 (0.014)	Loss 2.8578 (3.6403)	
+Epoch: [40][70/100]	Time 0.607 (0.642)	Data 0.001 (0.012)	Loss 2.4437 (3.5443)	
+Epoch: [40][80/100]	Time 0.624 (0.638)	Data 0.001 (0.011)	Loss 2.5027 (3.4292)	
+Epoch: [40][90/100]	Time 0.653 (0.637)	Data 0.000 (0.010)	Loss 2.8006 (3.3458)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.949)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.051)
+Test: 	Time 3.092	Prec@1 15.812	Prec@5 30.625
+KNN: Forward Pass Time   3.401
+KNN: Clustering time     0.092
+Number of proper clusters: 102
+Epoch: [41][10/100]	Time 0.649 (0.708)	Data 0.001 (0.074)	Loss 3.8288 (4.0048)	
+Epoch: [41][20/100]	Time 0.551 (0.656)	Data 0.001 (0.039)	Loss 3.1149 (3.7691)	
+Epoch: [41][30/100]	Time 0.573 (0.625)	Data 0.001 (0.027)	Loss 3.1493 (3.6363)	
+Epoch: [41][40/100]	Time 0.683 (0.629)	Data 0.001 (0.020)	Loss 3.5265 (3.5160)	
+Epoch: [41][50/100]	Time 0.615 (0.627)	Data 0.001 (0.016)	Loss 2.7469 (3.3855)	
+Epoch: [41][60/100]	Time 0.628 (0.626)	Data 0.001 (0.014)	Loss 2.8748 (3.2970)	
+Epoch: [41][70/100]	Time 0.621 (0.627)	Data 0.001 (0.012)	Loss 2.3987 (3.2355)	
+Epoch: [41][80/100]	Time 0.604 (0.627)	Data 0.001 (0.011)	Loss 2.8247 (3.1885)	
+Epoch: [41][90/100]	Time 0.602 (0.628)	Data 0.000 (0.009)	Loss 2.4018 (3.1361)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.645)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.044)
+Test: 	Time 3.085	Prec@1 32.542	Prec@5 66.771
+KNN: Forward Pass Time   3.218
+KNN: Clustering time     0.094
+Number of proper clusters: 102
+Epoch: [42][10/100]	Time 0.636 (0.745)	Data 0.001 (0.089)	Loss 3.2659 (3.6651)	
+Epoch: [42][20/100]	Time 0.640 (0.689)	Data 0.001 (0.047)	Loss 2.7086 (3.3784)	
+Epoch: [42][30/100]	Time 0.628 (0.672)	Data 0.001 (0.032)	Loss 3.3650 (3.2942)	
+Epoch: [42][40/100]	Time 0.620 (0.658)	Data 0.001 (0.024)	Loss 2.7061 (3.1899)	
+Epoch: [42][50/100]	Time 0.614 (0.649)	Data 0.001 (0.020)	Loss 2.1991 (3.0956)	
+Epoch: [42][60/100]	Time 0.645 (0.645)	Data 0.001 (0.017)	Loss 2.6455 (3.0506)	
+Epoch: [42][70/100]	Time 0.603 (0.643)	Data 0.001 (0.014)	Loss 2.5573 (3.0170)	
+Epoch: [42][80/100]	Time 0.647 (0.643)	Data 0.001 (0.013)	Loss 2.6193 (2.9616)	
+Epoch: [42][90/100]	Time 0.649 (0.642)	Data 0.000 (0.011)	Loss 2.4456 (2.9064)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.874)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.237)
+Test: 	Time 3.277	Prec@1 16.208	Prec@5 38.646
+KNN: Forward Pass Time   3.168
+KNN: Clustering time     0.089
+Number of proper clusters: 102
+Epoch: [43][10/100]	Time 0.615 (0.725)	Data 0.001 (0.074)	Loss 3.9399 (4.2482)	
+Epoch: [43][20/100]	Time 0.690 (0.678)	Data 0.001 (0.039)	Loss 3.2527 (4.0334)	
+Epoch: [43][30/100]	Time 0.640 (0.666)	Data 0.001 (0.027)	Loss 3.7858 (3.8609)	
+Epoch: [43][40/100]	Time 0.632 (0.659)	Data 0.001 (0.020)	Loss 2.8976 (3.7076)	
+Epoch: [43][50/100]	Time 0.610 (0.654)	Data 0.001 (0.017)	Loss 2.9176 (3.5946)	
+Epoch: [43][60/100]	Time 0.646 (0.649)	Data 0.001 (0.014)	Loss 2.7842 (3.4822)	
+Epoch: [43][70/100]	Time 0.636 (0.649)	Data 0.001 (0.012)	Loss 2.6770 (3.4009)	
+Epoch: [43][80/100]	Time 0.636 (0.647)	Data 0.001 (0.011)	Loss 2.7162 (3.3325)	
+Epoch: [43][90/100]	Time 0.627 (0.646)	Data 0.000 (0.010)	Loss 2.7414 (3.2809)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.034)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.264)
+Test: 	Time 3.302	Prec@1 8.333	Prec@5 8.333
+KNN: Forward Pass Time   3.199
+KNN: Clustering time     0.093
+Number of proper clusters: 102
+Epoch: [44][10/100]	Time 0.616 (0.700)	Data 0.001 (0.081)	Loss 3.7704 (4.1904)	
+Epoch: [44][20/100]	Time 0.623 (0.660)	Data 0.001 (0.043)	Loss 3.3883 (3.9727)	
+Epoch: [44][30/100]	Time 0.615 (0.644)	Data 0.001 (0.029)	Loss 2.9855 (3.7168)	
+Epoch: [44][40/100]	Time 0.628 (0.638)	Data 0.001 (0.022)	Loss 3.0969 (3.5497)	
+Epoch: [44][50/100]	Time 0.612 (0.637)	Data 0.001 (0.018)	Loss 2.8028 (3.4384)	
+Epoch: [44][60/100]	Time 0.617 (0.633)	Data 0.001 (0.015)	Loss 3.4743 (3.3417)	
+Epoch: [44][70/100]	Time 0.619 (0.631)	Data 0.001 (0.013)	Loss 2.3106 (3.2353)	
+Epoch: [44][80/100]	Time 0.609 (0.631)	Data 0.001 (0.012)	Loss 2.3712 (3.1508)	
+Epoch: [44][90/100]	Time 0.619 (0.629)	Data 0.000 (0.010)	Loss 2.8154 (3.0874)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.278)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.000)
+Test: 	Time 3.038	Prec@1 8.854	Prec@5 10.792
+KNN: Forward Pass Time   3.200
+KNN: Clustering time     0.093
+Number of proper clusters: 102
+Epoch: [45][10/100]	Time 0.602 (0.686)	Data 0.001 (0.072)	Loss 3.7219 (4.0399)	
+Epoch: [45][20/100]	Time 0.627 (0.653)	Data 0.001 (0.038)	Loss 4.1206 (3.9700)	
+Epoch: [45][30/100]	Time 0.636 (0.651)	Data 0.001 (0.026)	Loss 3.6142 (3.8279)	
+Epoch: [45][40/100]	Time 0.601 (0.644)	Data 0.001 (0.020)	Loss 3.0413 (3.6935)	
+Epoch: [45][50/100]	Time 0.620 (0.637)	Data 0.001 (0.016)	Loss 3.3216 (3.6139)	
+Epoch: [45][60/100]	Time 0.634 (0.634)	Data 0.001 (0.014)	Loss 2.9173 (3.5304)	
+Epoch: [45][70/100]	Time 0.637 (0.634)	Data 0.001 (0.012)	Loss 3.2160 (3.4910)	
+Epoch: [45][80/100]	Time 0.647 (0.633)	Data 0.001 (0.010)	Loss 3.2629 (3.4836)	
+Epoch: [45][90/100]	Time 0.655 (0.633)	Data 0.000 (0.009)	Loss 2.8549 (3.4586)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 11.897)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.945)
+Test: 	Time 2.983	Prec@1 8.458	Prec@5 16.708
+KNN: Forward Pass Time   3.168
+KNN: Clustering time     0.092
+Number of proper clusters: 102
+Epoch: [46][10/100]	Time 0.635 (0.719)	Data 0.001 (0.084)	Loss 3.8144 (3.9599)	
+Epoch: [46][20/100]	Time 0.738 (0.685)	Data 0.001 (0.044)	Loss 4.2389 (3.9428)	
+Epoch: [46][30/100]	Time 0.649 (0.669)	Data 0.001 (0.030)	Loss 3.7674 (3.8778)	
+Epoch: [46][40/100]	Time 0.654 (0.662)	Data 0.001 (0.023)	Loss 3.2008 (3.7503)	
+Epoch: [46][50/100]	Time 0.590 (0.653)	Data 0.001 (0.019)	Loss 3.2065 (3.6546)	
+Epoch: [46][60/100]	Time 0.622 (0.648)	Data 0.001 (0.016)	Loss 2.8958 (3.5746)	
+Epoch: [46][70/100]	Time 0.624 (0.646)	Data 0.001 (0.014)	Loss 2.9287 (3.5203)	
+Epoch: [46][80/100]	Time 0.620 (0.641)	Data 0.001 (0.012)	Loss 3.0234 (3.4813)	
+Epoch: [46][90/100]	Time 0.646 (0.641)	Data 0.000 (0.011)	Loss 2.5436 (3.4231)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.096)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.053)
+Test: 	Time 3.093	Prec@1 16.146	Prec@5 25.021
+KNN: Forward Pass Time   3.462
+KNN: Clustering time     0.115
+Number of proper clusters: 102
+Epoch: [47][10/100]	Time 0.596 (0.715)	Data 0.001 (0.081)	Loss 3.6481 (3.9694)	
+Epoch: [47][20/100]	Time 0.657 (0.683)	Data 0.001 (0.043)	Loss 3.3591 (3.7686)	
+Epoch: [47][30/100]	Time 0.631 (0.662)	Data 0.001 (0.029)	Loss 2.8472 (3.5785)	
+Epoch: [47][40/100]	Time 0.635 (0.656)	Data 0.001 (0.022)	Loss 2.8370 (3.4378)	
+Epoch: [47][50/100]	Time 0.620 (0.647)	Data 0.001 (0.018)	Loss 2.5750 (3.3292)	
+Epoch: [47][60/100]	Time 0.609 (0.642)	Data 0.001 (0.015)	Loss 2.5609 (3.2562)	
+Epoch: [47][70/100]	Time 0.617 (0.638)	Data 0.001 (0.013)	Loss 2.5292 (3.1989)	
+Epoch: [47][80/100]	Time 0.601 (0.636)	Data 0.001 (0.012)	Loss 2.6828 (3.1392)	
+Epoch: [47][90/100]	Time 0.618 (0.635)	Data 0.000 (0.010)	Loss 2.5128 (3.0671)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.091)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.977)
+Test: 	Time 3.015	Prec@1 13.625	Prec@5 21.542
+KNN: Forward Pass Time   3.285
+KNN: Clustering time     0.093
+Number of proper clusters: 102
+Epoch: [48][10/100]	Time 0.646 (0.729)	Data 0.001 (0.089)	Loss 4.4810 (4.2983)	
+Epoch: [48][20/100]	Time 0.642 (0.685)	Data 0.001 (0.047)	Loss 3.8668 (4.1272)	
+Epoch: [48][30/100]	Time 0.603 (0.662)	Data 0.001 (0.032)	Loss 3.5279 (3.9409)	
+Epoch: [48][40/100]	Time 0.634 (0.655)	Data 0.001 (0.024)	Loss 3.2813 (3.8029)	
+Epoch: [48][50/100]	Time 0.660 (0.653)	Data 0.001 (0.020)	Loss 3.1014 (3.7010)	
+Epoch: [48][60/100]	Time 0.649 (0.652)	Data 0.001 (0.017)	Loss 2.9044 (3.6009)	
+Epoch: [48][70/100]	Time 0.630 (0.649)	Data 0.001 (0.014)	Loss 3.2654 (3.5146)	
+Epoch: [48][80/100]	Time 0.624 (0.647)	Data 0.001 (0.013)	Loss 2.6929 (3.4406)	
+Epoch: [48][90/100]	Time 0.641 (0.646)	Data 0.000 (0.011)	Loss 2.7282 (3.4039)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 13.204)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.030)
+Test: 	Time 3.070	Prec@1 16.417	Prec@5 26.250
+KNN: Forward Pass Time   5.307
+KNN: Clustering time     0.104
+Number of proper clusters: 102
+Epoch: [49][10/100]	Time 0.635 (0.775)	Data 0.001 (0.143)	Loss 3.9211 (3.8929)	
+Epoch: [49][20/100]	Time 0.634 (0.719)	Data 0.001 (0.075)	Loss 3.3880 (3.6492)	
+Epoch: [49][30/100]	Time 0.612 (0.690)	Data 0.001 (0.051)	Loss 3.5881 (3.4945)	
+Epoch: [49][40/100]	Time 0.605 (0.676)	Data 0.001 (0.039)	Loss 3.3551 (3.4115)	
+Epoch: [49][50/100]	Time 0.631 (0.665)	Data 0.001 (0.031)	Loss 2.5574 (3.3158)	
+Epoch: [49][60/100]	Time 0.658 (0.662)	Data 0.001 (0.026)	Loss 2.7616 (3.2597)	
+Epoch: [49][70/100]	Time 0.603 (0.659)	Data 0.001 (0.023)	Loss 2.5599 (3.1813)	
+Epoch: [49][80/100]	Time 0.625 (0.657)	Data 0.001 (0.020)	Loss 2.8194 (3.0944)	
+Epoch: [49][90/100]	Time 0.624 (0.654)	Data 0.000 (0.018)	Loss 2.3686 (3.0230)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 14.931)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.246)
+Test: 	Time 3.288	Prec@1 23.750	Prec@5 41.542
+KNN: Forward Pass Time   6.184
+KNN: Clustering time     0.144
+Number of proper clusters: 102
+Epoch: [50][10/100]	Time 0.625 (0.735)	Data 0.001 (0.106)	Loss 3.9572 (3.9848)	
+Epoch: [50][20/100]	Time 0.640 (0.691)	Data 0.001 (0.056)	Loss 3.6940 (3.7743)	
+Epoch: [50][30/100]	Time 0.597 (0.666)	Data 0.001 (0.038)	Loss 3.3911 (3.6759)	
+Epoch: [50][40/100]	Time 0.626 (0.654)	Data 0.001 (0.029)	Loss 2.9251 (3.5525)	
+Epoch: [50][50/100]	Time 0.629 (0.651)	Data 0.001 (0.023)	Loss 3.4337 (3.4605)	
+Epoch: [50][60/100]	Time 0.634 (0.648)	Data 0.001 (0.020)	Loss 3.3633 (3.4181)	
+Epoch: [50][70/100]	Time 0.637 (0.646)	Data 0.001 (0.017)	Loss 3.4074 (3.3842)	
+Epoch: [50][80/100]	Time 0.610 (0.645)	Data 0.001 (0.015)	Loss 3.2381 (3.3649)	
+Epoch: [50][90/100]	Time 0.633 (0.646)	Data 0.000 (0.013)	Loss 2.9422 (3.3408)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 16.905)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.190)
+Test: 	Time 3.230	Prec@1 18.000	Prec@5 38.854
+KNN: Forward Pass Time   5.085
+KNN: Clustering time     0.126
+Number of proper clusters: 102
+Epoch: [51][10/100]	Time 0.634 (0.780)	Data 0.001 (0.160)	Loss 3.4722 (3.7592)	
+Epoch: [51][20/100]	Time 0.649 (0.701)	Data 0.001 (0.084)	Loss 3.0988 (3.6747)	
+Epoch: [51][30/100]	Time 0.622 (0.680)	Data 0.001 (0.057)	Loss 3.6350 (3.5719)	
+Epoch: [51][40/100]	Time 0.645 (0.671)	Data 0.001 (0.043)	Loss 2.5528 (3.4555)	
+Epoch: [51][50/100]	Time 0.596 (0.662)	Data 0.001 (0.035)	Loss 2.9615 (3.3830)	
+Epoch: [51][60/100]	Time 0.658 (0.662)	Data 0.001 (0.029)	Loss 2.9313 (3.2957)	
+Epoch: [51][70/100]	Time 0.566 (0.651)	Data 0.001 (0.025)	Loss 3.0631 (3.2475)	
+Epoch: [51][80/100]	Time 0.655 (0.648)	Data 0.001 (0.022)	Loss 2.8425 (3.1850)	
+Epoch: [51][90/100]	Time 0.629 (0.648)	Data 0.000 (0.020)	Loss 3.1698 (3.1522)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 15.711)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.331)
+Test: 	Time 3.370	Prec@1 27.875	Prec@5 45.167
+KNN: Forward Pass Time   4.660
+KNN: Clustering time     0.140
+Number of proper clusters: 102
+Epoch: [52][10/100]	Time 0.631 (0.738)	Data 0.001 (0.126)	Loss 4.4620 (4.5227)	
+Epoch: [52][20/100]	Time 0.615 (0.680)	Data 0.001 (0.066)	Loss 4.1365 (4.3834)	
+Epoch: [52][30/100]	Time 0.665 (0.660)	Data 0.001 (0.045)	Loss 4.0495 (4.3002)	
+Epoch: [52][40/100]	Time 0.609 (0.654)	Data 0.001 (0.034)	Loss 3.9093 (4.1937)	
+Epoch: [52][50/100]	Time 0.636 (0.650)	Data 0.001 (0.028)	Loss 3.8589 (4.1021)	
+Epoch: [52][60/100]	Time 0.616 (0.647)	Data 0.001 (0.023)	Loss 3.3645 (4.0056)	
+Epoch: [52][70/100]	Time 0.615 (0.642)	Data 0.001 (0.020)	Loss 3.8032 (3.9441)	
+Epoch: [52][80/100]	Time 0.629 (0.640)	Data 0.001 (0.018)	Loss 2.8446 (3.8693)	
+Epoch: [52][90/100]	Time 0.622 (0.639)	Data 0.000 (0.016)	Loss 2.8498 (3.7990)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 14.234)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.053)
+Test: 	Time 3.092	Prec@1 8.062	Prec@5 8.167
+KNN: Forward Pass Time   4.983
+KNN: Clustering time     0.105
+Number of proper clusters: 102
+Epoch: [53][10/100]	Time 0.619 (0.767)	Data 0.000 (0.129)	Loss 3.9148 (4.1946)	
+Epoch: [53][20/100]	Time 0.638 (0.705)	Data 0.001 (0.068)	Loss 3.2044 (3.9398)	
+Epoch: [53][30/100]	Time 0.633 (0.683)	Data 0.001 (0.046)	Loss 3.5467 (3.7861)	
+Epoch: [53][40/100]	Time 0.632 (0.671)	Data 0.001 (0.035)	Loss 3.0539 (3.6111)	
+Epoch: [53][50/100]	Time 0.646 (0.666)	Data 0.001 (0.028)	Loss 3.1688 (3.4791)	
+Epoch: [53][60/100]	Time 0.607 (0.659)	Data 0.001 (0.024)	Loss 2.3921 (3.3782)	
+Epoch: [53][70/100]	Time 0.621 (0.653)	Data 0.001 (0.020)	Loss 2.8392 (3.2854)	
+Epoch: [53][80/100]	Time 0.628 (0.651)	Data 0.001 (0.018)	Loss 3.7914 (3.2358)	
+Epoch: [53][90/100]	Time 0.622 (0.648)	Data 0.000 (0.016)	Loss 2.3340 (3.1991)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 22.391)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.177)
+Test: 	Time 3.218	Prec@1 6.729	Prec@5 7.312
+KNN: Forward Pass Time   5.956
+KNN: Clustering time     0.108
+Number of proper clusters: 102
+Epoch: [54][10/100]	Time 0.627 (0.786)	Data 0.001 (0.149)	Loss 3.5809 (3.9216)	
+Epoch: [54][20/100]	Time 0.612 (0.710)	Data 0.001 (0.078)	Loss 3.0395 (3.6341)	
+Epoch: [54][30/100]	Time 0.554 (0.679)	Data 0.001 (0.053)	Loss 3.1754 (3.4998)	
+Epoch: [54][40/100]	Time 0.657 (0.662)	Data 0.001 (0.040)	Loss 3.0941 (3.4011)	
+Epoch: [54][50/100]	Time 0.622 (0.655)	Data 0.001 (0.033)	Loss 2.9854 (3.3233)	
+Epoch: [54][60/100]	Time 0.658 (0.654)	Data 0.001 (0.027)	Loss 2.8392 (3.2723)	
+Epoch: [54][70/100]	Time 0.610 (0.650)	Data 0.001 (0.024)	Loss 2.8389 (3.2112)	
+Epoch: [54][80/100]	Time 0.691 (0.651)	Data 0.001 (0.021)	Loss 2.8830 (3.1444)	
+Epoch: [54][90/100]	Time 0.644 (0.651)	Data 0.000 (0.018)	Loss 2.3089 (3.0993)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 17.086)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.124)
+Test: 	Time 3.163	Prec@1 17.708	Prec@5 36.833
+KNN: Forward Pass Time   7.396
+KNN: Clustering time     0.106
+Number of proper clusters: 102
+Epoch: [55][10/100]	Time 0.627 (0.728)	Data 0.001 (0.101)	Loss 3.9934 (4.1459)	
+Epoch: [55][20/100]	Time 0.636 (0.684)	Data 0.001 (0.053)	Loss 3.3349 (3.8816)	
+Epoch: [55][30/100]	Time 0.657 (0.672)	Data 0.001 (0.036)	Loss 3.3810 (3.6476)	
+Epoch: [55][40/100]	Time 0.632 (0.664)	Data 0.001 (0.028)	Loss 3.5434 (3.5674)	
+Epoch: [55][50/100]	Time 0.626 (0.657)	Data 0.001 (0.022)	Loss 3.0897 (3.4868)	
+Epoch: [55][60/100]	Time 0.661 (0.657)	Data 0.001 (0.019)	Loss 2.7730 (3.3900)	
+Epoch: [55][70/100]	Time 0.632 (0.653)	Data 0.001 (0.016)	Loss 2.7325 (3.3114)	
+Epoch: [55][80/100]	Time 0.644 (0.653)	Data 0.001 (0.014)	Loss 2.9449 (3.2553)	
+Epoch: [55][90/100]	Time 0.625 (0.651)	Data 0.000 (0.013)	Loss 3.1153 (3.1954)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 18.456)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.275)
+Test: 	Time 3.313	Prec@1 15.292	Prec@5 23.896
+KNN: Forward Pass Time   8.262
+KNN: Clustering time     0.116
+Number of proper clusters: 102
+Epoch: [56][10/100]	Time 0.637 (0.754)	Data 0.001 (0.131)	Loss 3.7832 (4.0275)	
+Epoch: [56][20/100]	Time 0.724 (0.700)	Data 0.001 (0.069)	Loss 3.0828 (3.8360)	
+Epoch: [56][30/100]	Time 0.635 (0.676)	Data 0.001 (0.047)	Loss 3.0061 (3.5798)	
+Epoch: [56][40/100]	Time 0.649 (0.668)	Data 0.001 (0.036)	Loss 2.9036 (3.4226)	
+Epoch: [56][50/100]	Time 0.633 (0.660)	Data 0.001 (0.029)	Loss 2.7843 (3.3196)	
+Epoch: [56][60/100]	Time 0.639 (0.657)	Data 0.001 (0.024)	Loss 2.2752 (3.2197)	
+Epoch: [56][70/100]	Time 0.620 (0.652)	Data 0.001 (0.021)	Loss 3.2298 (3.1733)	
+Epoch: [56][80/100]	Time 0.631 (0.651)	Data 0.001 (0.018)	Loss 2.4238 (3.1277)	
+Epoch: [56][90/100]	Time 0.630 (0.649)	Data 0.000 (0.016)	Loss 1.9416 (3.0428)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 15.667)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.992)
+Test: 	Time 3.034	Prec@1 15.562	Prec@5 24.125
+KNN: Forward Pass Time   5.876
+KNN: Clustering time     0.128
+Number of proper clusters: 102
+Epoch: [57][10/100]	Time 0.637 (0.772)	Data 0.001 (0.126)	Loss 3.3970 (3.8539)	
+Epoch: [57][20/100]	Time 0.618 (0.703)	Data 0.001 (0.066)	Loss 3.3774 (3.6528)	
+Epoch: [57][30/100]	Time 0.624 (0.675)	Data 0.001 (0.045)	Loss 3.5790 (3.5559)	
+Epoch: [57][40/100]	Time 0.643 (0.662)	Data 0.001 (0.034)	Loss 3.0169 (3.4347)	
+Epoch: [57][50/100]	Time 0.631 (0.657)	Data 0.001 (0.028)	Loss 3.6837 (3.3617)	
+Epoch: [57][60/100]	Time 0.575 (0.652)	Data 0.001 (0.023)	Loss 2.8672 (3.2939)	
+Epoch: [57][70/100]	Time 0.618 (0.648)	Data 0.001 (0.020)	Loss 2.3117 (3.1869)	
+Epoch: [57][80/100]	Time 0.648 (0.646)	Data 0.001 (0.018)	Loss 2.9227 (3.1342)	
+Epoch: [57][90/100]	Time 0.629 (0.644)	Data 0.000 (0.016)	Loss 2.8070 (3.0964)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 17.348)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.962)
+Test: 	Time 2.999	Prec@1 21.979	Prec@5 27.479
+KNN: Forward Pass Time   6.165
+KNN: Clustering time     0.107
+Number of proper clusters: 102
+Epoch: [58][10/100]	Time 0.631 (0.806)	Data 0.001 (0.177)	Loss 3.2928 (3.5205)	
+Epoch: [58][20/100]	Time 0.628 (0.719)	Data 0.001 (0.093)	Loss 2.7693 (3.3255)	
+Epoch: [58][30/100]	Time 0.667 (0.690)	Data 0.001 (0.063)	Loss 3.4722 (3.2644)	
+Epoch: [58][40/100]	Time 0.636 (0.679)	Data 0.001 (0.048)	Loss 3.0793 (3.2318)	
+Epoch: [58][50/100]	Time 0.607 (0.671)	Data 0.001 (0.039)	Loss 2.4724 (3.1780)	
+Epoch: [58][60/100]	Time 0.612 (0.661)	Data 0.001 (0.032)	Loss 2.8470 (3.1102)	
+Epoch: [58][70/100]	Time 0.650 (0.657)	Data 0.001 (0.028)	Loss 2.6628 (3.0462)	
+Epoch: [58][80/100]	Time 0.628 (0.655)	Data 0.001 (0.025)	Loss 2.4973 (2.9815)	
+Epoch: [58][90/100]	Time 0.648 (0.651)	Data 0.000 (0.022)	Loss 2.1381 (2.9379)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 21.239)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.071)
+Test: 	Time 3.109	Prec@1 31.396	Prec@5 64.958
+KNN: Forward Pass Time   6.822
+KNN: Clustering time     0.102
+Number of proper clusters: 102
+Epoch: [59][10/100]	Time 0.630 (0.805)	Data 0.001 (0.186)	Loss 2.9305 (3.4985)	
+Epoch: [59][20/100]	Time 0.621 (0.722)	Data 0.001 (0.098)	Loss 2.6220 (3.2039)	
+Epoch: [59][30/100]	Time 0.638 (0.686)	Data 0.001 (0.067)	Loss 2.6223 (3.0671)	
+Epoch: [59][40/100]	Time 0.656 (0.676)	Data 0.001 (0.050)	Loss 2.4440 (2.9556)	
+Epoch: [59][50/100]	Time 0.638 (0.668)	Data 0.001 (0.041)	Loss 2.5467 (2.8469)	
+Epoch: [59][60/100]	Time 0.635 (0.664)	Data 0.001 (0.034)	Loss 1.9768 (2.7461)	
+Epoch: [59][70/100]	Time 0.641 (0.660)	Data 0.001 (0.029)	Loss 2.1718 (2.7104)	
+Epoch: [59][80/100]	Time 0.687 (0.660)	Data 0.001 (0.026)	Loss 1.9504 (2.6750)	
+Epoch: [59][90/100]	Time 0.645 (0.657)	Data 0.000 (0.023)	Loss 2.8930 (2.6154)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 22.752)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.173)
+Test: 	Time 3.212	Prec@1 24.958	Prec@5 36.396
+KNN: Forward Pass Time   8.015
+KNN: Clustering time     0.110
+Number of proper clusters: 102
+Epoch: [60][10/100]	Time 0.637 (0.805)	Data 0.001 (0.166)	Loss 3.2901 (3.7596)	
+Epoch: [60][20/100]	Time 0.674 (0.719)	Data 0.001 (0.087)	Loss 2.9768 (3.5608)	
+Epoch: [60][30/100]	Time 0.643 (0.694)	Data 0.001 (0.059)	Loss 3.3215 (3.3096)	
+Epoch: [60][40/100]	Time 0.619 (0.679)	Data 0.001 (0.045)	Loss 2.7972 (3.2317)	
+Epoch: [60][50/100]	Time 0.638 (0.671)	Data 0.001 (0.036)	Loss 2.6172 (3.2275)	
+Epoch: [60][60/100]	Time 0.661 (0.667)	Data 0.001 (0.030)	Loss 2.5854 (3.1658)	
+Epoch: [60][70/100]	Time 0.632 (0.663)	Data 0.001 (0.026)	Loss 3.5745 (3.1132)	
+Epoch: [60][80/100]	Time 0.640 (0.660)	Data 0.001 (0.023)	Loss 2.1586 (3.0411)	
+Epoch: [60][90/100]	Time 0.645 (0.658)	Data 0.000 (0.021)	Loss 2.0775 (2.9810)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 25.476)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.108)
+Test: 	Time 3.147	Prec@1 23.021	Prec@5 32.062
+KNN: Forward Pass Time   6.331
+KNN: Clustering time     0.144
+Number of proper clusters: 102
+Epoch: [61][10/100]	Time 0.632 (0.768)	Data 0.001 (0.138)	Loss 3.8170 (4.0846)	
+Epoch: [61][20/100]	Time 0.634 (0.707)	Data 0.001 (0.072)	Loss 2.7401 (3.7704)	
+Epoch: [61][30/100]	Time 0.624 (0.684)	Data 0.001 (0.049)	Loss 2.3853 (3.5921)	
+Epoch: [61][40/100]	Time 0.671 (0.675)	Data 0.001 (0.037)	Loss 3.1336 (3.4909)	
+Epoch: [61][50/100]	Time 0.606 (0.664)	Data 0.001 (0.030)	Loss 3.3792 (3.3958)	
+Epoch: [61][60/100]	Time 0.649 (0.658)	Data 0.001 (0.025)	Loss 2.7422 (3.2762)	
+Epoch: [61][70/100]	Time 0.638 (0.655)	Data 0.001 (0.022)	Loss 2.3619 (3.1553)	
+Epoch: [61][80/100]	Time 0.630 (0.653)	Data 0.001 (0.019)	Loss 2.0551 (3.0583)	
+Epoch: [61][90/100]	Time 0.609 (0.651)	Data 0.000 (0.017)	Loss 1.6219 (2.9732)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 17.727)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.995)
+Test: 	Time 3.033	Prec@1 15.354	Prec@5 32.208
+KNN: Forward Pass Time   6.901
+KNN: Clustering time     0.109
+Number of proper clusters: 102
+Epoch: [62][10/100]	Time 0.622 (0.853)	Data 0.001 (0.237)	Loss 3.7099 (4.0727)	
+Epoch: [62][20/100]	Time 0.632 (0.748)	Data 0.001 (0.125)	Loss 3.6948 (3.8921)	
+Epoch: [62][30/100]	Time 0.654 (0.711)	Data 0.001 (0.085)	Loss 3.0767 (3.7401)	
+Epoch: [62][40/100]	Time 0.657 (0.692)	Data 0.001 (0.064)	Loss 2.7753 (3.5901)	
+Epoch: [62][50/100]	Time 0.754 (0.682)	Data 0.001 (0.052)	Loss 2.6013 (3.4731)	
+Epoch: [62][60/100]	Time 0.624 (0.675)	Data 0.001 (0.043)	Loss 2.8588 (3.3938)	
+Epoch: [62][70/100]	Time 0.658 (0.671)	Data 0.001 (0.037)	Loss 2.9363 (3.3202)	
+Epoch: [62][80/100]	Time 0.646 (0.668)	Data 0.001 (0.033)	Loss 3.0792 (3.2437)	
+Epoch: [62][90/100]	Time 0.634 (0.665)	Data 0.000 (0.029)	Loss 2.7253 (3.1860)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 19.378)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.322)
+Test: 	Time 3.360	Prec@1 18.792	Prec@5 25.229
+KNN: Forward Pass Time   7.424
+KNN: Clustering time     0.107
+Number of proper clusters: 102
+Epoch: [63][10/100]	Time 0.653 (0.803)	Data 0.001 (0.178)	Loss 3.9823 (4.1067)	
+Epoch: [63][20/100]	Time 0.722 (0.724)	Data 0.001 (0.094)	Loss 3.2168 (3.9175)	
+Epoch: [63][30/100]	Time 0.601 (0.693)	Data 0.001 (0.064)	Loss 3.0324 (3.6904)	
+Epoch: [63][40/100]	Time 0.561 (0.660)	Data 0.001 (0.048)	Loss 2.7693 (3.4599)	
+Epoch: [63][50/100]	Time 0.645 (0.645)	Data 0.001 (0.039)	Loss 2.6487 (3.3273)	
+Epoch: [63][60/100]	Time 0.647 (0.641)	Data 0.001 (0.033)	Loss 2.3218 (3.1993)	
+Epoch: [63][70/100]	Time 0.627 (0.640)	Data 0.001 (0.028)	Loss 2.4379 (3.1005)	
+Epoch: [63][80/100]	Time 0.615 (0.639)	Data 0.001 (0.025)	Loss 2.8987 (3.0061)	
+Epoch: [63][90/100]	Time 0.632 (0.639)	Data 0.000 (0.022)	Loss 2.1267 (2.9267)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 19.462)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.975)
+Test: 	Time 3.013	Prec@1 17.917	Prec@5 38.021
+KNN: Forward Pass Time   6.877
+KNN: Clustering time     0.092
+Number of proper clusters: 102
+Epoch: [64][10/100]	Time 0.720 (0.802)	Data 0.001 (0.160)	Loss 3.9150 (4.2593)	
+Epoch: [64][20/100]	Time 0.631 (0.715)	Data 0.001 (0.084)	Loss 3.7825 (4.0702)	
+Epoch: [64][30/100]	Time 0.639 (0.692)	Data 0.001 (0.057)	Loss 3.6314 (3.8953)	
+Epoch: [64][40/100]	Time 0.631 (0.679)	Data 0.001 (0.043)	Loss 3.6171 (3.8042)	
+Epoch: [64][50/100]	Time 0.626 (0.670)	Data 0.001 (0.035)	Loss 2.9555 (3.6698)	
+Epoch: [64][60/100]	Time 0.633 (0.664)	Data 0.001 (0.029)	Loss 3.0329 (3.5700)	
+Epoch: [64][70/100]	Time 0.628 (0.660)	Data 0.001 (0.025)	Loss 3.0612 (3.4677)	
+Epoch: [64][80/100]	Time 0.614 (0.656)	Data 0.001 (0.022)	Loss 2.9834 (3.4083)	
+Epoch: [64][90/100]	Time 0.633 (0.654)	Data 0.000 (0.020)	Loss 2.6675 (3.3639)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 19.978)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.267)
+Test: 	Time 3.305	Prec@1 10.562	Prec@5 13.875
+KNN: Forward Pass Time   6.792
+KNN: Clustering time     0.093
+Number of proper clusters: 102
+Epoch: [65][10/100]	Time 0.620 (0.752)	Data 0.000 (0.134)	Loss 3.8564 (4.2375)	
+Epoch: [65][20/100]	Time 0.635 (0.688)	Data 0.001 (0.070)	Loss 3.5697 (4.0318)	
+Epoch: [65][30/100]	Time 0.636 (0.672)	Data 0.001 (0.048)	Loss 3.7049 (3.8531)	
+Epoch: [65][40/100]	Time 0.639 (0.664)	Data 0.001 (0.036)	Loss 3.2592 (3.7205)	
+Epoch: [65][50/100]	Time 0.648 (0.660)	Data 0.001 (0.029)	Loss 2.7916 (3.6038)	
+Epoch: [65][60/100]	Time 0.653 (0.655)	Data 0.001 (0.025)	Loss 3.3597 (3.5496)	
+Epoch: [65][70/100]	Time 0.633 (0.653)	Data 0.001 (0.021)	Loss 2.5996 (3.4742)	
+Epoch: [65][80/100]	Time 0.613 (0.651)	Data 0.001 (0.019)	Loss 3.4498 (3.4330)	
+Epoch: [65][90/100]	Time 0.642 (0.649)	Data 0.000 (0.017)	Loss 3.0741 (3.3879)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 18.006)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.188)
+Test: 	Time 3.229	Prec@1 16.854	Prec@5 21.312
+KNN: Forward Pass Time   7.546
+KNN: Clustering time     0.092
+Number of proper clusters: 102
+Epoch: [66][10/100]	Time 0.636 (0.796)	Data 0.001 (0.177)	Loss 2.9938 (3.2177)	
+Epoch: [66][20/100]	Time 0.639 (0.719)	Data 0.001 (0.093)	Loss 2.9956 (3.1873)	
+Epoch: [66][30/100]	Time 0.643 (0.693)	Data 0.001 (0.063)	Loss 3.0416 (3.1755)	
+Epoch: [66][40/100]	Time 0.587 (0.670)	Data 0.001 (0.048)	Loss 2.7946 (3.1457)	
+Epoch: [66][50/100]	Time 0.632 (0.662)	Data 0.001 (0.039)	Loss 3.5080 (3.1198)	
+Epoch: [66][60/100]	Time 0.638 (0.661)	Data 0.001 (0.032)	Loss 2.6972 (3.1301)	
+Epoch: [66][70/100]	Time 0.633 (0.656)	Data 0.001 (0.028)	Loss 2.4499 (3.0898)	
+Epoch: [66][80/100]	Time 0.655 (0.652)	Data 0.001 (0.025)	Loss 2.9648 (3.0722)	
+Epoch: [66][90/100]	Time 0.558 (0.646)	Data 0.000 (0.022)	Loss 2.4786 (3.0410)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 18.208)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.125)
+Test: 	Time 3.164	Prec@1 28.083	Prec@5 35.354
+KNN: Forward Pass Time   7.238
+KNN: Clustering time     0.090
+Number of proper clusters: 102
+Epoch: [67][10/100]	Time 0.624 (0.747)	Data 0.001 (0.130)	Loss 3.1696 (3.6749)	
+Epoch: [67][20/100]	Time 0.648 (0.691)	Data 0.001 (0.068)	Loss 2.9581 (3.4971)	
+Epoch: [67][30/100]	Time 0.627 (0.675)	Data 0.001 (0.046)	Loss 3.3719 (3.4234)	
+Epoch: [67][40/100]	Time 0.673 (0.667)	Data 0.001 (0.035)	Loss 3.4388 (3.3495)	
+Epoch: [67][50/100]	Time 0.684 (0.661)	Data 0.001 (0.028)	Loss 3.1020 (3.3116)	
+Epoch: [67][60/100]	Time 0.612 (0.659)	Data 0.001 (0.024)	Loss 2.8482 (3.3020)	
+Epoch: [67][70/100]	Time 0.631 (0.655)	Data 0.001 (0.021)	Loss 2.6890 (3.2559)	
+Epoch: [67][80/100]	Time 0.648 (0.653)	Data 0.001 (0.018)	Loss 2.9176 (3.2312)	
+Epoch: [67][90/100]	Time 0.636 (0.652)	Data 0.000 (0.016)	Loss 2.8621 (3.2044)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 17.207)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.189)
+Test: 	Time 3.230	Prec@1 28.250	Prec@5 30.750
+KNN: Forward Pass Time   4.864
+KNN: Clustering time     0.111
+Number of proper clusters: 102
+Epoch: [68][10/100]	Time 0.645 (0.772)	Data 0.001 (0.138)	Loss 3.3316 (3.4914)	
+Epoch: [68][20/100]	Time 0.634 (0.708)	Data 0.001 (0.073)	Loss 2.9069 (3.3159)	
+Epoch: [68][30/100]	Time 0.648 (0.685)	Data 0.001 (0.050)	Loss 2.7882 (3.2149)	
+Epoch: [68][40/100]	Time 0.623 (0.673)	Data 0.001 (0.038)	Loss 3.0786 (3.1733)	
+Epoch: [68][50/100]	Time 0.637 (0.665)	Data 0.001 (0.030)	Loss 2.9849 (3.1481)	
+Epoch: [68][60/100]	Time 0.644 (0.663)	Data 0.001 (0.025)	Loss 2.5959 (3.1128)	
+Epoch: [68][70/100]	Time 0.646 (0.659)	Data 0.001 (0.022)	Loss 3.1027 (3.1076)	
+Epoch: [68][80/100]	Time 0.705 (0.657)	Data 0.001 (0.019)	Loss 2.3868 (3.0780)	
+Epoch: [68][90/100]	Time 0.628 (0.655)	Data 0.000 (0.017)	Loss 3.3919 (3.0603)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 16.226)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.049)
+Test: 	Time 3.088	Prec@1 29.625	Prec@5 41.208
+KNN: Forward Pass Time   5.565
+KNN: Clustering time     0.107
+Number of proper clusters: 102
+Epoch: [69][10/100]	Time 0.624 (0.778)	Data 0.001 (0.144)	Loss 2.7214 (3.2359)	
+Epoch: [69][20/100]	Time 0.655 (0.714)	Data 0.001 (0.076)	Loss 2.8926 (3.1368)	
+Epoch: [69][30/100]	Time 0.659 (0.692)	Data 0.001 (0.051)	Loss 3.0891 (3.0413)	
+Epoch: [69][40/100]	Time 0.627 (0.678)	Data 0.001 (0.039)	Loss 2.3078 (2.9474)	
+Epoch: [69][50/100]	Time 0.623 (0.665)	Data 0.001 (0.031)	Loss 2.3073 (2.8147)	
+Epoch: [69][60/100]	Time 0.604 (0.657)	Data 0.001 (0.026)	Loss 2.5791 (2.7883)	
+Epoch: [69][70/100]	Time 0.624 (0.651)	Data 0.001 (0.023)	Loss 2.3001 (2.7369)	
+Epoch: [69][80/100]	Time 0.632 (0.649)	Data 0.001 (0.020)	Loss 2.0244 (2.6905)	
+Epoch: [69][90/100]	Time 0.627 (0.647)	Data 0.000 (0.018)	Loss 3.5073 (2.6435)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 16.342)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.272)
+Test: 	Time 3.310	Prec@1 37.250	Prec@5 65.500
+KNN: Forward Pass Time   5.615
+KNN: Clustering time     0.098
+Number of proper clusters: 102
+Epoch: [70][10/100]	Time 0.618 (0.794)	Data 0.001 (0.155)	Loss 3.6599 (3.7775)	
+Epoch: [70][20/100]	Time 0.636 (0.721)	Data 0.001 (0.082)	Loss 2.5070 (3.4064)	
+Epoch: [70][30/100]	Time 0.634 (0.692)	Data 0.000 (0.055)	Loss 3.3008 (3.2160)	
+Epoch: [70][40/100]	Time 0.650 (0.676)	Data 0.001 (0.042)	Loss 2.9651 (3.0632)	
+Epoch: [70][50/100]	Time 0.635 (0.670)	Data 0.001 (0.034)	Loss 3.0356 (3.0604)	
+Epoch: [70][60/100]	Time 0.676 (0.666)	Data 0.001 (0.028)	Loss 2.3166 (3.0231)	
+Epoch: [70][70/100]	Time 0.635 (0.663)	Data 0.001 (0.025)	Loss 2.9611 (2.9970)	
+Epoch: [70][80/100]	Time 0.642 (0.658)	Data 0.001 (0.022)	Loss 2.5333 (2.9523)	
+Epoch: [70][90/100]	Time 0.617 (0.655)	Data 0.000 (0.019)	Loss 2.6779 (2.9427)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 18.328)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.146)
+Test: 	Time 3.197	Prec@1 31.896	Prec@5 39.271
+KNN: Forward Pass Time   5.601
+KNN: Clustering time     0.106
+Number of proper clusters: 102
+Epoch: [71][10/100]	Time 0.628 (0.750)	Data 0.001 (0.128)	Loss 3.8483 (3.9568)	
+Epoch: [71][20/100]	Time 0.628 (0.697)	Data 0.001 (0.067)	Loss 3.2409 (3.8068)	
+Epoch: [71][30/100]	Time 0.631 (0.677)	Data 0.001 (0.046)	Loss 3.3367 (3.6290)	
+Epoch: [71][40/100]	Time 0.652 (0.672)	Data 0.001 (0.035)	Loss 3.2725 (3.4911)	
+Epoch: [71][50/100]	Time 0.642 (0.665)	Data 0.001 (0.028)	Loss 2.6913 (3.4304)	
+Epoch: [71][60/100]	Time 0.663 (0.661)	Data 0.001 (0.024)	Loss 2.9990 (3.3550)	
+Epoch: [71][70/100]	Time 0.583 (0.657)	Data 0.001 (0.020)	Loss 2.7294 (3.2952)	
+Epoch: [71][80/100]	Time 0.622 (0.653)	Data 0.001 (0.018)	Loss 2.7625 (3.2280)	
+Epoch: [71][90/100]	Time 0.646 (0.651)	Data 0.000 (0.016)	Loss 3.1812 (3.1583)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 13.019)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.955)
+Test: 	Time 2.993	Prec@1 23.854	Prec@5 31.625
+KNN: Forward Pass Time   4.329
+KNN: Clustering time     0.145
+Number of proper clusters: 102
+Epoch: [72][10/100]	Time 0.630 (0.747)	Data 0.001 (0.103)	Loss 3.2488 (3.3848)	
+Epoch: [72][20/100]	Time 0.637 (0.688)	Data 0.001 (0.054)	Loss 3.3126 (3.2520)	
+Epoch: [72][30/100]	Time 0.644 (0.676)	Data 0.001 (0.037)	Loss 3.0500 (3.2657)	
+Epoch: [72][40/100]	Time 0.607 (0.662)	Data 0.001 (0.028)	Loss 2.8910 (3.1983)	
+Epoch: [72][50/100]	Time 0.650 (0.655)	Data 0.001 (0.023)	Loss 2.8701 (3.1812)	
+Epoch: [72][60/100]	Time 0.631 (0.651)	Data 0.001 (0.019)	Loss 2.7041 (3.0949)	
+Epoch: [72][70/100]	Time 0.635 (0.650)	Data 0.001 (0.016)	Loss 3.4593 (3.0663)	
+Epoch: [72][80/100]	Time 0.647 (0.649)	Data 0.001 (0.015)	Loss 2.4667 (3.0065)	
+Epoch: [72][90/100]	Time 0.643 (0.649)	Data 0.000 (0.013)	Loss 2.5342 (3.0143)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 13.088)
+Evaluation: Softmax Probability Calculation (Time Elapsed 5.402)
+Test: 	Time 5.453	Prec@1 26.208	Prec@5 45.312
+KNN: Forward Pass Time   3.877
+KNN: Clustering time     0.093
+Number of proper clusters: 102
+Epoch: [73][10/100]	Time 0.617 (0.768)	Data 0.001 (0.137)	Loss 3.3684 (3.8100)	
+Epoch: [73][20/100]	Time 0.632 (0.704)	Data 0.001 (0.072)	Loss 3.1233 (3.5898)	
+Epoch: [73][30/100]	Time 0.613 (0.681)	Data 0.001 (0.049)	Loss 3.4795 (3.5288)	
+Epoch: [73][40/100]	Time 0.645 (0.671)	Data 0.001 (0.037)	Loss 3.1410 (3.4549)	
+Epoch: [73][50/100]	Time 0.626 (0.664)	Data 0.001 (0.030)	Loss 3.5133 (3.4046)	
+Epoch: [73][60/100]	Time 0.613 (0.657)	Data 0.001 (0.025)	Loss 3.5910 (3.3417)	
+Epoch: [73][70/100]	Time 0.649 (0.655)	Data 0.001 (0.022)	Loss 3.0053 (3.2934)	
+Epoch: [73][80/100]	Time 0.627 (0.651)	Data 0.001 (0.019)	Loss 3.1905 (3.2353)	
+Epoch: [73][90/100]	Time 0.612 (0.648)	Data 0.000 (0.017)	Loss 2.2425 (3.1544)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.131)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.948)
+Test: 	Time 2.986	Prec@1 23.979	Prec@5 24.292
+KNN: Forward Pass Time   3.981
+KNN: Clustering time     0.090
+Number of proper clusters: 102
+Epoch: [74][10/100]	Time 0.628 (0.728)	Data 0.001 (0.110)	Loss 2.5634 (3.0933)	
+Epoch: [74][20/100]	Time 0.607 (0.674)	Data 0.001 (0.058)	Loss 3.6777 (3.1224)	
+Epoch: [74][30/100]	Time 0.627 (0.660)	Data 0.001 (0.039)	Loss 2.4370 (3.0814)	
+Epoch: [74][40/100]	Time 0.619 (0.653)	Data 0.001 (0.030)	Loss 2.9213 (3.0271)	
+Epoch: [74][50/100]	Time 0.650 (0.649)	Data 0.001 (0.024)	Loss 2.4134 (2.9811)	
+Epoch: [74][60/100]	Time 0.636 (0.645)	Data 0.001 (0.020)	Loss 2.7129 (2.9113)	
+Epoch: [74][70/100]	Time 0.646 (0.645)	Data 0.001 (0.018)	Loss 2.4049 (2.8720)	
+Epoch: [74][80/100]	Time 0.654 (0.644)	Data 0.001 (0.015)	Loss 2.1314 (2.8285)	
+Epoch: [74][90/100]	Time 0.599 (0.642)	Data 0.000 (0.014)	Loss 2.3920 (2.7922)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.272)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.026)
+Test: 	Time 3.065	Prec@1 32.896	Prec@5 41.521
+KNN: Forward Pass Time   3.835
+KNN: Clustering time     0.109
+Number of proper clusters: 102
+Epoch: [75][10/100]	Time 0.634 (0.747)	Data 0.001 (0.113)	Loss 3.8439 (3.7675)	
+Epoch: [75][20/100]	Time 0.540 (0.672)	Data 0.001 (0.060)	Loss 3.1822 (3.5482)	
+Epoch: [75][30/100]	Time 0.631 (0.659)	Data 0.001 (0.041)	Loss 2.7783 (3.4115)	
+Epoch: [75][40/100]	Time 0.607 (0.651)	Data 0.001 (0.031)	Loss 2.7373 (3.3195)	
+Epoch: [75][50/100]	Time 0.633 (0.648)	Data 0.001 (0.025)	Loss 2.8096 (3.2224)	
+Epoch: [75][60/100]	Time 0.584 (0.643)	Data 0.001 (0.021)	Loss 2.3764 (3.1158)	
+Epoch: [75][70/100]	Time 0.623 (0.640)	Data 0.001 (0.018)	Loss 3.1329 (3.0487)	
+Epoch: [75][80/100]	Time 0.656 (0.638)	Data 0.001 (0.016)	Loss 2.6281 (2.9825)	
+Epoch: [75][90/100]	Time 0.645 (0.637)	Data 0.000 (0.014)	Loss 2.1526 (2.9140)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 14.510)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.070)
+Test: 	Time 3.112	Prec@1 16.229	Prec@5 23.562
+KNN: Forward Pass Time   3.619
+KNN: Clustering time     0.109
+Number of proper clusters: 102
+Epoch: [76][10/100]	Time 0.625 (0.750)	Data 0.001 (0.101)	Loss 3.4186 (4.0883)	
+Epoch: [76][20/100]	Time 0.656 (0.700)	Data 0.001 (0.053)	Loss 3.3455 (3.7609)	
+Epoch: [76][30/100]	Time 0.617 (0.676)	Data 0.001 (0.036)	Loss 3.4546 (3.5922)	
+Epoch: [76][40/100]	Time 0.631 (0.667)	Data 0.001 (0.028)	Loss 2.1865 (3.3932)	
+Epoch: [76][50/100]	Time 0.643 (0.663)	Data 0.001 (0.022)	Loss 4.0581 (3.3537)	
+Epoch: [76][60/100]	Time 0.649 (0.658)	Data 0.001 (0.019)	Loss 3.5946 (3.3409)	
+Epoch: [76][70/100]	Time 0.622 (0.653)	Data 0.001 (0.016)	Loss 2.9023 (3.2930)	
+Epoch: [76][80/100]	Time 0.598 (0.650)	Data 0.001 (0.014)	Loss 2.7986 (3.1565)	
+Epoch: [76][90/100]	Time 0.627 (0.649)	Data 0.000 (0.013)	Loss 1.8512 (3.0772)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 13.305)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.164)
+Test: 	Time 3.203	Prec@1 24.750	Prec@5 34.625
+KNN: Forward Pass Time   3.877
+KNN: Clustering time     0.148
+Number of proper clusters: 102
+Epoch: [77][10/100]	Time 0.631 (0.735)	Data 0.001 (0.109)	Loss 3.4870 (3.5534)	
+Epoch: [77][20/100]	Time 0.624 (0.675)	Data 0.001 (0.057)	Loss 2.4609 (3.3059)	
+Epoch: [77][30/100]	Time 0.646 (0.662)	Data 0.001 (0.039)	Loss 3.1912 (3.2408)	
+Epoch: [77][40/100]	Time 0.630 (0.655)	Data 0.001 (0.030)	Loss 2.5575 (3.1677)	
+Epoch: [77][50/100]	Time 0.596 (0.648)	Data 0.001 (0.024)	Loss 2.6340 (3.1600)	
+Epoch: [77][60/100]	Time 0.625 (0.645)	Data 0.001 (0.020)	Loss 2.7634 (3.0853)	
+Epoch: [77][70/100]	Time 0.624 (0.644)	Data 0.000 (0.017)	Loss 2.5052 (3.0056)	
+Epoch: [77][80/100]	Time 0.627 (0.643)	Data 0.001 (0.015)	Loss 3.1784 (2.9893)	
+Epoch: [77][90/100]	Time 0.635 (0.642)	Data 0.000 (0.014)	Loss 3.1670 (2.9647)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 15.746)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.206)
+Test: 	Time 3.253	Prec@1 38.604	Prec@5 55.354
+KNN: Forward Pass Time   4.352
+KNN: Clustering time     0.095
+Number of proper clusters: 102
+Epoch: [78][10/100]	Time 0.615 (0.746)	Data 0.001 (0.110)	Loss 2.8878 (3.1733)	
+Epoch: [78][20/100]	Time 0.647 (0.693)	Data 0.001 (0.058)	Loss 3.0615 (3.0463)	
+Epoch: [78][30/100]	Time 0.636 (0.675)	Data 0.001 (0.039)	Loss 3.0204 (2.9378)	
+Epoch: [78][40/100]	Time 0.601 (0.670)	Data 0.001 (0.030)	Loss 2.5298 (2.8648)	
+Epoch: [78][50/100]	Time 0.612 (0.664)	Data 0.001 (0.024)	Loss 3.2250 (2.8268)	
+Epoch: [78][60/100]	Time 0.625 (0.659)	Data 0.001 (0.020)	Loss 2.7203 (2.8302)	
+Epoch: [78][70/100]	Time 0.657 (0.654)	Data 0.001 (0.018)	Loss 2.1437 (2.7754)	
+Epoch: [78][80/100]	Time 0.635 (0.653)	Data 0.001 (0.015)	Loss 2.4874 (2.7458)	
+Epoch: [78][90/100]	Time 0.645 (0.652)	Data 0.000 (0.014)	Loss 2.2113 (2.7069)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 19.841)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.027)
+Test: 	Time 3.065	Prec@1 41.333	Prec@5 49.396
+KNN: Forward Pass Time   5.874
+KNN: Clustering time     0.089
+Number of proper clusters: 102
+Epoch: [79][10/100]	Time 0.636 (0.743)	Data 0.001 (0.135)	Loss 2.8810 (3.2442)	
+Epoch: [79][20/100]	Time 0.616 (0.691)	Data 0.001 (0.071)	Loss 2.5445 (3.0389)	
+Epoch: [79][30/100]	Time 0.628 (0.672)	Data 0.001 (0.048)	Loss 3.2378 (2.9740)	
+Epoch: [79][40/100]	Time 0.619 (0.663)	Data 0.001 (0.037)	Loss 2.5675 (3.0098)	
+Epoch: [79][50/100]	Time 0.609 (0.658)	Data 0.001 (0.030)	Loss 2.7007 (3.0700)	
+Epoch: [79][60/100]	Time 0.640 (0.654)	Data 0.001 (0.025)	Loss 3.5683 (3.0915)	
+Epoch: [79][70/100]	Time 0.665 (0.653)	Data 0.001 (0.021)	Loss 3.5534 (3.1096)	
+Epoch: [79][80/100]	Time 0.633 (0.652)	Data 0.001 (0.019)	Loss 2.0408 (3.0651)	
+Epoch: [79][90/100]	Time 0.631 (0.650)	Data 0.000 (0.017)	Loss 3.0834 (3.0974)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 17.102)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.186)
+Test: 	Time 3.224	Prec@1 20.771	Prec@5 34.146
+KNN: Forward Pass Time   7.283
+KNN: Clustering time     0.091
+Number of proper clusters: 102
+Epoch: [80][10/100]	Time 0.640 (0.874)	Data 0.001 (0.236)	Loss 3.7017 (3.7883)	
+Epoch: [80][20/100]	Time 0.641 (0.763)	Data 0.001 (0.124)	Loss 2.7726 (3.6011)	
+Epoch: [80][30/100]	Time 0.636 (0.721)	Data 0.001 (0.084)	Loss 2.5673 (3.3807)	
+Epoch: [80][40/100]	Time 0.604 (0.697)	Data 0.001 (0.064)	Loss 2.6762 (3.2627)	
+Epoch: [80][50/100]	Time 0.607 (0.685)	Data 0.001 (0.051)	Loss 2.2923 (3.1602)	
+Epoch: [80][60/100]	Time 0.633 (0.677)	Data 0.001 (0.043)	Loss 2.8524 (3.1163)	
+Epoch: [80][70/100]	Time 0.645 (0.673)	Data 0.001 (0.037)	Loss 2.6125 (3.1335)	
+Epoch: [80][80/100]	Time 0.610 (0.668)	Data 0.001 (0.033)	Loss 3.3010 (3.1003)	
+Epoch: [80][90/100]	Time 0.611 (0.665)	Data 0.000 (0.029)	Loss 2.6525 (3.0543)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 15.727)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.045)
+Test: 	Time 3.085	Prec@1 17.667	Prec@5 31.417
+KNN: Forward Pass Time   5.403
+KNN: Clustering time     0.092
+Number of proper clusters: 102
+Epoch: [81][10/100]	Time 0.638 (0.762)	Data 0.001 (0.124)	Loss 4.4076 (4.3423)	
+Epoch: [81][20/100]	Time 0.634 (0.702)	Data 0.001 (0.065)	Loss 3.7842 (4.1486)	
+Epoch: [81][30/100]	Time 0.644 (0.684)	Data 0.001 (0.044)	Loss 3.4807 (3.9104)	
+Epoch: [81][40/100]	Time 0.651 (0.671)	Data 0.001 (0.034)	Loss 3.2304 (3.7354)	
+Epoch: [81][50/100]	Time 0.633 (0.666)	Data 0.001 (0.027)	Loss 3.8476 (3.6588)	
+Epoch: [81][60/100]	Time 0.626 (0.658)	Data 0.001 (0.023)	Loss 3.7231 (3.6277)	
+Epoch: [81][70/100]	Time 0.655 (0.656)	Data 0.001 (0.020)	Loss 3.4281 (3.5878)	
+Epoch: [81][80/100]	Time 0.632 (0.652)	Data 0.001 (0.017)	Loss 2.7634 (3.5432)	
+Epoch: [81][90/100]	Time 0.632 (0.650)	Data 0.000 (0.015)	Loss 3.3618 (3.5016)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 16.057)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.200)
+Test: 	Time 3.239	Prec@1 23.271	Prec@5 24.000
+KNN: Forward Pass Time   5.877
+KNN: Clustering time     0.123
+Number of proper clusters: 102
+Epoch: [82][10/100]	Time 0.646 (0.775)	Data 0.001 (0.143)	Loss 4.4174 (4.1353)	
+Epoch: [82][20/100]	Time 0.656 (0.715)	Data 0.001 (0.075)	Loss 3.8055 (3.9523)	
+Epoch: [82][30/100]	Time 0.623 (0.689)	Data 0.001 (0.051)	Loss 3.0816 (3.8563)	
+Epoch: [82][40/100]	Time 0.656 (0.679)	Data 0.001 (0.039)	Loss 3.5294 (3.6912)	
+Epoch: [82][50/100]	Time 0.628 (0.672)	Data 0.001 (0.031)	Loss 3.5469 (3.6389)	
+Epoch: [82][60/100]	Time 0.618 (0.665)	Data 0.001 (0.026)	Loss 3.2419 (3.5669)	
+Epoch: [82][70/100]	Time 0.655 (0.660)	Data 0.001 (0.023)	Loss 3.9100 (3.5301)	
+Epoch: [82][80/100]	Time 0.640 (0.658)	Data 0.001 (0.020)	Loss 3.4384 (3.4717)	
+Epoch: [82][90/100]	Time 0.622 (0.655)	Data 0.000 (0.018)	Loss 3.2827 (3.4364)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 19.020)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.000)
+Test: 	Time 3.039	Prec@1 24.458	Prec@5 25.312
+KNN: Forward Pass Time   6.120
+KNN: Clustering time     0.094
+Number of proper clusters: 102
+Epoch: [83][10/100]	Time 0.636 (0.761)	Data 0.001 (0.135)	Loss 2.8754 (3.2789)	
+Epoch: [83][20/100]	Time 0.634 (0.705)	Data 0.001 (0.071)	Loss 3.5067 (3.1534)	
+Epoch: [83][30/100]	Time 0.631 (0.686)	Data 0.001 (0.048)	Loss 3.5970 (3.1206)	
+Epoch: [83][40/100]	Time 0.623 (0.674)	Data 0.001 (0.037)	Loss 2.7649 (3.0696)	
+Epoch: [83][50/100]	Time 0.610 (0.666)	Data 0.001 (0.030)	Loss 2.3703 (3.0063)	
+Epoch: [83][60/100]	Time 0.641 (0.658)	Data 0.001 (0.025)	Loss 2.5802 (2.9724)	
+Epoch: [83][70/100]	Time 0.623 (0.656)	Data 0.001 (0.021)	Loss 2.2957 (2.9025)	
+Epoch: [83][80/100]	Time 0.628 (0.655)	Data 0.001 (0.019)	Loss 3.1470 (2.8484)	
+Epoch: [83][90/100]	Time 0.627 (0.652)	Data 0.000 (0.017)	Loss 1.9021 (2.7790)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 14.915)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.238)
+Test: 	Time 3.277	Prec@1 32.042	Prec@5 46.833
+KNN: Forward Pass Time   6.422
+KNN: Clustering time     0.108
+Number of proper clusters: 102
+Epoch: [84][10/100]	Time 0.629 (0.801)	Data 0.001 (0.160)	Loss 3.2411 (3.2026)	
+Epoch: [84][20/100]	Time 0.683 (0.726)	Data 0.001 (0.084)	Loss 2.5241 (3.0576)	
+Epoch: [84][30/100]	Time 0.650 (0.698)	Data 0.001 (0.057)	Loss 2.3356 (2.9282)	
+Epoch: [84][40/100]	Time 0.680 (0.682)	Data 0.001 (0.043)	Loss 2.1222 (2.8365)	
+Epoch: [84][50/100]	Time 0.631 (0.674)	Data 0.001 (0.035)	Loss 1.9786 (2.7486)	
+Epoch: [84][60/100]	Time 0.635 (0.669)	Data 0.001 (0.029)	Loss 3.1391 (2.7131)	
+Epoch: [84][70/100]	Time 0.629 (0.667)	Data 0.001 (0.025)	Loss 3.1874 (2.6693)	
+Epoch: [84][80/100]	Time 0.654 (0.664)	Data 0.001 (0.022)	Loss 1.9057 (2.6110)	
+Epoch: [84][90/100]	Time 0.626 (0.660)	Data 0.000 (0.020)	Loss 1.4709 (2.5330)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 18.521)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.265)
+Test: 	Time 3.307	Prec@1 40.062	Prec@5 41.083
+KNN: Forward Pass Time   5.817
+KNN: Clustering time     0.091
+Number of proper clusters: 102
+Epoch: [85][10/100]	Time 0.662 (0.771)	Data 0.001 (0.145)	Loss 3.7484 (3.5753)	
+Epoch: [85][20/100]	Time 0.634 (0.704)	Data 0.001 (0.076)	Loss 2.9348 (3.3735)	
+Epoch: [85][30/100]	Time 0.633 (0.683)	Data 0.001 (0.052)	Loss 3.3298 (3.2028)	
+Epoch: [85][40/100]	Time 0.596 (0.669)	Data 0.001 (0.039)	Loss 3.0026 (3.1035)	
+Epoch: [85][50/100]	Time 0.630 (0.663)	Data 0.001 (0.032)	Loss 3.7038 (3.0968)	
+Epoch: [85][60/100]	Time 0.663 (0.661)	Data 0.001 (0.027)	Loss 3.5109 (3.1754)	
+Epoch: [85][70/100]	Time 0.657 (0.660)	Data 0.001 (0.023)	Loss 2.5473 (3.1223)	
+Epoch: [85][80/100]	Time 0.601 (0.655)	Data 0.001 (0.020)	Loss 2.7220 (3.1148)	
+Epoch: [85][90/100]	Time 0.627 (0.653)	Data 0.000 (0.018)	Loss 2.3575 (3.0509)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 15.516)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.396)
+Test: 	Time 3.448	Prec@1 38.583	Prec@5 46.062
+KNN: Forward Pass Time   5.051
+KNN: Clustering time     0.113
+Number of proper clusters: 102
+Epoch: [86][10/100]	Time 0.600 (0.753)	Data 0.001 (0.126)	Loss 2.8717 (3.2678)	
+Epoch: [86][20/100]	Time 0.632 (0.699)	Data 0.001 (0.066)	Loss 2.9949 (3.0187)	
+Epoch: [86][30/100]	Time 0.630 (0.680)	Data 0.001 (0.045)	Loss 2.5931 (2.8781)	
+Epoch: [86][40/100]	Time 0.652 (0.670)	Data 0.001 (0.034)	Loss 3.2257 (2.8186)	
+Epoch: [86][50/100]	Time 0.637 (0.665)	Data 0.001 (0.028)	Loss 1.9176 (2.6939)	
+Epoch: [86][60/100]	Time 0.653 (0.659)	Data 0.001 (0.023)	Loss 2.6471 (2.6937)	
+Epoch: [86][70/100]	Time 0.616 (0.654)	Data 0.001 (0.020)	Loss 2.4284 (2.6699)	
+Epoch: [86][80/100]	Time 0.639 (0.652)	Data 0.001 (0.018)	Loss 2.2501 (2.6440)	
+Epoch: [86][90/100]	Time 0.620 (0.650)	Data 0.000 (0.016)	Loss 3.5351 (2.6546)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 16.936)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.479)
+Test: 	Time 3.520	Prec@1 23.458	Prec@5 34.625
+KNN: Forward Pass Time   5.382
+KNN: Clustering time     0.112
+Number of proper clusters: 102
+Epoch: [87][10/100]	Time 0.628 (0.780)	Data 0.001 (0.145)	Loss 4.3035 (4.2327)	
+Epoch: [87][20/100]	Time 0.670 (0.714)	Data 0.001 (0.076)	Loss 3.2766 (4.0709)	
+Epoch: [87][30/100]	Time 0.640 (0.692)	Data 0.001 (0.052)	Loss 3.5912 (3.8667)	
+Epoch: [87][40/100]	Time 0.566 (0.672)	Data 0.001 (0.039)	Loss 2.7169 (3.6418)	
+Epoch: [87][50/100]	Time 0.606 (0.662)	Data 0.001 (0.032)	Loss 3.1377 (3.4999)	
+Epoch: [87][60/100]	Time 0.625 (0.654)	Data 0.001 (0.027)	Loss 2.9332 (3.4068)	
+Epoch: [87][70/100]	Time 0.626 (0.649)	Data 0.001 (0.023)	Loss 2.6522 (3.3429)	
+Epoch: [87][80/100]	Time 0.630 (0.645)	Data 0.001 (0.020)	Loss 2.4572 (3.2865)	
+Epoch: [87][90/100]	Time 0.580 (0.643)	Data 0.000 (0.018)	Loss 3.0974 (3.2251)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 16.458)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.100)
+Test: 	Time 3.138	Prec@1 15.125	Prec@5 24.396
+KNN: Forward Pass Time   5.784
+KNN: Clustering time     0.111
+Number of proper clusters: 102
+Epoch: [88][10/100]	Time 0.643 (0.801)	Data 0.001 (0.188)	Loss 3.2392 (3.1477)	
+Epoch: [88][20/100]	Time 0.626 (0.719)	Data 0.001 (0.099)	Loss 2.7372 (2.9893)	
+Epoch: [88][30/100]	Time 0.628 (0.691)	Data 0.001 (0.067)	Loss 2.5827 (2.9596)	
+Epoch: [88][40/100]	Time 0.637 (0.675)	Data 0.001 (0.051)	Loss 3.6487 (2.9675)	
+Epoch: [88][50/100]	Time 0.609 (0.665)	Data 0.001 (0.041)	Loss 3.0079 (2.9735)	
+Epoch: [88][60/100]	Time 0.633 (0.658)	Data 0.001 (0.034)	Loss 2.1188 (2.9238)	
+Epoch: [88][70/100]	Time 0.578 (0.651)	Data 0.001 (0.030)	Loss 2.3227 (2.8839)	
+Epoch: [88][80/100]	Time 0.631 (0.646)	Data 0.001 (0.026)	Loss 2.3349 (2.8573)	
+Epoch: [88][90/100]	Time 0.602 (0.643)	Data 0.000 (0.023)	Loss 2.1355 (2.8433)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 13.981)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.196)
+Test: 	Time 3.236	Prec@1 34.292	Prec@5 46.396
+KNN: Forward Pass Time   4.254
+KNN: Clustering time     0.093
+Number of proper clusters: 102
+Epoch: [89][10/100]	Time 0.629 (0.725)	Data 0.001 (0.100)	Loss 3.2739 (3.5523)	
+Epoch: [89][20/100]	Time 0.613 (0.675)	Data 0.001 (0.053)	Loss 2.6945 (3.3446)	
+Epoch: [89][30/100]	Time 0.632 (0.661)	Data 0.001 (0.036)	Loss 3.9115 (3.2954)	
+Epoch: [89][40/100]	Time 0.637 (0.654)	Data 0.001 (0.027)	Loss 3.5786 (3.1901)	
+Epoch: [89][50/100]	Time 0.589 (0.651)	Data 0.001 (0.022)	Loss 2.4334 (3.0798)	
+Epoch: [89][60/100]	Time 0.627 (0.647)	Data 0.001 (0.019)	Loss 2.8429 (3.0065)	
+Epoch: [89][70/100]	Time 0.626 (0.642)	Data 0.001 (0.016)	Loss 2.2234 (2.9268)	
+Epoch: [89][80/100]	Time 0.633 (0.638)	Data 0.001 (0.014)	Loss 3.0801 (2.8766)	
+Epoch: [89][90/100]	Time 0.626 (0.638)	Data 0.000 (0.013)	Loss 2.9322 (2.8881)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 15.585)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.002)
+Test: 	Time 3.041	Prec@1 25.021	Prec@5 34.333
+KNN: Forward Pass Time   5.228
+KNN: Clustering time     0.107
+Number of proper clusters: 102
+Epoch: [90][10/100]	Time 0.604 (0.769)	Data 0.001 (0.157)	Loss 4.1119 (4.2863)	
+Epoch: [90][20/100]	Time 0.610 (0.695)	Data 0.001 (0.082)	Loss 3.6669 (4.1360)	
+Epoch: [90][30/100]	Time 0.644 (0.675)	Data 0.001 (0.056)	Loss 3.6339 (3.9896)	
+Epoch: [90][40/100]	Time 0.584 (0.664)	Data 0.001 (0.043)	Loss 3.2668 (3.8386)	
+Epoch: [90][50/100]	Time 0.630 (0.655)	Data 0.001 (0.034)	Loss 2.9065 (3.6953)	
+Epoch: [90][60/100]	Time 0.612 (0.650)	Data 0.001 (0.029)	Loss 2.9107 (3.5789)	
+Epoch: [90][70/100]	Time 0.599 (0.644)	Data 0.001 (0.025)	Loss 2.8158 (3.4846)	
+Epoch: [90][80/100]	Time 0.617 (0.643)	Data 0.001 (0.022)	Loss 2.8765 (3.3987)	
+Epoch: [90][90/100]	Time 0.599 (0.640)	Data 0.000 (0.019)	Loss 2.8010 (3.3273)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.860)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.058)
+Test: 	Time 3.095	Prec@1 15.958	Prec@5 16.104
+KNN: Forward Pass Time   5.163
+KNN: Clustering time     0.090
+Number of proper clusters: 102
+Epoch: [91][10/100]	Time 0.609 (0.730)	Data 0.001 (0.120)	Loss 4.0149 (4.1016)	
+Epoch: [91][20/100]	Time 0.608 (0.671)	Data 0.001 (0.063)	Loss 3.3683 (3.8032)	
+Epoch: [91][30/100]	Time 0.630 (0.654)	Data 0.001 (0.043)	Loss 2.9059 (3.5929)	
+Epoch: [91][40/100]	Time 0.620 (0.647)	Data 0.001 (0.033)	Loss 2.6771 (3.4148)	
+Epoch: [91][50/100]	Time 0.633 (0.644)	Data 0.001 (0.026)	Loss 2.8144 (3.2845)	
+Epoch: [91][60/100]	Time 0.616 (0.639)	Data 0.001 (0.022)	Loss 2.7924 (3.1778)	
+Epoch: [91][70/100]	Time 0.600 (0.635)	Data 0.001 (0.019)	Loss 3.2008 (3.0771)	
+Epoch: [91][80/100]	Time 0.665 (0.634)	Data 0.001 (0.017)	Loss 2.0464 (2.9970)	
+Epoch: [91][90/100]	Time 0.601 (0.632)	Data 0.000 (0.015)	Loss 2.4697 (2.9116)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 12.342)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.113)
+Test: 	Time 3.153	Prec@1 27.625	Prec@5 32.958
+KNN: Forward Pass Time   3.859
+KNN: Clustering time     0.103
+Number of proper clusters: 102
+Epoch: [92][10/100]	Time 0.636 (0.757)	Data 0.001 (0.122)	Loss 4.0240 (3.9336)	
+Epoch: [92][20/100]	Time 0.627 (0.698)	Data 0.001 (0.064)	Loss 2.8968 (3.6864)	
+Epoch: [92][30/100]	Time 0.631 (0.674)	Data 0.001 (0.044)	Loss 2.7759 (3.4014)	
+Epoch: [92][40/100]	Time 0.611 (0.663)	Data 0.001 (0.033)	Loss 2.9914 (3.2091)	
+Epoch: [92][50/100]	Time 0.581 (0.654)	Data 0.001 (0.027)	Loss 2.1421 (3.0677)	
+Epoch: [92][60/100]	Time 0.607 (0.649)	Data 0.001 (0.023)	Loss 2.3647 (2.9960)	
+Epoch: [92][70/100]	Time 0.624 (0.645)	Data 0.001 (0.020)	Loss 1.9595 (2.8721)	
+Epoch: [92][80/100]	Time 0.636 (0.643)	Data 0.001 (0.017)	Loss 2.5358 (2.7942)	
+Epoch: [92][90/100]	Time 0.624 (0.640)	Data 0.000 (0.015)	Loss 2.2249 (2.7226)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 14.012)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.019)
+Test: 	Time 3.059	Prec@1 24.562	Prec@5 25.167
+KNN: Forward Pass Time   4.022
+KNN: Clustering time     0.106
+Number of proper clusters: 102
+Epoch: [93][10/100]	Time 0.627 (0.748)	Data 0.001 (0.133)	Loss 3.9705 (3.8129)	
+Epoch: [93][20/100]	Time 0.601 (0.689)	Data 0.001 (0.070)	Loss 3.9297 (3.5899)	
+Epoch: [93][30/100]	Time 0.613 (0.664)	Data 0.000 (0.048)	Loss 3.3054 (3.4045)	
+Epoch: [93][40/100]	Time 0.592 (0.655)	Data 0.001 (0.036)	Loss 2.8724 (3.2693)	
+Epoch: [93][50/100]	Time 0.626 (0.648)	Data 0.001 (0.029)	Loss 2.7804 (3.1909)	
+Epoch: [93][60/100]	Time 0.606 (0.645)	Data 0.001 (0.025)	Loss 2.6458 (3.1481)	
+Epoch: [93][70/100]	Time 0.628 (0.641)	Data 0.001 (0.021)	Loss 2.6458 (3.1158)	
+Epoch: [93][80/100]	Time 0.619 (0.640)	Data 0.001 (0.019)	Loss 2.6088 (3.0806)	
+Epoch: [93][90/100]	Time 0.599 (0.636)	Data 0.000 (0.017)	Loss 2.7345 (3.0474)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 13.999)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.019)
+Test: 	Time 3.059	Prec@1 31.771	Prec@5 33.396
+KNN: Forward Pass Time   4.764
+KNN: Clustering time     0.092
+Number of proper clusters: 102
+Epoch: [94][10/100]	Time 0.630 (0.761)	Data 0.001 (0.135)	Loss 2.9577 (3.0619)	
+Epoch: [94][20/100]	Time 0.738 (0.704)	Data 0.001 (0.071)	Loss 3.0683 (2.9534)	
+Epoch: [94][30/100]	Time 0.663 (0.681)	Data 0.001 (0.048)	Loss 2.4970 (2.8506)	
+Epoch: [94][40/100]	Time 0.626 (0.671)	Data 0.001 (0.037)	Loss 2.8154 (2.7614)	
+Epoch: [94][50/100]	Time 0.652 (0.664)	Data 0.002 (0.030)	Loss 1.9445 (2.7287)	
+Epoch: [94][60/100]	Time 0.621 (0.658)	Data 0.001 (0.025)	Loss 2.0867 (2.6762)	
+Epoch: [94][70/100]	Time 0.627 (0.653)	Data 0.001 (0.021)	Loss 1.7457 (2.6511)	
+Epoch: [94][80/100]	Time 0.619 (0.649)	Data 0.001 (0.019)	Loss 2.2123 (2.6135)	
+Epoch: [94][90/100]	Time 0.617 (0.647)	Data 0.000 (0.017)	Loss 1.5083 (2.5443)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 15.317)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.965)
+Test: 	Time 3.003	Prec@1 37.771	Prec@5 48.354
+KNN: Forward Pass Time   5.108
+KNN: Clustering time     0.109
+Number of proper clusters: 102
+Epoch: [95][10/100]	Time 0.624 (0.771)	Data 0.001 (0.148)	Loss 3.3505 (3.0892)	
+Epoch: [95][20/100]	Time 0.625 (0.705)	Data 0.001 (0.078)	Loss 2.4579 (2.8561)	
+Epoch: [95][30/100]	Time 0.605 (0.680)	Data 0.001 (0.053)	Loss 2.2475 (2.7128)	
+Epoch: [95][40/100]	Time 0.599 (0.667)	Data 0.001 (0.040)	Loss 2.3990 (2.6381)	
+Epoch: [95][50/100]	Time 0.655 (0.660)	Data 0.001 (0.033)	Loss 1.9859 (2.5436)	
+Epoch: [95][60/100]	Time 0.631 (0.656)	Data 0.001 (0.027)	Loss 1.6239 (2.4559)	
+Epoch: [95][70/100]	Time 0.623 (0.655)	Data 0.001 (0.024)	Loss 1.8387 (2.3523)	
+Epoch: [95][80/100]	Time 0.606 (0.650)	Data 0.001 (0.021)	Loss 1.4823 (2.3229)	
+Epoch: [95][90/100]	Time 0.594 (0.645)	Data 0.000 (0.018)	Loss 1.1303 (2.2710)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 14.360)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.146)
+Test: 	Time 3.184	Prec@1 32.438	Prec@5 50.333
+KNN: Forward Pass Time   4.971
+KNN: Clustering time     0.095
+Number of proper clusters: 102
+Epoch: [96][10/100]	Time 0.635 (0.773)	Data 0.001 (0.147)	Loss 2.6978 (3.3223)	
+Epoch: [96][20/100]	Time 0.630 (0.708)	Data 0.001 (0.077)	Loss 2.4923 (2.9519)	
+Epoch: [96][30/100]	Time 0.647 (0.684)	Data 0.001 (0.053)	Loss 2.1902 (2.7655)	
+Epoch: [96][40/100]	Time 0.622 (0.671)	Data 0.001 (0.040)	Loss 2.5470 (2.6383)	
+Epoch: [96][50/100]	Time 0.601 (0.658)	Data 0.001 (0.032)	Loss 2.0394 (2.5390)	
+Epoch: [96][60/100]	Time 0.606 (0.650)	Data 0.001 (0.027)	Loss 2.3633 (2.4639)	
+Epoch: [96][70/100]	Time 0.643 (0.645)	Data 0.001 (0.023)	Loss 1.5620 (2.3531)	
+Epoch: [96][80/100]	Time 0.559 (0.641)	Data 0.001 (0.020)	Loss 1.7547 (2.2866)	
+Epoch: [96][90/100]	Time 0.627 (0.640)	Data 0.000 (0.018)	Loss 2.9084 (2.2835)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 17.965)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.688)
+Test: 	Time 3.727	Prec@1 47.208	Prec@5 53.500
+KNN: Forward Pass Time   5.217
+KNN: Clustering time     0.092
+Number of proper clusters: 102
+Epoch: [97][10/100]	Time 0.606 (0.744)	Data 0.001 (0.135)	Loss 3.1837 (3.6274)	
+Epoch: [97][20/100]	Time 0.606 (0.686)	Data 0.001 (0.071)	Loss 3.4091 (3.3874)	
+Epoch: [97][30/100]	Time 0.631 (0.662)	Data 0.001 (0.048)	Loss 3.1528 (3.2219)	
+Epoch: [97][40/100]	Time 0.585 (0.651)	Data 0.001 (0.037)	Loss 2.5748 (3.1090)	
+Epoch: [97][50/100]	Time 0.626 (0.648)	Data 0.001 (0.030)	Loss 1.7517 (2.9613)	
+Epoch: [97][60/100]	Time 0.599 (0.643)	Data 0.001 (0.025)	Loss 2.2227 (2.8670)	
+Epoch: [97][70/100]	Time 0.635 (0.640)	Data 0.001 (0.021)	Loss 2.0387 (2.8051)	
+Epoch: [97][80/100]	Time 0.623 (0.639)	Data 0.001 (0.019)	Loss 3.3294 (2.8083)	
+Epoch: [97][90/100]	Time 0.622 (0.637)	Data 0.000 (0.017)	Loss 2.1122 (2.7519)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 15.549)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.259)
+Test: 	Time 3.297	Prec@1 32.625	Prec@5 33.208
+KNN: Forward Pass Time   3.881
+KNN: Clustering time     0.088
+Number of proper clusters: 102
+Epoch: [98][10/100]	Time 0.630 (0.724)	Data 0.001 (0.101)	Loss 2.7835 (3.1109)	
+Epoch: [98][20/100]	Time 0.594 (0.677)	Data 0.001 (0.053)	Loss 2.9538 (2.9053)	
+Epoch: [98][30/100]	Time 0.610 (0.654)	Data 0.001 (0.036)	Loss 2.7510 (2.8426)	
+Epoch: [98][40/100]	Time 0.601 (0.643)	Data 0.001 (0.028)	Loss 2.6679 (2.7533)	
+Epoch: [98][50/100]	Time 0.608 (0.639)	Data 0.001 (0.022)	Loss 1.9338 (2.6199)	
+Epoch: [98][60/100]	Time 0.628 (0.638)	Data 0.001 (0.019)	Loss 2.5752 (2.5383)	
+Epoch: [98][70/100]	Time 0.631 (0.636)	Data 0.001 (0.016)	Loss 1.5466 (2.4781)	
+Epoch: [98][80/100]	Time 0.609 (0.636)	Data 0.001 (0.014)	Loss 1.8709 (2.4185)	
+Epoch: [98][90/100]	Time 0.547 (0.629)	Data 0.000 (0.013)	Loss 1.7301 (2.3967)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 15.370)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.011)
+Test: 	Time 3.051	Prec@1 41.688	Prec@5 51.167
+KNN: Forward Pass Time   3.997
+KNN: Clustering time     0.091
+Number of proper clusters: 102
+Epoch: [99][10/100]	Time 0.652 (0.787)	Data 0.001 (0.151)	Loss 2.7020 (3.1739)	
+Epoch: [99][20/100]	Time 0.608 (0.709)	Data 0.001 (0.079)	Loss 2.9164 (3.0344)	
+Epoch: [99][30/100]	Time 0.635 (0.682)	Data 0.001 (0.054)	Loss 2.4619 (2.9693)	
+Epoch: [99][40/100]	Time 0.599 (0.666)	Data 0.001 (0.041)	Loss 2.7065 (2.8777)	
+Epoch: [99][50/100]	Time 0.625 (0.656)	Data 0.001 (0.033)	Loss 3.4362 (2.8631)	
+Epoch: [99][60/100]	Time 0.621 (0.651)	Data 0.001 (0.028)	Loss 2.1601 (2.7834)	
+Epoch: [99][70/100]	Time 0.574 (0.647)	Data 0.001 (0.024)	Loss 2.0226 (2.7390)	
+Epoch: [99][80/100]	Time 0.604 (0.643)	Data 0.001 (0.021)	Loss 2.0716 (2.6973)	
+Epoch: [99][90/100]	Time 0.629 (0.640)	Data 0.000 (0.019)	Loss 2.2327 (2.6543)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 14.953)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.162)
+Test: 	Time 3.202	Prec@1 32.250	Prec@5 34.521
+KNN: Forward Pass Time   5.640
+KNN: Clustering time     0.107
+Done

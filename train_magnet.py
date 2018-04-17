@@ -32,16 +32,19 @@ import torch.optim
 import torch.utils.data
 import torch.utils.data.distributed
 
-from datasets                   import ImageNet, oxford_iiit_pet
+from datasets                   import ImageNet, oxford_iiit_pet, oxford_flowers, magnet_MNIST
 from models                     import magnetInception
 from tensorboardX               import SummaryWriter    as Logger
 from util.torch_utils           import to_var, save_checkpoint, AverageMeter, accuracy
-from util                       import magnet_loss, triplet_loss, softkNN_metrics
+from util                       import magnet_loss, triplet_loss, softkNN_metrics, softkNC_metrics
 from torch.optim.lr_scheduler   import MultiStepLR
 from IPython                    import embed
 from sklearn.cluster            import KMeans
 from torch.utils.data.sampler   import Sampler
 
+
+import torch.nn as nn
+import torch.nn.functional as F
 
 def main(args):
     curr_time = time.time()
@@ -57,7 +60,12 @@ def main(args):
     # Model - inception_v3 as specified in the paper
     # Note: This is slightly different to the model used by the paper,
     # however, the differences should be minor in terms of implementation and impact on results
-    model   = magnetInception(args.embedding_size)
+
+    if args.dataset == "MNIST":
+        model   = Net(args.embedding_size)
+    else:
+        model   = magnetInception(args.embedding_size)
+
     model   = torch.nn.DataParallel(model).cuda()
 
 
@@ -103,7 +111,9 @@ def main(args):
     #                                     step        = 0,
     #                                     datasplit   = "valid")
 
-    loss_vector = None
+
+    loss_vector = 500. * np.ones(args.K * args.num_classes)
+    loss_count  = np.ones(args.K * args.num_classes)
 
     for epoch in range(0, args.num_epochs):
 
@@ -111,18 +121,20 @@ def main(args):
         if args.evaluate_only:         exit()
         if args.optimizer == 'sgd':    scheduler.step()
 
-        order = define_order(cluster_assignment, cluster_centers, loss_vector)
+        order = define_order(cluster_assignment, cluster_centers, loss_vector/loss_count)
         train_loader.dataset.update_read_order(order)
 
         logger.add_scalar("Misc/Epoch Number", epoch, epoch * total_step)
-        loss_vector, stdev = train_step(   model        = model,
+        loss_vector, loss_count, stdev = train_step(   model        = model,
                                     train_loader = train_loader,
                                     criterion    = criterion,
-                                    optimizer    = optimizer,
                                     epoch        = epoch,
+                                    optimizer    = optimizer,
                                     step         = epoch * total_step,
                                     valid_loader = valid_loader,
-                                    assignment   = cluster_assignment)
+                                    assignment   = cluster_assignment,
+                                    loss_vector  = loss_vector,
+                                    loss_count   = loss_count)
 
 
         curr_loss, curr_wacc = eval_step(   model       = model,
@@ -130,7 +142,8 @@ def main(args):
                                             criterion   = criterion,
                                             step        = epoch * total_step,
                                             datasplit   = "train",
-                                            stdev       = stdev)
+                                            stdev       = stdev,
+                                            cluster_centers = cluster_centers)
 
         cluster_centers, assignment = indexing_step( model = model, data_loader = train_loader, cluster_centers = cluster_centers)
 
@@ -153,7 +166,7 @@ def main(args):
                              curr_acc   = curr_wacc,
                              filename   = ('model@epoch%d.pkl' %(epoch)))
 
-def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loader = None, assignment = None):
+def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loader = None, assignment = None, loss_vector = None, loss_count=None):
 
     batch_time = AverageMeter()
     data_time = AverageMeter()
@@ -167,8 +180,6 @@ def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loa
 
     end = time.time()
 
-    loss_vector = np.zeros(args.K * args.num_classes)
-    loss_count  = np.zeros(args.K * args.num_classes)
     for i, (input, target, inst_indices) in enumerate(train_loader):
         # measure data loading time
         data_time.update(time.time() - end)
@@ -177,8 +188,13 @@ def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loa
 
         # compute output
         output = model(input_var)
-        loss, loss_vector, loss_count, c_stdev = criterion(output, list(inst_indices.numpy()), assignment, loss_vector, loss_count)
+        loss, c_loss_vector, c_loss_count, c_stdev = criterion(output, list(inst_indices.numpy()), assignment, loss_vector, loss_count, input, model)
         stdev.update(c_stdev, 1)
+
+        loss_vector *= 0.9
+        loss_count  *= 0.9
+        loss_vector += (c_loss_vector/100.)
+        loss_count  += c_loss_count
 
         # measure accuracy and record loss
         # prec1, prec5 = accuracy(output.data, target, topk=(1, 5))
@@ -215,8 +231,8 @@ def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loa
             logger.add_scalar("Misc/epoch time (min)",  batch_time.sum / 60.,                             step + i)
             logger.add_scalar("Misc/time left (min)",   ((len(train_loader) - i) * batch_time.avg) / 60., step + i)
             logger.add_scalar(args.dataset + "/Loss train  (avg)",          losses.avg,                      step + i)
-            logger.add_scalar(args.dataset + "/Perc5 train (avg)",          top5.avg,                      step + i)
-            logger.add_scalar(args.dataset + "/Perc1 train (avg)",          top1.avg,                      step + i)
+            # logger.add_scalar(args.dataset + "/Perc5 train (avg)",          top5.avg,                      step + i)
+            # logger.add_scalar(args.dataset + "/Perc1 train (avg)",          top1.avg,                      step + i)
 
         end = time.time()
 
@@ -228,26 +244,15 @@ def train_step(model, train_loader, criterion, optimizer, epoch, step, valid_loa
                                 datasplit   = "valid")
             model.train()
 
-    for i in range(0, len(loss_vector)):
-        if loss_count[i] != 0.0:
-            loss_vector[i] = loss_vector[i] / loss_count[i]
 
-    loss_sum = np.sum(loss_vector)
-
-    for i in range(0, len(loss_vector)):
-        if loss_count[i] == 0.0:
-            loss_vector[i] = loss_sum
-
-    loss_vector = loss_vector / np.sum(loss_vector)
-
-    return loss_vector, stdev.avg
+    return loss_vector, loss_count, stdev.avg
 
 
-def eval_step( model, data_loader,  criterion, step, datasplit, stdev):
+def eval_step( model, data_loader,  criterion, step, datasplit, stdev, cluster_centers):
     batch_time = AverageMeter()
     losses = AverageMeter()
 
-    metrics = softkNN_metrics(num_clusters = args.num_classes * args.K)
+    metrics = softkNC_metrics(stdev = stdev, cluster_centers = cluster_centers ,K = args.K, L = args.L)
 
     # switch to evaluate mode
     model.eval()
@@ -278,8 +283,8 @@ def eval_step( model, data_loader,  criterion, step, datasplit, stdev):
     )
 
     # logger.add_scalar(args.dataset + "/Loss valid  (avg)",   losses.avg, step)
-    logger.add_scalar(args.dataset + "/Perc5 valid (avg)",   acc5,   step)
-    logger.add_scalar(args.dataset + "/Perc1 valid (avg)",   acc1,   step)
+    logger.add_scalar(args.dataset + "/Perc5 " + datasplit + " (avg)",   acc5,   step)
+    logger.add_scalar(args.dataset + "/Perc1 " + datasplit + " (avg)",   acc1,   step)
 
     return losses.avg, 0.0
 
@@ -338,7 +343,8 @@ def cluster_assignment(indices, embeddings, labels, init_centers):
         else:
             c_init_centers = init_centers[i*args.K:(i+1)*args.K, :]
 
-        kmeans = KMeans(n_clusters=args.K, random_state=0, init = c_init_centers).fit(class_dict[i]['embeddings'])
+        # embed()
+        kmeans = KMeans(n_clusters=args.K, init = c_init_centers).fit(class_dict[i]['embeddings'])
         k_labels    = kmeans.labels_
         k_centers   = kmeans.cluster_centers_
 
@@ -363,10 +369,6 @@ def define_order(cluster_assignment, cluster_centers, loss_vector):
 
     num_clusters = args.num_classes * args.K
 
-    if loss_vector is None:
-        loss_vector = np.ones(num_clusters) / float(num_clusters)
-        loss_vector = list(loss_vector)
-
     cluster_distances = np.ones((num_clusters, num_clusters))
 
     for i in range(0, num_clusters):
@@ -375,12 +377,12 @@ def define_order(cluster_assignment, cluster_centers, loss_vector):
             cluster_distances[i][j] = d
             cluster_distances[j][i] = d
 
-    NUM_BATCHES = 100
 
     #construct useful dict
     cluster_dict = {}
     for i in range(0, num_clusters):
         cluster_dict[i] = []
+
 
     for i in range(0, len(cluster_assignment)):
         cluster_dict[cluster_assignment[i]].append(i)
@@ -401,7 +403,7 @@ def define_order(cluster_assignment, cluster_centers, loss_vector):
 
     order = []
     # construct batches
-    for B in range(0, NUM_BATCHES):
+    for B in range(0, args.NUM_BATCHES):
         M0 = np.random.choice(range(0, num_clusters), p = loss_vector)
         # print("Cluster to deal with is " + str(M0))
 
@@ -424,9 +426,8 @@ def define_order(cluster_assignment, cluster_centers, loss_vector):
 
 
 def get_loaders():
+
     # Data loading code (From PyTorch example https://github.com/pytorch/examples/blob/master/imagenet/main.py)
-    traindir = os.path.join(args.data_path, 'train')
-    valdir = os.path.join(args.data_path, 'validation')
     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                      std=[0.229, 0.224, 0.225])
 
@@ -444,9 +445,25 @@ def get_loaders():
         normalize,
     ])
 
-    print("Generating Training Dataset")
-    train_dataset = oxford_iiit_pet("train", args.data_path, transform = train_transform)
-    valid_dataset = oxford_iiit_pet("test",  args.data_path, transform = valid_transform)
+    print("Generating Datasets")
+    if args.dataset == "oxford":
+        train_dataset = oxford_iiit_pet("train", args.data_path, transform = train_transform)
+        valid_dataset = oxford_iiit_pet("test",  args.data_path, transform = valid_transform)
+    elif args.dataset == "flowers":
+        train_dataset = oxford_flowers("train", args.data_path, transform = train_transform)
+        valid_dataset = oxford_flowers("valid",  args.data_path, transform = valid_transform)
+    elif args.dataset == "MNIST":
+        train_dataset   =   magnet_MNIST('../data', train=False, download=True,
+                                transform=transforms.Compose([
+                                transforms.ToTensor(),
+                                transforms.Normalize((0.1307,), (0.3081,))
+                            ]))
+        valid_dataset = magnet_MNIST('../data', train=False,
+                                transform=transforms.Compose([
+                                    transforms.ToTensor(),
+                                    transforms.Normalize((0.1307,), (0.3081,))
+                            ]))
+    # END IF
 
     print("Generating Data Loaders")
     train_loader = torch.utils.data.DataLoader(
@@ -464,6 +481,26 @@ def get_loaders():
 
     return train_loader, valid_loader
 
+
+class Net(torch.nn.Module):
+
+    def __init__(self, embedding_size):
+        super(Net, self).__init__()
+        self.conv1 = nn.Conv2d(1, 10, kernel_size=5)
+        self.conv2 = nn.Conv2d(10, 20, kernel_size=5)
+        self.conv2_drop = nn.Dropout2d()
+        self.fc1 = nn.Linear(320, 50)
+        self.fc2 = nn.Linear(50, embedding_size)
+
+    def forward(self, x):
+        x = F.relu(F.max_pool2d(self.conv1(x), 2))
+        x = F.relu(F.max_pool2d(self.conv2_drop(self.conv2(x)), 2))
+        x = x.view(-1, 320)
+        x = F.relu(self.fc1(x))
+        x = F.dropout(x, training=self.training)
+        x = self.fc2(x)
+        return x
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
@@ -478,9 +515,7 @@ if __name__ == '__main__':
 
     # training parameters
     parser.add_argument('--num_epochs',         type=int,   default=100)
-    parser.add_argument('--num_classes',        type=int,   default=37)
     parser.add_argument('--embedding_size',     type=int,   default=512)
-    parser.add_argument('--batch_size',         type=int,   default=256)
     parser.add_argument('--lr',                 type=float, default=0.1)
     parser.add_argument('--momentum',           type=float, default=0.9)
     parser.add_argument('--weight_decay',       type=float, default=1e-4)
@@ -504,16 +539,27 @@ if __name__ == '__main__':
     # Magnet Loss Parameters
     parser.add_argument('--M',                  type=int, default=8)       # Number of nearest clusters per mini-batch
     parser.add_argument('--K',                  type=int, default=8)       # Number of clusters per class
+    parser.add_argument('--L',                  type=int, default=8)       # Number of clusters per class
     parser.add_argument('--D',                  type=int, default=4)       # Number of examples per cluster
     parser.add_argument('--GAP',                type=float, default=4)       # Number of examples per cluster
+    parser.add_argument('--NUM_BATCHES',        type=int, default=100)       # Number of examples per cluster
 
 
     args = parser.parse_args()
     print(args)
     print("")
 
+    args.batch_size = args.M * args.D
+
     if args.dataset == "oxford":
         args.data_path = "/z/home/mbanani/datasets/Oxford-IIIT_Pet/"
+        args.num_classes = 37
+    elif args.dataset == "MNIST":
+        args.data_path = None
+        args.num_classes = 10
+    elif args.dataset == "flowers":
+        args.data_path = "/z/home/mbanani/datasets/Oxford_Flowers/"
+        args.num_classes = 102
 
     root_dir                    = os.path.dirname(os.path.abspath(__file__))
     experiment_result_dir       = os.path.join(root_dir, os.path.join('experiments',args.dataset))
