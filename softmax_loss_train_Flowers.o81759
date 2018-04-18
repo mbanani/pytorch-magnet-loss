@@ -1,0 +1,338 @@
+I got allocated the
+/var/spool/torque/mom_priv/jobs/81759.blindspot.SC: line 15: following: command not found
+gpu: 2
+gpu: 1
+PBS: qsub is running on focus
+PBS: originating queue is batch
+PBS: executing queue is batch
+PBS: working directory is /z/home/mbanani/projects/pytorch-magnet-loss
+PBS: execution mode is PBS_BATCH
+PBS: job identifich_convAtter is 81759.blindspot
+PBS: job name is softmax_loss_train_Flowers
+PBS: node file is /var/spool/torque/aux//81759.blindspot
+PBS: current home directory is /home/mbanani
+PBS: PATH = /z/home/mbanani/PyTorch3/bin:/z/sw/packages/cuda/8.0.61/bin:/z/home/mbanani/sw/miniconda2/bin:/z/sw/bin/:/z/sw/sbin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+------------------------------------------------------
+Namespace(annealing_factor=1.0, batch_size=128, dataset='flowers', dist_backend='gloo', dist_url='tcp://224.66.41.62:23456', embedding_size=512, eval_epoch=3, eval_step=1000, evaluate_only=False, evaluate_train=False, experiment_name='OxfordFlowers_Softmax', log_rate=10, loss='softmax', lr=0.005, model='inception', momentum=0.9, num_epochs=300, optimizer='sgd', resume=None, save_epoch=10, weight_decay=0.0001, workers=7, world_size=1)
+
+Experiment path is :  /z/home/mbanani/projects/pytorch-magnet-loss/experiments/flowers/exp_04_18_03_17_16_flowers_OxfordFlowers_Softmax
+#############  Read in Database   ##############
+Generating Datasets
+csv file length:  1019
+Dataset loaded in  0.007103681564331055  secs.
+Dataset size:  1019
+csv file length:  6148
+Dataset loaded in  0.03776979446411133  secs.
+Dataset size:  6148
+Generating Data Loaders
+Time taken:  0.045144081115722656 seconds
+######## Initiate Model and Optimizer   ##############
+Time taken:  5.780287265777588 seconds
+#############  Start Training     ##############
+Evaluation: valid 	Time 23.208	Prec@1 0.911	Prec@5 5.368	
+Evaluation: valid 	Time 14.323	Prec@1 1.399	Prec@5 7.677	
+Evaluation: valid 	Time 15.101	Prec@1 2.342	Prec@5 11.370	
+Evaluation: valid 	Time 12.521	Prec@1 4.213	Prec@5 16.249	
+Evaluation: valid 	Time 12.626	Prec@1 6.978	Prec@5 20.950	
+Evaluation: valid 	Time 12.898	Prec@1 9.776	Prec@5 25.927	
+Evaluation: valid 	Time 12.405	Prec@1 12.947	Prec@5 30.514	
+Evaluation: valid 	Time 13.192	Prec@1 15.973	Prec@5 34.450	
+Evaluation: valid 	Time 16.275	Prec@1 19.323	Prec@5 38.191	
+Evaluation: valid 	Time 13.717	Prec@1 21.812	Prec@5 42.030	
+Evaluation: valid 	Time 16.387	Prec@1 24.496	Prec@5 45.771	
+Evaluation: valid 	Time 13.795	Prec@1 26.529	Prec@5 48.796	
+Evaluation: valid 	Time 16.115	Prec@1 29.245	Prec@5 52.017	
+Evaluation: valid 	Time 14.262	Prec@1 30.969	Prec@5 54.587	
+Evaluation: valid 	Time 15.830	Prec@1 32.807	Prec@5 57.157	
+Evaluation: valid 	Time 14.939	Prec@1 34.906	Prec@5 59.841	
+Evaluation: valid 	Time 16.748	Prec@1 36.679	Prec@5 61.955	
+Evaluation: valid 	Time 14.087	Prec@1 38.517	Prec@5 63.891	
+Evaluation: valid 	Time 16.340	Prec@1 40.371	Prec@5 65.582	
+Evaluation: valid 	Time 15.575	Prec@1 42.111	Prec@5 67.290	
+Evaluation: valid 	Time 17.705	Prec@1 43.640	Prec@5 68.900	
+Evaluation: valid 	Time 15.712	Prec@1 44.600	Prec@5 70.202	
+Evaluation: valid 	Time 16.730	Prec@1 46.438	Prec@5 71.698	
+Evaluation: valid 	Time 16.574	Prec@1 47.739	Prec@5 72.918	
+Evaluation: valid 	Time 17.070	Prec@1 49.886	Prec@5 74.366	
+Evaluation: valid 	Time 18.096	Prec@1 50.846	Prec@5 75.423	
+Evaluation: valid 	Time 17.366	Prec@1 51.838	Prec@5 76.187	
+Evaluation: valid 	Time 14.898	Prec@1 53.074	Prec@5 77.163	
+Evaluation: valid 	Time 15.115	Prec@1 54.164	Prec@5 78.432	
+Evaluation: valid 	Time 16.926	Prec@1 55.091	Prec@5 79.099	
+Evaluation: valid 	Time 14.652	Prec@1 56.246	Prec@5 79.880	
+Evaluation: valid 	Time 12.921	Prec@1 57.401	Prec@5 80.807	
+Evaluation: valid 	Time 12.783	Prec@1 58.702	Prec@5 81.636	
+Evaluation: valid 	Time 12.698	Prec@1 59.304	Prec@5 82.206	
+Evaluation: valid 	Time 11.844	Prec@1 59.971	Prec@5 82.596	
+Evaluation: valid 	Time 11.948	Prec@1 60.898	Prec@5 83.133	
+Evaluation: valid 	Time 12.199	Prec@1 61.858	Prec@5 83.556	
+Evaluation: valid 	Time 11.802	Prec@1 62.378	Prec@5 83.979	
+Evaluation: valid 	Time 11.974	Prec@1 63.045	Prec@5 84.450	
+Evaluation: valid 	Time 12.054	Prec@1 63.679	Prec@5 84.710	
+Evaluation: valid 	Time 11.826	Prec@1 64.005	Prec@5 85.020	
+Evaluation: valid 	Time 15.056	Prec@1 64.818	Prec@5 85.475	
+Evaluation: valid 	Time 14.186	Prec@1 65.680	Prec@5 85.898	
+Evaluation: valid 	Time 16.215	Prec@1 66.087	Prec@5 86.321	
+Evaluation: valid 	Time 14.637	Prec@1 66.965	Prec@5 86.597	
+Evaluation: valid 	Time 13.556	Prec@1 67.144	Prec@5 87.020	
+Evaluation: valid 	Time 16.277	Prec@1 67.241	Prec@5 87.215	
+Evaluation: valid 	Time 15.717	Prec@1 67.469	Prec@5 87.443	
+Evaluation: valid 	Time 14.553	Prec@1 68.022	Prec@5 87.915	
+Evaluation: valid 	Time 13.643	Prec@1 68.559	Prec@5 88.012	
+Evaluation: valid 	Time 14.656	Prec@1 69.047	Prec@5 88.224	
+Evaluation: valid 	Time 14.123	Prec@1 69.209	Prec@5 88.386	
+Evaluation: valid 	Time 13.789	Prec@1 69.453	Prec@5 88.403	
+Evaluation: valid 	Time 14.482	Prec@1 69.665	Prec@5 88.663	
+Evaluation: valid 	Time 13.124	Prec@1 70.722	Prec@5 89.005	
+Evaluation: valid 	Time 14.551	Prec@1 70.885	Prec@5 89.232	
+Evaluation: valid 	Time 13.538	Prec@1 71.031	Prec@5 89.574	
+Evaluation: valid 	Time 14.553	Prec@1 71.405	Prec@5 89.802	
+Evaluation: valid 	Time 14.826	Prec@1 71.877	Prec@5 90.078	
+Evaluation: valid 	Time 11.892	Prec@1 71.796	Prec@5 90.062	
+Evaluation: valid 	Time 12.037	Prec@1 72.007	Prec@5 89.850	
+Evaluation: valid 	Time 11.658	Prec@1 72.105	Prec@5 90.208	
+Evaluation: valid 	Time 12.163	Prec@1 72.869	Prec@5 90.452	
+Evaluation: valid 	Time 11.790	Prec@1 73.276	Prec@5 90.582	
+Evaluation: valid 	Time 12.324	Prec@1 73.422	Prec@5 90.696	
+Evaluation: valid 	Time 12.252	Prec@1 73.227	Prec@5 90.664	
+Evaluation: valid 	Time 12.040	Prec@1 72.918	Prec@5 90.647	
+Evaluation: valid 	Time 12.039	Prec@1 73.536	Prec@5 90.664	
+Evaluation: valid 	Time 12.365	Prec@1 73.682	Prec@5 90.761	
+Evaluation: valid 	Time 11.690	Prec@1 73.699	Prec@5 90.810	
+Evaluation: valid 	Time 11.670	Prec@1 74.610	Prec@5 91.070	
+Evaluation: valid 	Time 11.653	Prec@1 74.870	Prec@5 91.298	
+Evaluation: valid 	Time 11.925	Prec@1 74.805	Prec@5 91.249	
+Evaluation: valid 	Time 11.823	Prec@1 74.951	Prec@5 91.331	
+Evaluation: valid 	Time 11.767	Prec@1 75.098	Prec@5 91.314	
+Evaluation: valid 	Time 11.363	Prec@1 75.244	Prec@5 91.428	
+Evaluation: valid 	Time 11.699	Prec@1 75.195	Prec@5 91.526	
+Evaluation: valid 	Time 12.037	Prec@1 75.374	Prec@5 91.688	
+Evaluation: valid 	Time 11.693	Prec@1 75.602	Prec@5 91.786	
+Evaluation: valid 	Time 11.815	Prec@1 75.634	Prec@5 91.770	
+Evaluation: valid 	Time 11.290	Prec@1 75.667	Prec@5 91.916	
+Evaluation: valid 	Time 11.782	Prec@1 75.878	Prec@5 91.981	
+Evaluation: valid 	Time 12.180	Prec@1 75.667	Prec@5 92.030	
+Evaluation: valid 	Time 11.741	Prec@1 75.862	Prec@5 91.997	
+Evaluation: valid 	Time 11.597	Prec@1 75.960	Prec@5 91.932	
+Evaluation: valid 	Time 11.716	Prec@1 75.781	Prec@5 91.818	
+Evaluation: valid 	Time 11.922	Prec@1 75.553	Prec@5 91.932	
+Evaluation: valid 	Time 11.881	Prec@1 76.545	Prec@5 92.323	
+Evaluation: valid 	Time 12.471	Prec@1 76.610	Prec@5 92.241	
+Evaluation: valid 	Time 11.962	Prec@1 76.822	Prec@5 92.420	
+Evaluation: valid 	Time 11.288	Prec@1 77.049	Prec@5 92.453	
+Evaluation: valid 	Time 11.571	Prec@1 76.773	Prec@5 92.567	
+Evaluation: valid 	Time 11.621	Prec@1 76.952	Prec@5 92.258	
+Evaluation: valid 	Time 11.911	Prec@1 77.033	Prec@5 92.664	
+Evaluation: valid 	Time 12.243	Prec@1 77.098	Prec@5 92.648	
+Evaluation: valid 	Time 12.012	Prec@1 77.196	Prec@5 92.664	
+Evaluation: valid 	Time 11.726	Prec@1 77.180	Prec@5 92.664	
+Evaluation: valid 	Time 11.888	Prec@1 77.326	Prec@5 92.664	
+Evaluation: valid 	Time 11.973	Prec@1 77.521	Prec@5 92.664	
+Evaluation: valid 	Time 12.028	Prec@1 77.489	Prec@5 92.729	
+Evaluation: valid 	Time 11.946	Prec@1 77.863	Prec@5 92.827	
+Evaluation: valid 	Time 11.987	Prec@1 77.489	Prec@5 92.811	
+Evaluation: valid 	Time 11.524	Prec@1 77.765	Prec@5 92.843	
+Evaluation: valid 	Time 11.887	Prec@1 77.879	Prec@5 92.827	
+Evaluation: valid 	Time 12.176	Prec@1 78.107	Prec@5 92.925	
+Evaluation: valid 	Time 11.812	Prec@1 78.107	Prec@5 92.811	
+Evaluation: valid 	Time 11.606	Prec@1 78.188	Prec@5 92.925	
+Evaluation: valid 	Time 11.778	Prec@1 78.546	Prec@5 93.071	
+Evaluation: valid 	Time 11.775	Prec@1 78.497	Prec@5 93.103	
+Evaluation: valid 	Time 11.773	Prec@1 78.546	Prec@5 93.136	
+Evaluation: valid 	Time 11.614	Prec@1 78.416	Prec@5 93.071	
+Evaluation: valid 	Time 12.073	Prec@1 78.302	Prec@5 93.136	
+Evaluation: valid 	Time 11.919	Prec@1 78.269	Prec@5 93.120	
+Evaluation: valid 	Time 12.139	Prec@1 78.221	Prec@5 93.201	
+Evaluation: valid 	Time 11.960	Prec@1 78.090	Prec@5 93.038	
+Evaluation: valid 	Time 11.909	Prec@1 78.172	Prec@5 93.152	
+Evaluation: valid 	Time 12.000	Prec@1 78.432	Prec@5 93.217	
+Evaluation: valid 	Time 11.680	Prec@1 78.692	Prec@5 93.315	
+Evaluation: valid 	Time 11.465	Prec@1 78.904	Prec@5 93.380	
+Evaluation: valid 	Time 11.532	Prec@1 78.904	Prec@5 93.559	
+Evaluation: valid 	Time 11.254	Prec@1 78.790	Prec@5 93.429	
+Evaluation: valid 	Time 11.919	Prec@1 78.562	Prec@5 93.543	
+Evaluation: valid 	Time 11.720	Prec@1 78.399	Prec@5 93.494	
+Evaluation: valid 	Time 11.776	Prec@1 78.725	Prec@5 93.380	
+Evaluation: valid 	Time 11.835	Prec@1 78.904	Prec@5 93.347	
+Evaluation: valid 	Time 11.765	Prec@1 78.904	Prec@5 93.380	
+Evaluation: valid 	Time 11.949	Prec@1 78.887	Prec@5 93.445	
+Evaluation: valid 	Time 12.260	Prec@1 78.936	Prec@5 93.380	
+Evaluation: valid 	Time 11.686	Prec@1 78.709	Prec@5 93.282	
+Evaluation: valid 	Time 11.523	Prec@1 78.936	Prec@5 93.250	
+Evaluation: valid 	Time 11.944	Prec@1 79.473	Prec@5 93.494	
+Evaluation: valid 	Time 11.819	Prec@1 79.180	Prec@5 93.315	
+Evaluation: valid 	Time 11.889	Prec@1 79.359	Prec@5 93.575	
+Evaluation: valid 	Time 11.937	Prec@1 79.440	Prec@5 93.559	
+Evaluation: valid 	Time 11.911	Prec@1 79.375	Prec@5 93.543	
+Evaluation: valid 	Time 11.687	Prec@1 79.375	Prec@5 93.640	
+Evaluation: valid 	Time 12.073	Prec@1 79.506	Prec@5 93.575	
+Evaluation: valid 	Time 11.829	Prec@1 79.636	Prec@5 93.689	
+Evaluation: valid 	Time 11.740	Prec@1 79.603	Prec@5 93.624	
+Evaluation: valid 	Time 11.923	Prec@1 79.863	Prec@5 93.738	
+Evaluation: valid 	Time 11.733	Prec@1 79.522	Prec@5 93.673	
+Evaluation: valid 	Time 11.521	Prec@1 79.424	Prec@5 93.591	
+Evaluation: valid 	Time 11.934	Prec@1 79.587	Prec@5 93.656	
+Evaluation: valid 	Time 12.178	Prec@1 79.262	Prec@5 93.656	
+Evaluation: valid 	Time 12.016	Prec@1 79.229	Prec@5 93.543	
+Evaluation: valid 	Time 12.330	Prec@1 79.571	Prec@5 93.770	
+Evaluation: valid 	Time 12.344	Prec@1 79.571	Prec@5 93.722	
+Evaluation: valid 	Time 11.697	Prec@1 79.798	Prec@5 93.835	
+Evaluation: valid 	Time 12.143	Prec@1 79.993	Prec@5 93.868	
+Evaluation: valid 	Time 11.742	Prec@1 79.782	Prec@5 93.835	
+Evaluation: valid 	Time 11.960	Prec@1 79.701	Prec@5 93.689	
+Evaluation: valid 	Time 11.804	Prec@1 79.392	Prec@5 93.656	
+Evaluation: valid 	Time 11.566	Prec@1 79.636	Prec@5 93.705	
+Evaluation: valid 	Time 12.054	Prec@1 79.571	Prec@5 93.787	
+Evaluation: valid 	Time 11.957	Prec@1 79.619	Prec@5 93.673	
+Evaluation: valid 	Time 12.267	Prec@1 79.684	Prec@5 93.819	
+Evaluation: valid 	Time 11.685	Prec@1 79.587	Prec@5 93.689	
+Evaluation: valid 	Time 11.986	Prec@1 80.026	Prec@5 93.933	
+Evaluation: valid 	Time 11.570	Prec@1 79.652	Prec@5 93.770	
+Evaluation: valid 	Time 11.909	Prec@1 79.815	Prec@5 93.884	
+Evaluation: valid 	Time 11.985	Prec@1 80.400	Prec@5 93.998	
+Evaluation: valid 	Time 11.997	Prec@1 80.351	Prec@5 93.949	
+Evaluation: valid 	Time 12.086	Prec@1 80.303	Prec@5 94.031	
+Evaluation: valid 	Time 12.276	Prec@1 80.075	Prec@5 94.031	
+Evaluation: valid 	Time 12.297	Prec@1 80.270	Prec@5 93.933	
+Evaluation: valid 	Time 11.675	Prec@1 80.091	Prec@5 93.884	
+Evaluation: valid 	Time 12.160	Prec@1 80.140	Prec@5 93.966	
+Evaluation: valid 	Time 12.082	Prec@1 80.026	Prec@5 93.917	
+Evaluation: valid 	Time 11.606	Prec@1 80.091	Prec@5 94.031	
+Evaluation: valid 	Time 11.936	Prec@1 80.026	Prec@5 94.047	
+Evaluation: valid 	Time 11.952	Prec@1 80.124	Prec@5 93.966	
+Evaluation: valid 	Time 11.857	Prec@1 80.189	Prec@5 94.031	
+Evaluation: valid 	Time 12.336	Prec@1 80.416	Prec@5 94.144	
+Evaluation: valid 	Time 12.414	Prec@1 80.221	Prec@5 94.161	
+Evaluation: valid 	Time 11.642	Prec@1 80.286	Prec@5 94.031	
+Evaluation: valid 	Time 12.273	Prec@1 80.124	Prec@5 93.966	
+Evaluation: valid 	Time 11.533	Prec@1 79.928	Prec@5 93.966	
+Evaluation: valid 	Time 11.595	Prec@1 80.384	Prec@5 94.063	
+Evaluation: valid 	Time 11.861	Prec@1 80.498	Prec@5 93.998	
+Evaluation: valid 	Time 12.334	Prec@1 80.677	Prec@5 94.128	
+Evaluation: valid 	Time 11.614	Prec@1 80.351	Prec@5 94.112	
+Evaluation: valid 	Time 11.861	Prec@1 80.579	Prec@5 94.209	
+Evaluation: valid 	Time 12.077	Prec@1 80.791	Prec@5 94.242	
+Evaluation: valid 	Time 11.929	Prec@1 80.612	Prec@5 94.014	
+Evaluation: valid 	Time 11.836	Prec@1 80.693	Prec@5 94.063	
+Evaluation: valid 	Time 12.200	Prec@1 80.872	Prec@5 94.112	
+Evaluation: valid 	Time 11.954	Prec@1 80.530	Prec@5 93.819	
+Evaluation: valid 	Time 11.623	Prec@1 80.303	Prec@5 93.917	
+Evaluation: valid 	Time 11.715	Prec@1 80.547	Prec@5 93.852	
+Evaluation: valid 	Time 11.951	Prec@1 80.563	Prec@5 93.917	
+Evaluation: valid 	Time 12.422	Prec@1 80.791	Prec@5 93.966	
+Evaluation: valid 	Time 12.116	Prec@1 81.116	Prec@5 94.014	
+Evaluation: valid 	Time 12.188	Prec@1 80.856	Prec@5 94.128	
+Evaluation: valid 	Time 12.337	Prec@1 80.953	Prec@5 94.096	
+Evaluation: valid 	Time 12.029	Prec@1 80.644	Prec@5 94.047	
+Evaluation: valid 	Time 12.081	Prec@1 80.725	Prec@5 93.998	
+Evaluation: valid 	Time 11.735	Prec@1 80.872	Prec@5 94.014	
+Evaluation: valid 	Time 11.698	Prec@1 80.628	Prec@5 93.966	
+Evaluation: valid 	Time 12.006	Prec@1 80.856	Prec@5 93.933	
+Evaluation: valid 	Time 11.609	Prec@1 80.856	Prec@5 93.998	
+Evaluation: valid 	Time 12.008	Prec@1 80.839	Prec@5 94.161	
+Evaluation: valid 	Time 12.097	Prec@1 80.904	Prec@5 94.177	
+Evaluation: valid 	Time 12.406	Prec@1 80.888	Prec@5 94.128	
+Evaluation: valid 	Time 11.787	Prec@1 80.937	Prec@5 94.063	
+Evaluation: valid 	Time 11.634	Prec@1 80.758	Prec@5 93.982	
+Evaluation: valid 	Time 12.416	Prec@1 80.921	Prec@5 94.063	
+Evaluation: valid 	Time 11.659	Prec@1 80.937	Prec@5 94.161	
+Evaluation: valid 	Time 11.786	Prec@1 80.969	Prec@5 94.242	
+Evaluation: valid 	Time 12.216	Prec@1 80.888	Prec@5 94.193	
+Evaluation: valid 	Time 12.512	Prec@1 80.888	Prec@5 94.242	
+Evaluation: valid 	Time 11.569	Prec@1 80.856	Prec@5 94.112	
+Evaluation: valid 	Time 12.042	Prec@1 80.595	Prec@5 94.031	
+Evaluation: valid 	Time 12.289	Prec@1 80.807	Prec@5 94.177	
+Evaluation: valid 	Time 12.217	Prec@1 81.165	Prec@5 94.275	
+Evaluation: valid 	Time 11.992	Prec@1 81.083	Prec@5 94.356	
+Evaluation: valid 	Time 11.973	Prec@1 81.116	Prec@5 94.307	
+Evaluation: valid 	Time 12.066	Prec@1 81.230	Prec@5 94.356	
+Evaluation: valid 	Time 12.221	Prec@1 81.002	Prec@5 94.209	
+Evaluation: valid 	Time 11.723	Prec@1 81.018	Prec@5 94.340	
+Evaluation: valid 	Time 12.136	Prec@1 81.132	Prec@5 94.291	
+Evaluation: valid 	Time 12.122	Prec@1 81.409	Prec@5 94.307	
+Evaluation: valid 	Time 12.017	Prec@1 81.278	Prec@5 94.340	
+Evaluation: valid 	Time 11.571	Prec@1 81.360	Prec@5 94.275	
+Evaluation: valid 	Time 12.179	Prec@1 81.262	Prec@5 94.128	
+Evaluation: valid 	Time 12.325	Prec@1 81.360	Prec@5 94.209	
+Evaluation: valid 	Time 12.139	Prec@1 81.327	Prec@5 94.275	
+Evaluation: valid 	Time 12.040	Prec@1 81.344	Prec@5 94.226	
+Evaluation: valid 	Time 12.225	Prec@1 81.197	Prec@5 94.242	
+Evaluation: valid 	Time 11.676	Prec@1 81.116	Prec@5 94.226	
+Evaluation: valid 	Time 11.955	Prec@1 81.148	Prec@5 94.291	
+Evaluation: valid 	Time 11.776	Prec@1 81.067	Prec@5 94.258	
+Evaluation: valid 	Time 11.770	Prec@1 81.100	Prec@5 94.112	
+Evaluation: valid 	Time 12.179	Prec@1 81.116	Prec@5 94.291	
+Evaluation: valid 	Time 12.152	Prec@1 81.213	Prec@5 94.177	
+Evaluation: valid 	Time 11.708	Prec@1 81.295	Prec@5 94.209	
+Evaluation: valid 	Time 11.988	Prec@1 81.311	Prec@5 94.356	
+Evaluation: valid 	Time 11.859	Prec@1 81.311	Prec@5 94.372	
+Evaluation: valid 	Time 11.757	Prec@1 81.051	Prec@5 94.291	
+Evaluation: valid 	Time 11.740	Prec@1 81.116	Prec@5 94.421	
+Evaluation: valid 	Time 11.741	Prec@1 81.604	Prec@5 94.421	
+Evaluation: valid 	Time 12.036	Prec@1 81.604	Prec@5 94.372	
+Evaluation: valid 	Time 12.119	Prec@1 81.506	Prec@5 94.437	
+Evaluation: valid 	Time 12.222	Prec@1 81.474	Prec@5 94.275	
+Evaluation: valid 	Time 11.305	Prec@1 81.490	Prec@5 94.388	
+Evaluation: valid 	Time 12.095	Prec@1 81.490	Prec@5 94.242	
+Evaluation: valid 	Time 11.781	Prec@1 81.425	Prec@5 94.453	
+Evaluation: valid 	Time 11.459	Prec@1 81.474	Prec@5 94.356	
+Evaluation: valid 	Time 12.127	Prec@1 81.571	Prec@5 94.453	
+Evaluation: valid 	Time 11.668	Prec@1 81.588	Prec@5 94.405	
+Evaluation: valid 	Time 11.919	Prec@1 81.653	Prec@5 94.340	
+Evaluation: valid 	Time 11.841	Prec@1 81.653	Prec@5 94.470	
+Evaluation: valid 	Time 11.511	Prec@1 81.880	Prec@5 94.486	
+Evaluation: valid 	Time 12.244	Prec@1 81.588	Prec@5 94.600	
+Evaluation: valid 	Time 11.954	Prec@1 81.522	Prec@5 94.453	
+Evaluation: valid 	Time 11.886	Prec@1 81.213	Prec@5 94.258	
+Evaluation: valid 	Time 11.921	Prec@1 81.409	Prec@5 94.437	
+Evaluation: valid 	Time 11.748	Prec@1 81.327	Prec@5 94.307	
+Evaluation: valid 	Time 12.000	Prec@1 81.360	Prec@5 94.453	
+Evaluation: valid 	Time 11.390	Prec@1 81.278	Prec@5 94.405	
+Evaluation: valid 	Time 11.802	Prec@1 81.165	Prec@5 94.323	
+Evaluation: valid 	Time 11.866	Prec@1 81.034	Prec@5 94.209	
+Evaluation: valid 	Time 11.790	Prec@1 81.230	Prec@5 94.340	
+Evaluation: valid 	Time 12.052	Prec@1 81.588	Prec@5 94.421	
+Evaluation: valid 	Time 11.783	Prec@1 81.685	Prec@5 94.453	
+Evaluation: valid 	Time 11.928	Prec@1 81.734	Prec@5 94.388	
+Evaluation: valid 	Time 11.917	Prec@1 81.685	Prec@5 94.519	
+Evaluation: valid 	Time 11.894	Prec@1 81.604	Prec@5 94.388	
+Evaluation: valid 	Time 11.420	Prec@1 81.457	Prec@5 94.209	
+Evaluation: valid 	Time 11.757	Prec@1 81.327	Prec@5 94.405	
+Evaluation: valid 	Time 11.939	Prec@1 81.262	Prec@5 94.356	
+Evaluation: valid 	Time 11.389	Prec@1 81.246	Prec@5 94.372	
+Evaluation: valid 	Time 11.709	Prec@1 81.376	Prec@5 94.567	
+Evaluation: valid 	Time 11.908	Prec@1 81.230	Prec@5 94.437	
+Evaluation: valid 	Time 11.580	Prec@1 81.506	Prec@5 94.632	
+Evaluation: valid 	Time 11.616	Prec@1 81.555	Prec@5 94.519	
+Evaluation: valid 	Time 12.184	Prec@1 81.783	Prec@5 94.567	
+Evaluation: valid 	Time 12.128	Prec@1 81.750	Prec@5 94.519	
+Evaluation: valid 	Time 12.139	Prec@1 81.880	Prec@5 94.616	
+Evaluation: valid 	Time 11.818	Prec@1 81.620	Prec@5 94.470	
+Evaluation: valid 	Time 11.564	Prec@1 81.636	Prec@5 94.275	
+Evaluation: valid 	Time 12.270	Prec@1 81.636	Prec@5 94.486	
+Evaluation: valid 	Time 12.375	Prec@1 81.718	Prec@5 94.356	
+Evaluation: valid 	Time 11.767	Prec@1 81.669	Prec@5 94.372	
+Evaluation: valid 	Time 12.184	Prec@1 81.750	Prec@5 94.486	
+Evaluation: valid 	Time 11.783	Prec@1 81.344	Prec@5 94.258	
+Evaluation: valid 	Time 11.661	Prec@1 81.262	Prec@5 94.405	
+Evaluation: valid 	Time 11.750	Prec@1 81.653	Prec@5 94.421	
+Evaluation: valid 	Time 11.411	Prec@1 81.441	Prec@5 94.405	
+Evaluation: valid 	Time 11.856	Prec@1 81.815	Prec@5 94.535	
+Evaluation: valid 	Time 12.213	Prec@1 81.815	Prec@5 94.437	
+Evaluation: valid 	Time 11.725	Prec@1 81.913	Prec@5 94.356	
+Evaluation: valid 	Time 12.030	Prec@1 81.669	Prec@5 94.372	
+Evaluation: valid 	Time 12.081	Prec@1 81.864	Prec@5 94.340	
+Evaluation: valid 	Time 11.935	Prec@1 81.815	Prec@5 94.372	
+Evaluation: valid 	Time 11.388	Prec@1 81.734	Prec@5 94.519	
+Evaluation: valid 	Time 12.108	Prec@1 81.685	Prec@5 94.437	
+Evaluation: valid 	Time 11.672	Prec@1 81.701	Prec@5 94.453	
+Evaluation: valid 	Time 11.484	Prec@1 81.685	Prec@5 94.437	
+Evaluation: valid 	Time 11.650	Prec@1 81.815	Prec@5 94.519	
+Evaluation: valid 	Time 11.910	Prec@1 81.539	Prec@5 94.405	
+Traceback (most recent call last):
+  File "train_softmax.py", line 384, in <module>
+    main(args)
+  File "train_softmax.py", line 123, in main
+    curr_acc   = curr_wacc,
+NameError: name 'curr_wacc' is not defined
+Done

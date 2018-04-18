@@ -1,0 +1,40 @@
+I got allocated the
+/var/spool/torque/mom_priv/jobs/81742.blindspot.SC: line 15: following: command not found
+gpu: 0
+PBS: qsub is running on focus
+PBS: originating queue is batch
+PBS: executing queue is batch
+PBS: working directory is /z/home/mbanani/projects/pytorch-magnet-loss
+PBS: execution mode is PBS_BATCH
+PBS: job identifich_convAtter is 81742.blindspot
+PBS: job name is magnet_loss_train_flowers
+PBS: node file is /var/spool/torque/aux//81742.blindspot
+PBS: current home directory is /home/mbanani
+PBS: PATH = /z/home/mbanani/PyTorch3/bin:/z/sw/packages/cuda/8.0.61/bin:/z/home/mbanani/sw/miniconda2/bin:/z/sw/bin/:/z/sw/sbin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+------------------------------------------------------
+Namespace(D=4, GAP=0.7, K=1, L=8, M=16, NUM_BATCHES=300, annealing_factor=1.0, dataset='oxford', dist_backend='gloo', dist_url='tcp://224.66.41.62:23456', embedding_size=128, eval_epoch=3, eval_step=1000, evaluate_only=False, evaluate_train=False, experiment_name='magnet_pets_smallGap_0.02LR', log_rate=10, loss='magnet', lr=0.024, model='inception', momentum=0.9, num_epochs=500, optimizer='sgd', resume='/z/home/mbanani/projects/pytorch-magnet-loss/experiments/oxford/exp_04_17_20_58_06_oxford_magnet_pets_smallGap_0.02LR/model@epoch99.pkl', save_epoch=10, weight_decay=0.0001, workers=7, world_size=1)
+
+Experiment path is :  /z/home/mbanani/projects/pytorch-magnet-loss/experiments/oxford/exp_04_17_23_26_37_oxford_magnet_pets_smallGap_0.02LR
+#############  Read in Database   ##############
+Generating Datasets
+csv file length:  3680
+Dataset loaded in  0.1597743034362793  secs.
+Dataset size:  3680
+NOTE: Bounding box information not provided due to missing xml files. Full images shown not object bounded (bbox cropping in pil_loader is commented).
+csv file length:  3669
+Dataset loaded in  0.045690059661865234  secs.
+Dataset size:  3669
+NOTE: Bounding box information not provided due to missing xml files. Full images shown not object bounded (bbox cropping in pil_loader is commented).
+Generating Data Loaders
+Time taken:  0.21658945083618164 seconds
+######## Initiate Model and Optimizer   ##############
+Loading pretrained Module
+Traceback (most recent call last):
+  File "train_magnet.py", line 625, in <module>
+    main(args)
+  File "train_magnet.py", line 73, in main
+    model.load_state_dict(state_dict)
+  File "/z/home/mbanani/PyTorch3/lib/python3.5/site-packages/torch/nn/modules/module.py", line 522, in load_state_dict
+    .format(name))
+KeyError: 'unexpected key "module.Conv2d_1a_3x3.conv.weight" in state_dict'
+Done

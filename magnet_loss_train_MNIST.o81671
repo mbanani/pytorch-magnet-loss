@@ -1,0 +1,42 @@
+I got allocated the
+/var/spool/torque/mom_priv/jobs/81671.blindspot.SC: line 15: following: command not found
+gpu: 0
+PBS: qsub is running on focus
+PBS: originating queue is batch
+PBS: executing queue is batch
+PBS: working directory is /z/home/mbanani/projects/pytorch-magnet-loss
+PBS: execution mode is PBS_BATCH
+PBS: job identifich_convAtter is 81671.blindspot
+PBS: job name is magnet_loss_train_MNIST
+PBS: node file is /var/spool/torque/aux//81671.blindspot
+PBS: current home directory is /home/mbanani
+PBS: PATH = /z/home/mbanani/PyTorch3/bin:/z/sw/packages/cuda/8.0.61/bin:/z/home/mbanani/sw/miniconda2/bin:/z/sw/bin/:/z/sw/sbin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+------------------------------------------------------
+Namespace(D=4, GAP=2.43, K=1, L=8, M=12, NUM_BATCHES=300, annealing_factor=1.0, dataset='MNIST', dist_backend='gloo', dist_url='tcp://224.66.41.62:23456', embedding_size=16, eval_epoch=3, eval_step=1000, evaluate_only=False, evaluate_train=False, experiment_name='MagnetTest', log_rate=10, loss='magnet', lr=0.024, model='inception', momentum=0.9, num_epochs=100, optimizer='sgd', resume=None, save_epoch=10, weight_decay=0.0001, workers=7, world_size=1)
+
+Experiment path is :  /z/home/mbanani/projects/pytorch-magnet-loss/experiments/MNIST/exp_04_17_18_48_11_MNIST_MagnetTest
+#############  Read in Database   ##############
+Generating Datasets
+Size of dataset : 60000
+Size of dataset : 10000
+Generating Data Loaders
+Time taken:  0.21872782707214355 seconds
+######## Initiate Model and Optimizer   ##############
+Time taken:  2.24790096282959 seconds
+#############  Start Training     ##############
+KNN: Forward Pass Time   3.003
+KNN: Clustering time     0.614
+Number of proper clusters: 10
+Evaluation: Forward Embedding Calculation (Time Elapsed 0.306)
+Evaluation: Softmax Probability Calculation (Time Elapsed 0.000)
+Traceback (most recent call last):
+  File "train_magnet.py", line 606, in <module>
+    main(args)
+  File "train_magnet.py", line 146, in main
+    cluster_centers = cluster_centers)
+  File "train_magnet.py", line 274, in eval_step
+    acc1, acc5 = metrics.accuracy(stdev = stdev)
+  File "/z/home/mbanani/projects/pytorch-magnet-loss/util/kNN_metrics.py", line 135, in accuracy
+    return 100.0*acc1/float(softmax_probs.shape[0]), 100.0*acc5/float(softmax_probs.shape[0])
+ZeroDivisionError: float division by zero
+Done

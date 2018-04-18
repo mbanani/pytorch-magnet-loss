@@ -54,38 +54,34 @@ class magnet_loss(nn.Module):
 
         ######################### Cluster Assignments ##########################
         clusters = list(batch_clusters.keys())
-        # old_clusters = list(batch_clusters.keys())
-        # clusters = []
-        # # remove clusters with less than D instances TODO
-        # for c in old_clusters:
-        #     if len(batch_clusters[c]) >= 4:
-        #         clusters.append(c)
-        #
-        # if len(clusters) < 5:
-        #     print("Number of clusters : " + str(len(clusters)))
 
         ##################### Calculate Means and STDEV ########################
         num_instances = 0.0
         stdev       = torch.zeros(1)        # sdev array
         stdev       = stdev.cuda()
         stdev       = torch.autograd.Variable(stdev)
-
+        """
         c_means = []
 
         for i in range(0, outputs.size(0)):
             c_means.append(torch.zeros(outputs.shape[1]))                  # sdev array
             c_means[i]   = c_means[i].cuda()
             c_means[i]   = torch.autograd.Variable(c_means[i])
+        """
+        c_means = torch.stack([torch.mean(outputs[batch_clusters[clusters[m]]], dim=0) for m in range(0, len(clusters))])
 
         for m in range(0, len(clusters)):
             c = clusters[m]
-            c_means[m] += outputs[batch_clusters[c]].mean(dim=0)
+            #c_means[m] += outputs[batch_clusters[c]].mean(dim=0)
 
             for i in range(0, len(batch_clusters[c])):
-                stdev += (outputs[batch_clusters[c][i]] -  c_means[m]).norm(p=2)
+                stdev += (outputs[batch_clusters[c][i]] -  c_means[m]).norm(p=2).pow(2)
                 num_instances += 1.0
 
-        stdev = -2.0 * stdev / (num_instances - 1.0)
+
+        stdev = stdev / (num_instances - 1.0)
+        # stdev = stdev.pow(2)
+        stdev = -2.0 * stdev
 
         ########################## CALCULATE THE LOSS #########################
         denom = []
@@ -106,14 +102,14 @@ class magnet_loss(nn.Module):
                     embed()
                 for mF in range(0, len(clusters)):
                     if mF != m:
-                        denom[ind] += ((outputs[ind] - c_means[mF]).norm() / stdev ).exp()
+                        denom[ind] += ((outputs[ind] - c_means[mF]).norm().pow(2) / stdev ).exp()
 
-                loss -=  (( ( (outputs[ind] - c_means[m]).norm()/stdev - self.alpha ).exp() / denom[ind]).log() ).clamp(max=0.0) # negative in first term in exponent is covered by stdev, min because we are subtracting
+                loss -=  (( ( (outputs[ind] - c_means[m]).norm().pow(2)/stdev - self.alpha ).exp() / denom[ind]).log() ).clamp(max=0.0) # negative in first term in exponent is covered by stdev, min because we are subtracting
 
-                loss_vector[c] -= (  ( (outputs[ind] - c_means[m]).norm() / stdev - self.alpha ).exp() / denom[ind]).log().clamp(max = 0.0).cpu().data.numpy()[0]
+                loss_vector[c] -= (  ( (outputs[ind] - c_means[m]).norm().pow(2) / stdev - self.alpha ).exp() / denom[ind]).log().clamp(max = 0.0).cpu().data.numpy()[0]
                 loss_count[c] += 1.0
 
 
 
         loss /= num_instances
-        return loss, loss_vector, loss_count, stdev.cpu().data.numpy()[0] / -2.0
+        return loss, loss_vector/num_instances, loss_count, stdev.cpu().data.numpy()[0] / -2.0

@@ -1,0 +1,3033 @@
+I got allocated the
+/var/spool/torque/mom_priv/jobs/81755.blindspot.SC: line 15: following: command not found
+gpu: 0
+PBS: qsub is running on focus
+PBS: originating queue is batch
+PBS: executing queue is batch
+PBS: working directory is /z/home/mbanani/projects/pytorch-magnet-loss
+PBS: execution mode is PBS_BATCH
+PBS: job identifich_convAtter is 81755.blindspot
+PBS: job name is magnet_loss_train_flowers
+PBS: node file is /var/spool/torque/aux//81755.blindspot
+PBS: current home directory is /home/mbanani
+PBS: PATH = /z/home/mbanani/PyTorch3/bin:/z/sw/packages/cuda/8.0.61/bin:/z/home/mbanani/sw/miniconda2/bin:/z/sw/bin/:/z/sw/sbin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+------------------------------------------------------
+Namespace(GAP=0.7, L=128, NUM_BATCHES=300, annealing_factor=1.0, batch_size=100, dataset='flowers', dist_backend='gloo', dist_url='tcp://224.66.41.62:23456', embedding_size=128, eval_epoch=3, eval_step=1000, evaluate_only=False, evaluate_train=False, experiment_name='magnet_pets_triplet', log_rate=10, loss='magnet', lr=0.02, model='inception', momentum=0.9, num_epochs=500, optimizer='sgd', resume=None, save_epoch=10, weight_decay=0.0001, workers=7, world_size=1)
+
+Experiment path is :  /z/home/mbanani/projects/pytorch-magnet-loss/experiments/flowers/exp_04_18_01_48_58_flowers_magnet_pets_triplet
+#############  Read in Database   ##############
+Generating Datasets
+csv file length:  1019
+Dataset loaded in  0.02280116081237793  secs.
+Dataset size:  1019
+csv file length:  1019
+Dataset loaded in  0.01522207260131836  secs.
+Dataset size:  1019
+Generating Data Loaders
+Time taken:  0.03820967674255371 seconds
+######## Initiate Model and Optimizer   ##############
+Time taken:  6.584047079086304 seconds
+#############  Start Training     ##############
+Number of proper clusters: 102
+Epoch: [0][10/38]	Time 0.182 (0.438)	Data 0.000 (0.133)	Loss 0.4889 (0.7808)	
+Epoch: [0][20/38]	Time 0.185 (0.316)	Data 0.000 (0.070)	Loss 0.4328 (0.6885)	
+Epoch: [0][30/38]	Time 0.180 (0.273)	Data 0.000 (0.048)	Loss 0.5908 (0.6513)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.396)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.496)
+Test: 	Time 3.508	Prec@1 42.787	Prec@5 70.559
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.691)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.053)
+Test: 	Time 3.063	Prec@1 50.932	Prec@5 79.882
+Number of proper clusters: 102
+Epoch: [1][10/38]	Time 0.181 (0.237)	Data 0.000 (0.054)	Loss 0.4494 (0.5622)	
+Epoch: [1][20/38]	Time 0.185 (0.212)	Data 0.000 (0.028)	Loss 0.4399 (0.5372)	
+Epoch: [1][30/38]	Time 0.181 (0.202)	Data 0.000 (0.019)	Loss 0.3443 (0.5312)	
+Number of proper clusters: 102
+Epoch: [2][10/37]	Time 0.184 (0.239)	Data 0.000 (0.056)	Loss 0.2838 (0.3043)	
+Epoch: [2][20/37]	Time 0.183 (0.213)	Data 0.000 (0.029)	Loss 0.3742 (0.4176)	
+Epoch: [2][30/37]	Time 0.182 (0.203)	Data 0.000 (0.020)	Loss 0.7630 (0.4799)	
+Number of proper clusters: 102
+Epoch: [3][10/38]	Time 0.184 (0.236)	Data 0.000 (0.051)	Loss 0.1650 (0.3544)	
+Epoch: [3][20/38]	Time 0.184 (0.211)	Data 0.000 (0.027)	Loss 0.4376 (0.3508)	
+Epoch: [3][30/38]	Time 0.182 (0.202)	Data 0.000 (0.018)	Loss 0.2723 (0.3411)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.849)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.989)
+Test: 	Time 2.999	Prec@1 48.381	Prec@5 77.920
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.768)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.875)
+Test: 	Time 2.884	Prec@1 56.232	Prec@5 84.691
+Number of proper clusters: 102
+Epoch: [4][10/37]	Time 0.184 (0.233)	Data 0.000 (0.049)	Loss 0.1384 (0.3612)	
+Epoch: [4][20/37]	Time 0.186 (0.210)	Data 0.000 (0.026)	Loss 0.2772 (0.3401)	
+Epoch: [4][30/37]	Time 0.185 (0.202)	Data 0.000 (0.017)	Loss 0.4112 (0.3473)	
+Number of proper clusters: 102
+Epoch: [5][10/38]	Time 0.184 (0.241)	Data 0.001 (0.054)	Loss 0.5128 (0.3158)	
+Epoch: [5][20/38]	Time 0.185 (0.214)	Data 0.001 (0.028)	Loss 0.3617 (0.3121)	
+Epoch: [5][30/38]	Time 0.184 (0.205)	Data 0.000 (0.019)	Loss 0.2428 (0.3117)	
+Number of proper clusters: 102
+Epoch: [6][10/38]	Time 0.186 (0.248)	Data 0.000 (0.063)	Loss 0.1662 (0.2456)	
+Epoch: [6][20/38]	Time 0.185 (0.218)	Data 0.000 (0.033)	Loss 0.1582 (0.3067)	
+Epoch: [6][30/38]	Time 0.184 (0.207)	Data 0.000 (0.022)	Loss 0.1823 (0.3011)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.841)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.009)
+Test: 	Time 3.020	Prec@1 50.049	Prec@5 81.256
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.879)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.576)
+Test: 	Time 3.587	Prec@1 60.550	Prec@5 86.948
+Number of proper clusters: 102
+Epoch: [7][10/37]	Time 0.186 (0.242)	Data 0.000 (0.056)	Loss 0.1772 (0.2225)	
+Epoch: [7][20/37]	Time 0.186 (0.216)	Data 0.000 (0.029)	Loss 0.3777 (0.2181)	
+Epoch: [7][30/37]	Time 0.187 (0.206)	Data 0.000 (0.020)	Loss 0.2142 (0.2452)	
+Number of proper clusters: 102
+Epoch: [8][10/38]	Time 0.190 (0.239)	Data 0.000 (0.051)	Loss 0.1467 (0.1961)	
+Epoch: [8][20/38]	Time 0.186 (0.214)	Data 0.000 (0.027)	Loss 0.4619 (0.2561)	
+Epoch: [8][30/38]	Time 0.184 (0.206)	Data 0.000 (0.018)	Loss 0.4698 (0.2539)	
+Number of proper clusters: 102
+Epoch: [9][10/38]	Time 0.186 (0.254)	Data 0.001 (0.067)	Loss 0.1743 (0.1894)	
+Epoch: [9][20/38]	Time 0.193 (0.222)	Data 0.000 (0.035)	Loss 0.2883 (0.2094)	
+Epoch: [9][30/38]	Time 0.188 (0.213)	Data 0.000 (0.024)	Loss 0.3759 (0.2225)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.941)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.175)
+Test: 	Time 3.185	Prec@1 58.587	Prec@5 86.555
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.806)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.235)
+Test: 	Time 3.246	Prec@1 59.176	Prec@5 86.850
+Number of proper clusters: 102
+Epoch: [10][10/38]	Time 0.187 (0.247)	Data 0.000 (0.058)	Loss 0.1365 (0.2610)	
+Epoch: [10][20/38]	Time 0.186 (0.218)	Data 0.000 (0.030)	Loss 0.1941 (0.2326)	
+Epoch: [10][30/38]	Time 0.184 (0.208)	Data 0.000 (0.021)	Loss 0.3126 (0.2403)	
+Number of proper clusters: 102
+Epoch: [11][10/37]	Time 0.187 (0.234)	Data 0.000 (0.047)	Loss 0.1544 (0.1926)	
+Epoch: [11][20/37]	Time 0.187 (0.211)	Data 0.000 (0.025)	Loss 0.1625 (0.2174)	
+Epoch: [11][30/37]	Time 0.185 (0.203)	Data 0.000 (0.017)	Loss 0.3601 (0.2203)	
+Number of proper clusters: 102
+Epoch: [12][10/38]	Time 0.203 (0.262)	Data 0.000 (0.051)	Loss 0.0856 (0.2244)	
+Epoch: [12][20/38]	Time 0.192 (0.229)	Data 0.000 (0.027)	Loss 0.3068 (0.2231)	
+Epoch: [12][30/38]	Time 0.191 (0.216)	Data 0.000 (0.018)	Loss 0.1633 (0.1917)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.131)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.245)
+Test: 	Time 3.254	Prec@1 62.905	Prec@5 88.813
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.776)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.043)
+Test: 	Time 3.053	Prec@1 61.335	Prec@5 88.616
+Number of proper clusters: 102
+Epoch: [13][10/38]	Time 0.186 (0.238)	Data 0.000 (0.052)	Loss 0.3727 (0.2020)	
+Epoch: [13][20/38]	Time 0.187 (0.213)	Data 0.000 (0.027)	Loss 0.1073 (0.1971)	
+Epoch: [13][30/38]	Time 0.184 (0.204)	Data 0.000 (0.019)	Loss 0.1700 (0.1898)	
+Number of proper clusters: 102
+Epoch: [14][10/38]	Time 0.190 (0.237)	Data 0.000 (0.049)	Loss 0.1003 (0.1621)	
+Epoch: [14][20/38]	Time 0.188 (0.213)	Data 0.000 (0.026)	Loss 0.1438 (0.1608)	
+Epoch: [14][30/38]	Time 0.185 (0.205)	Data 0.000 (0.018)	Loss 0.3373 (0.1816)	
+Number of proper clusters: 102
+Epoch: [15][10/37]	Time 0.188 (0.250)	Data 0.000 (0.054)	Loss 0.2095 (0.1504)	
+Epoch: [15][20/37]	Time 0.187 (0.221)	Data 0.001 (0.028)	Loss 0.2786 (0.1617)	
+Epoch: [15][30/37]	Time 0.187 (0.210)	Data 0.000 (0.019)	Loss 0.0669 (0.1611)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.278)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.061)
+Test: 	Time 3.073	Prec@1 62.709	Prec@5 90.088
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.015)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.207)
+Test: 	Time 3.216	Prec@1 66.928	Prec@5 89.303
+Number of proper clusters: 102
+Epoch: [16][10/38]	Time 0.185 (0.236)	Data 0.000 (0.049)	Loss 0.0341 (0.1607)	
+Epoch: [16][20/38]	Time 0.186 (0.213)	Data 0.000 (0.026)	Loss 0.1348 (0.1580)	
+Epoch: [16][30/38]	Time 0.189 (0.205)	Data 0.000 (0.018)	Loss 0.2551 (0.1637)	
+Number of proper clusters: 102
+Epoch: [17][10/38]	Time 0.211 (0.261)	Data 0.000 (0.049)	Loss 0.1470 (0.2031)	
+Epoch: [17][20/38]	Time 0.191 (0.230)	Data 0.000 (0.026)	Loss 0.1141 (0.1986)	
+Epoch: [17][30/38]	Time 0.186 (0.216)	Data 0.000 (0.018)	Loss 0.0330 (0.1794)	
+Number of proper clusters: 102
+Epoch: [18][10/38]	Time 0.195 (0.265)	Data 0.000 (0.058)	Loss 0.0896 (0.1399)	
+Epoch: [18][20/38]	Time 0.209 (0.237)	Data 0.000 (0.031)	Loss 0.0395 (0.1418)	
+Epoch: [18][30/38]	Time 0.200 (0.226)	Data 0.000 (0.021)	Loss 0.1911 (0.1530)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.907)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.098)
+Test: 	Time 3.107	Prec@1 64.769	Prec@5 90.677
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.893)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.046)
+Test: 	Time 3.055	Prec@1 64.868	Prec@5 89.401
+Number of proper clusters: 102
+Epoch: [19][10/38]	Time 0.186 (0.238)	Data 0.000 (0.051)	Loss 0.2251 (0.1384)	
+Epoch: [19][20/38]	Time 0.187 (0.213)	Data 0.000 (0.027)	Loss 0.0951 (0.1365)	
+Epoch: [19][30/38]	Time 0.186 (0.205)	Data 0.000 (0.018)	Loss 0.1629 (0.1491)	
+Number of proper clusters: 102
+Epoch: [20][10/38]	Time 0.191 (0.249)	Data 0.000 (0.059)	Loss 0.1872 (0.1384)	
+Epoch: [20][20/38]	Time 0.187 (0.220)	Data 0.000 (0.031)	Loss 0.2527 (0.1554)	
+Epoch: [20][30/38]	Time 0.188 (0.210)	Data 0.000 (0.021)	Loss 0.3890 (0.1572)	
+Number of proper clusters: 102
+Epoch: [21][10/37]	Time 0.186 (0.244)	Data 0.000 (0.057)	Loss 0.0636 (0.1462)	
+Epoch: [21][20/37]	Time 0.188 (0.218)	Data 0.000 (0.030)	Loss 0.0634 (0.1410)	
+Epoch: [21][30/37]	Time 0.192 (0.210)	Data 0.000 (0.020)	Loss 0.0839 (0.1360)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.943)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.918)
+Test: 	Time 2.927	Prec@1 66.830	Prec@5 92.444
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.166)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.293)
+Test: 	Time 3.303	Prec@1 65.162	Prec@5 90.088
+Number of proper clusters: 102
+Epoch: [22][10/38]	Time 0.191 (0.240)	Data 0.000 (0.051)	Loss 0.0412 (0.0918)	
+Epoch: [22][20/38]	Time 0.192 (0.216)	Data 0.000 (0.027)	Loss 0.1010 (0.1395)	
+Epoch: [22][30/38]	Time 0.185 (0.207)	Data 0.000 (0.018)	Loss 0.3256 (0.1553)	
+Number of proper clusters: 102
+Epoch: [23][10/38]	Time 0.207 (0.267)	Data 0.000 (0.056)	Loss 0.2129 (0.1791)	
+Epoch: [23][20/38]	Time 0.187 (0.232)	Data 0.000 (0.030)	Loss 0.2943 (0.1738)	
+Epoch: [23][30/38]	Time 0.187 (0.218)	Data 0.000 (0.020)	Loss 0.0868 (0.1589)	
+Number of proper clusters: 102
+Epoch: [24][10/37]	Time 0.200 (0.255)	Data 0.000 (0.054)	Loss 0.0303 (0.0893)	
+Epoch: [24][20/37]	Time 0.187 (0.224)	Data 0.000 (0.029)	Loss 0.0341 (0.1045)	
+Epoch: [24][30/37]	Time 0.185 (0.212)	Data 0.000 (0.020)	Loss 0.0754 (0.1106)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.166)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.044)
+Test: 	Time 3.053	Prec@1 70.363	Prec@5 93.621
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.947)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.646)
+Test: 	Time 3.658	Prec@1 64.279	Prec@5 89.794
+Number of proper clusters: 102
+Epoch: [25][10/38]	Time 0.187 (0.247)	Data 0.000 (0.060)	Loss 0.3712 (0.1251)	
+Epoch: [25][20/38]	Time 0.186 (0.219)	Data 0.000 (0.032)	Loss 0.1212 (0.1253)	
+Epoch: [25][30/38]	Time 0.191 (0.209)	Data 0.000 (0.022)	Loss 0.0664 (0.1135)	
+Number of proper clusters: 102
+Epoch: [26][10/38]	Time 0.195 (0.265)	Data 0.000 (0.062)	Loss 0.0991 (0.1403)	
+Epoch: [26][20/38]	Time 0.190 (0.229)	Data 0.000 (0.032)	Loss 0.1168 (0.1381)	
+Epoch: [26][30/38]	Time 0.187 (0.216)	Data 0.000 (0.022)	Loss 0.1387 (0.1490)	
+Number of proper clusters: 102
+Epoch: [27][10/38]	Time 0.187 (0.259)	Data 0.000 (0.071)	Loss 0.1731 (0.1118)	
+Epoch: [27][20/38]	Time 0.210 (0.232)	Data 0.000 (0.037)	Loss 0.1127 (0.1087)	
+Epoch: [27][30/38]	Time 0.212 (0.223)	Data 0.000 (0.025)	Loss 0.0884 (0.1062)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.123)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.369)
+Test: 	Time 3.379	Prec@1 70.559	Prec@5 93.327
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.121)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.973)
+Test: 	Time 2.983	Prec@1 67.026	Prec@5 90.383
+Number of proper clusters: 102
+Epoch: [28][10/38]	Time 0.186 (0.256)	Data 0.000 (0.071)	Loss 0.1131 (0.0965)	
+Epoch: [28][20/38]	Time 0.187 (0.223)	Data 0.000 (0.037)	Loss 0.0706 (0.0820)	
+Epoch: [28][30/38]	Time 0.185 (0.211)	Data 0.000 (0.025)	Loss 0.1364 (0.0916)	
+Number of proper clusters: 102
+Epoch: [29][10/38]	Time 0.189 (0.243)	Data 0.000 (0.055)	Loss 0.0983 (0.0951)	
+Epoch: [29][20/38]	Time 0.192 (0.217)	Data 0.000 (0.029)	Loss 0.0251 (0.1019)	
+Epoch: [29][30/38]	Time 0.188 (0.208)	Data 0.000 (0.020)	Loss 0.0439 (0.1051)	
+Number of proper clusters: 102
+Epoch: [30][10/38]	Time 0.191 (0.251)	Data 0.000 (0.059)	Loss 0.1058 (0.0900)	
+Epoch: [30][20/38]	Time 0.187 (0.222)	Data 0.000 (0.031)	Loss 0.0336 (0.1059)	
+Epoch: [30][30/38]	Time 0.189 (0.211)	Data 0.000 (0.021)	Loss 0.1651 (0.1063)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.230)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.587)
+Test: 	Time 3.596	Prec@1 70.854	Prec@5 94.014
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.251)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.197)
+Test: 	Time 3.207	Prec@1 67.223	Prec@5 90.677
+Number of proper clusters: 102
+Epoch: [31][10/38]	Time 0.186 (0.241)	Data 0.000 (0.054)	Loss 0.1111 (0.1193)	
+Epoch: [31][20/38]	Time 0.191 (0.215)	Data 0.000 (0.028)	Loss 0.0242 (0.1368)	
+Epoch: [31][30/38]	Time 0.188 (0.206)	Data 0.000 (0.019)	Loss 0.0715 (0.1146)	
+Number of proper clusters: 102
+Epoch: [32][10/38]	Time 0.187 (0.249)	Data 0.000 (0.055)	Loss 0.0782 (0.0795)	
+Epoch: [32][20/38]	Time 0.189 (0.220)	Data 0.000 (0.029)	Loss 0.0945 (0.1019)	
+Epoch: [32][30/38]	Time 0.187 (0.210)	Data 0.000 (0.020)	Loss 0.0415 (0.1084)	
+Number of proper clusters: 102
+Epoch: [33][10/38]	Time 0.193 (0.251)	Data 0.000 (0.059)	Loss 0.0560 (0.0890)	
+Epoch: [33][20/38]	Time 0.187 (0.221)	Data 0.000 (0.031)	Loss 0.0559 (0.0924)	
+Epoch: [33][30/38]	Time 0.193 (0.210)	Data 0.000 (0.021)	Loss 0.1300 (0.0968)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.141)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.978)
+Test: 	Time 2.987	Prec@1 72.228	Prec@5 94.603
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.856)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.941)
+Test: 	Time 2.950	Prec@1 68.008	Prec@5 90.873
+Number of proper clusters: 102
+Epoch: [34][10/38]	Time 0.187 (0.245)	Data 0.000 (0.058)	Loss 0.1010 (0.0898)	
+Epoch: [34][20/38]	Time 0.187 (0.218)	Data 0.000 (0.030)	Loss 0.0669 (0.0794)	
+Epoch: [34][30/38]	Time 0.188 (0.209)	Data 0.000 (0.021)	Loss 0.0110 (0.0758)	
+Number of proper clusters: 102
+Epoch: [35][10/38]	Time 0.187 (0.264)	Data 0.000 (0.070)	Loss 0.0454 (0.1124)	
+Epoch: [35][20/38]	Time 0.187 (0.228)	Data 0.000 (0.037)	Loss 0.1786 (0.1126)	
+Epoch: [35][30/38]	Time 0.186 (0.215)	Data 0.000 (0.025)	Loss 0.0680 (0.1011)	
+Number of proper clusters: 102
+Epoch: [36][10/38]	Time 0.195 (0.249)	Data 0.001 (0.054)	Loss 0.1428 (0.1011)	
+Epoch: [36][20/38]	Time 0.185 (0.219)	Data 0.000 (0.028)	Loss 0.0973 (0.0946)	
+Epoch: [36][30/38]	Time 0.185 (0.210)	Data 0.000 (0.019)	Loss 0.0803 (0.0840)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.965)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.049)
+Test: 	Time 3.060	Prec@1 75.466	Prec@5 94.799
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.193)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.507)
+Test: 	Time 3.519	Prec@1 68.204	Prec@5 90.186
+Number of proper clusters: 102
+Epoch: [37][10/37]	Time 0.187 (0.249)	Data 0.000 (0.061)	Loss 0.1850 (0.1110)	
+Epoch: [37][20/37]	Time 0.193 (0.221)	Data 0.000 (0.032)	Loss 0.1441 (0.1135)	
+Epoch: [37][30/37]	Time 0.191 (0.210)	Data 0.000 (0.022)	Loss 0.0910 (0.1078)	
+Number of proper clusters: 102
+Epoch: [38][10/38]	Time 0.197 (0.250)	Data 0.001 (0.051)	Loss 0.1081 (0.0756)	
+Epoch: [38][20/38]	Time 0.190 (0.221)	Data 0.000 (0.027)	Loss 0.0957 (0.0633)	
+Epoch: [38][30/38]	Time 0.186 (0.210)	Data 0.000 (0.018)	Loss 0.1653 (0.0795)	
+Number of proper clusters: 102
+Epoch: [39][10/38]	Time 0.193 (0.258)	Data 0.000 (0.058)	Loss 0.0528 (0.0686)	
+Epoch: [39][20/38]	Time 0.190 (0.225)	Data 0.000 (0.031)	Loss 0.0310 (0.0676)	
+Epoch: [39][30/38]	Time 0.186 (0.213)	Data 0.000 (0.021)	Loss 0.0305 (0.0706)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.110)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.901)
+Test: 	Time 2.910	Prec@1 73.209	Prec@5 94.504
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.018)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.514)
+Test: 	Time 3.525	Prec@1 68.793	Prec@5 90.186
+Number of proper clusters: 102
+Epoch: [40][10/37]	Time 0.186 (0.260)	Data 0.000 (0.072)	Loss 0.0669 (0.1013)	
+Epoch: [40][20/37]	Time 0.187 (0.226)	Data 0.001 (0.038)	Loss 0.0819 (0.0958)	
+Epoch: [40][30/37]	Time 0.193 (0.214)	Data 0.000 (0.026)	Loss 0.1350 (0.0894)	
+Number of proper clusters: 102
+Epoch: [41][10/38]	Time 0.209 (0.268)	Data 0.000 (0.057)	Loss 0.0655 (0.0947)	
+Epoch: [41][20/38]	Time 0.186 (0.234)	Data 0.000 (0.030)	Loss 0.0325 (0.1094)	
+Epoch: [41][30/38]	Time 0.185 (0.219)	Data 0.000 (0.020)	Loss 0.1253 (0.1041)	
+Number of proper clusters: 102
+Epoch: [42][10/37]	Time 0.187 (0.242)	Data 0.000 (0.051)	Loss 0.1582 (0.0682)	
+Epoch: [42][20/37]	Time 0.186 (0.216)	Data 0.000 (0.027)	Loss 0.0413 (0.0919)	
+Epoch: [42][30/37]	Time 0.190 (0.207)	Data 0.000 (0.018)	Loss 0.0642 (0.0877)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.252)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.206)
+Test: 	Time 3.215	Prec@1 76.742	Prec@5 95.682
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.098)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.974)
+Test: 	Time 2.983	Prec@1 70.658	Prec@5 91.855
+Number of proper clusters: 102
+Epoch: [43][10/38]	Time 0.191 (0.242)	Data 0.000 (0.055)	Loss 0.1636 (0.0779)	
+Epoch: [43][20/38]	Time 0.189 (0.216)	Data 0.000 (0.029)	Loss 0.0058 (0.0746)	
+Epoch: [43][30/38]	Time 0.186 (0.206)	Data 0.000 (0.020)	Loss 0.0569 (0.0704)	
+Number of proper clusters: 102
+Epoch: [44][10/38]	Time 0.192 (0.249)	Data 0.000 (0.054)	Loss 0.0427 (0.0649)	
+Epoch: [44][20/38]	Time 0.187 (0.220)	Data 0.000 (0.029)	Loss 0.1565 (0.0673)	
+Epoch: [44][30/38]	Time 0.185 (0.209)	Data 0.000 (0.019)	Loss 0.3663 (0.0853)	
+Number of proper clusters: 102
+Epoch: [45][10/38]	Time 0.188 (0.258)	Data 0.000 (0.065)	Loss 0.1664 (0.0908)	
+Epoch: [45][20/38]	Time 0.189 (0.225)	Data 0.000 (0.034)	Loss 0.0104 (0.0860)	
+Epoch: [45][30/38]	Time 0.188 (0.214)	Data 0.000 (0.023)	Loss 0.0409 (0.0740)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.292)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.508)
+Test: 	Time 3.520	Prec@1 79.490	Prec@5 95.780
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.336)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.484)
+Test: 	Time 3.493	Prec@1 67.615	Prec@5 91.070
+Number of proper clusters: 102
+Epoch: [46][10/38]	Time 0.185 (0.255)	Data 0.000 (0.069)	Loss 0.0924 (0.0621)	
+Epoch: [46][20/38]	Time 0.212 (0.226)	Data 0.000 (0.036)	Loss 0.0937 (0.0771)	
+Epoch: [46][30/38]	Time 0.196 (0.219)	Data 0.000 (0.024)	Loss 0.0658 (0.0703)	
+Number of proper clusters: 102
+Epoch: [47][10/38]	Time 0.196 (0.258)	Data 0.000 (0.070)	Loss 0.0171 (0.0423)	
+Epoch: [47][20/38]	Time 0.188 (0.225)	Data 0.000 (0.037)	Loss 0.0431 (0.0527)	
+Epoch: [47][30/38]	Time 0.187 (0.213)	Data 0.000 (0.025)	Loss 0.0781 (0.0573)	
+Number of proper clusters: 102
+Epoch: [48][10/38]	Time 0.191 (0.265)	Data 0.000 (0.075)	Loss 0.0329 (0.0571)	
+Epoch: [48][20/38]	Time 0.188 (0.229)	Data 0.000 (0.040)	Loss 0.0709 (0.0622)	
+Epoch: [48][30/38]	Time 0.193 (0.216)	Data 0.000 (0.027)	Loss 0.0741 (0.0624)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.044)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.997)
+Test: 	Time 3.006	Prec@1 78.999	Prec@5 96.565
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.147)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.938)
+Test: 	Time 2.947	Prec@1 70.069	Prec@5 92.247
+Number of proper clusters: 102
+Epoch: [49][10/38]	Time 0.196 (0.262)	Data 0.000 (0.074)	Loss 0.0237 (0.0811)	
+Epoch: [49][20/38]	Time 0.187 (0.228)	Data 0.000 (0.039)	Loss 0.0402 (0.0790)	
+Epoch: [49][30/38]	Time 0.186 (0.216)	Data 0.000 (0.026)	Loss 0.1438 (0.0799)	
+Number of proper clusters: 102
+Epoch: [50][10/38]	Time 0.186 (0.263)	Data 0.000 (0.067)	Loss 0.2420 (0.0813)	
+Epoch: [50][20/38]	Time 0.190 (0.228)	Data 0.000 (0.035)	Loss 0.0433 (0.0726)	
+Epoch: [50][30/38]	Time 0.187 (0.215)	Data 0.000 (0.024)	Loss 0.1185 (0.0738)	
+Number of proper clusters: 102
+Epoch: [51][10/38]	Time 0.198 (0.266)	Data 0.000 (0.069)	Loss 0.0220 (0.0818)	
+Epoch: [51][20/38]	Time 0.188 (0.229)	Data 0.000 (0.037)	Loss 0.0633 (0.0668)	
+Epoch: [51][30/38]	Time 0.185 (0.217)	Data 0.000 (0.025)	Loss 0.0865 (0.0683)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.165)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.490)
+Test: 	Time 3.500	Prec@1 79.490	Prec@5 95.486
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.229)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.501)
+Test: 	Time 3.511	Prec@1 67.910	Prec@5 91.364
+Number of proper clusters: 102
+Epoch: [52][10/38]	Time 0.186 (0.252)	Data 0.000 (0.065)	Loss 0.1607 (0.0570)	
+Epoch: [52][20/38]	Time 0.189 (0.223)	Data 0.000 (0.034)	Loss 0.2250 (0.0721)	
+Epoch: [52][30/38]	Time 0.191 (0.211)	Data 0.000 (0.023)	Loss 0.1309 (0.0803)	
+Number of proper clusters: 102
+Epoch: [53][10/37]	Time 0.186 (0.274)	Data 0.000 (0.075)	Loss 0.0448 (0.0821)	
+Epoch: [53][20/37]	Time 0.196 (0.237)	Data 0.000 (0.039)	Loss 0.0821 (0.0794)	
+Epoch: [53][30/37]	Time 0.187 (0.221)	Data 0.000 (0.027)	Loss 0.0984 (0.0761)	
+Number of proper clusters: 102
+Epoch: [54][10/38]	Time 0.190 (0.272)	Data 0.000 (0.071)	Loss 0.0647 (0.1199)	
+Epoch: [54][20/38]	Time 0.188 (0.232)	Data 0.000 (0.037)	Loss 0.0592 (0.0890)	
+Epoch: [54][30/38]	Time 0.189 (0.218)	Data 0.000 (0.025)	Loss 0.0959 (0.0803)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.182)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.872)
+Test: 	Time 2.881	Prec@1 78.999	Prec@5 95.878
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.905)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.533)
+Test: 	Time 3.544	Prec@1 70.658	Prec@5 92.640
+Number of proper clusters: 102
+Epoch: [55][10/38]	Time 0.189 (0.264)	Data 0.000 (0.077)	Loss 0.0610 (0.0865)	
+Epoch: [55][20/38]	Time 0.192 (0.228)	Data 0.000 (0.040)	Loss 0.0845 (0.0764)	
+Epoch: [55][30/38]	Time 0.186 (0.215)	Data 0.000 (0.027)	Loss 0.0075 (0.0718)	
+Number of proper clusters: 102
+Epoch: [56][10/38]	Time 0.187 (0.267)	Data 0.000 (0.073)	Loss 0.0682 (0.0393)	
+Epoch: [56][20/38]	Time 0.188 (0.229)	Data 0.000 (0.038)	Loss 0.0753 (0.0530)	
+Epoch: [56][30/38]	Time 0.187 (0.216)	Data 0.000 (0.026)	Loss 0.0803 (0.0576)	
+Number of proper clusters: 102
+Epoch: [57][10/38]	Time 0.187 (0.259)	Data 0.001 (0.071)	Loss 0.0240 (0.0592)	
+Epoch: [57][20/38]	Time 0.187 (0.226)	Data 0.000 (0.038)	Loss 0.0815 (0.0736)	
+Epoch: [57][30/38]	Time 0.187 (0.214)	Data 0.000 (0.025)	Loss 0.2185 (0.0784)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.489)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.345)
+Test: 	Time 3.354	Prec@1 81.060	Prec@5 96.075
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.529)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.947)
+Test: 	Time 2.957	Prec@1 71.050	Prec@5 93.131
+Number of proper clusters: 102
+Epoch: [58][10/37]	Time 0.187 (0.253)	Data 0.000 (0.066)	Loss 0.0188 (0.0730)	
+Epoch: [58][20/37]	Time 0.188 (0.224)	Data 0.000 (0.035)	Loss 0.0838 (0.0845)	
+Epoch: [58][30/37]	Time 0.186 (0.212)	Data 0.000 (0.023)	Loss 0.0496 (0.0787)	
+Number of proper clusters: 102
+Epoch: [59][10/38]	Time 0.197 (0.269)	Data 0.001 (0.075)	Loss 0.1970 (0.0748)	
+Epoch: [59][20/38]	Time 0.192 (0.231)	Data 0.000 (0.040)	Loss 0.1125 (0.0623)	
+Epoch: [59][30/38]	Time 0.188 (0.217)	Data 0.000 (0.027)	Loss 0.1677 (0.0727)	
+Number of proper clusters: 102
+Epoch: [60][10/38]	Time 0.186 (0.265)	Data 0.000 (0.076)	Loss 0.0587 (0.0544)	
+Epoch: [60][20/38]	Time 0.190 (0.230)	Data 0.000 (0.040)	Loss 0.0769 (0.0688)	
+Epoch: [60][30/38]	Time 0.188 (0.216)	Data 0.000 (0.027)	Loss 0.0835 (0.0651)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.460)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.707)
+Test: 	Time 3.718	Prec@1 80.569	Prec@5 95.682
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.056)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.999)
+Test: 	Time 3.009	Prec@1 69.578	Prec@5 91.855
+Number of proper clusters: 102
+Epoch: [61][10/38]	Time 0.192 (0.253)	Data 0.000 (0.066)	Loss 0.0475 (0.0620)	
+Epoch: [61][20/38]	Time 0.190 (0.222)	Data 0.000 (0.035)	Loss 0.0386 (0.0621)	
+Epoch: [61][30/38]	Time 0.186 (0.212)	Data 0.000 (0.024)	Loss 0.1074 (0.0833)	
+Number of proper clusters: 102
+Epoch: [62][10/38]	Time 0.190 (0.257)	Data 0.000 (0.070)	Loss 0.0132 (0.0493)	
+Epoch: [62][20/38]	Time 0.191 (0.224)	Data 0.000 (0.037)	Loss 0.1134 (0.0504)	
+Epoch: [62][30/38]	Time 0.188 (0.213)	Data 0.000 (0.025)	Loss 0.0331 (0.0506)	
+Number of proper clusters: 102
+Epoch: [63][10/38]	Time 0.187 (0.274)	Data 0.000 (0.080)	Loss 0.0112 (0.0534)	
+Epoch: [63][20/38]	Time 0.188 (0.233)	Data 0.001 (0.042)	Loss 0.0462 (0.0615)	
+Epoch: [63][30/38]	Time 0.187 (0.219)	Data 0.000 (0.028)	Loss 0.0690 (0.0589)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.154)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.223)
+Test: 	Time 3.232	Prec@1 79.980	Prec@5 95.682
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.301)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.970)
+Test: 	Time 2.979	Prec@1 70.265	Prec@5 93.621
+Number of proper clusters: 102
+Epoch: [64][10/37]	Time 0.192 (0.258)	Data 0.001 (0.069)	Loss 0.0729 (0.0859)	
+Epoch: [64][20/37]	Time 0.189 (0.225)	Data 0.000 (0.036)	Loss 0.1507 (0.0879)	
+Epoch: [64][30/37]	Time 0.209 (0.218)	Data 0.000 (0.025)	Loss 0.0643 (0.0792)	
+Number of proper clusters: 102
+Epoch: [65][10/37]	Time 0.201 (0.280)	Data 0.000 (0.071)	Loss 0.0635 (0.0667)	
+Epoch: [65][20/37]	Time 0.195 (0.241)	Data 0.000 (0.037)	Loss 0.0377 (0.0590)	
+Epoch: [65][30/37]	Time 0.186 (0.224)	Data 0.000 (0.025)	Loss 0.0213 (0.0649)	
+Number of proper clusters: 102
+Epoch: [66][10/37]	Time 0.189 (0.262)	Data 0.000 (0.074)	Loss 0.0436 (0.0471)	
+Epoch: [66][20/37]	Time 0.189 (0.227)	Data 0.000 (0.039)	Loss 0.0698 (0.0457)	
+Epoch: [66][30/37]	Time 0.186 (0.214)	Data 0.000 (0.026)	Loss 0.0024 (0.0448)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.251)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.085)
+Test: 	Time 3.094	Prec@1 81.256	Prec@5 96.075
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.231)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.610)
+Test: 	Time 3.622	Prec@1 69.676	Prec@5 93.131
+Number of proper clusters: 102
+Epoch: [67][10/38]	Time 0.186 (0.286)	Data 0.000 (0.100)	Loss 0.0408 (0.0568)	
+Epoch: [67][20/38]	Time 0.187 (0.239)	Data 0.000 (0.052)	Loss 0.1164 (0.0676)	
+Epoch: [67][30/38]	Time 0.187 (0.223)	Data 0.000 (0.036)	Loss 0.0886 (0.0629)	
+Number of proper clusters: 102
+Epoch: [68][10/38]	Time 0.187 (0.273)	Data 0.000 (0.078)	Loss 0.0026 (0.0317)	
+Epoch: [68][20/38]	Time 0.185 (0.233)	Data 0.001 (0.041)	Loss 0.0718 (0.0394)	
+Epoch: [68][30/38]	Time 0.199 (0.222)	Data 0.000 (0.028)	Loss 0.0448 (0.0408)	
+Number of proper clusters: 102
+Epoch: [69][10/38]	Time 0.188 (0.267)	Data 0.000 (0.073)	Loss 0.0463 (0.0444)	
+Epoch: [69][20/38]	Time 0.189 (0.231)	Data 0.000 (0.038)	Loss 0.0555 (0.0507)	
+Epoch: [69][30/38]	Time 0.186 (0.217)	Data 0.000 (0.026)	Loss 0.0968 (0.0626)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.481)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.138)
+Test: 	Time 3.149	Prec@1 81.845	Prec@5 97.252
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.233)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.326)
+Test: 	Time 3.335	Prec@1 69.971	Prec@5 93.032
+Number of proper clusters: 102
+Epoch: [70][10/37]	Time 0.186 (0.255)	Data 0.000 (0.069)	Loss 0.0711 (0.0487)	
+Epoch: [70][20/37]	Time 0.187 (0.222)	Data 0.000 (0.036)	Loss 0.0047 (0.0538)	
+Epoch: [70][30/37]	Time 0.186 (0.211)	Data 0.000 (0.025)	Loss 0.0434 (0.0521)	
+Number of proper clusters: 102
+Epoch: [71][10/38]	Time 0.197 (0.253)	Data 0.000 (0.058)	Loss 0.0164 (0.0525)	
+Epoch: [71][20/38]	Time 0.188 (0.222)	Data 0.000 (0.031)	Loss 0.0258 (0.0607)	
+Epoch: [71][30/38]	Time 0.188 (0.211)	Data 0.000 (0.021)	Loss 0.0454 (0.0584)	
+Number of proper clusters: 102
+Epoch: [72][10/37]	Time 0.191 (0.260)	Data 0.000 (0.066)	Loss 0.0816 (0.0422)	
+Epoch: [72][20/37]	Time 0.189 (0.226)	Data 0.000 (0.035)	Loss 0.0271 (0.0398)	
+Epoch: [72][30/37]	Time 0.188 (0.214)	Data 0.000 (0.024)	Loss 0.0683 (0.0439)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.939)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.162)
+Test: 	Time 3.171	Prec@1 83.710	Prec@5 97.056
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.978)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.043)
+Test: 	Time 3.052	Prec@1 70.559	Prec@5 93.916
+Number of proper clusters: 102
+Epoch: [73][10/38]	Time 0.189 (0.248)	Data 0.000 (0.058)	Loss 0.1413 (0.0664)	
+Epoch: [73][20/38]	Time 0.196 (0.220)	Data 0.000 (0.031)	Loss 0.0331 (0.0688)	
+Epoch: [73][30/38]	Time 0.185 (0.211)	Data 0.000 (0.021)	Loss 0.0315 (0.0653)	
+Number of proper clusters: 102
+Epoch: [74][10/38]	Time 0.201 (0.278)	Data 0.000 (0.071)	Loss 0.0123 (0.0478)	
+Epoch: [74][20/38]	Time 0.190 (0.238)	Data 0.000 (0.038)	Loss 0.0068 (0.0420)	
+Epoch: [74][30/38]	Time 0.188 (0.222)	Data 0.000 (0.026)	Loss 0.0405 (0.0451)	
+Number of proper clusters: 102
+Epoch: [75][10/38]	Time 0.187 (0.267)	Data 0.000 (0.074)	Loss 0.0126 (0.0321)	
+Epoch: [75][20/38]	Time 0.196 (0.229)	Data 0.001 (0.039)	Loss 0.1171 (0.0477)	
+Epoch: [75][30/38]	Time 0.188 (0.216)	Data 0.000 (0.027)	Loss 0.1719 (0.0622)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.219)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.195)
+Test: 	Time 3.205	Prec@1 83.121	Prec@5 96.860
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.951)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.252)
+Test: 	Time 3.262	Prec@1 72.130	Prec@5 93.523
+Number of proper clusters: 102
+Epoch: [76][10/38]	Time 0.188 (0.245)	Data 0.000 (0.058)	Loss 0.0157 (0.0810)	
+Epoch: [76][20/38]	Time 0.190 (0.217)	Data 0.000 (0.030)	Loss 0.0369 (0.0615)	
+Epoch: [76][30/38]	Time 0.185 (0.207)	Data 0.000 (0.021)	Loss 0.0491 (0.0580)	
+Number of proper clusters: 102
+Epoch: [77][10/38]	Time 0.189 (0.245)	Data 0.000 (0.054)	Loss 0.0652 (0.0492)	
+Epoch: [77][20/38]	Time 0.188 (0.218)	Data 0.000 (0.028)	Loss 0.0069 (0.0548)	
+Epoch: [77][30/38]	Time 0.187 (0.209)	Data 0.000 (0.019)	Loss 0.0221 (0.0592)	
+Number of proper clusters: 102
+Epoch: [78][10/38]	Time 0.194 (0.273)	Data 0.000 (0.066)	Loss 0.0249 (0.0626)	
+Epoch: [78][20/38]	Time 0.191 (0.234)	Data 0.000 (0.034)	Loss 0.0166 (0.0590)	
+Epoch: [78][30/38]	Time 0.187 (0.219)	Data 0.000 (0.023)	Loss 0.1375 (0.0618)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.115)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.018)
+Test: 	Time 3.027	Prec@1 84.200	Prec@5 97.056
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.887)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.206)
+Test: 	Time 3.217	Prec@1 71.737	Prec@5 93.621
+Number of proper clusters: 102
+Epoch: [79][10/38]	Time 0.196 (0.258)	Data 0.000 (0.059)	Loss 0.0977 (0.0572)	
+Epoch: [79][20/38]	Time 0.187 (0.226)	Data 0.000 (0.031)	Loss 0.0230 (0.0502)	
+Epoch: [79][30/38]	Time 0.186 (0.213)	Data 0.000 (0.021)	Loss 0.0000 (0.0532)	
+Number of proper clusters: 102
+Epoch: [80][10/38]	Time 0.188 (0.259)	Data 0.000 (0.065)	Loss 0.0061 (0.0564)	
+Epoch: [80][20/38]	Time 0.191 (0.226)	Data 0.000 (0.034)	Loss 0.0396 (0.0557)	
+Epoch: [80][30/38]	Time 0.185 (0.214)	Data 0.000 (0.023)	Loss 0.1255 (0.0583)	
+Number of proper clusters: 102
+Epoch: [81][10/37]	Time 0.189 (0.256)	Data 0.000 (0.060)	Loss 0.0421 (0.0557)	
+Epoch: [81][20/37]	Time 0.188 (0.224)	Data 0.000 (0.031)	Loss 0.0700 (0.0494)	
+Epoch: [81][30/37]	Time 0.185 (0.212)	Data 0.000 (0.021)	Loss 0.0071 (0.0464)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.192)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.529)
+Test: 	Time 3.540	Prec@1 85.182	Prec@5 97.154
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.071)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.045)
+Test: 	Time 3.054	Prec@1 73.209	Prec@5 92.836
+Number of proper clusters: 102
+Epoch: [82][10/37]	Time 0.188 (0.253)	Data 0.001 (0.063)	Loss 0.0065 (0.0640)	
+Epoch: [82][20/37]	Time 0.189 (0.222)	Data 0.000 (0.033)	Loss 0.0144 (0.0591)	
+Epoch: [82][30/37]	Time 0.187 (0.211)	Data 0.000 (0.023)	Loss 0.0293 (0.0544)	
+Number of proper clusters: 102
+Epoch: [83][10/38]	Time 0.186 (0.249)	Data 0.000 (0.062)	Loss 0.0457 (0.0539)	
+Epoch: [83][20/38]	Time 0.187 (0.220)	Data 0.000 (0.032)	Loss 0.0188 (0.0628)	
+Epoch: [83][30/38]	Time 0.188 (0.210)	Data 0.000 (0.022)	Loss 0.0018 (0.0649)	
+Number of proper clusters: 102
+Epoch: [84][10/37]	Time 0.189 (0.253)	Data 0.001 (0.061)	Loss 0.0916 (0.0639)	
+Epoch: [84][20/37]	Time 0.188 (0.223)	Data 0.000 (0.032)	Loss 0.0043 (0.0631)	
+Epoch: [84][30/37]	Time 0.186 (0.212)	Data 0.000 (0.022)	Loss 0.0150 (0.0614)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.320)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.524)
+Test: 	Time 3.535	Prec@1 85.182	Prec@5 97.154
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.057)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.322)
+Test: 	Time 3.333	Prec@1 71.246	Prec@5 93.131
+Number of proper clusters: 102
+Epoch: [85][10/37]	Time 0.195 (0.253)	Data 0.000 (0.060)	Loss 0.0459 (0.0680)	
+Epoch: [85][20/37]	Time 0.188 (0.223)	Data 0.001 (0.032)	Loss 0.0225 (0.0563)	
+Epoch: [85][30/37]	Time 0.185 (0.211)	Data 0.000 (0.022)	Loss 0.0329 (0.0501)	
+Number of proper clusters: 102
+Epoch: [86][10/37]	Time 0.188 (0.250)	Data 0.000 (0.059)	Loss 0.0410 (0.0421)	
+Epoch: [86][20/37]	Time 0.187 (0.220)	Data 0.000 (0.031)	Loss 0.0049 (0.0383)	
+Epoch: [86][30/37]	Time 0.186 (0.210)	Data 0.000 (0.021)	Loss 0.0866 (0.0433)	
+Number of proper clusters: 102
+Epoch: [87][10/38]	Time 0.209 (0.272)	Data 0.000 (0.061)	Loss 0.0726 (0.0346)	
+Epoch: [87][20/38]	Time 0.194 (0.238)	Data 0.001 (0.032)	Loss 0.0415 (0.0367)	
+Epoch: [87][30/38]	Time 0.206 (0.228)	Data 0.000 (0.022)	Loss 0.0385 (0.0466)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.612)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.987)
+Test: 	Time 2.997	Prec@1 84.200	Prec@5 97.056
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.862)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.889)
+Test: 	Time 2.898	Prec@1 73.503	Prec@5 93.131
+Number of proper clusters: 102
+Epoch: [88][10/38]	Time 0.185 (0.259)	Data 0.000 (0.072)	Loss 0.1198 (0.0523)	
+Epoch: [88][20/38]	Time 0.200 (0.227)	Data 0.001 (0.038)	Loss 0.0152 (0.0591)	
+Epoch: [88][30/38]	Time 0.185 (0.215)	Data 0.000 (0.026)	Loss 0.0181 (0.0631)	
+Number of proper clusters: 102
+Epoch: [89][10/38]	Time 0.218 (0.263)	Data 0.000 (0.067)	Loss 0.0005 (0.0390)	
+Epoch: [89][20/38]	Time 0.202 (0.238)	Data 0.000 (0.035)	Loss 0.0565 (0.0450)	
+Epoch: [89][30/38]	Time 0.194 (0.226)	Data 0.000 (0.024)	Loss 0.0060 (0.0455)	
+Number of proper clusters: 102
+Epoch: [90][10/38]	Time 0.205 (0.272)	Data 0.000 (0.061)	Loss 0.0072 (0.0290)	
+Epoch: [90][20/38]	Time 0.188 (0.234)	Data 0.000 (0.032)	Loss 0.0210 (0.0276)	
+Epoch: [90][30/38]	Time 0.188 (0.220)	Data 0.000 (0.022)	Loss 0.0141 (0.0403)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.110)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.046)
+Test: 	Time 3.056	Prec@1 84.887	Prec@5 97.645
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.956)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.894)
+Test: 	Time 2.903	Prec@1 71.737	Prec@5 93.131
+Number of proper clusters: 102
+Epoch: [91][10/37]	Time 0.188 (0.258)	Data 0.000 (0.072)	Loss 0.0645 (0.0641)	
+Epoch: [91][20/37]	Time 0.187 (0.225)	Data 0.000 (0.038)	Loss 0.0749 (0.0490)	
+Epoch: [91][30/37]	Time 0.189 (0.213)	Data 0.000 (0.026)	Loss 0.0217 (0.0452)	
+Number of proper clusters: 102
+Epoch: [92][10/38]	Time 0.188 (0.263)	Data 0.000 (0.067)	Loss 0.0668 (0.0456)	
+Epoch: [92][20/38]	Time 0.189 (0.228)	Data 0.000 (0.036)	Loss 0.0204 (0.0496)	
+Epoch: [92][30/38]	Time 0.185 (0.215)	Data 0.000 (0.024)	Loss 0.0957 (0.0455)	
+Number of proper clusters: 102
+Epoch: [93][10/38]	Time 0.192 (0.262)	Data 0.000 (0.069)	Loss 0.0473 (0.0191)	
+Epoch: [93][20/38]	Time 0.190 (0.227)	Data 0.000 (0.036)	Loss 0.0596 (0.0240)	
+Epoch: [93][30/38]	Time 0.187 (0.214)	Data 0.000 (0.025)	Loss 0.1198 (0.0352)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.177)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.872)
+Test: 	Time 2.880	Prec@1 87.635	Prec@5 98.234
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.332)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.510)
+Test: 	Time 3.520	Prec@1 71.933	Prec@5 92.542
+Number of proper clusters: 102
+Epoch: [94][10/38]	Time 0.187 (0.256)	Data 0.000 (0.069)	Loss 0.0108 (0.0199)	
+Epoch: [94][20/38]	Time 0.191 (0.224)	Data 0.000 (0.036)	Loss 0.0248 (0.0273)	
+Epoch: [94][30/38]	Time 0.187 (0.212)	Data 0.000 (0.025)	Loss 0.0749 (0.0336)	
+Number of proper clusters: 102
+Epoch: [95][10/38]	Time 0.188 (0.258)	Data 0.000 (0.065)	Loss 0.0064 (0.0448)	
+Epoch: [95][20/38]	Time 0.191 (0.225)	Data 0.000 (0.034)	Loss 0.0889 (0.0430)	
+Epoch: [95][30/38]	Time 0.185 (0.213)	Data 0.000 (0.023)	Loss 0.0407 (0.0444)	
+Number of proper clusters: 102
+Epoch: [96][10/38]	Time 0.188 (0.274)	Data 0.000 (0.082)	Loss 0.0723 (0.0595)	
+Epoch: [96][20/38]	Time 0.185 (0.233)	Data 0.000 (0.043)	Loss 0.0109 (0.0516)	
+Epoch: [96][30/38]	Time 0.188 (0.219)	Data 0.000 (0.029)	Loss 0.0424 (0.0496)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.248)
+Evaluation: Softmax Probability Calculation (Time Elapsed 4.024)
+Test: 	Time 4.036	Prec@1 84.985	Prec@5 96.663
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.348)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.592)
+Test: 	Time 3.607	Prec@1 72.915	Prec@5 93.425
+Number of proper clusters: 102
+Epoch: [97][10/38]	Time 0.186 (0.261)	Data 0.000 (0.074)	Loss 0.0280 (0.0427)	
+Epoch: [97][20/38]	Time 0.194 (0.227)	Data 0.000 (0.039)	Loss 0.0314 (0.0422)	
+Epoch: [97][30/38]	Time 0.187 (0.215)	Data 0.000 (0.026)	Loss 0.0836 (0.0462)	
+Number of proper clusters: 102
+Epoch: [98][10/38]	Time 0.192 (0.261)	Data 0.000 (0.071)	Loss 0.0540 (0.0441)	
+Epoch: [98][20/38]	Time 0.186 (0.226)	Data 0.000 (0.038)	Loss 0.0452 (0.0362)	
+Epoch: [98][30/38]	Time 0.185 (0.214)	Data 0.000 (0.026)	Loss 0.0064 (0.0402)	
+Number of proper clusters: 102
+Epoch: [99][10/38]	Time 0.209 (0.284)	Data 0.000 (0.077)	Loss 0.0156 (0.0215)	
+Epoch: [99][20/38]	Time 0.210 (0.245)	Data 0.000 (0.040)	Loss 0.0270 (0.0227)	
+Epoch: [99][30/38]	Time 0.201 (0.232)	Data 0.000 (0.027)	Loss 0.0910 (0.0260)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.763)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.988)
+Test: 	Time 2.999	Prec@1 85.378	Prec@5 97.350
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.330)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.069)
+Test: 	Time 3.078	Prec@1 72.816	Prec@5 93.817
+Number of proper clusters: 102
+Epoch: [100][10/37]	Time 0.186 (0.253)	Data 0.001 (0.066)	Loss 0.1235 (0.0644)	
+Epoch: [100][20/37]	Time 0.185 (0.222)	Data 0.000 (0.035)	Loss 0.0377 (0.0482)	
+Epoch: [100][30/37]	Time 0.184 (0.210)	Data 0.000 (0.024)	Loss 0.0426 (0.0446)	
+Number of proper clusters: 102
+Epoch: [101][10/38]	Time 0.188 (0.272)	Data 0.000 (0.085)	Loss 0.0233 (0.0307)	
+Epoch: [101][20/38]	Time 0.189 (0.232)	Data 0.000 (0.045)	Loss 0.0037 (0.0243)	
+Epoch: [101][30/38]	Time 0.189 (0.220)	Data 0.000 (0.030)	Loss 0.0293 (0.0336)	
+Number of proper clusters: 102
+Epoch: [102][10/38]	Time 0.187 (0.273)	Data 0.000 (0.073)	Loss 0.0340 (0.0302)	
+Epoch: [102][20/38]	Time 0.188 (0.232)	Data 0.000 (0.038)	Loss 0.0060 (0.0336)	
+Epoch: [102][30/38]	Time 0.186 (0.218)	Data 0.000 (0.026)	Loss 0.0525 (0.0436)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.477)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.856)
+Test: 	Time 2.866	Prec@1 84.691	Prec@5 98.234
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.027)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.906)
+Test: 	Time 2.915	Prec@1 72.228	Prec@5 93.032
+Number of proper clusters: 102
+Epoch: [103][10/38]	Time 0.188 (0.267)	Data 0.000 (0.080)	Loss 0.0269 (0.0454)	
+Epoch: [103][20/38]	Time 0.186 (0.229)	Data 0.000 (0.042)	Loss 0.0121 (0.0500)	
+Epoch: [103][30/38]	Time 0.194 (0.216)	Data 0.000 (0.028)	Loss 0.0052 (0.0476)	
+Number of proper clusters: 102
+Epoch: [104][10/38]	Time 0.188 (0.267)	Data 0.000 (0.075)	Loss 0.0439 (0.0496)	
+Epoch: [104][20/38]	Time 0.188 (0.229)	Data 0.000 (0.039)	Loss 0.0297 (0.0428)	
+Epoch: [104][30/38]	Time 0.188 (0.216)	Data 0.000 (0.027)	Loss 0.0316 (0.0436)	
+Number of proper clusters: 102
+Epoch: [105][10/38]	Time 0.188 (0.260)	Data 0.000 (0.064)	Loss 0.0491 (0.0602)	
+Epoch: [105][20/38]	Time 0.188 (0.226)	Data 0.000 (0.033)	Loss 0.0110 (0.0439)	
+Epoch: [105][30/38]	Time 0.197 (0.215)	Data 0.000 (0.023)	Loss 0.0192 (0.0406)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.095)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.968)
+Test: 	Time 2.977	Prec@1 84.789	Prec@5 96.762
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.226)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.897)
+Test: 	Time 2.907	Prec@1 73.111	Prec@5 93.621
+Number of proper clusters: 102
+Epoch: [106][10/37]	Time 0.186 (0.248)	Data 0.000 (0.059)	Loss 0.0208 (0.0297)	
+Epoch: [106][20/37]	Time 0.190 (0.219)	Data 0.000 (0.031)	Loss 0.0449 (0.0332)	
+Epoch: [106][30/37]	Time 0.191 (0.209)	Data 0.000 (0.021)	Loss 0.0374 (0.0377)	
+Number of proper clusters: 102
+Epoch: [107][10/37]	Time 0.189 (0.265)	Data 0.000 (0.075)	Loss 0.0261 (0.0476)	
+Epoch: [107][20/37]	Time 0.212 (0.238)	Data 0.000 (0.039)	Loss 0.0181 (0.0379)	
+Epoch: [107][30/37]	Time 0.197 (0.226)	Data 0.000 (0.027)	Loss 0.0636 (0.0401)	
+Number of proper clusters: 102
+Epoch: [108][10/37]	Time 0.209 (0.281)	Data 0.000 (0.070)	Loss 0.0462 (0.0412)	
+Epoch: [108][20/37]	Time 0.189 (0.239)	Data 0.000 (0.037)	Loss 0.0287 (0.0494)	
+Epoch: [108][30/37]	Time 0.185 (0.222)	Data 0.000 (0.025)	Loss 0.0522 (0.0565)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.984)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.157)
+Test: 	Time 3.169	Prec@1 86.752	Prec@5 98.430
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.171)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.301)
+Test: 	Time 3.310	Prec@1 72.620	Prec@5 92.542
+Number of proper clusters: 102
+Epoch: [109][10/38]	Time 0.186 (0.247)	Data 0.000 (0.061)	Loss 0.0109 (0.0467)	
+Epoch: [109][20/38]	Time 0.191 (0.219)	Data 0.000 (0.032)	Loss 0.0350 (0.0500)	
+Epoch: [109][30/38]	Time 0.185 (0.209)	Data 0.000 (0.022)	Loss 0.0047 (0.0418)	
+Number of proper clusters: 102
+Epoch: [110][10/38]	Time 0.195 (0.257)	Data 0.000 (0.063)	Loss 0.0420 (0.0427)	
+Epoch: [110][20/38]	Time 0.189 (0.225)	Data 0.000 (0.033)	Loss 0.0322 (0.0497)	
+Epoch: [110][30/38]	Time 0.186 (0.213)	Data 0.000 (0.023)	Loss 0.0094 (0.0449)	
+Number of proper clusters: 102
+Epoch: [111][10/37]	Time 0.190 (0.260)	Data 0.000 (0.062)	Loss 0.0371 (0.0660)	
+Epoch: [111][20/37]	Time 0.189 (0.226)	Data 0.000 (0.033)	Loss 0.1558 (0.0549)	
+Epoch: [111][30/37]	Time 0.188 (0.214)	Data 0.000 (0.022)	Loss 0.0275 (0.0497)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.574)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.296)
+Test: 	Time 3.305	Prec@1 87.144	Prec@5 97.841
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.641)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.625)
+Test: 	Time 3.636	Prec@1 72.522	Prec@5 93.229
+Number of proper clusters: 102
+Epoch: [112][10/38]	Time 0.187 (0.266)	Data 0.001 (0.080)	Loss 0.0634 (0.0507)	
+Epoch: [112][20/38]	Time 0.186 (0.228)	Data 0.000 (0.042)	Loss 0.0348 (0.0411)	
+Epoch: [112][30/38]	Time 0.190 (0.216)	Data 0.000 (0.029)	Loss 0.0184 (0.0404)	
+Number of proper clusters: 102
+Epoch: [113][10/38]	Time 0.205 (0.273)	Data 0.000 (0.064)	Loss 0.0249 (0.0374)	
+Epoch: [113][20/38]	Time 0.191 (0.234)	Data 0.000 (0.034)	Loss 0.1835 (0.0473)	
+Epoch: [113][30/38]	Time 0.188 (0.220)	Data 0.000 (0.023)	Loss 0.0329 (0.0439)	
+Number of proper clusters: 102
+Epoch: [114][10/37]	Time 0.188 (0.263)	Data 0.000 (0.070)	Loss 0.0122 (0.0143)	
+Epoch: [114][20/37]	Time 0.187 (0.227)	Data 0.001 (0.037)	Loss 0.0870 (0.0228)	
+Epoch: [114][30/37]	Time 0.188 (0.214)	Data 0.000 (0.025)	Loss 0.0496 (0.0269)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.483)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.191)
+Test: 	Time 3.200	Prec@1 87.635	Prec@5 97.645
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.993)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.965)
+Test: 	Time 2.974	Prec@1 73.405	Prec@5 94.112
+Number of proper clusters: 102
+Epoch: [115][10/38]	Time 0.187 (0.252)	Data 0.000 (0.065)	Loss 0.0173 (0.0346)	
+Epoch: [115][20/38]	Time 0.188 (0.223)	Data 0.000 (0.034)	Loss 0.0104 (0.0296)	
+Epoch: [115][30/38]	Time 0.190 (0.211)	Data 0.000 (0.023)	Loss 0.0632 (0.0353)	
+Number of proper clusters: 102
+Epoch: [116][10/38]	Time 0.201 (0.272)	Data 0.000 (0.070)	Loss 0.0011 (0.0366)	
+Epoch: [116][20/38]	Time 0.188 (0.235)	Data 0.000 (0.037)	Loss 0.0348 (0.0524)	
+Epoch: [116][30/38]	Time 0.187 (0.220)	Data 0.000 (0.025)	Loss 0.0378 (0.0505)	
+Number of proper clusters: 102
+Epoch: [117][10/38]	Time 0.207 (0.271)	Data 0.000 (0.064)	Loss 0.0080 (0.0299)	
+Epoch: [117][20/38]	Time 0.209 (0.239)	Data 0.000 (0.033)	Loss 0.0425 (0.0351)	
+Epoch: [117][30/38]	Time 0.205 (0.227)	Data 0.000 (0.023)	Loss 0.0092 (0.0347)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.210)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.879)
+Test: 	Time 2.889	Prec@1 84.200	Prec@5 97.056
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.966)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.198)
+Test: 	Time 3.207	Prec@1 72.326	Prec@5 93.425
+Number of proper clusters: 102
+Epoch: [118][10/37]	Time 0.187 (0.264)	Data 0.000 (0.078)	Loss 0.0288 (0.0260)	
+Epoch: [118][20/37]	Time 0.190 (0.229)	Data 0.000 (0.041)	Loss 0.0478 (0.0315)	
+Epoch: [118][30/37]	Time 0.187 (0.216)	Data 0.000 (0.028)	Loss 0.0366 (0.0293)	
+Number of proper clusters: 102
+Epoch: [119][10/37]	Time 0.190 (0.269)	Data 0.000 (0.082)	Loss 0.0156 (0.0300)	
+Epoch: [119][20/37]	Time 0.188 (0.230)	Data 0.000 (0.043)	Loss 0.0504 (0.0431)	
+Epoch: [119][30/37]	Time 0.188 (0.216)	Data 0.000 (0.029)	Loss 0.0199 (0.0430)	
+Number of proper clusters: 102
+Epoch: [120][10/38]	Time 0.188 (0.259)	Data 0.000 (0.062)	Loss 0.0051 (0.0187)	
+Epoch: [120][20/38]	Time 0.186 (0.226)	Data 0.000 (0.033)	Loss 0.0127 (0.0199)	
+Epoch: [120][30/38]	Time 0.186 (0.214)	Data 0.000 (0.022)	Loss 0.0347 (0.0262)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.439)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.898)
+Test: 	Time 2.907	Prec@1 88.126	Prec@5 97.939
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.950)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.981)
+Test: 	Time 2.991	Prec@1 72.816	Prec@5 93.523
+Number of proper clusters: 102
+Epoch: [121][10/37]	Time 0.189 (0.263)	Data 0.000 (0.073)	Loss 0.0091 (0.0370)	
+Epoch: [121][20/37]	Time 0.188 (0.228)	Data 0.000 (0.039)	Loss 0.0581 (0.0330)	
+Epoch: [121][30/37]	Time 0.187 (0.215)	Data 0.000 (0.026)	Loss 0.0045 (0.0297)	
+Number of proper clusters: 102
+Epoch: [122][10/38]	Time 0.207 (0.269)	Data 0.000 (0.061)	Loss 0.0115 (0.0297)	
+Epoch: [122][20/38]	Time 0.209 (0.238)	Data 0.000 (0.032)	Loss 0.0228 (0.0373)	
+Epoch: [122][30/38]	Time 0.194 (0.227)	Data 0.000 (0.022)	Loss 0.1556 (0.0403)	
+Number of proper clusters: 102
+Epoch: [123][10/37]	Time 0.208 (0.266)	Data 0.000 (0.055)	Loss 0.0144 (0.0682)	
+Epoch: [123][20/37]	Time 0.188 (0.232)	Data 0.000 (0.029)	Loss 0.0053 (0.0467)	
+Epoch: [123][30/37]	Time 0.185 (0.217)	Data 0.000 (0.020)	Loss 0.0719 (0.0527)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.316)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.178)
+Test: 	Time 3.189	Prec@1 87.144	Prec@5 98.135
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.462)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.976)
+Test: 	Time 2.985	Prec@1 73.798	Prec@5 93.523
+Number of proper clusters: 102
+Epoch: [124][10/38]	Time 0.189 (0.253)	Data 0.000 (0.066)	Loss 0.0285 (0.0361)	
+Epoch: [124][20/38]	Time 0.187 (0.222)	Data 0.000 (0.035)	Loss 0.0646 (0.0387)	
+Epoch: [124][30/38]	Time 0.187 (0.211)	Data 0.000 (0.024)	Loss 0.0480 (0.0374)	
+Number of proper clusters: 102
+Epoch: [125][10/38]	Time 0.199 (0.268)	Data 0.000 (0.059)	Loss 0.0159 (0.0397)	
+Epoch: [125][20/38]	Time 0.194 (0.232)	Data 0.000 (0.031)	Loss 0.0422 (0.0390)	
+Epoch: [125][30/38]	Time 0.188 (0.219)	Data 0.000 (0.021)	Loss 0.0220 (0.0336)	
+Number of proper clusters: 102
+Epoch: [126][10/37]	Time 0.189 (0.248)	Data 0.000 (0.060)	Loss 0.0113 (0.0373)	
+Epoch: [126][20/37]	Time 0.187 (0.220)	Data 0.000 (0.032)	Loss 0.0529 (0.0364)	
+Epoch: [126][30/37]	Time 0.186 (0.209)	Data 0.000 (0.022)	Loss 0.0485 (0.0340)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.092)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.519)
+Test: 	Time 3.529	Prec@1 86.948	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.144)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.195)
+Test: 	Time 3.207	Prec@1 72.718	Prec@5 92.738
+Number of proper clusters: 102
+Epoch: [127][10/38]	Time 0.188 (0.262)	Data 0.000 (0.074)	Loss 0.0075 (0.0255)	
+Epoch: [127][20/38]	Time 0.186 (0.226)	Data 0.000 (0.039)	Loss 0.0017 (0.0187)	
+Epoch: [127][30/38]	Time 0.187 (0.214)	Data 0.000 (0.026)	Loss 0.0229 (0.0212)	
+Number of proper clusters: 102
+Epoch: [128][10/38]	Time 0.200 (0.284)	Data 0.000 (0.077)	Loss 0.0406 (0.0245)	
+Epoch: [128][20/38]	Time 0.188 (0.239)	Data 0.000 (0.040)	Loss 0.0017 (0.0343)	
+Epoch: [128][30/38]	Time 0.186 (0.222)	Data 0.000 (0.027)	Loss 0.0623 (0.0345)	
+Number of proper clusters: 102
+Epoch: [129][10/38]	Time 0.186 (0.269)	Data 0.000 (0.078)	Loss 0.0000 (0.0262)	
+Epoch: [129][20/38]	Time 0.194 (0.232)	Data 0.001 (0.041)	Loss 0.0123 (0.0410)	
+Epoch: [129][30/38]	Time 0.191 (0.218)	Data 0.000 (0.028)	Loss 0.0038 (0.0379)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.349)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.014)
+Test: 	Time 3.023	Prec@1 87.831	Prec@5 98.135
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.087)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.912)
+Test: 	Time 2.922	Prec@1 74.583	Prec@5 93.719
+Number of proper clusters: 102
+Epoch: [130][10/37]	Time 0.187 (0.234)	Data 0.000 (0.047)	Loss 0.0354 (0.0456)	
+Epoch: [130][20/37]	Time 0.186 (0.211)	Data 0.000 (0.025)	Loss 0.1461 (0.0396)	
+Epoch: [130][30/37]	Time 0.188 (0.204)	Data 0.000 (0.017)	Loss 0.0476 (0.0355)	
+Number of proper clusters: 102
+Epoch: [131][10/38]	Time 0.188 (0.256)	Data 0.000 (0.062)	Loss 0.0406 (0.0286)	
+Epoch: [131][20/38]	Time 0.190 (0.225)	Data 0.001 (0.033)	Loss 0.0266 (0.0399)	
+Epoch: [131][30/38]	Time 0.188 (0.213)	Data 0.000 (0.022)	Loss 0.0461 (0.0423)	
+Number of proper clusters: 102
+Epoch: [132][10/37]	Time 0.198 (0.275)	Data 0.000 (0.074)	Loss 0.0026 (0.0330)	
+Epoch: [132][20/37]	Time 0.186 (0.234)	Data 0.000 (0.039)	Loss 0.1220 (0.0430)	
+Epoch: [132][30/37]	Time 0.186 (0.219)	Data 0.000 (0.027)	Loss 0.0335 (0.0405)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.315)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.907)
+Test: 	Time 2.916	Prec@1 87.341	Prec@5 97.939
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.045)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.249)
+Test: 	Time 3.261	Prec@1 72.816	Prec@5 93.425
+Number of proper clusters: 102
+Epoch: [133][10/38]	Time 0.191 (0.264)	Data 0.000 (0.075)	Loss 0.0193 (0.0221)	
+Epoch: [133][20/38]	Time 0.188 (0.228)	Data 0.000 (0.039)	Loss 0.0180 (0.0325)	
+Epoch: [133][30/38]	Time 0.185 (0.215)	Data 0.000 (0.027)	Loss 0.0606 (0.0329)	
+Number of proper clusters: 102
+Epoch: [134][10/37]	Time 0.189 (0.266)	Data 0.000 (0.070)	Loss 0.0340 (0.0243)	
+Epoch: [134][20/37]	Time 0.189 (0.229)	Data 0.000 (0.037)	Loss 0.0122 (0.0215)	
+Epoch: [134][30/37]	Time 0.189 (0.216)	Data 0.000 (0.025)	Loss 0.0004 (0.0258)	
+Number of proper clusters: 102
+Epoch: [135][10/38]	Time 0.187 (0.262)	Data 0.000 (0.071)	Loss 0.0410 (0.0434)	
+Epoch: [135][20/38]	Time 0.194 (0.228)	Data 0.000 (0.038)	Loss 0.0119 (0.0421)	
+Epoch: [135][30/38]	Time 0.186 (0.215)	Data 0.000 (0.025)	Loss 0.0684 (0.0401)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.081)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.099)
+Test: 	Time 3.109	Prec@1 87.831	Prec@5 98.430
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.178)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.275)
+Test: 	Time 3.287	Prec@1 74.289	Prec@5 93.719
+Number of proper clusters: 102
+Epoch: [136][10/37]	Time 0.195 (0.268)	Data 0.000 (0.077)	Loss 0.0727 (0.0391)	
+Epoch: [136][20/37]	Time 0.188 (0.231)	Data 0.000 (0.040)	Loss 0.0146 (0.0359)	
+Epoch: [136][30/37]	Time 0.185 (0.217)	Data 0.000 (0.027)	Loss 0.0366 (0.0399)	
+Number of proper clusters: 102
+Epoch: [137][10/38]	Time 0.191 (0.243)	Data 0.000 (0.047)	Loss 0.0114 (0.0150)	
+Epoch: [137][20/38]	Time 0.188 (0.217)	Data 0.000 (0.025)	Loss 0.0287 (0.0286)	
+Epoch: [137][30/38]	Time 0.187 (0.208)	Data 0.000 (0.017)	Loss 0.0204 (0.0269)	
+Number of proper clusters: 102
+Epoch: [138][10/38]	Time 0.187 (0.257)	Data 0.000 (0.062)	Loss 0.0244 (0.0298)	
+Epoch: [138][20/38]	Time 0.187 (0.224)	Data 0.000 (0.032)	Loss 0.0426 (0.0287)	
+Epoch: [138][30/38]	Time 0.187 (0.212)	Data 0.000 (0.022)	Loss 0.0289 (0.0388)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.952)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.736)
+Test: 	Time 3.747	Prec@1 89.303	Prec@5 98.332
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.159)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.092)
+Test: 	Time 3.102	Prec@1 73.994	Prec@5 94.603
+Number of proper clusters: 102
+Epoch: [139][10/37]	Time 0.187 (0.239)	Data 0.000 (0.052)	Loss 0.0338 (0.0285)	
+Epoch: [139][20/37]	Time 0.187 (0.215)	Data 0.000 (0.028)	Loss 0.0522 (0.0280)	
+Epoch: [139][30/37]	Time 0.188 (0.207)	Data 0.000 (0.019)	Loss 0.0076 (0.0312)	
+Number of proper clusters: 102
+Epoch: [140][10/37]	Time 0.190 (0.253)	Data 0.000 (0.053)	Loss 0.0648 (0.0296)	
+Epoch: [140][20/37]	Time 0.190 (0.222)	Data 0.000 (0.028)	Loss 0.0277 (0.0323)	
+Epoch: [140][30/37]	Time 0.190 (0.211)	Data 0.000 (0.019)	Loss 0.0107 (0.0294)	
+Number of proper clusters: 102
+Epoch: [141][10/38]	Time 0.201 (0.259)	Data 0.000 (0.052)	Loss 0.0360 (0.0321)	
+Epoch: [141][20/38]	Time 0.193 (0.229)	Data 0.000 (0.027)	Loss 0.0221 (0.0305)	
+Epoch: [141][30/38]	Time 0.188 (0.216)	Data 0.000 (0.018)	Loss 0.0132 (0.0326)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.157)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.579)
+Test: 	Time 3.591	Prec@1 89.794	Prec@5 98.724
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.948)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.200)
+Test: 	Time 3.209	Prec@1 75.270	Prec@5 94.406
+Number of proper clusters: 102
+Epoch: [142][10/38]	Time 0.187 (0.240)	Data 0.000 (0.053)	Loss 0.0164 (0.0182)	
+Epoch: [142][20/38]	Time 0.188 (0.216)	Data 0.000 (0.028)	Loss 0.0109 (0.0209)	
+Epoch: [142][30/38]	Time 0.187 (0.206)	Data 0.000 (0.019)	Loss 0.0116 (0.0202)	
+Number of proper clusters: 102
+Epoch: [143][10/37]	Time 0.192 (0.235)	Data 0.000 (0.047)	Loss 0.0121 (0.0381)	
+Epoch: [143][20/37]	Time 0.188 (0.213)	Data 0.000 (0.025)	Loss 0.0211 (0.0336)	
+Epoch: [143][30/37]	Time 0.187 (0.204)	Data 0.000 (0.017)	Loss 0.0092 (0.0279)	
+Number of proper clusters: 102
+Epoch: [144][10/37]	Time 0.208 (0.258)	Data 0.000 (0.052)	Loss 0.0060 (0.0295)	
+Epoch: [144][20/37]	Time 0.192 (0.229)	Data 0.000 (0.028)	Loss 0.0160 (0.0281)	
+Epoch: [144][30/37]	Time 0.186 (0.216)	Data 0.000 (0.019)	Loss 0.0920 (0.0302)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.148)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.068)
+Test: 	Time 3.077	Prec@1 87.537	Prec@5 96.958
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.808)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.043)
+Test: 	Time 3.052	Prec@1 73.896	Prec@5 94.210
+Number of proper clusters: 102
+Epoch: [145][10/37]	Time 0.187 (0.241)	Data 0.000 (0.053)	Loss 0.0138 (0.0235)	
+Epoch: [145][20/37]	Time 0.187 (0.216)	Data 0.000 (0.028)	Loss 0.0034 (0.0268)	
+Epoch: [145][30/37]	Time 0.188 (0.207)	Data 0.000 (0.019)	Loss 0.0590 (0.0263)	
+Number of proper clusters: 102
+Epoch: [146][10/38]	Time 0.189 (0.243)	Data 0.000 (0.049)	Loss 0.0269 (0.0206)	
+Epoch: [146][20/38]	Time 0.188 (0.218)	Data 0.000 (0.026)	Loss 0.0500 (0.0358)	
+Epoch: [146][30/38]	Time 0.190 (0.209)	Data 0.000 (0.018)	Loss 0.0695 (0.0401)	
+Number of proper clusters: 102
+Epoch: [147][10/37]	Time 0.192 (0.252)	Data 0.000 (0.057)	Loss 0.0054 (0.0255)	
+Epoch: [147][20/37]	Time 0.194 (0.223)	Data 0.000 (0.030)	Loss 0.0328 (0.0394)	
+Epoch: [147][30/37]	Time 0.187 (0.212)	Data 0.000 (0.021)	Loss 0.0596 (0.0365)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.921)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.908)
+Test: 	Time 2.917	Prec@1 89.107	Prec@5 97.645
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.111)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.299)
+Test: 	Time 3.310	Prec@1 73.405	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [148][10/38]	Time 0.189 (0.243)	Data 0.000 (0.052)	Loss 0.0104 (0.0176)	
+Epoch: [148][20/38]	Time 0.188 (0.217)	Data 0.000 (0.028)	Loss 0.0529 (0.0239)	
+Epoch: [148][30/38]	Time 0.185 (0.207)	Data 0.000 (0.019)	Loss 0.0203 (0.0328)	
+Number of proper clusters: 102
+Epoch: [149][10/37]	Time 0.187 (0.246)	Data 0.000 (0.053)	Loss 0.0054 (0.0254)	
+Epoch: [149][20/37]	Time 0.194 (0.219)	Data 0.000 (0.028)	Loss 0.0572 (0.0272)	
+Epoch: [149][30/37]	Time 0.188 (0.209)	Data 0.000 (0.019)	Loss 0.0360 (0.0252)	
+Number of proper clusters: 102
+Epoch: [150][10/37]	Time 0.192 (0.238)	Data 0.000 (0.045)	Loss 0.0008 (0.0393)	
+Epoch: [150][20/37]	Time 0.187 (0.215)	Data 0.000 (0.024)	Loss 0.0404 (0.0312)	
+Epoch: [150][30/37]	Time 0.188 (0.207)	Data 0.000 (0.016)	Loss 0.0035 (0.0334)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.935)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.953)
+Test: 	Time 2.962	Prec@1 89.990	Prec@5 98.135
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.123)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.511)
+Test: 	Time 3.522	Prec@1 75.172	Prec@5 94.995
+Number of proper clusters: 102
+Epoch: [151][10/37]	Time 0.189 (0.234)	Data 0.000 (0.046)	Loss 0.0127 (0.0261)	
+Epoch: [151][20/37]	Time 0.186 (0.211)	Data 0.000 (0.024)	Loss 0.0018 (0.0487)	
+Epoch: [151][30/37]	Time 0.186 (0.203)	Data 0.000 (0.017)	Loss 0.0190 (0.0466)	
+Number of proper clusters: 102
+Epoch: [152][10/38]	Time 0.203 (0.258)	Data 0.000 (0.054)	Loss 0.0296 (0.0445)	
+Epoch: [152][20/38]	Time 0.194 (0.234)	Data 0.000 (0.029)	Loss 0.0167 (0.0329)	
+Epoch: [152][30/38]	Time 0.185 (0.219)	Data 0.000 (0.019)	Loss 0.0111 (0.0275)	
+Number of proper clusters: 102
+Epoch: [153][10/38]	Time 0.189 (0.248)	Data 0.000 (0.055)	Loss 0.0039 (0.0258)	
+Epoch: [153][20/38]	Time 0.199 (0.223)	Data 0.000 (0.029)	Loss 0.0106 (0.0234)	
+Epoch: [153][30/38]	Time 0.190 (0.212)	Data 0.000 (0.020)	Loss 0.0281 (0.0244)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.270)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.169)
+Test: 	Time 3.178	Prec@1 89.500	Prec@5 97.645
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.860)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.102)
+Test: 	Time 3.111	Prec@1 75.172	Prec@5 94.897
+Number of proper clusters: 102
+Epoch: [154][10/38]	Time 0.187 (0.237)	Data 0.000 (0.050)	Loss 0.0099 (0.0341)	
+Epoch: [154][20/38]	Time 0.203 (0.216)	Data 0.000 (0.026)	Loss 0.0247 (0.0335)	
+Epoch: [154][30/38]	Time 0.185 (0.208)	Data 0.000 (0.018)	Loss 0.0050 (0.0358)	
+Number of proper clusters: 102
+Epoch: [155][10/38]	Time 0.206 (0.255)	Data 0.000 (0.045)	Loss 0.0658 (0.0368)	
+Epoch: [155][20/38]	Time 0.186 (0.226)	Data 0.000 (0.024)	Loss 0.0116 (0.0273)	
+Epoch: [155][30/38]	Time 0.186 (0.214)	Data 0.000 (0.016)	Loss 0.0058 (0.0258)	
+Number of proper clusters: 102
+Epoch: [156][10/37]	Time 0.192 (0.243)	Data 0.001 (0.048)	Loss 0.1396 (0.0324)	
+Epoch: [156][20/37]	Time 0.189 (0.217)	Data 0.000 (0.026)	Loss 0.0272 (0.0350)	
+Epoch: [156][30/37]	Time 0.187 (0.208)	Data 0.000 (0.017)	Loss 0.0170 (0.0361)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.890)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.458)
+Test: 	Time 3.469	Prec@1 90.579	Prec@5 98.724
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.981)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.186)
+Test: 	Time 3.195	Prec@1 76.055	Prec@5 95.191
+Number of proper clusters: 102
+Epoch: [157][10/37]	Time 0.185 (0.253)	Data 0.000 (0.066)	Loss 0.0408 (0.0255)	
+Epoch: [157][20/37]	Time 0.188 (0.222)	Data 0.001 (0.035)	Loss 0.0774 (0.0267)	
+Epoch: [157][30/37]	Time 0.188 (0.211)	Data 0.000 (0.024)	Loss 0.0456 (0.0308)	
+Number of proper clusters: 102
+Epoch: [158][10/38]	Time 0.189 (0.274)	Data 0.000 (0.076)	Loss 0.0015 (0.0367)	
+Epoch: [158][20/38]	Time 0.188 (0.234)	Data 0.000 (0.040)	Loss 0.0940 (0.0346)	
+Epoch: [158][30/38]	Time 0.187 (0.219)	Data 0.000 (0.027)	Loss 0.0414 (0.0323)	
+Number of proper clusters: 102
+Epoch: [159][10/37]	Time 0.187 (0.243)	Data 0.000 (0.052)	Loss 0.0337 (0.0397)	
+Epoch: [159][20/37]	Time 0.198 (0.219)	Data 0.000 (0.028)	Loss 0.0087 (0.0304)	
+Epoch: [159][30/37]	Time 0.186 (0.209)	Data 0.000 (0.019)	Loss 0.0866 (0.0323)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.223)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.101)
+Test: 	Time 3.111	Prec@1 91.168	Prec@5 99.019
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.881)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.819)
+Test: 	Time 2.828	Prec@1 74.583	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [160][10/38]	Time 0.200 (0.245)	Data 0.000 (0.051)	Loss 0.0712 (0.0369)	
+Epoch: [160][20/38]	Time 0.201 (0.226)	Data 0.000 (0.027)	Loss 0.0223 (0.0405)	
+Epoch: [160][30/38]	Time 0.186 (0.216)	Data 0.000 (0.018)	Loss 0.0502 (0.0352)	
+Number of proper clusters: 102
+Epoch: [161][10/38]	Time 0.206 (0.270)	Data 0.000 (0.058)	Loss 0.1327 (0.0569)	
+Epoch: [161][20/38]	Time 0.187 (0.234)	Data 0.000 (0.031)	Loss 0.0582 (0.0431)	
+Epoch: [161][30/38]	Time 0.186 (0.219)	Data 0.000 (0.021)	Loss 0.0204 (0.0382)	
+Number of proper clusters: 102
+Epoch: [162][10/38]	Time 0.191 (0.260)	Data 0.000 (0.066)	Loss 0.0244 (0.0285)	
+Epoch: [162][20/38]	Time 0.189 (0.227)	Data 0.001 (0.035)	Loss 0.0059 (0.0366)	
+Epoch: [162][30/38]	Time 0.186 (0.214)	Data 0.000 (0.023)	Loss 0.0138 (0.0310)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.310)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.979)
+Test: 	Time 2.991	Prec@1 89.401	Prec@5 97.939
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.989)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.385)
+Test: 	Time 3.396	Prec@1 75.368	Prec@5 94.308
+Number of proper clusters: 102
+Epoch: [163][10/38]	Time 0.188 (0.266)	Data 0.001 (0.078)	Loss 0.0444 (0.0213)	
+Epoch: [163][20/38]	Time 0.187 (0.229)	Data 0.000 (0.041)	Loss 0.0480 (0.0314)	
+Epoch: [163][30/38]	Time 0.187 (0.215)	Data 0.000 (0.028)	Loss 0.0611 (0.0285)	
+Number of proper clusters: 102
+Epoch: [164][10/38]	Time 0.188 (0.238)	Data 0.000 (0.048)	Loss 0.0016 (0.0117)	
+Epoch: [164][20/38]	Time 0.189 (0.216)	Data 0.001 (0.026)	Loss 0.0136 (0.0149)	
+Epoch: [164][30/38]	Time 0.192 (0.207)	Data 0.000 (0.017)	Loss 0.0153 (0.0223)	
+Number of proper clusters: 102
+Epoch: [165][10/37]	Time 0.189 (0.251)	Data 0.000 (0.060)	Loss 0.0021 (0.0139)	
+Epoch: [165][20/37]	Time 0.188 (0.221)	Data 0.000 (0.032)	Loss 0.0008 (0.0276)	
+Epoch: [165][30/37]	Time 0.186 (0.210)	Data 0.000 (0.022)	Loss 0.0071 (0.0303)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.932)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.054)
+Test: 	Time 3.063	Prec@1 88.322	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.074)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.622)
+Test: 	Time 3.634	Prec@1 75.662	Prec@5 94.897
+Number of proper clusters: 102
+Epoch: [166][10/38]	Time 0.187 (0.259)	Data 0.000 (0.072)	Loss 0.0145 (0.0340)	
+Epoch: [166][20/38]	Time 0.193 (0.225)	Data 0.000 (0.038)	Loss 0.0041 (0.0277)	
+Epoch: [166][30/38]	Time 0.186 (0.213)	Data 0.000 (0.026)	Loss 0.0588 (0.0360)	
+Number of proper clusters: 102
+Epoch: [167][10/38]	Time 0.189 (0.253)	Data 0.000 (0.060)	Loss 0.0794 (0.0391)	
+Epoch: [167][20/38]	Time 0.186 (0.222)	Data 0.000 (0.032)	Loss 0.0829 (0.0338)	
+Epoch: [167][30/38]	Time 0.188 (0.211)	Data 0.000 (0.022)	Loss 0.0020 (0.0311)	
+Number of proper clusters: 102
+Epoch: [168][10/37]	Time 0.187 (0.248)	Data 0.000 (0.059)	Loss 0.0102 (0.0140)	
+Epoch: [168][20/37]	Time 0.185 (0.219)	Data 0.000 (0.031)	Loss 0.0203 (0.0192)	
+Epoch: [168][30/37]	Time 0.208 (0.211)	Data 0.000 (0.021)	Loss 0.0112 (0.0192)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.592)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.307)
+Test: 	Time 3.319	Prec@1 89.303	Prec@5 98.332
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.963)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.131)
+Test: 	Time 3.141	Prec@1 76.349	Prec@5 95.093
+Number of proper clusters: 102
+Epoch: [169][10/37]	Time 0.186 (0.245)	Data 0.000 (0.058)	Loss 0.0047 (0.0359)	
+Epoch: [169][20/37]	Time 0.192 (0.219)	Data 0.000 (0.031)	Loss 0.0404 (0.0298)	
+Epoch: [169][30/37]	Time 0.185 (0.209)	Data 0.000 (0.021)	Loss 0.0359 (0.0281)	
+Number of proper clusters: 102
+Epoch: [170][10/37]	Time 0.203 (0.277)	Data 0.000 (0.073)	Loss 0.0028 (0.0208)	
+Epoch: [170][20/37]	Time 0.198 (0.241)	Data 0.001 (0.039)	Loss 0.0000 (0.0187)	
+Epoch: [170][30/37]	Time 0.186 (0.224)	Data 0.000 (0.026)	Loss 0.0071 (0.0237)	
+Number of proper clusters: 102
+Epoch: [171][10/38]	Time 0.189 (0.257)	Data 0.000 (0.057)	Loss 0.0215 (0.0182)	
+Epoch: [171][20/38]	Time 0.186 (0.224)	Data 0.000 (0.030)	Loss 0.0914 (0.0269)	
+Epoch: [171][30/38]	Time 0.185 (0.213)	Data 0.000 (0.020)	Loss 0.0476 (0.0257)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.948)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.486)
+Test: 	Time 3.496	Prec@1 91.462	Prec@5 98.921
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.408)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.291)
+Test: 	Time 3.300	Prec@1 76.251	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [172][10/37]	Time 0.186 (0.257)	Data 0.000 (0.071)	Loss 0.0039 (0.0284)	
+Epoch: [172][20/37]	Time 0.188 (0.225)	Data 0.000 (0.037)	Loss 0.0209 (0.0336)	
+Epoch: [172][30/37]	Time 0.193 (0.214)	Data 0.000 (0.025)	Loss 0.0902 (0.0299)	
+Number of proper clusters: 102
+Epoch: [173][10/38]	Time 0.188 (0.250)	Data 0.000 (0.055)	Loss 0.0146 (0.0257)	
+Epoch: [173][20/38]	Time 0.187 (0.221)	Data 0.000 (0.029)	Loss 0.0011 (0.0305)	
+Epoch: [173][30/38]	Time 0.188 (0.210)	Data 0.000 (0.020)	Loss 0.0014 (0.0282)	
+Number of proper clusters: 102
+Epoch: [174][10/37]	Time 0.188 (0.275)	Data 0.001 (0.081)	Loss 0.0970 (0.0475)	
+Epoch: [174][20/37]	Time 0.187 (0.233)	Data 0.001 (0.042)	Loss 0.0129 (0.0384)	
+Epoch: [174][30/37]	Time 0.185 (0.219)	Data 0.000 (0.029)	Loss 0.0324 (0.0362)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.350)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.977)
+Test: 	Time 2.986	Prec@1 88.813	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.993)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.913)
+Test: 	Time 2.922	Prec@1 74.877	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [175][10/38]	Time 0.189 (0.266)	Data 0.000 (0.078)	Loss 0.0068 (0.0270)	
+Epoch: [175][20/38]	Time 0.186 (0.229)	Data 0.000 (0.041)	Loss 0.0006 (0.0255)	
+Epoch: [175][30/38]	Time 0.187 (0.216)	Data 0.000 (0.028)	Loss 0.0072 (0.0221)	
+Number of proper clusters: 102
+Epoch: [176][10/38]	Time 0.191 (0.290)	Data 0.000 (0.094)	Loss 0.0162 (0.0450)	
+Epoch: [176][20/38]	Time 0.190 (0.242)	Data 0.000 (0.049)	Loss 0.0277 (0.0300)	
+Epoch: [176][30/38]	Time 0.187 (0.224)	Data 0.000 (0.033)	Loss 0.0824 (0.0307)	
+Number of proper clusters: 102
+Epoch: [177][10/38]	Time 0.191 (0.261)	Data 0.000 (0.067)	Loss 0.0028 (0.0139)	
+Epoch: [177][20/38]	Time 0.187 (0.226)	Data 0.000 (0.035)	Loss 0.0000 (0.0172)	
+Epoch: [177][30/38]	Time 0.186 (0.214)	Data 0.000 (0.024)	Loss 0.0088 (0.0224)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.047)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.043)
+Test: 	Time 3.053	Prec@1 88.224	Prec@5 98.234
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.494)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.510)
+Test: 	Time 3.522	Prec@1 75.368	Prec@5 94.112
+Number of proper clusters: 102
+Epoch: [178][10/38]	Time 0.189 (0.251)	Data 0.000 (0.064)	Loss 0.0734 (0.0244)	
+Epoch: [178][20/38]	Time 0.188 (0.221)	Data 0.000 (0.034)	Loss 0.0275 (0.0270)	
+Epoch: [178][30/38]	Time 0.190 (0.211)	Data 0.000 (0.023)	Loss 0.0261 (0.0258)	
+Number of proper clusters: 102
+Epoch: [179][10/38]	Time 0.187 (0.261)	Data 0.000 (0.071)	Loss 0.0461 (0.0360)	
+Epoch: [179][20/38]	Time 0.188 (0.228)	Data 0.000 (0.037)	Loss 0.0326 (0.0308)	
+Epoch: [179][30/38]	Time 0.184 (0.216)	Data 0.000 (0.025)	Loss 0.0190 (0.0276)	
+Number of proper clusters: 102
+Epoch: [180][10/38]	Time 0.210 (0.295)	Data 0.000 (0.085)	Loss 0.0049 (0.0181)	
+Epoch: [180][20/38]	Time 0.199 (0.249)	Data 0.000 (0.045)	Loss 0.0080 (0.0257)	
+Epoch: [180][30/38]	Time 0.187 (0.229)	Data 0.000 (0.030)	Loss 0.0034 (0.0251)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.864)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.913)
+Test: 	Time 2.922	Prec@1 88.224	Prec@5 98.135
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.151)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.545)
+Test: 	Time 3.555	Prec@1 75.172	Prec@5 94.210
+Number of proper clusters: 102
+Epoch: [181][10/38]	Time 0.187 (0.240)	Data 0.000 (0.053)	Loss 0.0073 (0.0138)	
+Epoch: [181][20/38]	Time 0.191 (0.216)	Data 0.000 (0.028)	Loss 0.0105 (0.0191)	
+Epoch: [181][30/38]	Time 0.188 (0.207)	Data 0.000 (0.019)	Loss 0.0164 (0.0175)	
+Number of proper clusters: 102
+Epoch: [182][10/38]	Time 0.191 (0.242)	Data 0.000 (0.050)	Loss 0.0156 (0.0167)	
+Epoch: [182][20/38]	Time 0.190 (0.216)	Data 0.000 (0.026)	Loss 0.0006 (0.0158)	
+Epoch: [182][30/38]	Time 0.186 (0.206)	Data 0.000 (0.018)	Loss 0.0026 (0.0144)	
+Number of proper clusters: 102
+Epoch: [183][10/37]	Time 0.198 (0.267)	Data 0.000 (0.061)	Loss 0.0247 (0.0305)	
+Epoch: [183][20/37]	Time 0.201 (0.238)	Data 0.000 (0.032)	Loss 0.0149 (0.0419)	
+Epoch: [183][30/37]	Time 0.199 (0.225)	Data 0.000 (0.022)	Loss 0.0236 (0.0348)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.208)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.603)
+Test: 	Time 3.613	Prec@1 90.383	Prec@5 99.019
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.178)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.956)
+Test: 	Time 2.965	Prec@1 75.859	Prec@5 93.817
+Number of proper clusters: 102
+Epoch: [184][10/38]	Time 0.193 (0.251)	Data 0.000 (0.064)	Loss 0.0022 (0.0183)	
+Epoch: [184][20/38]	Time 0.187 (0.221)	Data 0.000 (0.034)	Loss 0.0064 (0.0226)	
+Epoch: [184][30/38]	Time 0.185 (0.210)	Data 0.000 (0.023)	Loss 0.0161 (0.0243)	
+Number of proper clusters: 102
+Epoch: [185][10/38]	Time 0.209 (0.276)	Data 0.001 (0.070)	Loss 0.0309 (0.0330)	
+Epoch: [185][20/38]	Time 0.186 (0.237)	Data 0.000 (0.037)	Loss 0.0315 (0.0303)	
+Epoch: [185][30/38]	Time 0.190 (0.221)	Data 0.000 (0.025)	Loss 0.0178 (0.0259)	
+Number of proper clusters: 102
+Epoch: [186][10/38]	Time 0.189 (0.252)	Data 0.000 (0.058)	Loss 0.0020 (0.0312)	
+Epoch: [186][20/38]	Time 0.188 (0.221)	Data 0.000 (0.030)	Loss 0.2047 (0.0413)	
+Epoch: [186][30/38]	Time 0.185 (0.211)	Data 0.000 (0.021)	Loss 0.0065 (0.0375)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.248)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.448)
+Test: 	Time 3.459	Prec@1 89.696	Prec@5 98.135
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.893)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.955)
+Test: 	Time 2.964	Prec@1 75.957	Prec@5 94.995
+Number of proper clusters: 102
+Epoch: [187][10/37]	Time 0.186 (0.248)	Data 0.000 (0.061)	Loss 0.0074 (0.0357)	
+Epoch: [187][20/37]	Time 0.190 (0.220)	Data 0.000 (0.032)	Loss 0.0004 (0.0307)	
+Epoch: [187][30/37]	Time 0.186 (0.209)	Data 0.000 (0.022)	Loss 0.0368 (0.0284)	
+Number of proper clusters: 102
+Epoch: [188][10/38]	Time 0.191 (0.243)	Data 0.000 (0.051)	Loss 0.0857 (0.0245)	
+Epoch: [188][20/38]	Time 0.187 (0.218)	Data 0.000 (0.027)	Loss 0.0620 (0.0208)	
+Epoch: [188][30/38]	Time 0.194 (0.209)	Data 0.000 (0.018)	Loss 0.0555 (0.0241)	
+Number of proper clusters: 102
+Epoch: [189][10/37]	Time 0.189 (0.271)	Data 0.000 (0.072)	Loss 0.0198 (0.0154)	
+Epoch: [189][20/37]	Time 0.214 (0.238)	Data 0.001 (0.038)	Loss 0.0498 (0.0190)	
+Epoch: [189][30/37]	Time 0.192 (0.225)	Data 0.000 (0.026)	Loss 0.0011 (0.0229)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.126)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.967)
+Test: 	Time 2.976	Prec@1 91.266	Prec@5 98.037
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.876)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.032)
+Test: 	Time 3.041	Prec@1 76.349	Prec@5 94.308
+Number of proper clusters: 102
+Epoch: [190][10/38]	Time 0.187 (0.246)	Data 0.000 (0.059)	Loss 0.0367 (0.0276)	
+Epoch: [190][20/38]	Time 0.189 (0.219)	Data 0.000 (0.031)	Loss 0.1098 (0.0327)	
+Epoch: [190][30/38]	Time 0.188 (0.209)	Data 0.000 (0.021)	Loss 0.0045 (0.0356)	
+Number of proper clusters: 102
+Epoch: [191][10/37]	Time 0.188 (0.249)	Data 0.000 (0.053)	Loss 0.0075 (0.0232)	
+Epoch: [191][20/37]	Time 0.209 (0.229)	Data 0.000 (0.028)	Loss 0.0240 (0.0229)	
+Epoch: [191][30/37]	Time 0.206 (0.220)	Data 0.000 (0.019)	Loss 0.0153 (0.0229)	
+Number of proper clusters: 102
+Epoch: [192][10/37]	Time 0.188 (0.244)	Data 0.000 (0.050)	Loss 0.0103 (0.0274)	
+Epoch: [192][20/37]	Time 0.188 (0.218)	Data 0.000 (0.026)	Loss 0.0378 (0.0345)	
+Epoch: [192][30/37]	Time 0.187 (0.208)	Data 0.000 (0.018)	Loss 0.0151 (0.0303)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.960)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.167)
+Test: 	Time 3.176	Prec@1 90.873	Prec@5 98.135
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.912)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.553)
+Test: 	Time 3.565	Prec@1 74.779	Prec@5 94.504
+Number of proper clusters: 102
+Epoch: [193][10/38]	Time 0.192 (0.250)	Data 0.000 (0.059)	Loss 0.0152 (0.0194)	
+Epoch: [193][20/38]	Time 0.189 (0.220)	Data 0.000 (0.031)	Loss 0.0056 (0.0304)	
+Epoch: [193][30/38]	Time 0.186 (0.210)	Data 0.000 (0.021)	Loss 0.0140 (0.0319)	
+Number of proper clusters: 102
+Epoch: [194][10/38]	Time 0.188 (0.259)	Data 0.001 (0.065)	Loss 0.0019 (0.0228)	
+Epoch: [194][20/38]	Time 0.208 (0.235)	Data 0.000 (0.035)	Loss 0.0346 (0.0323)	
+Epoch: [194][30/38]	Time 0.209 (0.224)	Data 0.000 (0.023)	Loss 0.0099 (0.0297)	
+Number of proper clusters: 102
+Epoch: [195][10/38]	Time 0.187 (0.253)	Data 0.000 (0.058)	Loss 0.0352 (0.0187)	
+Epoch: [195][20/38]	Time 0.192 (0.222)	Data 0.000 (0.030)	Loss 0.0288 (0.0168)	
+Epoch: [195][30/38]	Time 0.187 (0.211)	Data 0.000 (0.021)	Loss 0.0042 (0.0213)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.108)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.907)
+Test: 	Time 2.916	Prec@1 91.953	Prec@5 98.626
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.267)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.458)
+Test: 	Time 3.469	Prec@1 75.466	Prec@5 94.308
+Number of proper clusters: 102
+Epoch: [196][10/38]	Time 0.187 (0.239)	Data 0.000 (0.053)	Loss 0.0131 (0.0206)	
+Epoch: [196][20/38]	Time 0.186 (0.215)	Data 0.000 (0.028)	Loss 0.1296 (0.0268)	
+Epoch: [196][30/38]	Time 0.185 (0.206)	Data 0.000 (0.019)	Loss 0.0006 (0.0280)	
+Number of proper clusters: 102
+Epoch: [197][10/38]	Time 0.187 (0.244)	Data 0.000 (0.056)	Loss 0.0389 (0.0382)	
+Epoch: [197][20/38]	Time 0.191 (0.219)	Data 0.000 (0.030)	Loss 0.0004 (0.0252)	
+Epoch: [197][30/38]	Time 0.187 (0.208)	Data 0.000 (0.020)	Loss 0.0369 (0.0278)	
+Number of proper clusters: 102
+Epoch: [198][10/37]	Time 0.190 (0.238)	Data 0.000 (0.050)	Loss 0.1563 (0.0467)	
+Epoch: [198][20/37]	Time 0.187 (0.215)	Data 0.000 (0.027)	Loss 0.0092 (0.0363)	
+Epoch: [198][30/37]	Time 0.199 (0.208)	Data 0.000 (0.018)	Loss 0.0151 (0.0337)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.418)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.331)
+Test: 	Time 3.341	Prec@1 89.990	Prec@5 98.234
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.021)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.051)
+Test: 	Time 3.060	Prec@1 75.859	Prec@5 95.093
+Number of proper clusters: 102
+Epoch: [199][10/38]	Time 0.186 (0.238)	Data 0.000 (0.049)	Loss 0.0000 (0.0177)	
+Epoch: [199][20/38]	Time 0.187 (0.213)	Data 0.000 (0.026)	Loss 0.0157 (0.0201)	
+Epoch: [199][30/38]	Time 0.187 (0.205)	Data 0.000 (0.017)	Loss 0.0041 (0.0203)	
+Number of proper clusters: 102
+Epoch: [200][10/37]	Time 0.193 (0.242)	Data 0.000 (0.049)	Loss 0.0391 (0.0246)	
+Epoch: [200][20/37]	Time 0.188 (0.216)	Data 0.000 (0.026)	Loss 0.0503 (0.0208)	
+Epoch: [200][30/37]	Time 0.190 (0.207)	Data 0.000 (0.017)	Loss 0.0000 (0.0226)	
+Number of proper clusters: 102
+Epoch: [201][10/37]	Time 0.221 (0.277)	Data 0.000 (0.074)	Loss 0.0064 (0.0205)	
+Epoch: [201][20/37]	Time 0.191 (0.239)	Data 0.000 (0.039)	Loss 0.0075 (0.0210)	
+Epoch: [201][30/37]	Time 0.189 (0.222)	Data 0.000 (0.026)	Loss 0.0104 (0.0168)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.235)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.414)
+Test: 	Time 3.424	Prec@1 89.500	Prec@5 98.822
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.971)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.931)
+Test: 	Time 2.940	Prec@1 75.466	Prec@5 94.603
+Number of proper clusters: 102
+Epoch: [202][10/38]	Time 0.202 (0.241)	Data 0.000 (0.049)	Loss 0.0346 (0.0245)	
+Epoch: [202][20/38]	Time 0.188 (0.217)	Data 0.000 (0.026)	Loss 0.0287 (0.0325)	
+Epoch: [202][30/38]	Time 0.184 (0.208)	Data 0.000 (0.018)	Loss 0.0566 (0.0320)	
+Number of proper clusters: 102
+Epoch: [203][10/38]	Time 0.186 (0.241)	Data 0.000 (0.049)	Loss 0.0100 (0.0111)	
+Epoch: [203][20/38]	Time 0.190 (0.216)	Data 0.001 (0.026)	Loss 0.0077 (0.0145)	
+Epoch: [203][30/38]	Time 0.190 (0.208)	Data 0.000 (0.018)	Loss 0.0140 (0.0143)	
+Number of proper clusters: 102
+Epoch: [204][10/38]	Time 0.188 (0.242)	Data 0.001 (0.053)	Loss 0.0330 (0.0214)	
+Epoch: [204][20/38]	Time 0.190 (0.217)	Data 0.000 (0.028)	Loss 0.0093 (0.0217)	
+Epoch: [204][30/38]	Time 0.193 (0.208)	Data 0.000 (0.019)	Loss 0.0194 (0.0221)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.117)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.985)
+Test: 	Time 2.994	Prec@1 91.168	Prec@5 98.430
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.136)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.955)
+Test: 	Time 2.964	Prec@1 74.583	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [205][10/37]	Time 0.190 (0.238)	Data 0.000 (0.048)	Loss 0.0439 (0.0261)	
+Epoch: [205][20/37]	Time 0.200 (0.221)	Data 0.000 (0.025)	Loss 0.0107 (0.0198)	
+Epoch: [205][30/37]	Time 0.187 (0.212)	Data 0.000 (0.017)	Loss 0.0641 (0.0258)	
+Number of proper clusters: 102
+Epoch: [206][10/38]	Time 0.187 (0.247)	Data 0.000 (0.054)	Loss 0.0074 (0.0276)	
+Epoch: [206][20/38]	Time 0.188 (0.220)	Data 0.000 (0.029)	Loss 0.0382 (0.0284)	
+Epoch: [206][30/38]	Time 0.193 (0.209)	Data 0.000 (0.019)	Loss 0.0321 (0.0226)	
+Number of proper clusters: 102
+Epoch: [207][10/37]	Time 0.185 (0.235)	Data 0.000 (0.046)	Loss 0.0052 (0.0187)	
+Epoch: [207][20/37]	Time 0.189 (0.212)	Data 0.000 (0.024)	Loss 0.0369 (0.0260)	
+Epoch: [207][30/37]	Time 0.185 (0.204)	Data 0.000 (0.017)	Loss 0.0576 (0.0261)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.887)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.325)
+Test: 	Time 3.334	Prec@1 91.658	Prec@5 98.234
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.796)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.277)
+Test: 	Time 3.287	Prec@1 76.251	Prec@5 95.191
+Number of proper clusters: 102
+Epoch: [208][10/38]	Time 0.186 (0.252)	Data 0.000 (0.063)	Loss 0.0032 (0.0249)	
+Epoch: [208][20/38]	Time 0.186 (0.222)	Data 0.000 (0.033)	Loss 0.0601 (0.0261)	
+Epoch: [208][30/38]	Time 0.211 (0.216)	Data 0.000 (0.023)	Loss 0.0225 (0.0290)	
+Number of proper clusters: 102
+Epoch: [209][10/38]	Time 0.192 (0.254)	Data 0.000 (0.058)	Loss 0.0132 (0.0274)	
+Epoch: [209][20/38]	Time 0.209 (0.231)	Data 0.000 (0.030)	Loss 0.0185 (0.0250)	
+Epoch: [209][30/38]	Time 0.199 (0.222)	Data 0.000 (0.021)	Loss 0.0052 (0.0232)	
+Number of proper clusters: 102
+Epoch: [210][10/38]	Time 0.191 (0.253)	Data 0.000 (0.047)	Loss 0.0499 (0.0243)	
+Epoch: [210][20/38]	Time 0.188 (0.222)	Data 0.000 (0.025)	Loss 0.0415 (0.0221)	
+Epoch: [210][30/38]	Time 0.190 (0.211)	Data 0.000 (0.017)	Loss 0.0018 (0.0252)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.887)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.012)
+Test: 	Time 3.024	Prec@1 93.131	Prec@5 99.019
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.798)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.177)
+Test: 	Time 3.188	Prec@1 75.270	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [211][10/38]	Time 0.192 (0.238)	Data 0.000 (0.051)	Loss 0.0265 (0.0212)	
+Epoch: [211][20/38]	Time 0.190 (0.216)	Data 0.000 (0.027)	Loss 0.0000 (0.0212)	
+Epoch: [211][30/38]	Time 0.186 (0.207)	Data 0.000 (0.018)	Loss 0.0053 (0.0219)	
+Number of proper clusters: 102
+Epoch: [212][10/38]	Time 0.198 (0.253)	Data 0.000 (0.050)	Loss 0.0179 (0.0165)	
+Epoch: [212][20/38]	Time 0.212 (0.228)	Data 0.000 (0.026)	Loss 0.0392 (0.0255)	
+Epoch: [212][30/38]	Time 0.197 (0.220)	Data 0.000 (0.018)	Loss 0.0000 (0.0239)	
+Number of proper clusters: 102
+Epoch: [213][10/38]	Time 0.189 (0.250)	Data 0.000 (0.053)	Loss 0.0020 (0.0272)	
+Epoch: [213][20/38]	Time 0.188 (0.221)	Data 0.001 (0.028)	Loss 0.0338 (0.0218)	
+Epoch: [213][30/38]	Time 0.188 (0.210)	Data 0.000 (0.019)	Loss 0.0218 (0.0251)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.178)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.073)
+Test: 	Time 3.082	Prec@1 91.168	Prec@5 98.332
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.837)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.059)
+Test: 	Time 3.069	Prec@1 75.859	Prec@5 95.093
+Number of proper clusters: 102
+Epoch: [214][10/38]	Time 0.186 (0.240)	Data 0.000 (0.054)	Loss 0.0307 (0.0356)	
+Epoch: [214][20/38]	Time 0.186 (0.215)	Data 0.000 (0.028)	Loss 0.0478 (0.0314)	
+Epoch: [214][30/38]	Time 0.185 (0.206)	Data 0.000 (0.019)	Loss 0.0470 (0.0315)	
+Number of proper clusters: 102
+Epoch: [215][10/38]	Time 0.187 (0.253)	Data 0.000 (0.057)	Loss 0.0000 (0.0257)	
+Epoch: [215][20/38]	Time 0.188 (0.224)	Data 0.000 (0.030)	Loss 0.0243 (0.0250)	
+Epoch: [215][30/38]	Time 0.192 (0.212)	Data 0.000 (0.021)	Loss 0.0161 (0.0222)	
+Number of proper clusters: 102
+Epoch: [216][10/38]	Time 0.189 (0.247)	Data 0.000 (0.050)	Loss 0.0443 (0.0254)	
+Epoch: [216][20/38]	Time 0.187 (0.219)	Data 0.000 (0.026)	Loss 0.0016 (0.0327)	
+Epoch: [216][30/38]	Time 0.188 (0.210)	Data 0.000 (0.018)	Loss 0.0469 (0.0302)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.909)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.334)
+Test: 	Time 3.345	Prec@1 92.444	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.197)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.053)
+Test: 	Time 3.063	Prec@1 75.859	Prec@5 94.603
+Number of proper clusters: 102
+Epoch: [217][10/38]	Time 0.186 (0.243)	Data 0.000 (0.055)	Loss 0.0301 (0.0221)	
+Epoch: [217][20/38]	Time 0.191 (0.217)	Data 0.000 (0.029)	Loss 0.0020 (0.0183)	
+Epoch: [217][30/38]	Time 0.191 (0.207)	Data 0.000 (0.020)	Loss 0.0038 (0.0192)	
+Number of proper clusters: 102
+Epoch: [218][10/38]	Time 0.190 (0.250)	Data 0.000 (0.052)	Loss 0.0028 (0.0201)	
+Epoch: [218][20/38]	Time 0.194 (0.229)	Data 0.000 (0.028)	Loss 0.0312 (0.0205)	
+Epoch: [218][30/38]	Time 0.206 (0.221)	Data 0.000 (0.019)	Loss 0.0102 (0.0247)	
+Number of proper clusters: 102
+Epoch: [219][10/38]	Time 0.191 (0.244)	Data 0.000 (0.049)	Loss 0.0039 (0.0338)	
+Epoch: [219][20/38]	Time 0.201 (0.221)	Data 0.000 (0.026)	Loss 0.0526 (0.0249)	
+Epoch: [219][30/38]	Time 0.186 (0.210)	Data 0.000 (0.018)	Loss 0.0458 (0.0236)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.851)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.884)
+Test: 	Time 2.894	Prec@1 90.775	Prec@5 98.724
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.998)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.967)
+Test: 	Time 2.976	Prec@1 75.859	Prec@5 95.191
+Number of proper clusters: 102
+Epoch: [220][10/37]	Time 0.188 (0.241)	Data 0.000 (0.052)	Loss 0.0073 (0.0195)	
+Epoch: [220][20/37]	Time 0.186 (0.216)	Data 0.000 (0.027)	Loss 0.0041 (0.0212)	
+Epoch: [220][30/37]	Time 0.187 (0.207)	Data 0.000 (0.019)	Loss 0.0023 (0.0192)	
+Number of proper clusters: 102
+Epoch: [221][10/38]	Time 0.213 (0.256)	Data 0.000 (0.056)	Loss 0.0422 (0.0244)	
+Epoch: [221][20/38]	Time 0.212 (0.233)	Data 0.000 (0.029)	Loss 0.0395 (0.0186)	
+Epoch: [221][30/38]	Time 0.197 (0.223)	Data 0.000 (0.020)	Loss 0.0524 (0.0194)	
+Number of proper clusters: 102
+Epoch: [222][10/38]	Time 0.186 (0.243)	Data 0.000 (0.056)	Loss 0.0033 (0.0195)	
+Epoch: [222][20/38]	Time 0.190 (0.217)	Data 0.000 (0.029)	Loss 0.0040 (0.0245)	
+Epoch: [222][30/38]	Time 0.186 (0.207)	Data 0.000 (0.020)	Loss 0.0116 (0.0250)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.189)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.212)
+Test: 	Time 3.224	Prec@1 91.070	Prec@5 98.822
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.866)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.569)
+Test: 	Time 3.581	Prec@1 75.564	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [223][10/38]	Time 0.187 (0.247)	Data 0.000 (0.062)	Loss 0.0016 (0.0241)	
+Epoch: [223][20/38]	Time 0.188 (0.219)	Data 0.000 (0.032)	Loss 0.0798 (0.0255)	
+Epoch: [223][30/38]	Time 0.191 (0.209)	Data 0.000 (0.022)	Loss 0.0334 (0.0233)	
+Number of proper clusters: 102
+Epoch: [224][10/37]	Time 0.192 (0.252)	Data 0.000 (0.054)	Loss 0.1226 (0.0283)	
+Epoch: [224][20/37]	Time 0.188 (0.222)	Data 0.000 (0.028)	Loss 0.0033 (0.0328)	
+Epoch: [224][30/37]	Time 0.186 (0.211)	Data 0.000 (0.019)	Loss 0.0107 (0.0318)	
+Number of proper clusters: 102
+Epoch: [225][10/38]	Time 0.205 (0.256)	Data 0.000 (0.053)	Loss 0.0044 (0.0149)	
+Epoch: [225][20/38]	Time 0.211 (0.230)	Data 0.000 (0.028)	Loss 0.0096 (0.0176)	
+Epoch: [225][30/38]	Time 0.208 (0.223)	Data 0.000 (0.019)	Loss 0.0054 (0.0167)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.306)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.312)
+Test: 	Time 3.322	Prec@1 92.149	Prec@5 98.332
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.035)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.162)
+Test: 	Time 3.174	Prec@1 75.172	Prec@5 95.388
+Number of proper clusters: 102
+Epoch: [226][10/37]	Time 0.189 (0.249)	Data 0.000 (0.062)	Loss 0.0177 (0.0342)	
+Epoch: [226][20/37]	Time 0.209 (0.222)	Data 0.001 (0.033)	Loss 0.0078 (0.0269)	
+Epoch: [226][30/37]	Time 0.186 (0.213)	Data 0.000 (0.022)	Loss 0.0280 (0.0254)	
+Number of proper clusters: 102
+Epoch: [227][10/37]	Time 0.204 (0.274)	Data 0.000 (0.065)	Loss 0.0682 (0.0405)	
+Epoch: [227][20/37]	Time 0.187 (0.234)	Data 0.000 (0.034)	Loss 0.0631 (0.0348)	
+Epoch: [227][30/37]	Time 0.186 (0.219)	Data 0.000 (0.023)	Loss 0.1146 (0.0316)	
+Number of proper clusters: 102
+Epoch: [228][10/38]	Time 0.197 (0.258)	Data 0.000 (0.057)	Loss 0.0000 (0.0421)	
+Epoch: [228][20/38]	Time 0.188 (0.225)	Data 0.000 (0.030)	Loss 0.1171 (0.0354)	
+Epoch: [228][30/38]	Time 0.189 (0.213)	Data 0.000 (0.020)	Loss 0.0367 (0.0306)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.200)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.029)
+Test: 	Time 3.038	Prec@1 92.444	Prec@5 98.724
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.863)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.869)
+Test: 	Time 2.878	Prec@1 76.055	Prec@5 94.504
+Number of proper clusters: 102
+Epoch: [229][10/37]	Time 0.189 (0.246)	Data 0.000 (0.059)	Loss 0.1190 (0.0343)	
+Epoch: [229][20/37]	Time 0.187 (0.219)	Data 0.000 (0.031)	Loss 0.0178 (0.0301)	
+Epoch: [229][30/37]	Time 0.185 (0.209)	Data 0.000 (0.021)	Loss 0.0306 (0.0265)	
+Number of proper clusters: 102
+Epoch: [230][10/38]	Time 0.188 (0.256)	Data 0.000 (0.061)	Loss 0.0220 (0.0150)	
+Epoch: [230][20/38]	Time 0.186 (0.226)	Data 0.000 (0.032)	Loss 0.0069 (0.0144)	
+Epoch: [230][30/38]	Time 0.187 (0.213)	Data 0.000 (0.022)	Loss 0.0129 (0.0173)	
+Number of proper clusters: 102
+Epoch: [231][10/38]	Time 0.190 (0.256)	Data 0.000 (0.060)	Loss 0.0162 (0.0141)	
+Epoch: [231][20/38]	Time 0.188 (0.224)	Data 0.000 (0.031)	Loss 0.0134 (0.0174)	
+Epoch: [231][30/38]	Time 0.209 (0.215)	Data 0.000 (0.021)	Loss 0.0117 (0.0181)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.361)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.174)
+Test: 	Time 3.183	Prec@1 90.775	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.949)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.997)
+Test: 	Time 3.007	Prec@1 75.957	Prec@5 93.916
+Number of proper clusters: 102
+Epoch: [232][10/37]	Time 0.188 (0.236)	Data 0.000 (0.049)	Loss 0.0068 (0.0197)	
+Epoch: [232][20/37]	Time 0.189 (0.213)	Data 0.000 (0.026)	Loss 0.0081 (0.0211)	
+Epoch: [232][30/37]	Time 0.185 (0.205)	Data 0.000 (0.018)	Loss 0.0086 (0.0214)	
+Number of proper clusters: 102
+Epoch: [233][10/38]	Time 0.189 (0.258)	Data 0.001 (0.063)	Loss 0.0090 (0.0226)	
+Epoch: [233][20/38]	Time 0.186 (0.225)	Data 0.000 (0.033)	Loss 0.0052 (0.0183)	
+Epoch: [233][30/38]	Time 0.187 (0.213)	Data 0.000 (0.022)	Loss 0.0061 (0.0181)	
+Number of proper clusters: 102
+Epoch: [234][10/38]	Time 0.187 (0.278)	Data 0.000 (0.080)	Loss 0.0027 (0.0197)	
+Epoch: [234][20/38]	Time 0.189 (0.236)	Data 0.001 (0.042)	Loss 0.0140 (0.0198)	
+Epoch: [234][30/38]	Time 0.189 (0.222)	Data 0.000 (0.029)	Loss 0.0000 (0.0191)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.998)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.925)
+Test: 	Time 2.935	Prec@1 91.070	Prec@5 99.019
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.074)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.100)
+Test: 	Time 3.111	Prec@1 76.447	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [235][10/38]	Time 0.210 (0.247)	Data 0.000 (0.046)	Loss 0.2199 (0.0457)	
+Epoch: [235][20/38]	Time 0.208 (0.225)	Data 0.000 (0.024)	Loss 0.0082 (0.0318)	
+Epoch: [235][30/38]	Time 0.185 (0.215)	Data 0.000 (0.017)	Loss 0.0071 (0.0274)	
+Number of proper clusters: 102
+Epoch: [236][10/38]	Time 0.187 (0.260)	Data 0.000 (0.062)	Loss 0.0047 (0.0275)	
+Epoch: [236][20/38]	Time 0.187 (0.226)	Data 0.000 (0.033)	Loss 0.0226 (0.0257)	
+Epoch: [236][30/38]	Time 0.185 (0.213)	Data 0.000 (0.022)	Loss 0.0021 (0.0221)	
+Number of proper clusters: 102
+Epoch: [237][10/38]	Time 0.206 (0.278)	Data 0.000 (0.068)	Loss 0.0022 (0.0275)	
+Epoch: [237][20/38]	Time 0.192 (0.239)	Data 0.000 (0.036)	Loss 0.0887 (0.0335)	
+Epoch: [237][30/38]	Time 0.188 (0.222)	Data 0.000 (0.024)	Loss 0.0006 (0.0275)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.875)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.249)
+Test: 	Time 3.261	Prec@1 92.444	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.004)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.549)
+Test: 	Time 3.559	Prec@1 76.153	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [238][10/38]	Time 0.189 (0.239)	Data 0.000 (0.052)	Loss 0.0012 (0.0283)	
+Epoch: [238][20/38]	Time 0.189 (0.215)	Data 0.000 (0.027)	Loss 0.0256 (0.0305)	
+Epoch: [238][30/38]	Time 0.193 (0.207)	Data 0.000 (0.019)	Loss 0.0228 (0.0263)	
+Number of proper clusters: 102
+Epoch: [239][10/37]	Time 0.188 (0.255)	Data 0.000 (0.066)	Loss 0.0028 (0.0159)	
+Epoch: [239][20/37]	Time 0.212 (0.228)	Data 0.000 (0.035)	Loss 0.0708 (0.0213)	
+Epoch: [239][30/37]	Time 0.207 (0.220)	Data 0.000 (0.024)	Loss 0.0169 (0.0215)	
+Number of proper clusters: 102
+Epoch: [240][10/38]	Time 0.187 (0.260)	Data 0.000 (0.060)	Loss 0.0160 (0.0225)	
+Epoch: [240][20/38]	Time 0.187 (0.226)	Data 0.000 (0.032)	Loss 0.0085 (0.0214)	
+Epoch: [240][30/38]	Time 0.185 (0.213)	Data 0.000 (0.021)	Loss 0.0434 (0.0201)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.149)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.609)
+Test: 	Time 3.620	Prec@1 91.953	Prec@5 98.921
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.974)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.269)
+Test: 	Time 3.278	Prec@1 75.368	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [241][10/38]	Time 0.185 (0.252)	Data 0.001 (0.065)	Loss 0.0102 (0.0275)	
+Epoch: [241][20/38]	Time 0.190 (0.222)	Data 0.000 (0.034)	Loss 0.0221 (0.0258)	
+Epoch: [241][30/38]	Time 0.191 (0.211)	Data 0.000 (0.023)	Loss 0.0170 (0.0249)	
+Number of proper clusters: 102
+Epoch: [242][10/38]	Time 0.188 (0.252)	Data 0.000 (0.058)	Loss 0.0212 (0.0234)	
+Epoch: [242][20/38]	Time 0.187 (0.221)	Data 0.000 (0.030)	Loss 0.1139 (0.0291)	
+Epoch: [242][30/38]	Time 0.186 (0.210)	Data 0.000 (0.021)	Loss 0.0106 (0.0244)	
+Number of proper clusters: 102
+Epoch: [243][10/37]	Time 0.187 (0.265)	Data 0.000 (0.073)	Loss 0.0389 (0.0140)	
+Epoch: [243][20/37]	Time 0.212 (0.233)	Data 0.000 (0.039)	Loss 0.0034 (0.0265)	
+Epoch: [243][30/37]	Time 0.200 (0.223)	Data 0.000 (0.026)	Loss 0.0034 (0.0257)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.223)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.953)
+Test: 	Time 2.962	Prec@1 91.855	Prec@5 98.430
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.069)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.969)
+Test: 	Time 2.978	Prec@1 75.957	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [244][10/38]	Time 0.187 (0.237)	Data 0.000 (0.050)	Loss 0.0956 (0.0138)	
+Epoch: [244][20/38]	Time 0.189 (0.213)	Data 0.000 (0.026)	Loss 0.0272 (0.0129)	
+Epoch: [244][30/38]	Time 0.212 (0.212)	Data 0.000 (0.018)	Loss 0.0121 (0.0191)	
+Number of proper clusters: 102
+Epoch: [245][10/37]	Time 0.191 (0.248)	Data 0.000 (0.058)	Loss 0.0003 (0.0110)	
+Epoch: [245][20/37]	Time 0.189 (0.219)	Data 0.001 (0.031)	Loss 0.0050 (0.0198)	
+Epoch: [245][30/37]	Time 0.188 (0.209)	Data 0.000 (0.021)	Loss 0.0117 (0.0189)	
+Number of proper clusters: 102
+Epoch: [246][10/37]	Time 0.188 (0.248)	Data 0.000 (0.060)	Loss 0.0031 (0.0285)	
+Epoch: [246][20/37]	Time 0.217 (0.225)	Data 0.000 (0.032)	Loss 0.0243 (0.0203)	
+Epoch: [246][30/37]	Time 0.196 (0.217)	Data 0.000 (0.022)	Loss 0.0894 (0.0230)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.198)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.449)
+Test: 	Time 3.458	Prec@1 93.719	Prec@5 98.626
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.929)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.030)
+Test: 	Time 3.039	Prec@1 77.920	Prec@5 94.897
+Number of proper clusters: 102
+Epoch: [247][10/38]	Time 0.190 (0.245)	Data 0.000 (0.058)	Loss 0.0079 (0.0168)	
+Epoch: [247][20/38]	Time 0.187 (0.218)	Data 0.000 (0.031)	Loss 0.0775 (0.0252)	
+Epoch: [247][30/38]	Time 0.188 (0.208)	Data 0.000 (0.021)	Loss 0.0155 (0.0305)	
+Number of proper clusters: 102
+Epoch: [248][10/37]	Time 0.192 (0.268)	Data 0.000 (0.063)	Loss 0.0000 (0.0252)	
+Epoch: [248][20/37]	Time 0.190 (0.230)	Data 0.000 (0.033)	Loss 0.0000 (0.0212)	
+Epoch: [248][30/37]	Time 0.189 (0.216)	Data 0.000 (0.023)	Loss 0.0119 (0.0187)	
+Number of proper clusters: 102
+Epoch: [249][10/38]	Time 0.214 (0.278)	Data 0.000 (0.072)	Loss 0.0245 (0.0118)	
+Epoch: [249][20/38]	Time 0.206 (0.246)	Data 0.000 (0.038)	Loss 0.0136 (0.0192)	
+Epoch: [249][30/38]	Time 0.199 (0.232)	Data 0.000 (0.026)	Loss 0.1177 (0.0247)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.426)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.983)
+Test: 	Time 2.993	Prec@1 91.070	Prec@5 98.135
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.163)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.428)
+Test: 	Time 3.440	Prec@1 76.840	Prec@5 94.406
+Number of proper clusters: 102
+Epoch: [250][10/38]	Time 0.188 (0.252)	Data 0.000 (0.064)	Loss 0.0339 (0.0319)	
+Epoch: [250][20/38]	Time 0.185 (0.222)	Data 0.000 (0.034)	Loss 0.0044 (0.0316)	
+Epoch: [250][30/38]	Time 0.187 (0.211)	Data 0.000 (0.023)	Loss 0.0011 (0.0289)	
+Number of proper clusters: 102
+Epoch: [251][10/38]	Time 0.191 (0.262)	Data 0.000 (0.070)	Loss 0.0058 (0.0130)	
+Epoch: [251][20/38]	Time 0.189 (0.229)	Data 0.001 (0.037)	Loss 0.0107 (0.0145)	
+Epoch: [251][30/38]	Time 0.185 (0.215)	Data 0.000 (0.025)	Loss 0.0093 (0.0150)	
+Number of proper clusters: 102
+Epoch: [252][10/38]	Time 0.188 (0.260)	Data 0.000 (0.073)	Loss 0.0075 (0.0135)	
+Epoch: [252][20/38]	Time 0.187 (0.226)	Data 0.000 (0.038)	Loss 0.0012 (0.0144)	
+Epoch: [252][30/38]	Time 0.190 (0.214)	Data 0.000 (0.026)	Loss 0.0044 (0.0148)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.964)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.626)
+Test: 	Time 3.636	Prec@1 93.032	Prec@5 98.921
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.123)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.276)
+Test: 	Time 3.288	Prec@1 77.331	Prec@5 94.897
+Number of proper clusters: 102
+Epoch: [253][10/37]	Time 0.190 (0.240)	Data 0.000 (0.052)	Loss 0.0196 (0.0170)	
+Epoch: [253][20/37]	Time 0.186 (0.215)	Data 0.000 (0.027)	Loss 0.0016 (0.0132)	
+Epoch: [253][30/37]	Time 0.189 (0.207)	Data 0.000 (0.019)	Loss 0.0400 (0.0143)	
+Number of proper clusters: 102
+Epoch: [254][10/37]	Time 0.192 (0.251)	Data 0.000 (0.060)	Loss 0.0100 (0.0141)	
+Epoch: [254][20/37]	Time 0.186 (0.220)	Data 0.001 (0.031)	Loss 0.0000 (0.0107)	
+Epoch: [254][30/37]	Time 0.191 (0.210)	Data 0.000 (0.021)	Loss 0.0603 (0.0163)	
+Number of proper clusters: 102
+Epoch: [255][10/37]	Time 0.190 (0.268)	Data 0.000 (0.074)	Loss 0.0186 (0.0170)	
+Epoch: [255][20/37]	Time 0.187 (0.233)	Data 0.000 (0.039)	Loss 0.0087 (0.0140)	
+Epoch: [255][30/37]	Time 0.187 (0.219)	Data 0.000 (0.026)	Loss 0.0049 (0.0164)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.131)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.552)
+Test: 	Time 3.562	Prec@1 94.014	Prec@5 98.921
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.493)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.270)
+Test: 	Time 3.280	Prec@1 76.349	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [256][10/38]	Time 0.187 (0.237)	Data 0.000 (0.050)	Loss 0.0255 (0.0150)	
+Epoch: [256][20/38]	Time 0.190 (0.214)	Data 0.000 (0.026)	Loss 0.0315 (0.0145)	
+Epoch: [256][30/38]	Time 0.186 (0.205)	Data 0.000 (0.018)	Loss 0.0240 (0.0154)	
+Number of proper clusters: 102
+Epoch: [257][10/37]	Time 0.188 (0.266)	Data 0.000 (0.072)	Loss 0.0322 (0.0186)	
+Epoch: [257][20/37]	Time 0.186 (0.228)	Data 0.000 (0.038)	Loss 0.0350 (0.0224)	
+Epoch: [257][30/37]	Time 0.185 (0.215)	Data 0.000 (0.026)	Loss 0.0280 (0.0198)	
+Number of proper clusters: 102
+Epoch: [258][10/38]	Time 0.192 (0.255)	Data 0.000 (0.062)	Loss 0.0042 (0.0357)	
+Epoch: [258][20/38]	Time 0.189 (0.223)	Data 0.000 (0.033)	Loss 0.0129 (0.0229)	
+Epoch: [258][30/38]	Time 0.189 (0.213)	Data 0.000 (0.022)	Loss 0.0015 (0.0200)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.129)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.205)
+Test: 	Time 3.214	Prec@1 92.149	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.863)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.965)
+Test: 	Time 2.975	Prec@1 75.761	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [259][10/38]	Time 0.188 (0.241)	Data 0.000 (0.053)	Loss 0.0011 (0.0243)	
+Epoch: [259][20/38]	Time 0.187 (0.216)	Data 0.000 (0.028)	Loss 0.0007 (0.0211)	
+Epoch: [259][30/38]	Time 0.190 (0.207)	Data 0.000 (0.019)	Loss 0.0000 (0.0167)	
+Number of proper clusters: 102
+Epoch: [260][10/37]	Time 0.186 (0.249)	Data 0.000 (0.058)	Loss 0.0479 (0.0202)	
+Epoch: [260][20/37]	Time 0.187 (0.220)	Data 0.000 (0.030)	Loss 0.0009 (0.0220)	
+Epoch: [260][30/37]	Time 0.188 (0.210)	Data 0.000 (0.021)	Loss 0.0024 (0.0170)	
+Number of proper clusters: 102
+Epoch: [261][10/37]	Time 0.186 (0.261)	Data 0.000 (0.070)	Loss 0.0147 (0.0229)	
+Epoch: [261][20/37]	Time 0.188 (0.227)	Data 0.000 (0.037)	Loss 0.0051 (0.0175)	
+Epoch: [261][30/37]	Time 0.188 (0.215)	Data 0.000 (0.025)	Loss 0.0219 (0.0189)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.414)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.539)
+Test: 	Time 3.548	Prec@1 93.621	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.212)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.091)
+Test: 	Time 3.100	Prec@1 75.270	Prec@5 95.191
+Number of proper clusters: 102
+Epoch: [262][10/38]	Time 0.188 (0.249)	Data 0.000 (0.061)	Loss 0.0012 (0.0397)	
+Epoch: [262][20/38]	Time 0.186 (0.222)	Data 0.000 (0.032)	Loss 0.0150 (0.0293)	
+Epoch: [262][30/38]	Time 0.185 (0.210)	Data 0.000 (0.022)	Loss 0.0041 (0.0321)	
+Number of proper clusters: 102
+Epoch: [263][10/37]	Time 0.188 (0.245)	Data 0.000 (0.056)	Loss 0.0000 (0.0161)	
+Epoch: [263][20/37]	Time 0.189 (0.218)	Data 0.000 (0.030)	Loss 0.0569 (0.0219)	
+Epoch: [263][30/37]	Time 0.186 (0.208)	Data 0.000 (0.020)	Loss 0.0431 (0.0216)	
+Number of proper clusters: 102
+Epoch: [264][10/38]	Time 0.212 (0.272)	Data 0.000 (0.068)	Loss 0.1314 (0.0322)	
+Epoch: [264][20/38]	Time 0.206 (0.240)	Data 0.000 (0.036)	Loss 0.0092 (0.0257)	
+Epoch: [264][30/38]	Time 0.206 (0.229)	Data 0.000 (0.024)	Loss 0.0065 (0.0253)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.131)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.917)
+Test: 	Time 2.926	Prec@1 93.131	Prec@5 98.626
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.812)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.197)
+Test: 	Time 3.206	Prec@1 75.074	Prec@5 95.289
+Number of proper clusters: 102
+Epoch: [265][10/37]	Time 0.188 (0.233)	Data 0.000 (0.046)	Loss 0.0055 (0.0145)	
+Epoch: [265][20/37]	Time 0.192 (0.212)	Data 0.000 (0.024)	Loss 0.0549 (0.0191)	
+Epoch: [265][30/37]	Time 0.191 (0.204)	Data 0.000 (0.016)	Loss 0.0091 (0.0174)	
+Number of proper clusters: 102
+Epoch: [266][10/38]	Time 0.206 (0.257)	Data 0.000 (0.045)	Loss 0.0142 (0.0286)	
+Epoch: [266][20/38]	Time 0.189 (0.227)	Data 0.000 (0.024)	Loss 0.0072 (0.0231)	
+Epoch: [266][30/38]	Time 0.188 (0.214)	Data 0.000 (0.016)	Loss 0.0205 (0.0223)	
+Number of proper clusters: 102
+Epoch: [267][10/37]	Time 0.189 (0.244)	Data 0.000 (0.052)	Loss 0.0333 (0.0157)	
+Epoch: [267][20/37]	Time 0.187 (0.217)	Data 0.000 (0.028)	Loss 0.0118 (0.0259)	
+Epoch: [267][30/37]	Time 0.187 (0.208)	Data 0.000 (0.019)	Loss 0.0430 (0.0216)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.950)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.353)
+Test: 	Time 3.364	Prec@1 93.523	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.821)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.258)
+Test: 	Time 3.267	Prec@1 75.662	Prec@5 94.897
+Number of proper clusters: 102
+Epoch: [268][10/38]	Time 0.188 (0.236)	Data 0.001 (0.048)	Loss 0.0059 (0.0193)	
+Epoch: [268][20/38]	Time 0.187 (0.214)	Data 0.000 (0.025)	Loss 0.0135 (0.0205)	
+Epoch: [268][30/38]	Time 0.188 (0.206)	Data 0.000 (0.017)	Loss 0.0598 (0.0246)	
+Number of proper clusters: 102
+Epoch: [269][10/38]	Time 0.210 (0.252)	Data 0.000 (0.049)	Loss 0.0179 (0.0227)	
+Epoch: [269][20/38]	Time 0.201 (0.227)	Data 0.000 (0.026)	Loss 0.0231 (0.0185)	
+Epoch: [269][30/38]	Time 0.191 (0.215)	Data 0.000 (0.018)	Loss 0.0081 (0.0178)	
+Number of proper clusters: 102
+Epoch: [270][10/37]	Time 0.206 (0.261)	Data 0.000 (0.057)	Loss 0.0040 (0.0041)	
+Epoch: [270][20/37]	Time 0.203 (0.234)	Data 0.000 (0.030)	Loss 0.0183 (0.0084)	
+Epoch: [270][30/37]	Time 0.204 (0.226)	Data 0.000 (0.020)	Loss 0.0076 (0.0120)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.908)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.183)
+Test: 	Time 3.193	Prec@1 93.229	Prec@5 99.313
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.835)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.189)
+Test: 	Time 3.201	Prec@1 76.153	Prec@5 94.995
+Number of proper clusters: 102
+Epoch: [271][10/38]	Time 0.188 (0.237)	Data 0.000 (0.050)	Loss 0.0330 (0.0170)	
+Epoch: [271][20/38]	Time 0.186 (0.214)	Data 0.000 (0.026)	Loss 0.0143 (0.0157)	
+Epoch: [271][30/38]	Time 0.187 (0.205)	Data 0.000 (0.018)	Loss 0.0125 (0.0170)	
+Number of proper clusters: 102
+Epoch: [272][10/38]	Time 0.190 (0.255)	Data 0.000 (0.052)	Loss 0.0054 (0.0229)	
+Epoch: [272][20/38]	Time 0.189 (0.223)	Data 0.000 (0.027)	Loss 0.0034 (0.0196)	
+Epoch: [272][30/38]	Time 0.186 (0.211)	Data 0.000 (0.019)	Loss 0.0010 (0.0198)	
+Number of proper clusters: 102
+Epoch: [273][10/37]	Time 0.198 (0.261)	Data 0.000 (0.059)	Loss 0.0000 (0.0099)	
+Epoch: [273][20/37]	Time 0.189 (0.227)	Data 0.000 (0.031)	Loss 0.0124 (0.0210)	
+Epoch: [273][30/37]	Time 0.188 (0.214)	Data 0.000 (0.021)	Loss 0.0056 (0.0208)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.943)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.050)
+Test: 	Time 3.059	Prec@1 93.523	Prec@5 98.724
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.852)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.981)
+Test: 	Time 2.990	Prec@1 76.938	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [274][10/37]	Time 0.187 (0.241)	Data 0.000 (0.052)	Loss 0.0061 (0.0210)	
+Epoch: [274][20/37]	Time 0.187 (0.217)	Data 0.000 (0.027)	Loss 0.0399 (0.0231)	
+Epoch: [274][30/37]	Time 0.187 (0.207)	Data 0.000 (0.019)	Loss 0.0262 (0.0193)	
+Number of proper clusters: 102
+Epoch: [275][10/38]	Time 0.187 (0.242)	Data 0.000 (0.054)	Loss 0.0230 (0.0124)	
+Epoch: [275][20/38]	Time 0.192 (0.216)	Data 0.000 (0.028)	Loss 0.0009 (0.0131)	
+Epoch: [275][30/38]	Time 0.197 (0.208)	Data 0.000 (0.019)	Loss 0.0062 (0.0173)	
+Number of proper clusters: 102
+Epoch: [276][10/38]	Time 0.188 (0.246)	Data 0.000 (0.050)	Loss 0.0251 (0.0221)	
+Epoch: [276][20/38]	Time 0.196 (0.227)	Data 0.000 (0.026)	Loss 0.0016 (0.0199)	
+Epoch: [276][30/38]	Time 0.188 (0.216)	Data 0.000 (0.018)	Loss 0.0236 (0.0236)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.913)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.290)
+Test: 	Time 3.299	Prec@1 93.229	Prec@5 99.411
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.173)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.995)
+Test: 	Time 3.004	Prec@1 77.233	Prec@5 94.504
+Number of proper clusters: 102
+Epoch: [277][10/37]	Time 0.187 (0.240)	Data 0.000 (0.052)	Loss 0.0476 (0.0209)	
+Epoch: [277][20/37]	Time 0.199 (0.216)	Data 0.000 (0.027)	Loss 0.0002 (0.0178)	
+Epoch: [277][30/37]	Time 0.185 (0.207)	Data 0.000 (0.019)	Loss 0.0005 (0.0179)	
+Number of proper clusters: 102
+Epoch: [278][10/38]	Time 0.193 (0.243)	Data 0.000 (0.048)	Loss 0.0000 (0.0216)	
+Epoch: [278][20/38]	Time 0.196 (0.218)	Data 0.000 (0.025)	Loss 0.0086 (0.0256)	
+Epoch: [278][30/38]	Time 0.187 (0.208)	Data 0.000 (0.017)	Loss 0.0505 (0.0237)	
+Number of proper clusters: 102
+Epoch: [279][10/38]	Time 0.189 (0.252)	Data 0.000 (0.058)	Loss 0.0010 (0.0069)	
+Epoch: [279][20/38]	Time 0.188 (0.222)	Data 0.000 (0.031)	Loss 0.0080 (0.0131)	
+Epoch: [279][30/38]	Time 0.191 (0.211)	Data 0.000 (0.021)	Loss 0.0005 (0.0128)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.000)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.866)
+Test: 	Time 2.875	Prec@1 94.112	Prec@5 98.430
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.861)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.079)
+Test: 	Time 3.091	Prec@1 77.821	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [280][10/37]	Time 0.187 (0.246)	Data 0.000 (0.056)	Loss 0.0058 (0.0369)	
+Epoch: [280][20/37]	Time 0.193 (0.219)	Data 0.001 (0.030)	Loss 0.0151 (0.0298)	
+Epoch: [280][30/37]	Time 0.187 (0.209)	Data 0.000 (0.020)	Loss 0.0150 (0.0253)	
+Number of proper clusters: 102
+Epoch: [281][10/37]	Time 0.189 (0.256)	Data 0.000 (0.058)	Loss 0.0016 (0.0077)	
+Epoch: [281][20/37]	Time 0.187 (0.225)	Data 0.000 (0.031)	Loss 0.0446 (0.0118)	
+Epoch: [281][30/37]	Time 0.186 (0.213)	Data 0.000 (0.021)	Loss 0.0013 (0.0126)	
+Number of proper clusters: 102
+Epoch: [282][10/38]	Time 0.209 (0.260)	Data 0.000 (0.054)	Loss 0.0032 (0.0181)	
+Epoch: [282][20/38]	Time 0.200 (0.231)	Data 0.000 (0.028)	Loss 0.0009 (0.0248)	
+Epoch: [282][30/38]	Time 0.187 (0.217)	Data 0.000 (0.019)	Loss 0.0379 (0.0206)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.071)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.228)
+Test: 	Time 3.239	Prec@1 92.051	Prec@5 98.430
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.046)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.496)
+Test: 	Time 3.506	Prec@1 76.349	Prec@5 94.406
+Number of proper clusters: 102
+Epoch: [283][10/38]	Time 0.187 (0.244)	Data 0.000 (0.057)	Loss 0.0602 (0.0137)	
+Epoch: [283][20/38]	Time 0.199 (0.218)	Data 0.000 (0.030)	Loss 0.0021 (0.0157)	
+Epoch: [283][30/38]	Time 0.187 (0.208)	Data 0.000 (0.020)	Loss 0.0252 (0.0167)	
+Number of proper clusters: 102
+Epoch: [284][10/38]	Time 0.186 (0.262)	Data 0.000 (0.068)	Loss 0.0315 (0.0241)	
+Epoch: [284][20/38]	Time 0.187 (0.228)	Data 0.000 (0.036)	Loss 0.0494 (0.0253)	
+Epoch: [284][30/38]	Time 0.187 (0.215)	Data 0.000 (0.024)	Loss 0.0000 (0.0221)	
+Number of proper clusters: 102
+Epoch: [285][10/38]	Time 0.186 (0.266)	Data 0.000 (0.069)	Loss 0.0001 (0.0217)	
+Epoch: [285][20/38]	Time 0.187 (0.229)	Data 0.000 (0.036)	Loss 0.0076 (0.0287)	
+Epoch: [285][30/38]	Time 0.188 (0.215)	Data 0.000 (0.025)	Loss 0.0026 (0.0261)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.917)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.323)
+Test: 	Time 3.335	Prec@1 92.934	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.645)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.205)
+Test: 	Time 3.217	Prec@1 76.840	Prec@5 94.210
+Number of proper clusters: 102
+Epoch: [286][10/38]	Time 0.189 (0.263)	Data 0.000 (0.074)	Loss 0.0005 (0.0429)	
+Epoch: [286][20/38]	Time 0.195 (0.228)	Data 0.000 (0.039)	Loss 0.0338 (0.0350)	
+Epoch: [286][30/38]	Time 0.186 (0.215)	Data 0.000 (0.026)	Loss 0.0233 (0.0347)	
+Number of proper clusters: 102
+Epoch: [287][10/38]	Time 0.205 (0.267)	Data 0.000 (0.060)	Loss 0.0155 (0.0221)	
+Epoch: [287][20/38]	Time 0.211 (0.236)	Data 0.000 (0.031)	Loss 0.0063 (0.0146)	
+Epoch: [287][30/38]	Time 0.198 (0.225)	Data 0.000 (0.021)	Loss 0.0071 (0.0162)	
+Number of proper clusters: 102
+Epoch: [288][10/38]	Time 0.209 (0.277)	Data 0.000 (0.071)	Loss 0.0576 (0.0228)	
+Epoch: [288][20/38]	Time 0.188 (0.240)	Data 0.000 (0.038)	Loss 0.0029 (0.0236)	
+Epoch: [288][30/38]	Time 0.190 (0.223)	Data 0.000 (0.026)	Loss 0.0019 (0.0221)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.319)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.922)
+Test: 	Time 2.932	Prec@1 93.032	Prec@5 98.332
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.945)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.998)
+Test: 	Time 3.007	Prec@1 76.251	Prec@5 93.916
+Number of proper clusters: 102
+Epoch: [289][10/38]	Time 0.186 (0.247)	Data 0.000 (0.060)	Loss 0.0000 (0.0107)	
+Epoch: [289][20/38]	Time 0.189 (0.219)	Data 0.000 (0.032)	Loss 0.0365 (0.0116)	
+Epoch: [289][30/38]	Time 0.188 (0.209)	Data 0.000 (0.022)	Loss 0.0479 (0.0128)	
+Number of proper clusters: 102
+Epoch: [290][10/38]	Time 0.188 (0.264)	Data 0.000 (0.070)	Loss 0.0042 (0.0093)	
+Epoch: [290][20/38]	Time 0.187 (0.229)	Data 0.000 (0.037)	Loss 0.0012 (0.0092)	
+Epoch: [290][30/38]	Time 0.189 (0.217)	Data 0.000 (0.025)	Loss 0.0335 (0.0151)	
+Number of proper clusters: 102
+Epoch: [291][10/37]	Time 0.187 (0.260)	Data 0.000 (0.073)	Loss 0.0000 (0.0172)	
+Epoch: [291][20/37]	Time 0.186 (0.227)	Data 0.001 (0.038)	Loss 0.0000 (0.0138)	
+Epoch: [291][30/37]	Time 0.191 (0.215)	Data 0.000 (0.026)	Loss 0.0136 (0.0171)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.319)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.280)
+Test: 	Time 3.292	Prec@1 94.112	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.212)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.962)
+Test: 	Time 2.973	Prec@1 77.429	Prec@5 94.406
+Number of proper clusters: 102
+Epoch: [292][10/38]	Time 0.187 (0.254)	Data 0.000 (0.067)	Loss 0.0181 (0.0334)	
+Epoch: [292][20/38]	Time 0.191 (0.222)	Data 0.000 (0.035)	Loss 0.0037 (0.0272)	
+Epoch: [292][30/38]	Time 0.187 (0.211)	Data 0.000 (0.024)	Loss 0.0393 (0.0220)	
+Number of proper clusters: 102
+Epoch: [293][10/38]	Time 0.193 (0.267)	Data 0.000 (0.074)	Loss 0.0032 (0.0205)	
+Epoch: [293][20/38]	Time 0.187 (0.230)	Data 0.000 (0.039)	Loss 0.0339 (0.0202)	
+Epoch: [293][30/38]	Time 0.186 (0.217)	Data 0.000 (0.026)	Loss 0.0215 (0.0192)	
+Number of proper clusters: 102
+Epoch: [294][10/38]	Time 0.191 (0.255)	Data 0.000 (0.061)	Loss 0.0056 (0.0103)	
+Epoch: [294][20/38]	Time 0.188 (0.223)	Data 0.000 (0.032)	Loss 0.0125 (0.0109)	
+Epoch: [294][30/38]	Time 0.187 (0.212)	Data 0.000 (0.022)	Loss 0.0016 (0.0116)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.302)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.042)
+Test: 	Time 3.051	Prec@1 94.308	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.234)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.382)
+Test: 	Time 3.394	Prec@1 78.116	Prec@5 94.995
+Number of proper clusters: 102
+Epoch: [295][10/37]	Time 0.188 (0.251)	Data 0.000 (0.063)	Loss 0.0034 (0.0118)	
+Epoch: [295][20/37]	Time 0.186 (0.221)	Data 0.000 (0.033)	Loss 0.0439 (0.0197)	
+Epoch: [295][30/37]	Time 0.187 (0.210)	Data 0.000 (0.023)	Loss 0.0481 (0.0197)	
+Number of proper clusters: 102
+Epoch: [296][10/38]	Time 0.193 (0.254)	Data 0.000 (0.057)	Loss 0.0271 (0.0203)	
+Epoch: [296][20/38]	Time 0.188 (0.224)	Data 0.000 (0.030)	Loss 0.0471 (0.0215)	
+Epoch: [296][30/38]	Time 0.186 (0.212)	Data 0.000 (0.020)	Loss 0.0378 (0.0189)	
+Number of proper clusters: 102
+Epoch: [297][10/38]	Time 0.189 (0.252)	Data 0.000 (0.059)	Loss 0.0021 (0.0130)	
+Epoch: [297][20/38]	Time 0.187 (0.221)	Data 0.000 (0.031)	Loss 0.0123 (0.0152)	
+Epoch: [297][30/38]	Time 0.189 (0.211)	Data 0.000 (0.021)	Loss 0.0377 (0.0149)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.461)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.525)
+Test: 	Time 3.536	Prec@1 94.112	Prec@5 98.724
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.178)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.260)
+Test: 	Time 3.269	Prec@1 76.251	Prec@5 93.719
+Number of proper clusters: 102
+Epoch: [298][10/38]	Time 0.190 (0.252)	Data 0.000 (0.063)	Loss 0.0082 (0.0109)	
+Epoch: [298][20/38]	Time 0.208 (0.228)	Data 0.000 (0.033)	Loss 0.0000 (0.0126)	
+Epoch: [298][30/38]	Time 0.203 (0.221)	Data 0.000 (0.023)	Loss 0.0223 (0.0112)	
+Number of proper clusters: 102
+Epoch: [299][10/37]	Time 0.210 (0.261)	Data 0.000 (0.064)	Loss 0.0013 (0.0141)	
+Epoch: [299][20/37]	Time 0.199 (0.230)	Data 0.000 (0.034)	Loss 0.0257 (0.0133)	
+Epoch: [299][30/37]	Time 0.204 (0.223)	Data 0.000 (0.023)	Loss 0.0011 (0.0138)	
+Number of proper clusters: 102
+Epoch: [300][10/38]	Time 0.189 (0.237)	Data 0.000 (0.048)	Loss 0.0593 (0.0210)	
+Epoch: [300][20/38]	Time 0.187 (0.213)	Data 0.000 (0.025)	Loss 0.0732 (0.0235)	
+Epoch: [300][30/38]	Time 0.186 (0.205)	Data 0.000 (0.017)	Loss 0.0100 (0.0207)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.313)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.428)
+Test: 	Time 3.440	Prec@1 94.799	Prec@5 98.724
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.041)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.218)
+Test: 	Time 3.228	Prec@1 77.134	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [301][10/37]	Time 0.187 (0.247)	Data 0.000 (0.061)	Loss 0.0030 (0.0250)	
+Epoch: [301][20/37]	Time 0.187 (0.218)	Data 0.000 (0.032)	Loss 0.0139 (0.0238)	
+Epoch: [301][30/37]	Time 0.186 (0.209)	Data 0.000 (0.022)	Loss 0.0101 (0.0197)	
+Number of proper clusters: 102
+Epoch: [302][10/38]	Time 0.211 (0.261)	Data 0.000 (0.053)	Loss 0.0157 (0.0203)	
+Epoch: [302][20/38]	Time 0.196 (0.233)	Data 0.000 (0.028)	Loss 0.0417 (0.0203)	
+Epoch: [302][30/38]	Time 0.188 (0.219)	Data 0.000 (0.019)	Loss 0.0000 (0.0166)	
+Number of proper clusters: 102
+Epoch: [303][10/37]	Time 0.188 (0.245)	Data 0.001 (0.050)	Loss 0.0021 (0.0119)	
+Epoch: [303][20/37]	Time 0.187 (0.218)	Data 0.000 (0.026)	Loss 0.0381 (0.0152)	
+Epoch: [303][30/37]	Time 0.194 (0.209)	Data 0.000 (0.018)	Loss 0.0000 (0.0184)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.145)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.035)
+Test: 	Time 3.045	Prec@1 92.934	Prec@5 98.626
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.980)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.957)
+Test: 	Time 2.967	Prec@1 76.644	Prec@5 93.425
+Number of proper clusters: 102
+Epoch: [304][10/37]	Time 0.193 (0.238)	Data 0.001 (0.049)	Loss 0.0116 (0.0177)	
+Epoch: [304][20/37]	Time 0.188 (0.215)	Data 0.000 (0.026)	Loss 0.0054 (0.0158)	
+Epoch: [304][30/37]	Time 0.188 (0.206)	Data 0.000 (0.017)	Loss 0.0039 (0.0216)	
+Number of proper clusters: 102
+Epoch: [305][10/38]	Time 0.189 (0.249)	Data 0.000 (0.060)	Loss 0.0195 (0.0159)	
+Epoch: [305][20/38]	Time 0.189 (0.221)	Data 0.000 (0.032)	Loss 0.0002 (0.0146)	
+Epoch: [305][30/38]	Time 0.187 (0.210)	Data 0.000 (0.021)	Loss 0.0092 (0.0185)	
+Number of proper clusters: 102
+Epoch: [306][10/38]	Time 0.188 (0.249)	Data 0.000 (0.056)	Loss 0.0000 (0.0124)	
+Epoch: [306][20/38]	Time 0.194 (0.220)	Data 0.000 (0.029)	Loss 0.0601 (0.0139)	
+Epoch: [306][30/38]	Time 0.188 (0.210)	Data 0.000 (0.020)	Loss 0.0044 (0.0133)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.567)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.042)
+Test: 	Time 3.061	Prec@1 94.210	Prec@5 98.921
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.152)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.218)
+Test: 	Time 3.228	Prec@1 78.116	Prec@5 95.093
+Number of proper clusters: 102
+Epoch: [307][10/38]	Time 0.185 (0.237)	Data 0.000 (0.050)	Loss 0.0048 (0.0115)	
+Epoch: [307][20/38]	Time 0.187 (0.214)	Data 0.000 (0.027)	Loss 0.0307 (0.0200)	
+Epoch: [307][30/38]	Time 0.190 (0.205)	Data 0.000 (0.018)	Loss 0.0078 (0.0188)	
+Number of proper clusters: 102
+Epoch: [308][10/38]	Time 0.191 (0.253)	Data 0.001 (0.060)	Loss 0.0055 (0.0088)	
+Epoch: [308][20/38]	Time 0.187 (0.223)	Data 0.001 (0.032)	Loss 0.0154 (0.0110)	
+Epoch: [308][30/38]	Time 0.189 (0.212)	Data 0.000 (0.021)	Loss 0.0159 (0.0104)	
+Number of proper clusters: 102
+Epoch: [309][10/38]	Time 0.188 (0.242)	Data 0.000 (0.051)	Loss 0.0023 (0.0258)	
+Epoch: [309][20/38]	Time 0.187 (0.216)	Data 0.000 (0.027)	Loss 0.0011 (0.0187)	
+Epoch: [309][30/38]	Time 0.192 (0.207)	Data 0.000 (0.018)	Loss 0.0188 (0.0166)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.232)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.911)
+Test: 	Time 2.920	Prec@1 92.640	Prec@5 98.921
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.941)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.481)
+Test: 	Time 3.491	Prec@1 76.742	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [310][10/38]	Time 0.190 (0.262)	Data 0.001 (0.074)	Loss 0.0078 (0.0272)	
+Epoch: [310][20/38]	Time 0.186 (0.227)	Data 0.000 (0.039)	Loss 0.0273 (0.0190)	
+Epoch: [310][30/38]	Time 0.187 (0.214)	Data 0.000 (0.027)	Loss 0.0169 (0.0186)	
+Number of proper clusters: 102
+Epoch: [311][10/38]	Time 0.193 (0.258)	Data 0.000 (0.059)	Loss 0.0221 (0.0261)	
+Epoch: [311][20/38]	Time 0.184 (0.226)	Data 0.000 (0.031)	Loss 0.0100 (0.0208)	
+Epoch: [311][30/38]	Time 0.193 (0.214)	Data 0.000 (0.021)	Loss 0.0000 (0.0183)	
+Number of proper clusters: 102
+Epoch: [312][10/38]	Time 0.187 (0.256)	Data 0.000 (0.069)	Loss 0.0515 (0.0146)	
+Epoch: [312][20/38]	Time 0.186 (0.224)	Data 0.000 (0.036)	Loss 0.0005 (0.0128)	
+Epoch: [312][30/38]	Time 0.187 (0.212)	Data 0.000 (0.025)	Loss 0.0196 (0.0155)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.357)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.496)
+Test: 	Time 3.515	Prec@1 94.504	Prec@5 98.921
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.969)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.347)
+Test: 	Time 3.358	Prec@1 76.349	Prec@5 94.406
+Number of proper clusters: 102
+Epoch: [313][10/37]	Time 0.187 (0.236)	Data 0.000 (0.049)	Loss 0.0141 (0.0162)	
+Epoch: [313][20/37]	Time 0.207 (0.216)	Data 0.000 (0.026)	Loss 0.0000 (0.0133)	
+Epoch: [313][30/37]	Time 0.192 (0.210)	Data 0.000 (0.018)	Loss 0.0277 (0.0145)	
+Number of proper clusters: 102
+Epoch: [314][10/38]	Time 0.200 (0.272)	Data 0.000 (0.063)	Loss 0.0237 (0.0311)	
+Epoch: [314][20/38]	Time 0.189 (0.233)	Data 0.000 (0.033)	Loss 0.0038 (0.0234)	
+Epoch: [314][30/38]	Time 0.184 (0.218)	Data 0.000 (0.022)	Loss 0.0132 (0.0216)	
+Number of proper clusters: 102
+Epoch: [315][10/38]	Time 0.213 (0.267)	Data 0.000 (0.059)	Loss 0.0053 (0.0208)	
+Epoch: [315][20/38]	Time 0.186 (0.236)	Data 0.000 (0.031)	Loss 0.0000 (0.0204)	
+Epoch: [315][30/38]	Time 0.186 (0.220)	Data 0.000 (0.021)	Loss 0.0214 (0.0184)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.951)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.167)
+Test: 	Time 3.176	Prec@1 94.112	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.988)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.000)
+Test: 	Time 3.009	Prec@1 78.803	Prec@5 94.210
+Number of proper clusters: 102
+Epoch: [316][10/38]	Time 0.184 (0.242)	Data 0.000 (0.056)	Loss 0.0009 (0.0092)	
+Epoch: [316][20/38]	Time 0.187 (0.217)	Data 0.000 (0.030)	Loss 0.0165 (0.0123)	
+Epoch: [316][30/38]	Time 0.190 (0.207)	Data 0.000 (0.020)	Loss 0.0263 (0.0141)	
+Number of proper clusters: 102
+Epoch: [317][10/38]	Time 0.198 (0.277)	Data 0.000 (0.072)	Loss 0.0019 (0.0219)	
+Epoch: [317][20/38]	Time 0.187 (0.235)	Data 0.000 (0.038)	Loss 0.0679 (0.0204)	
+Epoch: [317][30/38]	Time 0.185 (0.220)	Data 0.000 (0.026)	Loss 0.0028 (0.0177)	
+Number of proper clusters: 102
+Epoch: [318][10/38]	Time 0.197 (0.251)	Data 0.000 (0.057)	Loss 0.0198 (0.0085)	
+Epoch: [318][20/38]	Time 0.187 (0.221)	Data 0.000 (0.030)	Loss 0.0018 (0.0144)	
+Epoch: [318][30/38]	Time 0.188 (0.210)	Data 0.000 (0.020)	Loss 0.0580 (0.0152)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.975)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.089)
+Test: 	Time 3.098	Prec@1 93.817	Prec@5 98.626
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.921)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.936)
+Test: 	Time 2.945	Prec@1 77.331	Prec@5 95.682
+Number of proper clusters: 102
+Epoch: [319][10/37]	Time 0.196 (0.252)	Data 0.000 (0.064)	Loss 0.0000 (0.0413)	
+Epoch: [319][20/37]	Time 0.187 (0.222)	Data 0.000 (0.034)	Loss 0.0196 (0.0309)	
+Epoch: [319][30/37]	Time 0.191 (0.211)	Data 0.000 (0.023)	Loss 0.0044 (0.0252)	
+Number of proper clusters: 102
+Epoch: [320][10/38]	Time 0.202 (0.263)	Data 0.000 (0.064)	Loss 0.0003 (0.0295)	
+Epoch: [320][20/38]	Time 0.199 (0.234)	Data 0.000 (0.034)	Loss 0.0021 (0.0288)	
+Epoch: [320][30/38]	Time 0.206 (0.225)	Data 0.000 (0.023)	Loss 0.0027 (0.0219)	
+Number of proper clusters: 102
+Epoch: [321][10/37]	Time 0.189 (0.245)	Data 0.000 (0.058)	Loss 0.0257 (0.0234)	
+Epoch: [321][20/37]	Time 0.188 (0.218)	Data 0.000 (0.030)	Loss 0.0052 (0.0258)	
+Epoch: [321][30/37]	Time 0.190 (0.209)	Data 0.000 (0.021)	Loss 0.0233 (0.0225)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.130)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.061)
+Test: 	Time 3.070	Prec@1 94.210	Prec@5 98.724
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.869)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.997)
+Test: 	Time 3.006	Prec@1 77.429	Prec@5 93.916
+Number of proper clusters: 102
+Epoch: [322][10/37]	Time 0.193 (0.247)	Data 0.000 (0.057)	Loss 0.0019 (0.0087)	
+Epoch: [322][20/37]	Time 0.186 (0.218)	Data 0.000 (0.030)	Loss 0.0038 (0.0128)	
+Epoch: [322][30/37]	Time 0.191 (0.209)	Data 0.000 (0.020)	Loss 0.0451 (0.0159)	
+Number of proper clusters: 102
+Epoch: [323][10/38]	Time 0.191 (0.246)	Data 0.001 (0.049)	Loss 0.0240 (0.0242)	
+Epoch: [323][20/38]	Time 0.210 (0.225)	Data 0.000 (0.026)	Loss 0.0515 (0.0220)	
+Epoch: [323][30/38]	Time 0.193 (0.216)	Data 0.000 (0.017)	Loss 0.0326 (0.0197)	
+Number of proper clusters: 102
+Epoch: [324][10/37]	Time 0.197 (0.273)	Data 0.000 (0.063)	Loss 0.0157 (0.0193)	
+Epoch: [324][20/37]	Time 0.186 (0.236)	Data 0.000 (0.033)	Loss 0.0014 (0.0187)	
+Epoch: [324][30/37]	Time 0.190 (0.220)	Data 0.000 (0.022)	Loss 0.0101 (0.0225)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.129)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.919)
+Test: 	Time 2.928	Prec@1 92.444	Prec@5 98.037
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.882)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.530)
+Test: 	Time 3.541	Prec@1 76.644	Prec@5 95.388
+Number of proper clusters: 102
+Epoch: [325][10/38]	Time 0.186 (0.251)	Data 0.000 (0.063)	Loss 0.0012 (0.0192)	
+Epoch: [325][20/38]	Time 0.190 (0.221)	Data 0.000 (0.033)	Loss 0.0000 (0.0170)	
+Epoch: [325][30/38]	Time 0.187 (0.210)	Data 0.000 (0.023)	Loss 0.0328 (0.0153)	
+Number of proper clusters: 102
+Epoch: [326][10/38]	Time 0.186 (0.256)	Data 0.000 (0.057)	Loss 0.0379 (0.0178)	
+Epoch: [326][20/38]	Time 0.194 (0.224)	Data 0.000 (0.030)	Loss 0.0038 (0.0177)	
+Epoch: [326][30/38]	Time 0.185 (0.212)	Data 0.000 (0.021)	Loss 0.0022 (0.0154)	
+Number of proper clusters: 102
+Epoch: [327][10/38]	Time 0.191 (0.259)	Data 0.000 (0.054)	Loss 0.0010 (0.0247)	
+Epoch: [327][20/38]	Time 0.188 (0.229)	Data 0.000 (0.028)	Loss 0.0000 (0.0224)	
+Epoch: [327][30/38]	Time 0.187 (0.216)	Data 0.000 (0.019)	Loss 0.0010 (0.0237)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.927)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.539)
+Test: 	Time 3.552	Prec@1 92.640	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.889)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.511)
+Test: 	Time 3.523	Prec@1 76.349	Prec@5 94.603
+Number of proper clusters: 102
+Epoch: [328][10/37]	Time 0.204 (0.251)	Data 0.000 (0.061)	Loss 0.0001 (0.0181)	
+Epoch: [328][20/37]	Time 0.193 (0.228)	Data 0.000 (0.032)	Loss 0.0183 (0.0165)	
+Epoch: [328][30/37]	Time 0.190 (0.215)	Data 0.000 (0.022)	Loss 0.0031 (0.0138)	
+Number of proper clusters: 102
+Epoch: [329][10/38]	Time 0.204 (0.261)	Data 0.000 (0.055)	Loss 0.0135 (0.0146)	
+Epoch: [329][20/38]	Time 0.193 (0.232)	Data 0.000 (0.029)	Loss 0.0036 (0.0252)	
+Epoch: [329][30/38]	Time 0.188 (0.217)	Data 0.000 (0.020)	Loss 0.0033 (0.0319)	
+Number of proper clusters: 102
+Epoch: [330][10/38]	Time 0.189 (0.246)	Data 0.000 (0.055)	Loss 0.0001 (0.0221)	
+Epoch: [330][20/38]	Time 0.188 (0.220)	Data 0.000 (0.029)	Loss 0.0208 (0.0210)	
+Epoch: [330][30/38]	Time 0.188 (0.209)	Data 0.000 (0.020)	Loss 0.0162 (0.0180)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.256)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.289)
+Test: 	Time 3.298	Prec@1 93.425	Prec@5 98.921
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.830)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.929)
+Test: 	Time 2.938	Prec@1 76.644	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [331][10/38]	Time 0.189 (0.237)	Data 0.000 (0.049)	Loss 0.0179 (0.0076)	
+Epoch: [331][20/38]	Time 0.185 (0.216)	Data 0.000 (0.026)	Loss 0.0000 (0.0195)	
+Epoch: [331][30/38]	Time 0.187 (0.207)	Data 0.000 (0.018)	Loss 0.0000 (0.0176)	
+Number of proper clusters: 102
+Epoch: [332][10/38]	Time 0.203 (0.257)	Data 0.000 (0.052)	Loss 0.0010 (0.0339)	
+Epoch: [332][20/38]	Time 0.209 (0.232)	Data 0.000 (0.027)	Loss 0.0440 (0.0241)	
+Epoch: [332][30/38]	Time 0.213 (0.223)	Data 0.000 (0.019)	Loss 0.0138 (0.0237)	
+Number of proper clusters: 102
+Epoch: [333][10/38]	Time 0.190 (0.249)	Data 0.001 (0.052)	Loss 0.0166 (0.0194)	
+Epoch: [333][20/38]	Time 0.211 (0.230)	Data 0.000 (0.028)	Loss 0.0028 (0.0148)	
+Epoch: [333][30/38]	Time 0.185 (0.218)	Data 0.000 (0.019)	Loss 0.0000 (0.0120)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.082)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.941)
+Test: 	Time 2.950	Prec@1 94.799	Prec@5 98.921
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.869)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.940)
+Test: 	Time 2.949	Prec@1 76.153	Prec@5 94.603
+Number of proper clusters: 102
+Epoch: [334][10/38]	Time 0.186 (0.233)	Data 0.000 (0.045)	Loss 0.0195 (0.0266)	
+Epoch: [334][20/38]	Time 0.186 (0.212)	Data 0.000 (0.024)	Loss 0.0016 (0.0216)	
+Epoch: [334][30/38]	Time 0.187 (0.204)	Data 0.000 (0.016)	Loss 0.0150 (0.0224)	
+Number of proper clusters: 102
+Epoch: [335][10/38]	Time 0.188 (0.244)	Data 0.000 (0.052)	Loss 0.0149 (0.0136)	
+Epoch: [335][20/38]	Time 0.192 (0.218)	Data 0.000 (0.027)	Loss 0.0152 (0.0193)	
+Epoch: [335][30/38]	Time 0.190 (0.210)	Data 0.000 (0.019)	Loss 0.0169 (0.0216)	
+Number of proper clusters: 102
+Epoch: [336][10/38]	Time 0.207 (0.251)	Data 0.000 (0.054)	Loss 0.0058 (0.0108)	
+Epoch: [336][20/38]	Time 0.189 (0.222)	Data 0.000 (0.028)	Loss 0.0469 (0.0135)	
+Epoch: [336][30/38]	Time 0.208 (0.216)	Data 0.000 (0.019)	Loss 0.0059 (0.0201)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.873)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.170)
+Test: 	Time 3.180	Prec@1 94.112	Prec@5 98.037
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.785)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.978)
+Test: 	Time 2.987	Prec@1 76.840	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [337][10/37]	Time 0.186 (0.240)	Data 0.000 (0.052)	Loss 0.0117 (0.0225)	
+Epoch: [337][20/37]	Time 0.187 (0.215)	Data 0.000 (0.027)	Loss 0.0208 (0.0210)	
+Epoch: [337][30/37]	Time 0.188 (0.207)	Data 0.000 (0.018)	Loss 0.0107 (0.0206)	
+Number of proper clusters: 102
+Epoch: [338][10/38]	Time 0.187 (0.242)	Data 0.000 (0.054)	Loss 0.0105 (0.0123)	
+Epoch: [338][20/38]	Time 0.186 (0.216)	Data 0.000 (0.029)	Loss 0.0047 (0.0146)	
+Epoch: [338][30/38]	Time 0.187 (0.207)	Data 0.000 (0.019)	Loss 0.0112 (0.0143)	
+Number of proper clusters: 102
+Epoch: [339][10/38]	Time 0.199 (0.270)	Data 0.000 (0.061)	Loss 0.0001 (0.0288)	
+Epoch: [339][20/38]	Time 0.211 (0.239)	Data 0.000 (0.032)	Loss 0.0348 (0.0232)	
+Epoch: [339][30/38]	Time 0.206 (0.228)	Data 0.000 (0.022)	Loss 0.0000 (0.0196)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.873)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.061)
+Test: 	Time 3.071	Prec@1 93.425	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.067)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.522)
+Test: 	Time 3.531	Prec@1 76.055	Prec@5 94.603
+Number of proper clusters: 102
+Epoch: [340][10/37]	Time 0.186 (0.239)	Data 0.000 (0.052)	Loss 0.0128 (0.0156)	
+Epoch: [340][20/37]	Time 0.191 (0.215)	Data 0.000 (0.027)	Loss 0.0145 (0.0132)	
+Epoch: [340][30/37]	Time 0.191 (0.206)	Data 0.000 (0.019)	Loss 0.0111 (0.0122)	
+Number of proper clusters: 102
+Epoch: [341][10/37]	Time 0.192 (0.251)	Data 0.000 (0.051)	Loss 0.0285 (0.0170)	
+Epoch: [341][20/37]	Time 0.189 (0.221)	Data 0.000 (0.027)	Loss 0.0032 (0.0212)	
+Epoch: [341][30/37]	Time 0.186 (0.210)	Data 0.000 (0.018)	Loss 0.0065 (0.0203)	
+Number of proper clusters: 102
+Epoch: [342][10/38]	Time 0.188 (0.241)	Data 0.000 (0.049)	Loss 0.0295 (0.0162)	
+Epoch: [342][20/38]	Time 0.193 (0.217)	Data 0.000 (0.026)	Loss 0.0267 (0.0127)	
+Epoch: [342][30/38]	Time 0.194 (0.209)	Data 0.000 (0.018)	Loss 0.0036 (0.0145)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.301)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.291)
+Test: 	Time 3.302	Prec@1 94.112	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.780)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.444)
+Test: 	Time 3.454	Prec@1 77.723	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [343][10/38]	Time 0.190 (0.241)	Data 0.000 (0.053)	Loss 0.0073 (0.0194)	
+Epoch: [343][20/38]	Time 0.188 (0.215)	Data 0.000 (0.028)	Loss 0.0056 (0.0166)	
+Epoch: [343][30/38]	Time 0.186 (0.206)	Data 0.000 (0.019)	Loss 0.0174 (0.0153)	
+Number of proper clusters: 102
+Epoch: [344][10/38]	Time 0.187 (0.256)	Data 0.000 (0.059)	Loss 0.0002 (0.0133)	
+Epoch: [344][20/38]	Time 0.186 (0.224)	Data 0.000 (0.031)	Loss 0.0013 (0.0098)	
+Epoch: [344][30/38]	Time 0.186 (0.212)	Data 0.000 (0.021)	Loss 0.0216 (0.0109)	
+Number of proper clusters: 102
+Epoch: [345][10/37]	Time 0.187 (0.241)	Data 0.000 (0.045)	Loss 0.1980 (0.0273)	
+Epoch: [345][20/37]	Time 0.188 (0.217)	Data 0.000 (0.024)	Loss 0.0003 (0.0254)	
+Epoch: [345][30/37]	Time 0.187 (0.208)	Data 0.000 (0.016)	Loss 0.0065 (0.0209)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.477)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.218)
+Test: 	Time 3.229	Prec@1 93.032	Prec@5 98.430
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.937)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.950)
+Test: 	Time 2.960	Prec@1 75.270	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [346][10/37]	Time 0.191 (0.243)	Data 0.000 (0.054)	Loss 0.0022 (0.0155)	
+Epoch: [346][20/37]	Time 0.191 (0.217)	Data 0.000 (0.028)	Loss 0.0197 (0.0184)	
+Epoch: [346][30/37]	Time 0.191 (0.208)	Data 0.000 (0.019)	Loss 0.0051 (0.0158)	
+Number of proper clusters: 102
+Epoch: [347][10/38]	Time 0.189 (0.258)	Data 0.000 (0.068)	Loss 0.0491 (0.0128)	
+Epoch: [347][20/38]	Time 0.191 (0.224)	Data 0.000 (0.036)	Loss 0.0139 (0.0179)	
+Epoch: [347][30/38]	Time 0.188 (0.212)	Data 0.000 (0.024)	Loss 0.0023 (0.0184)	
+Number of proper clusters: 102
+Epoch: [348][10/38]	Time 0.187 (0.278)	Data 0.000 (0.083)	Loss 0.0134 (0.0073)	
+Epoch: [348][20/38]	Time 0.188 (0.235)	Data 0.000 (0.044)	Loss 0.0123 (0.0162)	
+Epoch: [348][30/38]	Time 0.188 (0.221)	Data 0.000 (0.030)	Loss 0.0604 (0.0173)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.473)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.301)
+Test: 	Time 3.310	Prec@1 93.719	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.305)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.979)
+Test: 	Time 2.988	Prec@1 77.723	Prec@5 95.289
+Number of proper clusters: 102
+Epoch: [349][10/37]	Time 0.185 (0.240)	Data 0.000 (0.052)	Loss 0.0067 (0.0274)	
+Epoch: [349][20/37]	Time 0.188 (0.215)	Data 0.000 (0.027)	Loss 0.0053 (0.0261)	
+Epoch: [349][30/37]	Time 0.188 (0.207)	Data 0.000 (0.019)	Loss 0.0124 (0.0231)	
+Number of proper clusters: 102
+Epoch: [350][10/38]	Time 0.187 (0.257)	Data 0.000 (0.070)	Loss 0.0000 (0.0128)	
+Epoch: [350][20/38]	Time 0.187 (0.225)	Data 0.000 (0.037)	Loss 0.0074 (0.0176)	
+Epoch: [350][30/38]	Time 0.187 (0.212)	Data 0.000 (0.025)	Loss 0.0187 (0.0174)	
+Number of proper clusters: 102
+Epoch: [351][10/38]	Time 0.189 (0.256)	Data 0.000 (0.058)	Loss 0.0088 (0.0240)	
+Epoch: [351][20/38]	Time 0.189 (0.224)	Data 0.000 (0.031)	Loss 0.0591 (0.0231)	
+Epoch: [351][30/38]	Time 0.211 (0.215)	Data 0.000 (0.021)	Loss 0.0122 (0.0206)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.302)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.201)
+Test: 	Time 3.210	Prec@1 94.014	Prec@5 99.019
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.029)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.882)
+Test: 	Time 2.891	Prec@1 75.662	Prec@5 93.916
+Number of proper clusters: 102
+Epoch: [352][10/37]	Time 0.192 (0.252)	Data 0.000 (0.064)	Loss 0.0021 (0.0298)	
+Epoch: [352][20/37]	Time 0.193 (0.222)	Data 0.000 (0.034)	Loss 0.0205 (0.0186)	
+Epoch: [352][30/37]	Time 0.188 (0.211)	Data 0.000 (0.023)	Loss 0.0062 (0.0209)	
+Number of proper clusters: 102
+Epoch: [353][10/37]	Time 0.187 (0.245)	Data 0.001 (0.052)	Loss 0.0263 (0.0151)	
+Epoch: [353][20/37]	Time 0.189 (0.218)	Data 0.000 (0.028)	Loss 0.0045 (0.0142)	
+Epoch: [353][30/37]	Time 0.212 (0.213)	Data 0.000 (0.019)	Loss 0.0180 (0.0135)	
+Number of proper clusters: 102
+Epoch: [354][10/38]	Time 0.187 (0.277)	Data 0.000 (0.079)	Loss 0.0016 (0.0133)	
+Epoch: [354][20/38]	Time 0.196 (0.237)	Data 0.000 (0.041)	Loss 0.0102 (0.0114)	
+Epoch: [354][30/38]	Time 0.187 (0.221)	Data 0.000 (0.028)	Loss 0.0001 (0.0157)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.472)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.054)
+Test: 	Time 3.066	Prec@1 94.014	Prec@5 98.332
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.801)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.106)
+Test: 	Time 3.118	Prec@1 76.447	Prec@5 94.112
+Number of proper clusters: 102
+Epoch: [355][10/38]	Time 0.189 (0.238)	Data 0.000 (0.051)	Loss 0.0005 (0.0100)	
+Epoch: [355][20/38]	Time 0.188 (0.214)	Data 0.000 (0.027)	Loss 0.0029 (0.0106)	
+Epoch: [355][30/38]	Time 0.184 (0.205)	Data 0.000 (0.018)	Loss 0.0028 (0.0087)	
+Number of proper clusters: 102
+Epoch: [356][10/38]	Time 0.190 (0.258)	Data 0.001 (0.068)	Loss 0.0067 (0.0161)	
+Epoch: [356][20/38]	Time 0.208 (0.234)	Data 0.001 (0.036)	Loss 0.0038 (0.0143)	
+Epoch: [356][30/38]	Time 0.201 (0.224)	Data 0.000 (0.024)	Loss 0.0000 (0.0125)	
+Number of proper clusters: 102
+Epoch: [357][10/38]	Time 0.208 (0.260)	Data 0.000 (0.049)	Loss 0.0000 (0.0253)	
+Epoch: [357][20/38]	Time 0.186 (0.228)	Data 0.000 (0.026)	Loss 0.0197 (0.0225)	
+Epoch: [357][30/38]	Time 0.184 (0.214)	Data 0.000 (0.017)	Loss 0.0000 (0.0223)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.348)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.547)
+Test: 	Time 3.556	Prec@1 93.916	Prec@5 98.724
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.919)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.587)
+Test: 	Time 3.599	Prec@1 76.742	Prec@5 93.719
+Number of proper clusters: 102
+Epoch: [358][10/38]	Time 0.187 (0.244)	Data 0.000 (0.057)	Loss 0.0005 (0.0240)	
+Epoch: [358][20/38]	Time 0.188 (0.217)	Data 0.000 (0.030)	Loss 0.0339 (0.0230)	
+Epoch: [358][30/38]	Time 0.193 (0.208)	Data 0.000 (0.020)	Loss 0.0074 (0.0237)	
+Number of proper clusters: 102
+Epoch: [359][10/38]	Time 0.208 (0.277)	Data 0.000 (0.067)	Loss 0.0034 (0.0322)	
+Epoch: [359][20/38]	Time 0.191 (0.239)	Data 0.000 (0.035)	Loss 0.0196 (0.0238)	
+Epoch: [359][30/38]	Time 0.191 (0.223)	Data 0.000 (0.024)	Loss 0.0236 (0.0207)	
+Number of proper clusters: 102
+Epoch: [360][10/38]	Time 0.187 (0.246)	Data 0.000 (0.053)	Loss 0.0005 (0.0277)	
+Epoch: [360][20/38]	Time 0.186 (0.218)	Data 0.000 (0.028)	Loss 0.0109 (0.0239)	
+Epoch: [360][30/38]	Time 0.186 (0.208)	Data 0.000 (0.019)	Loss 0.0320 (0.0275)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.292)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.244)
+Test: 	Time 3.255	Prec@1 94.210	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.913)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.994)
+Test: 	Time 3.004	Prec@1 77.233	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [361][10/37]	Time 0.187 (0.248)	Data 0.000 (0.059)	Loss 0.0060 (0.0198)	
+Epoch: [361][20/37]	Time 0.186 (0.219)	Data 0.000 (0.031)	Loss 0.0219 (0.0171)	
+Epoch: [361][30/37]	Time 0.191 (0.209)	Data 0.000 (0.021)	Loss 0.0305 (0.0170)	
+Number of proper clusters: 102
+Epoch: [362][10/38]	Time 0.188 (0.253)	Data 0.000 (0.062)	Loss 0.0005 (0.0129)	
+Epoch: [362][20/38]	Time 0.187 (0.222)	Data 0.000 (0.033)	Loss 0.0123 (0.0169)	
+Epoch: [362][30/38]	Time 0.188 (0.211)	Data 0.000 (0.022)	Loss 0.0017 (0.0150)	
+Number of proper clusters: 102
+Epoch: [363][10/37]	Time 0.191 (0.274)	Data 0.000 (0.067)	Loss 0.0055 (0.0125)	
+Epoch: [363][20/37]	Time 0.190 (0.234)	Data 0.000 (0.035)	Loss 0.0453 (0.0175)	
+Epoch: [363][30/37]	Time 0.186 (0.220)	Data 0.000 (0.024)	Loss 0.0016 (0.0174)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.157)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.916)
+Test: 	Time 2.926	Prec@1 94.799	Prec@5 99.509
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.132)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.878)
+Test: 	Time 2.887	Prec@1 76.840	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [364][10/37]	Time 0.189 (0.241)	Data 0.000 (0.052)	Loss 0.0061 (0.0181)	
+Epoch: [364][20/37]	Time 0.186 (0.216)	Data 0.000 (0.028)	Loss 0.0082 (0.0153)	
+Epoch: [364][30/37]	Time 0.191 (0.208)	Data 0.000 (0.019)	Loss 0.0973 (0.0218)	
+Number of proper clusters: 102
+Epoch: [365][10/37]	Time 0.187 (0.268)	Data 0.000 (0.069)	Loss 0.0043 (0.0168)	
+Epoch: [365][20/37]	Time 0.190 (0.230)	Data 0.000 (0.036)	Loss 0.0040 (0.0168)	
+Epoch: [365][30/37]	Time 0.188 (0.216)	Data 0.000 (0.025)	Loss 0.0161 (0.0207)	
+Number of proper clusters: 102
+Epoch: [366][10/37]	Time 0.193 (0.265)	Data 0.001 (0.062)	Loss 0.0077 (0.0280)	
+Epoch: [366][20/37]	Time 0.189 (0.230)	Data 0.000 (0.033)	Loss 0.0009 (0.0214)	
+Epoch: [366][30/37]	Time 0.195 (0.216)	Data 0.000 (0.022)	Loss 0.0073 (0.0209)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.340)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.074)
+Test: 	Time 3.084	Prec@1 94.112	Prec@5 98.626
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.004)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.987)
+Test: 	Time 2.996	Prec@1 78.214	Prec@5 94.112
+Number of proper clusters: 102
+Epoch: [367][10/38]	Time 0.187 (0.245)	Data 0.000 (0.057)	Loss 0.0028 (0.0077)	
+Epoch: [367][20/38]	Time 0.186 (0.218)	Data 0.000 (0.030)	Loss 0.0000 (0.0084)	
+Epoch: [367][30/38]	Time 0.188 (0.208)	Data 0.000 (0.021)	Loss 0.0471 (0.0098)	
+Number of proper clusters: 102
+Epoch: [368][10/37]	Time 0.189 (0.276)	Data 0.000 (0.080)	Loss 0.0595 (0.0110)	
+Epoch: [368][20/37]	Time 0.188 (0.234)	Data 0.001 (0.042)	Loss 0.0041 (0.0145)	
+Epoch: [368][30/37]	Time 0.186 (0.219)	Data 0.000 (0.029)	Loss 0.0095 (0.0174)	
+Number of proper clusters: 102
+Epoch: [369][10/38]	Time 0.187 (0.263)	Data 0.000 (0.062)	Loss 0.0005 (0.0228)	
+Epoch: [369][20/38]	Time 0.186 (0.229)	Data 0.000 (0.033)	Loss 0.0000 (0.0179)	
+Epoch: [369][30/38]	Time 0.194 (0.216)	Data 0.000 (0.022)	Loss 0.0230 (0.0165)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.232)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.200)
+Test: 	Time 3.211	Prec@1 93.523	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.063)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.195)
+Test: 	Time 3.206	Prec@1 77.233	Prec@5 93.621
+Number of proper clusters: 102
+Epoch: [370][10/38]	Time 0.187 (0.258)	Data 0.000 (0.071)	Loss 0.0103 (0.0139)	
+Epoch: [370][20/38]	Time 0.190 (0.225)	Data 0.000 (0.037)	Loss 0.0189 (0.0136)	
+Epoch: [370][30/38]	Time 0.188 (0.213)	Data 0.000 (0.025)	Loss 0.0763 (0.0192)	
+Number of proper clusters: 102
+Epoch: [371][10/38]	Time 0.189 (0.252)	Data 0.001 (0.058)	Loss 0.0156 (0.0130)	
+Epoch: [371][20/38]	Time 0.187 (0.222)	Data 0.000 (0.031)	Loss 0.0069 (0.0217)	
+Epoch: [371][30/38]	Time 0.185 (0.211)	Data 0.000 (0.021)	Loss 0.0000 (0.0227)	
+Number of proper clusters: 102
+Epoch: [372][10/37]	Time 0.188 (0.253)	Data 0.000 (0.060)	Loss 0.0695 (0.0212)	
+Epoch: [372][20/37]	Time 0.190 (0.223)	Data 0.000 (0.032)	Loss 0.0196 (0.0266)	
+Epoch: [372][30/37]	Time 0.191 (0.213)	Data 0.000 (0.021)	Loss 0.0000 (0.0233)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.278)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.382)
+Test: 	Time 3.391	Prec@1 93.621	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.124)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.551)
+Test: 	Time 3.563	Prec@1 78.018	Prec@5 94.603
+Number of proper clusters: 102
+Epoch: [373][10/38]	Time 0.192 (0.245)	Data 0.000 (0.057)	Loss 0.0000 (0.0114)	
+Epoch: [373][20/38]	Time 0.193 (0.218)	Data 0.000 (0.030)	Loss 0.0284 (0.0192)	
+Epoch: [373][30/38]	Time 0.184 (0.208)	Data 0.000 (0.020)	Loss 0.0478 (0.0200)	
+Number of proper clusters: 102
+Epoch: [374][10/38]	Time 0.190 (0.243)	Data 0.000 (0.055)	Loss 0.0181 (0.0173)	
+Epoch: [374][20/38]	Time 0.186 (0.217)	Data 0.000 (0.029)	Loss 0.0314 (0.0179)	
+Epoch: [374][30/38]	Time 0.185 (0.207)	Data 0.000 (0.020)	Loss 0.0085 (0.0190)	
+Number of proper clusters: 102
+Epoch: [375][10/37]	Time 0.190 (0.254)	Data 0.000 (0.052)	Loss 0.0219 (0.0288)	
+Epoch: [375][20/37]	Time 0.188 (0.223)	Data 0.000 (0.027)	Loss 0.0115 (0.0203)	
+Epoch: [375][30/37]	Time 0.190 (0.212)	Data 0.000 (0.019)	Loss 0.0037 (0.0176)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.408)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.220)
+Test: 	Time 3.232	Prec@1 93.425	Prec@5 99.019
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.970)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.008)
+Test: 	Time 3.018	Prec@1 78.214	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [376][10/37]	Time 0.193 (0.246)	Data 0.001 (0.057)	Loss 0.0111 (0.0106)	
+Epoch: [376][20/37]	Time 0.196 (0.226)	Data 0.000 (0.030)	Loss 0.0000 (0.0141)	
+Epoch: [376][30/37]	Time 0.187 (0.213)	Data 0.000 (0.021)	Loss 0.0000 (0.0151)	
+Number of proper clusters: 102
+Epoch: [377][10/38]	Time 0.190 (0.252)	Data 0.000 (0.051)	Loss 0.0165 (0.0100)	
+Epoch: [377][20/38]	Time 0.187 (0.221)	Data 0.000 (0.027)	Loss 0.0339 (0.0091)	
+Epoch: [377][30/38]	Time 0.186 (0.210)	Data 0.000 (0.018)	Loss 0.0022 (0.0090)	
+Number of proper clusters: 102
+Epoch: [378][10/38]	Time 0.186 (0.243)	Data 0.000 (0.053)	Loss 0.0228 (0.0126)	
+Epoch: [378][20/38]	Time 0.188 (0.217)	Data 0.000 (0.028)	Loss 0.0122 (0.0138)	
+Epoch: [378][30/38]	Time 0.188 (0.208)	Data 0.000 (0.019)	Loss 0.0263 (0.0134)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.217)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.060)
+Test: 	Time 3.069	Prec@1 95.584	Prec@5 98.822
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.856)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.410)
+Test: 	Time 3.422	Prec@1 78.508	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [379][10/37]	Time 0.187 (0.249)	Data 0.000 (0.061)	Loss 0.0096 (0.0135)	
+Epoch: [379][20/37]	Time 0.189 (0.220)	Data 0.000 (0.032)	Loss 0.0000 (0.0191)	
+Epoch: [379][30/37]	Time 0.190 (0.210)	Data 0.000 (0.022)	Loss 0.0016 (0.0197)	
+Number of proper clusters: 102
+Epoch: [380][10/38]	Time 0.185 (0.244)	Data 0.000 (0.050)	Loss 0.0011 (0.0169)	
+Epoch: [380][20/38]	Time 0.187 (0.218)	Data 0.000 (0.026)	Loss 0.0046 (0.0181)	
+Epoch: [380][30/38]	Time 0.188 (0.208)	Data 0.000 (0.018)	Loss 0.0053 (0.0151)	
+Number of proper clusters: 102
+Epoch: [381][10/38]	Time 0.192 (0.246)	Data 0.000 (0.048)	Loss 0.0034 (0.0186)	
+Epoch: [381][20/38]	Time 0.187 (0.219)	Data 0.000 (0.025)	Loss 0.0261 (0.0179)	
+Epoch: [381][30/38]	Time 0.189 (0.209)	Data 0.000 (0.017)	Loss 0.0350 (0.0238)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.122)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.998)
+Test: 	Time 3.022	Prec@1 94.308	Prec@5 99.411
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.852)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.963)
+Test: 	Time 2.973	Prec@1 77.723	Prec@5 93.425
+Number of proper clusters: 102
+Epoch: [382][10/37]	Time 0.189 (0.248)	Data 0.000 (0.058)	Loss 0.0072 (0.0163)	
+Epoch: [382][20/37]	Time 0.212 (0.228)	Data 0.000 (0.031)	Loss 0.0034 (0.0171)	
+Epoch: [382][30/37]	Time 0.186 (0.218)	Data 0.000 (0.021)	Loss 0.0125 (0.0186)	
+Number of proper clusters: 102
+Epoch: [383][10/38]	Time 0.195 (0.245)	Data 0.000 (0.056)	Loss 0.0148 (0.0155)	
+Epoch: [383][20/38]	Time 0.190 (0.218)	Data 0.000 (0.029)	Loss 0.0058 (0.0177)	
+Epoch: [383][30/38]	Time 0.185 (0.208)	Data 0.000 (0.020)	Loss 0.0002 (0.0138)	
+Number of proper clusters: 102
+Epoch: [384][10/38]	Time 0.186 (0.244)	Data 0.000 (0.050)	Loss 0.0533 (0.0244)	
+Epoch: [384][20/38]	Time 0.195 (0.217)	Data 0.000 (0.027)	Loss 0.0146 (0.0210)	
+Epoch: [384][30/38]	Time 0.187 (0.208)	Data 0.000 (0.018)	Loss 0.0128 (0.0185)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.102)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.197)
+Test: 	Time 3.208	Prec@1 93.719	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.890)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.377)
+Test: 	Time 3.386	Prec@1 77.723	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [385][10/38]	Time 0.187 (0.241)	Data 0.000 (0.054)	Loss 0.0482 (0.0225)	
+Epoch: [385][20/38]	Time 0.194 (0.217)	Data 0.000 (0.028)	Loss 0.0020 (0.0200)	
+Epoch: [385][30/38]	Time 0.190 (0.208)	Data 0.000 (0.019)	Loss 0.0030 (0.0170)	
+Number of proper clusters: 102
+Epoch: [386][10/38]	Time 0.210 (0.261)	Data 0.001 (0.049)	Loss 0.0072 (0.0093)	
+Epoch: [386][20/38]	Time 0.217 (0.233)	Data 0.000 (0.026)	Loss 0.0000 (0.0094)	
+Epoch: [386][30/38]	Time 0.198 (0.225)	Data 0.000 (0.018)	Loss 0.0000 (0.0115)	
+Number of proper clusters: 102
+Epoch: [387][10/38]	Time 0.193 (0.246)	Data 0.000 (0.056)	Loss 0.0136 (0.0183)	
+Epoch: [387][20/38]	Time 0.192 (0.219)	Data 0.000 (0.030)	Loss 0.0417 (0.0143)	
+Epoch: [387][30/38]	Time 0.194 (0.210)	Data 0.000 (0.020)	Loss 0.0000 (0.0134)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.220)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.100)
+Test: 	Time 3.112	Prec@1 94.701	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.819)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.425)
+Test: 	Time 3.438	Prec@1 75.859	Prec@5 93.817
+Number of proper clusters: 102
+Epoch: [388][10/38]	Time 0.185 (0.240)	Data 0.000 (0.053)	Loss 0.0181 (0.0147)	
+Epoch: [388][20/38]	Time 0.193 (0.215)	Data 0.000 (0.028)	Loss 0.0070 (0.0119)	
+Epoch: [388][30/38]	Time 0.187 (0.206)	Data 0.000 (0.019)	Loss 0.0000 (0.0105)	
+Number of proper clusters: 102
+Epoch: [389][10/37]	Time 0.207 (0.258)	Data 0.000 (0.046)	Loss 0.0039 (0.0115)	
+Epoch: [389][20/37]	Time 0.190 (0.227)	Data 0.000 (0.024)	Loss 0.0107 (0.0124)	
+Epoch: [389][30/37]	Time 0.185 (0.214)	Data 0.000 (0.016)	Loss 0.0168 (0.0125)	
+Number of proper clusters: 102
+Epoch: [390][10/38]	Time 0.202 (0.257)	Data 0.000 (0.051)	Loss 0.0227 (0.0144)	
+Epoch: [390][20/38]	Time 0.210 (0.232)	Data 0.000 (0.027)	Loss 0.0109 (0.0128)	
+Epoch: [390][30/38]	Time 0.194 (0.223)	Data 0.000 (0.018)	Loss 0.0286 (0.0126)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.212)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.106)
+Test: 	Time 3.116	Prec@1 93.817	Prec@5 98.135
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.858)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.090)
+Test: 	Time 3.100	Prec@1 77.134	Prec@5 94.603
+Number of proper clusters: 102
+Epoch: [391][10/38]	Time 0.186 (0.242)	Data 0.000 (0.056)	Loss 0.0301 (0.0330)	
+Epoch: [391][20/38]	Time 0.192 (0.216)	Data 0.000 (0.029)	Loss 0.0232 (0.0247)	
+Epoch: [391][30/38]	Time 0.187 (0.207)	Data 0.000 (0.020)	Loss 0.0032 (0.0195)	
+Number of proper clusters: 102
+Epoch: [392][10/38]	Time 0.186 (0.234)	Data 0.000 (0.046)	Loss 0.0103 (0.0097)	
+Epoch: [392][20/38]	Time 0.190 (0.213)	Data 0.000 (0.024)	Loss 0.0099 (0.0102)	
+Epoch: [392][30/38]	Time 0.188 (0.205)	Data 0.000 (0.017)	Loss 0.0030 (0.0137)	
+Number of proper clusters: 102
+Epoch: [393][10/38]	Time 0.188 (0.247)	Data 0.000 (0.047)	Loss 0.0008 (0.0092)	
+Epoch: [393][20/38]	Time 0.188 (0.218)	Data 0.000 (0.025)	Loss 0.0025 (0.0058)	
+Epoch: [393][30/38]	Time 0.197 (0.212)	Data 0.000 (0.017)	Loss 0.0165 (0.0077)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.215)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.947)
+Test: 	Time 2.956	Prec@1 95.780	Prec@5 99.706
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.913)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.258)
+Test: 	Time 3.269	Prec@1 77.821	Prec@5 94.308
+Number of proper clusters: 102
+Epoch: [394][10/38]	Time 0.190 (0.245)	Data 0.000 (0.057)	Loss 0.0003 (0.0174)	
+Epoch: [394][20/38]	Time 0.191 (0.218)	Data 0.000 (0.030)	Loss 0.1019 (0.0248)	
+Epoch: [394][30/38]	Time 0.186 (0.208)	Data 0.000 (0.021)	Loss 0.0009 (0.0218)	
+Number of proper clusters: 102
+Epoch: [395][10/38]	Time 0.193 (0.244)	Data 0.000 (0.056)	Loss 0.0232 (0.0173)	
+Epoch: [395][20/38]	Time 0.187 (0.217)	Data 0.000 (0.030)	Loss 0.0049 (0.0174)	
+Epoch: [395][30/38]	Time 0.186 (0.208)	Data 0.000 (0.020)	Loss 0.0062 (0.0175)	
+Number of proper clusters: 102
+Epoch: [396][10/38]	Time 0.200 (0.269)	Data 0.001 (0.072)	Loss 0.0199 (0.0147)	
+Epoch: [396][20/38]	Time 0.193 (0.231)	Data 0.000 (0.038)	Loss 0.0211 (0.0213)	
+Epoch: [396][30/38]	Time 0.210 (0.222)	Data 0.000 (0.026)	Loss 0.0109 (0.0164)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.938)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.046)
+Test: 	Time 3.055	Prec@1 93.327	Prec@5 99.411
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.864)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.023)
+Test: 	Time 3.032	Prec@1 76.742	Prec@5 94.504
+Number of proper clusters: 102
+Epoch: [397][10/38]	Time 0.187 (0.244)	Data 0.000 (0.056)	Loss 0.0006 (0.0125)	
+Epoch: [397][20/38]	Time 0.187 (0.217)	Data 0.000 (0.030)	Loss 0.0002 (0.0143)	
+Epoch: [397][30/38]	Time 0.186 (0.208)	Data 0.000 (0.020)	Loss 0.0085 (0.0157)	
+Number of proper clusters: 102
+Epoch: [398][10/37]	Time 0.189 (0.255)	Data 0.000 (0.061)	Loss 0.0012 (0.0128)	
+Epoch: [398][20/37]	Time 0.188 (0.223)	Data 0.000 (0.032)	Loss 0.0049 (0.0132)	
+Epoch: [398][30/37]	Time 0.186 (0.212)	Data 0.000 (0.022)	Loss 0.0003 (0.0135)	
+Number of proper clusters: 102
+Epoch: [399][10/38]	Time 0.188 (0.262)	Data 0.000 (0.068)	Loss 0.0005 (0.0081)	
+Epoch: [399][20/38]	Time 0.187 (0.227)	Data 0.000 (0.036)	Loss 0.0327 (0.0142)	
+Epoch: [399][30/38]	Time 0.192 (0.214)	Data 0.000 (0.024)	Loss 0.0098 (0.0153)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.333)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.262)
+Test: 	Time 3.273	Prec@1 94.897	Prec@5 99.706
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.958)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.262)
+Test: 	Time 3.273	Prec@1 76.447	Prec@5 93.621
+Number of proper clusters: 102
+Epoch: [400][10/37]	Time 0.187 (0.245)	Data 0.000 (0.056)	Loss 0.0002 (0.0148)	
+Epoch: [400][20/37]	Time 0.186 (0.218)	Data 0.000 (0.029)	Loss 0.0014 (0.0149)	
+Epoch: [400][30/37]	Time 0.185 (0.208)	Data 0.000 (0.020)	Loss 0.0000 (0.0183)	
+Number of proper clusters: 102
+Epoch: [401][10/38]	Time 0.205 (0.256)	Data 0.000 (0.048)	Loss 0.0212 (0.0090)	
+Epoch: [401][20/38]	Time 0.209 (0.232)	Data 0.000 (0.025)	Loss 0.0427 (0.0220)	
+Epoch: [401][30/38]	Time 0.199 (0.222)	Data 0.000 (0.017)	Loss 0.0015 (0.0217)	
+Number of proper clusters: 102
+Epoch: [402][10/38]	Time 0.187 (0.250)	Data 0.000 (0.062)	Loss 0.0000 (0.0117)	
+Epoch: [402][20/38]	Time 0.193 (0.220)	Data 0.000 (0.032)	Loss 0.0063 (0.0107)	
+Epoch: [402][30/38]	Time 0.186 (0.211)	Data 0.000 (0.022)	Loss 0.0018 (0.0098)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.377)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.171)
+Test: 	Time 3.182	Prec@1 93.719	Prec@5 99.019
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.178)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.514)
+Test: 	Time 3.524	Prec@1 77.429	Prec@5 95.780
+Number of proper clusters: 102
+Epoch: [403][10/38]	Time 0.187 (0.238)	Data 0.000 (0.051)	Loss 0.0047 (0.0173)	
+Epoch: [403][20/38]	Time 0.189 (0.214)	Data 0.000 (0.027)	Loss 0.0029 (0.0180)	
+Epoch: [403][30/38]	Time 0.186 (0.205)	Data 0.000 (0.018)	Loss 0.0191 (0.0219)	
+Number of proper clusters: 102
+Epoch: [404][10/38]	Time 0.188 (0.265)	Data 0.000 (0.075)	Loss 0.0025 (0.0089)	
+Epoch: [404][20/38]	Time 0.190 (0.229)	Data 0.000 (0.039)	Loss 0.0571 (0.0170)	
+Epoch: [404][30/38]	Time 0.186 (0.215)	Data 0.000 (0.027)	Loss 0.0087 (0.0162)	
+Number of proper clusters: 102
+Epoch: [405][10/38]	Time 0.192 (0.260)	Data 0.000 (0.067)	Loss 0.0007 (0.0128)	
+Epoch: [405][20/38]	Time 0.186 (0.226)	Data 0.000 (0.035)	Loss 0.1320 (0.0204)	
+Epoch: [405][30/38]	Time 0.187 (0.215)	Data 0.000 (0.024)	Loss 0.0493 (0.0178)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.297)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.246)
+Test: 	Time 3.255	Prec@1 92.934	Prec@5 98.921
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.263)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.996)
+Test: 	Time 3.005	Prec@1 78.410	Prec@5 95.191
+Number of proper clusters: 102
+Epoch: [406][10/37]	Time 0.192 (0.245)	Data 0.000 (0.058)	Loss 0.0094 (0.0057)	
+Epoch: [406][20/37]	Time 0.187 (0.218)	Data 0.000 (0.030)	Loss 0.0229 (0.0145)	
+Epoch: [406][30/37]	Time 0.185 (0.208)	Data 0.000 (0.021)	Loss 0.0413 (0.0166)	
+Number of proper clusters: 102
+Epoch: [407][10/38]	Time 0.196 (0.258)	Data 0.000 (0.061)	Loss 0.0119 (0.0152)	
+Epoch: [407][20/38]	Time 0.201 (0.234)	Data 0.000 (0.032)	Loss 0.0068 (0.0208)	
+Epoch: [407][30/38]	Time 0.190 (0.220)	Data 0.000 (0.022)	Loss 0.0004 (0.0187)	
+Number of proper clusters: 102
+Epoch: [408][10/37]	Time 0.200 (0.258)	Data 0.000 (0.050)	Loss 0.0316 (0.0178)	
+Epoch: [408][20/37]	Time 0.211 (0.232)	Data 0.000 (0.026)	Loss 0.0001 (0.0148)	
+Epoch: [408][30/37]	Time 0.211 (0.223)	Data 0.000 (0.018)	Loss 0.0113 (0.0141)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.340)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.989)
+Test: 	Time 2.998	Prec@1 95.388	Prec@5 99.509
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.982)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.225)
+Test: 	Time 3.234	Prec@1 76.447	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [409][10/38]	Time 0.191 (0.252)	Data 0.000 (0.065)	Loss 0.0086 (0.0151)	
+Epoch: [409][20/38]	Time 0.188 (0.221)	Data 0.000 (0.034)	Loss 0.0027 (0.0164)	
+Epoch: [409][30/38]	Time 0.194 (0.212)	Data 0.000 (0.023)	Loss 0.0382 (0.0136)	
+Number of proper clusters: 102
+Epoch: [410][10/38]	Time 0.205 (0.265)	Data 0.000 (0.055)	Loss 0.0136 (0.0117)	
+Epoch: [410][20/38]	Time 0.192 (0.231)	Data 0.000 (0.029)	Loss 0.0009 (0.0136)	
+Epoch: [410][30/38]	Time 0.188 (0.218)	Data 0.000 (0.020)	Loss 0.0014 (0.0150)	
+Number of proper clusters: 102
+Epoch: [411][10/38]	Time 0.198 (0.257)	Data 0.001 (0.065)	Loss 0.0052 (0.0051)	
+Epoch: [411][20/38]	Time 0.187 (0.226)	Data 0.000 (0.034)	Loss 0.0003 (0.0062)	
+Epoch: [411][30/38]	Time 0.194 (0.214)	Data 0.000 (0.023)	Loss 0.0126 (0.0067)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.377)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.974)
+Test: 	Time 2.983	Prec@1 95.191	Prec@5 99.313
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.017)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.047)
+Test: 	Time 3.058	Prec@1 76.644	Prec@5 95.093
+Number of proper clusters: 102
+Epoch: [412][10/38]	Time 0.188 (0.251)	Data 0.001 (0.063)	Loss 0.0179 (0.0350)	
+Epoch: [412][20/38]	Time 0.188 (0.222)	Data 0.000 (0.033)	Loss 0.0000 (0.0219)	
+Epoch: [412][30/38]	Time 0.188 (0.211)	Data 0.000 (0.023)	Loss 0.1441 (0.0240)	
+Number of proper clusters: 102
+Epoch: [413][10/38]	Time 0.186 (0.244)	Data 0.000 (0.056)	Loss 0.0426 (0.0093)	
+Epoch: [413][20/38]	Time 0.186 (0.217)	Data 0.000 (0.030)	Loss 0.0015 (0.0090)	
+Epoch: [413][30/38]	Time 0.186 (0.208)	Data 0.000 (0.020)	Loss 0.0420 (0.0133)	
+Number of proper clusters: 102
+Epoch: [414][10/38]	Time 0.187 (0.260)	Data 0.000 (0.066)	Loss 0.0025 (0.0182)	
+Epoch: [414][20/38]	Time 0.190 (0.225)	Data 0.000 (0.035)	Loss 0.0262 (0.0227)	
+Epoch: [414][30/38]	Time 0.189 (0.213)	Data 0.000 (0.024)	Loss 0.0000 (0.0199)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.986)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.555)
+Test: 	Time 3.566	Prec@1 95.780	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.060)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.341)
+Test: 	Time 3.350	Prec@1 75.564	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [415][10/37]	Time 0.187 (0.245)	Data 0.000 (0.056)	Loss 0.0165 (0.0105)	
+Epoch: [415][20/37]	Time 0.185 (0.219)	Data 0.000 (0.030)	Loss 0.0000 (0.0136)	
+Epoch: [415][30/37]	Time 0.186 (0.209)	Data 0.000 (0.020)	Loss 0.0002 (0.0114)	
+Number of proper clusters: 102
+Epoch: [416][10/37]	Time 0.190 (0.243)	Data 0.000 (0.055)	Loss 0.0042 (0.0325)	
+Epoch: [416][20/37]	Time 0.187 (0.217)	Data 0.000 (0.029)	Loss 0.0375 (0.0222)	
+Epoch: [416][30/37]	Time 0.188 (0.208)	Data 0.000 (0.020)	Loss 0.0903 (0.0237)	
+Number of proper clusters: 102
+Epoch: [417][10/38]	Time 0.199 (0.270)	Data 0.000 (0.065)	Loss 0.0112 (0.0132)	
+Epoch: [417][20/38]	Time 0.200 (0.241)	Data 0.000 (0.034)	Loss 0.0097 (0.0115)	
+Epoch: [417][30/38]	Time 0.188 (0.225)	Data 0.000 (0.023)	Loss 0.0214 (0.0101)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.320)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.587)
+Test: 	Time 3.599	Prec@1 95.289	Prec@5 99.117
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.112)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.186)
+Test: 	Time 3.197	Prec@1 76.349	Prec@5 95.093
+Number of proper clusters: 102
+Epoch: [418][10/37]	Time 0.188 (0.239)	Data 0.000 (0.052)	Loss 0.0004 (0.0270)	
+Epoch: [418][20/37]	Time 0.186 (0.214)	Data 0.000 (0.027)	Loss 0.0019 (0.0174)	
+Epoch: [418][30/37]	Time 0.186 (0.205)	Data 0.000 (0.019)	Loss 0.0025 (0.0155)	
+Number of proper clusters: 102
+Epoch: [419][10/37]	Time 0.187 (0.250)	Data 0.000 (0.061)	Loss 0.0033 (0.0048)	
+Epoch: [419][20/37]	Time 0.187 (0.221)	Data 0.000 (0.032)	Loss 0.0019 (0.0104)	
+Epoch: [419][30/37]	Time 0.184 (0.209)	Data 0.000 (0.022)	Loss 0.0062 (0.0095)	
+Number of proper clusters: 102
+Epoch: [420][10/37]	Time 0.189 (0.240)	Data 0.000 (0.050)	Loss 0.0027 (0.0106)	
+Epoch: [420][20/37]	Time 0.189 (0.216)	Data 0.001 (0.026)	Loss 0.0013 (0.0156)	
+Epoch: [420][30/37]	Time 0.193 (0.207)	Data 0.000 (0.018)	Loss 0.0075 (0.0156)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.859)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.028)
+Test: 	Time 3.037	Prec@1 94.210	Prec@5 98.822
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.053)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.035)
+Test: 	Time 3.044	Prec@1 76.742	Prec@5 94.406
+Number of proper clusters: 102
+Epoch: [421][10/38]	Time 0.188 (0.241)	Data 0.000 (0.051)	Loss 0.0130 (0.0124)	
+Epoch: [421][20/38]	Time 0.188 (0.215)	Data 0.000 (0.027)	Loss 0.0000 (0.0174)	
+Epoch: [421][30/38]	Time 0.184 (0.206)	Data 0.000 (0.018)	Loss 0.0010 (0.0145)	
+Number of proper clusters: 102
+Epoch: [422][10/38]	Time 0.196 (0.257)	Data 0.000 (0.052)	Loss 0.0000 (0.0086)	
+Epoch: [422][20/38]	Time 0.216 (0.233)	Data 0.000 (0.027)	Loss 0.0000 (0.0082)	
+Epoch: [422][30/38]	Time 0.211 (0.223)	Data 0.000 (0.019)	Loss 0.0003 (0.0116)	
+Number of proper clusters: 102
+Epoch: [423][10/37]	Time 0.201 (0.253)	Data 0.000 (0.047)	Loss 0.0011 (0.0146)	
+Epoch: [423][20/37]	Time 0.213 (0.230)	Data 0.000 (0.025)	Loss 0.0065 (0.0131)	
+Epoch: [423][30/37]	Time 0.199 (0.222)	Data 0.000 (0.017)	Loss 0.0184 (0.0127)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.023)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.977)
+Test: 	Time 2.986	Prec@1 95.289	Prec@5 98.430
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.829)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.042)
+Test: 	Time 3.051	Prec@1 77.331	Prec@5 93.916
+Number of proper clusters: 102
+Epoch: [424][10/37]	Time 0.186 (0.251)	Data 0.000 (0.064)	Loss 0.0247 (0.0108)	
+Epoch: [424][20/37]	Time 0.188 (0.221)	Data 0.000 (0.034)	Loss 0.0091 (0.0104)	
+Epoch: [424][30/37]	Time 0.186 (0.210)	Data 0.000 (0.023)	Loss 0.0065 (0.0132)	
+Number of proper clusters: 102
+Epoch: [425][10/38]	Time 0.200 (0.269)	Data 0.000 (0.058)	Loss 0.0060 (0.0249)	
+Epoch: [425][20/38]	Time 0.191 (0.234)	Data 0.000 (0.031)	Loss 0.0222 (0.0194)	
+Epoch: [425][30/38]	Time 0.187 (0.219)	Data 0.000 (0.021)	Loss 0.0026 (0.0158)	
+Number of proper clusters: 102
+Epoch: [426][10/37]	Time 0.193 (0.241)	Data 0.000 (0.048)	Loss 0.0094 (0.0058)	
+Epoch: [426][20/37]	Time 0.188 (0.216)	Data 0.000 (0.025)	Loss 0.0000 (0.0187)	
+Epoch: [426][30/37]	Time 0.185 (0.207)	Data 0.000 (0.017)	Loss 0.0141 (0.0156)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.981)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.906)
+Test: 	Time 2.915	Prec@1 95.191	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.943)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.958)
+Test: 	Time 2.968	Prec@1 77.723	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [427][10/38]	Time 0.188 (0.240)	Data 0.000 (0.049)	Loss 0.0103 (0.0226)	
+Epoch: [427][20/38]	Time 0.189 (0.216)	Data 0.001 (0.026)	Loss 0.0095 (0.0248)	
+Epoch: [427][30/38]	Time 0.190 (0.207)	Data 0.000 (0.018)	Loss 0.0158 (0.0262)	
+Number of proper clusters: 102
+Epoch: [428][10/38]	Time 0.197 (0.263)	Data 0.000 (0.066)	Loss 0.0015 (0.0129)	
+Epoch: [428][20/38]	Time 0.187 (0.227)	Data 0.000 (0.035)	Loss 0.0172 (0.0086)	
+Epoch: [428][30/38]	Time 0.186 (0.214)	Data 0.000 (0.024)	Loss 0.0046 (0.0118)	
+Number of proper clusters: 102
+Epoch: [429][10/38]	Time 0.187 (0.241)	Data 0.000 (0.051)	Loss 0.0002 (0.0140)	
+Epoch: [429][20/38]	Time 0.191 (0.217)	Data 0.000 (0.027)	Loss 0.0228 (0.0135)	
+Epoch: [429][30/38]	Time 0.191 (0.209)	Data 0.000 (0.018)	Loss 0.0125 (0.0141)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.285)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.592)
+Test: 	Time 3.602	Prec@1 93.621	Prec@5 98.822
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.046)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.272)
+Test: 	Time 3.282	Prec@1 77.625	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [430][10/38]	Time 0.198 (0.240)	Data 0.000 (0.049)	Loss 0.0700 (0.0200)	
+Epoch: [430][20/38]	Time 0.187 (0.216)	Data 0.001 (0.026)	Loss 0.0000 (0.0161)	
+Epoch: [430][30/38]	Time 0.188 (0.206)	Data 0.000 (0.017)	Loss 0.0062 (0.0156)	
+Number of proper clusters: 102
+Epoch: [431][10/38]	Time 0.187 (0.234)	Data 0.000 (0.047)	Loss 0.0037 (0.0191)	
+Epoch: [431][20/38]	Time 0.199 (0.216)	Data 0.000 (0.025)	Loss 0.0048 (0.0154)	
+Epoch: [431][30/38]	Time 0.187 (0.207)	Data 0.000 (0.017)	Loss 0.0103 (0.0134)	
+Number of proper clusters: 102
+Epoch: [432][10/38]	Time 0.190 (0.243)	Data 0.000 (0.048)	Loss 0.0069 (0.0193)	
+Epoch: [432][20/38]	Time 0.190 (0.218)	Data 0.000 (0.025)	Loss 0.0046 (0.0133)	
+Epoch: [432][30/38]	Time 0.211 (0.213)	Data 0.000 (0.017)	Loss 0.0113 (0.0130)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.976)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.510)
+Test: 	Time 3.520	Prec@1 94.308	Prec@5 98.724
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.878)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.121)
+Test: 	Time 3.133	Prec@1 76.644	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [433][10/38]	Time 0.191 (0.239)	Data 0.000 (0.049)	Loss 0.0013 (0.0111)	
+Epoch: [433][20/38]	Time 0.209 (0.222)	Data 0.000 (0.026)	Loss 0.0022 (0.0094)	
+Epoch: [433][30/38]	Time 0.199 (0.215)	Data 0.000 (0.018)	Loss 0.0002 (0.0085)	
+Number of proper clusters: 102
+Epoch: [434][10/37]	Time 0.186 (0.239)	Data 0.000 (0.051)	Loss 0.0495 (0.0196)	
+Epoch: [434][20/37]	Time 0.187 (0.215)	Data 0.000 (0.027)	Loss 0.0103 (0.0157)	
+Epoch: [434][30/37]	Time 0.192 (0.206)	Data 0.000 (0.018)	Loss 0.0008 (0.0137)	
+Number of proper clusters: 102
+Epoch: [435][10/38]	Time 0.188 (0.250)	Data 0.000 (0.051)	Loss 0.0124 (0.0121)	
+Epoch: [435][20/38]	Time 0.188 (0.221)	Data 0.000 (0.027)	Loss 0.0389 (0.0134)	
+Epoch: [435][30/38]	Time 0.187 (0.210)	Data 0.000 (0.018)	Loss 0.0023 (0.0162)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.899)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.978)
+Test: 	Time 2.987	Prec@1 94.406	Prec@5 98.430
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.018)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.044)
+Test: 	Time 3.053	Prec@1 76.153	Prec@5 93.916
+Number of proper clusters: 102
+Epoch: [436][10/37]	Time 0.186 (0.239)	Data 0.000 (0.051)	Loss 0.0044 (0.0087)	
+Epoch: [436][20/37]	Time 0.187 (0.215)	Data 0.000 (0.027)	Loss 0.0094 (0.0112)	
+Epoch: [436][30/37]	Time 0.191 (0.206)	Data 0.000 (0.018)	Loss 0.1049 (0.0123)	
+Number of proper clusters: 102
+Epoch: [437][10/38]	Time 0.191 (0.258)	Data 0.000 (0.065)	Loss 0.0234 (0.0109)	
+Epoch: [437][20/38]	Time 0.192 (0.226)	Data 0.000 (0.034)	Loss 0.0012 (0.0149)	
+Epoch: [437][30/38]	Time 0.187 (0.213)	Data 0.000 (0.023)	Loss 0.0123 (0.0163)	
+Number of proper clusters: 102
+Epoch: [438][10/38]	Time 0.188 (0.256)	Data 0.000 (0.061)	Loss 0.0146 (0.0125)	
+Epoch: [438][20/38]	Time 0.188 (0.223)	Data 0.000 (0.032)	Loss 0.0031 (0.0102)	
+Epoch: [438][30/38]	Time 0.186 (0.212)	Data 0.000 (0.022)	Loss 0.0263 (0.0128)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.241)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.987)
+Test: 	Time 2.996	Prec@1 95.780	Prec@5 99.313
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.798)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.210)
+Test: 	Time 3.222	Prec@1 78.116	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [439][10/37]	Time 0.193 (0.241)	Data 0.000 (0.050)	Loss 0.0168 (0.0189)	
+Epoch: [439][20/37]	Time 0.198 (0.223)	Data 0.001 (0.027)	Loss 0.0011 (0.0132)	
+Epoch: [439][30/37]	Time 0.192 (0.212)	Data 0.000 (0.018)	Loss 0.0021 (0.0157)	
+Number of proper clusters: 102
+Epoch: [440][10/38]	Time 0.203 (0.266)	Data 0.000 (0.057)	Loss 0.0060 (0.0095)	
+Epoch: [440][20/38]	Time 0.198 (0.235)	Data 0.001 (0.030)	Loss 0.0134 (0.0143)	
+Epoch: [440][30/38]	Time 0.188 (0.221)	Data 0.000 (0.021)	Loss 0.0086 (0.0114)	
+Number of proper clusters: 102
+Epoch: [441][10/38]	Time 0.192 (0.255)	Data 0.000 (0.060)	Loss 0.0101 (0.0157)	
+Epoch: [441][20/38]	Time 0.191 (0.224)	Data 0.000 (0.032)	Loss 0.0037 (0.0127)	
+Epoch: [441][30/38]	Time 0.186 (0.212)	Data 0.000 (0.021)	Loss 0.0038 (0.0112)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.908)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.106)
+Test: 	Time 3.116	Prec@1 95.584	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.930)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.230)
+Test: 	Time 3.240	Prec@1 78.312	Prec@5 95.289
+Number of proper clusters: 102
+Epoch: [442][10/38]	Time 0.188 (0.241)	Data 0.000 (0.053)	Loss 0.0047 (0.0087)	
+Epoch: [442][20/38]	Time 0.189 (0.217)	Data 0.001 (0.028)	Loss 0.0025 (0.0099)	
+Epoch: [442][30/38]	Time 0.186 (0.207)	Data 0.000 (0.019)	Loss 0.0131 (0.0106)	
+Number of proper clusters: 102
+Epoch: [443][10/38]	Time 0.210 (0.262)	Data 0.000 (0.058)	Loss 0.0015 (0.0093)	
+Epoch: [443][20/38]	Time 0.216 (0.234)	Data 0.000 (0.031)	Loss 0.0316 (0.0167)	
+Epoch: [443][30/38]	Time 0.191 (0.222)	Data 0.000 (0.021)	Loss 0.0307 (0.0156)	
+Number of proper clusters: 102
+Epoch: [444][10/38]	Time 0.190 (0.239)	Data 0.000 (0.046)	Loss 0.0938 (0.0273)	
+Epoch: [444][20/38]	Time 0.187 (0.215)	Data 0.000 (0.024)	Loss 0.0288 (0.0184)	
+Epoch: [444][30/38]	Time 0.186 (0.205)	Data 0.000 (0.016)	Loss 0.0095 (0.0156)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.951)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.460)
+Test: 	Time 3.470	Prec@1 94.112	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.826)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.134)
+Test: 	Time 3.144	Prec@1 76.840	Prec@5 94.897
+Number of proper clusters: 102
+Epoch: [445][10/38]	Time 0.187 (0.246)	Data 0.000 (0.058)	Loss 0.0051 (0.0025)	
+Epoch: [445][20/38]	Time 0.186 (0.217)	Data 0.001 (0.030)	Loss 0.0316 (0.0060)	
+Epoch: [445][30/38]	Time 0.185 (0.208)	Data 0.000 (0.021)	Loss 0.0111 (0.0087)	
+Number of proper clusters: 102
+Epoch: [446][10/38]	Time 0.190 (0.249)	Data 0.000 (0.053)	Loss 0.0262 (0.0127)	
+Epoch: [446][20/38]	Time 0.187 (0.220)	Data 0.000 (0.028)	Loss 0.0017 (0.0151)	
+Epoch: [446][30/38]	Time 0.196 (0.212)	Data 0.000 (0.019)	Loss 0.0005 (0.0123)	
+Number of proper clusters: 102
+Epoch: [447][10/38]	Time 0.187 (0.250)	Data 0.000 (0.057)	Loss 0.0143 (0.0132)	
+Epoch: [447][20/38]	Time 0.189 (0.221)	Data 0.000 (0.030)	Loss 0.0216 (0.0117)	
+Epoch: [447][30/38]	Time 0.185 (0.211)	Data 0.000 (0.021)	Loss 0.0000 (0.0112)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.933)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.624)
+Test: 	Time 3.634	Prec@1 95.388	Prec@5 99.411
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.909)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.285)
+Test: 	Time 3.295	Prec@1 76.447	Prec@5 94.603
+Number of proper clusters: 102
+Epoch: [448][10/38]	Time 0.192 (0.244)	Data 0.000 (0.055)	Loss 0.0335 (0.0279)	
+Epoch: [448][20/38]	Time 0.186 (0.218)	Data 0.000 (0.029)	Loss 0.0004 (0.0205)	
+Epoch: [448][30/38]	Time 0.188 (0.208)	Data 0.000 (0.020)	Loss 0.0000 (0.0166)	
+Number of proper clusters: 102
+Epoch: [449][10/38]	Time 0.188 (0.245)	Data 0.000 (0.049)	Loss 0.1108 (0.0386)	
+Epoch: [449][20/38]	Time 0.187 (0.218)	Data 0.000 (0.026)	Loss 0.0059 (0.0301)	
+Epoch: [449][30/38]	Time 0.185 (0.209)	Data 0.000 (0.018)	Loss 0.0147 (0.0239)	
+Number of proper clusters: 102
+Epoch: [450][10/37]	Time 0.208 (0.258)	Data 0.000 (0.053)	Loss 0.0093 (0.0055)	
+Epoch: [450][20/37]	Time 0.190 (0.228)	Data 0.000 (0.028)	Loss 0.0394 (0.0097)	
+Epoch: [450][30/37]	Time 0.193 (0.216)	Data 0.000 (0.019)	Loss 0.0290 (0.0107)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.089)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.125)
+Test: 	Time 3.134	Prec@1 94.701	Prec@5 99.509
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.089)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.000)
+Test: 	Time 3.009	Prec@1 76.840	Prec@5 93.916
+Number of proper clusters: 102
+Epoch: [451][10/38]	Time 0.188 (0.250)	Data 0.000 (0.063)	Loss 0.0025 (0.0220)	
+Epoch: [451][20/38]	Time 0.186 (0.221)	Data 0.000 (0.033)	Loss 0.0005 (0.0143)	
+Epoch: [451][30/38]	Time 0.187 (0.210)	Data 0.000 (0.023)	Loss 0.0051 (0.0146)	
+Number of proper clusters: 102
+Epoch: [452][10/38]	Time 0.188 (0.243)	Data 0.000 (0.054)	Loss 0.0056 (0.0051)	
+Epoch: [452][20/38]	Time 0.191 (0.218)	Data 0.000 (0.029)	Loss 0.0000 (0.0086)	
+Epoch: [452][30/38]	Time 0.192 (0.208)	Data 0.000 (0.019)	Loss 0.0000 (0.0126)	
+Number of proper clusters: 102
+Epoch: [453][10/38]	Time 0.189 (0.252)	Data 0.000 (0.061)	Loss 0.0122 (0.0094)	
+Epoch: [453][20/38]	Time 0.190 (0.222)	Data 0.001 (0.032)	Loss 0.0647 (0.0152)	
+Epoch: [453][30/38]	Time 0.187 (0.211)	Data 0.000 (0.022)	Loss 0.0224 (0.0142)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.228)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.926)
+Test: 	Time 2.935	Prec@1 94.308	Prec@5 99.019
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.068)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.133)
+Test: 	Time 3.144	Prec@1 77.233	Prec@5 94.504
+Number of proper clusters: 102
+Epoch: [454][10/37]	Time 0.189 (0.265)	Data 0.001 (0.077)	Loss 0.0015 (0.0118)	
+Epoch: [454][20/37]	Time 0.189 (0.228)	Data 0.000 (0.040)	Loss 0.0014 (0.0136)	
+Epoch: [454][30/37]	Time 0.187 (0.215)	Data 0.000 (0.027)	Loss 0.0030 (0.0199)	
+Number of proper clusters: 102
+Epoch: [455][10/38]	Time 0.188 (0.246)	Data 0.000 (0.056)	Loss 0.0000 (0.0069)	
+Epoch: [455][20/38]	Time 0.189 (0.219)	Data 0.000 (0.029)	Loss 0.0017 (0.0089)	
+Epoch: [455][30/38]	Time 0.195 (0.209)	Data 0.000 (0.020)	Loss 0.0000 (0.0095)	
+Number of proper clusters: 102
+Epoch: [456][10/37]	Time 0.188 (0.261)	Data 0.000 (0.064)	Loss 0.2324 (0.0381)	
+Epoch: [456][20/37]	Time 0.187 (0.226)	Data 0.000 (0.034)	Loss 0.0010 (0.0235)	
+Epoch: [456][30/37]	Time 0.185 (0.214)	Data 0.000 (0.023)	Loss 0.0102 (0.0193)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.204)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.877)
+Test: 	Time 2.886	Prec@1 94.799	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.099)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.445)
+Test: 	Time 3.455	Prec@1 77.134	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [457][10/38]	Time 0.188 (0.241)	Data 0.000 (0.053)	Loss 0.0071 (0.0229)	
+Epoch: [457][20/38]	Time 0.188 (0.216)	Data 0.000 (0.028)	Loss 0.0065 (0.0170)	
+Epoch: [457][30/38]	Time 0.203 (0.212)	Data 0.000 (0.019)	Loss 0.0156 (0.0146)	
+Number of proper clusters: 102
+Epoch: [458][10/38]	Time 0.190 (0.259)	Data 0.000 (0.066)	Loss 0.0057 (0.0076)	
+Epoch: [458][20/38]	Time 0.187 (0.227)	Data 0.001 (0.035)	Loss 0.0000 (0.0121)	
+Epoch: [458][30/38]	Time 0.186 (0.214)	Data 0.000 (0.024)	Loss 0.0007 (0.0113)	
+Number of proper clusters: 102
+Epoch: [459][10/37]	Time 0.210 (0.271)	Data 0.000 (0.064)	Loss 0.0010 (0.0117)	
+Epoch: [459][20/37]	Time 0.207 (0.240)	Data 0.001 (0.034)	Loss 0.0848 (0.0170)	
+Epoch: [459][30/37]	Time 0.206 (0.228)	Data 0.000 (0.023)	Loss 0.0135 (0.0172)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.146)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.463)
+Test: 	Time 3.472	Prec@1 95.486	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.234)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.922)
+Test: 	Time 2.933	Prec@1 78.705	Prec@5 94.701
+Number of proper clusters: 102
+Epoch: [460][10/37]	Time 0.186 (0.244)	Data 0.000 (0.057)	Loss 0.0084 (0.0082)	
+Epoch: [460][20/37]	Time 0.186 (0.217)	Data 0.000 (0.030)	Loss 0.0200 (0.0099)	
+Epoch: [460][30/37]	Time 0.186 (0.207)	Data 0.000 (0.020)	Loss 0.0072 (0.0096)	
+Number of proper clusters: 102
+Epoch: [461][10/38]	Time 0.198 (0.286)	Data 0.000 (0.078)	Loss 0.0161 (0.0055)	
+Epoch: [461][20/38]	Time 0.194 (0.242)	Data 0.000 (0.041)	Loss 0.0340 (0.0073)	
+Epoch: [461][30/38]	Time 0.184 (0.224)	Data 0.000 (0.028)	Loss 0.0000 (0.0100)	
+Number of proper clusters: 102
+Epoch: [462][10/38]	Time 0.187 (0.250)	Data 0.001 (0.052)	Loss 0.0000 (0.0061)	
+Epoch: [462][20/38]	Time 0.187 (0.221)	Data 0.000 (0.028)	Loss 0.0037 (0.0123)	
+Epoch: [462][30/38]	Time 0.188 (0.211)	Data 0.000 (0.019)	Loss 0.0311 (0.0125)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.335)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.277)
+Test: 	Time 3.287	Prec@1 95.388	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.913)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.603)
+Test: 	Time 3.612	Prec@1 79.195	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [463][10/37]	Time 0.186 (0.241)	Data 0.000 (0.054)	Loss 0.0108 (0.0134)	
+Epoch: [463][20/37]	Time 0.187 (0.215)	Data 0.000 (0.029)	Loss 0.0341 (0.0128)	
+Epoch: [463][30/37]	Time 0.185 (0.206)	Data 0.000 (0.019)	Loss 0.0006 (0.0131)	
+Number of proper clusters: 102
+Epoch: [464][10/38]	Time 0.188 (0.258)	Data 0.001 (0.062)	Loss 0.0068 (0.0048)	
+Epoch: [464][20/38]	Time 0.188 (0.225)	Data 0.000 (0.032)	Loss 0.0000 (0.0052)	
+Epoch: [464][30/38]	Time 0.188 (0.213)	Data 0.000 (0.022)	Loss 0.0027 (0.0069)	
+Number of proper clusters: 102
+Epoch: [465][10/38]	Time 0.194 (0.251)	Data 0.000 (0.056)	Loss 0.0017 (0.0253)	
+Epoch: [465][20/38]	Time 0.190 (0.221)	Data 0.000 (0.030)	Loss 0.0000 (0.0255)	
+Epoch: [465][30/38]	Time 0.186 (0.210)	Data 0.000 (0.020)	Loss 0.0185 (0.0206)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.254)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.358)
+Test: 	Time 3.368	Prec@1 95.878	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.373)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.972)
+Test: 	Time 2.981	Prec@1 77.331	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [466][10/38]	Time 0.191 (0.250)	Data 0.000 (0.063)	Loss 0.0092 (0.0128)	
+Epoch: [466][20/38]	Time 0.188 (0.220)	Data 0.000 (0.033)	Loss 0.0500 (0.0173)	
+Epoch: [466][30/38]	Time 0.188 (0.211)	Data 0.000 (0.022)	Loss 0.0148 (0.0160)	
+Number of proper clusters: 102
+Epoch: [467][10/38]	Time 0.187 (0.250)	Data 0.000 (0.060)	Loss 0.0020 (0.0100)	
+Epoch: [467][20/38]	Time 0.193 (0.221)	Data 0.000 (0.032)	Loss 0.0074 (0.0085)	
+Epoch: [467][30/38]	Time 0.186 (0.210)	Data 0.000 (0.022)	Loss 0.0154 (0.0098)	
+Number of proper clusters: 102
+Epoch: [468][10/37]	Time 0.190 (0.253)	Data 0.000 (0.053)	Loss 0.0286 (0.0079)	
+Epoch: [468][20/37]	Time 0.200 (0.227)	Data 0.000 (0.028)	Loss 0.0601 (0.0103)	
+Epoch: [468][30/37]	Time 0.190 (0.215)	Data 0.000 (0.019)	Loss 0.0021 (0.0134)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.239)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.156)
+Test: 	Time 3.168	Prec@1 95.976	Prec@5 99.019
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.198)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.640)
+Test: 	Time 3.651	Prec@1 77.821	Prec@5 94.504
+Number of proper clusters: 102
+Epoch: [469][10/38]	Time 0.187 (0.249)	Data 0.000 (0.062)	Loss 0.0297 (0.0119)	
+Epoch: [469][20/38]	Time 0.191 (0.220)	Data 0.000 (0.033)	Loss 0.0033 (0.0103)	
+Epoch: [469][30/38]	Time 0.186 (0.209)	Data 0.000 (0.022)	Loss 0.0304 (0.0104)	
+Number of proper clusters: 102
+Epoch: [470][10/38]	Time 0.190 (0.257)	Data 0.001 (0.057)	Loss 0.0130 (0.0059)	
+Epoch: [470][20/38]	Time 0.203 (0.234)	Data 0.000 (0.030)	Loss 0.0013 (0.0094)	
+Epoch: [470][30/38]	Time 0.187 (0.220)	Data 0.000 (0.020)	Loss 0.0000 (0.0104)	
+Number of proper clusters: 102
+Epoch: [471][10/38]	Time 0.186 (0.280)	Data 0.000 (0.084)	Loss 0.0169 (0.0102)	
+Epoch: [471][20/38]	Time 0.187 (0.236)	Data 0.000 (0.044)	Loss 0.0301 (0.0134)	
+Epoch: [471][30/38]	Time 0.185 (0.220)	Data 0.000 (0.030)	Loss 0.0000 (0.0107)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.306)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.948)
+Test: 	Time 2.958	Prec@1 94.799	Prec@5 98.332
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.422)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.085)
+Test: 	Time 3.097	Prec@1 78.116	Prec@5 94.210
+Number of proper clusters: 102
+Epoch: [472][10/37]	Time 0.186 (0.251)	Data 0.000 (0.064)	Loss 0.0067 (0.0121)	
+Epoch: [472][20/37]	Time 0.190 (0.223)	Data 0.001 (0.034)	Loss 0.0022 (0.0109)	
+Epoch: [472][30/37]	Time 0.189 (0.212)	Data 0.000 (0.023)	Loss 0.0047 (0.0111)	
+Number of proper clusters: 102
+Epoch: [473][10/38]	Time 0.199 (0.289)	Data 0.000 (0.079)	Loss 0.0015 (0.0130)	
+Epoch: [473][20/38]	Time 0.185 (0.242)	Data 0.000 (0.042)	Loss 0.0032 (0.0114)	
+Epoch: [473][30/38]	Time 0.184 (0.225)	Data 0.000 (0.028)	Loss 0.0104 (0.0125)	
+Number of proper clusters: 102
+Epoch: [474][10/37]	Time 0.186 (0.279)	Data 0.000 (0.080)	Loss 0.0070 (0.0257)	
+Epoch: [474][20/37]	Time 0.187 (0.235)	Data 0.000 (0.042)	Loss 0.0044 (0.0204)	
+Epoch: [474][30/37]	Time 0.188 (0.220)	Data 0.000 (0.029)	Loss 0.0026 (0.0172)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.338)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.318)
+Test: 	Time 3.327	Prec@1 95.093	Prec@5 99.117
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.236)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.042)
+Test: 	Time 3.051	Prec@1 76.938	Prec@5 95.093
+Number of proper clusters: 102
+Epoch: [475][10/38]	Time 0.185 (0.254)	Data 0.000 (0.068)	Loss 0.0446 (0.0165)	
+Epoch: [475][20/38]	Time 0.197 (0.227)	Data 0.000 (0.036)	Loss 0.0024 (0.0141)	
+Epoch: [475][30/38]	Time 0.185 (0.214)	Data 0.000 (0.024)	Loss 0.0051 (0.0153)	
+Number of proper clusters: 102
+Epoch: [476][10/38]	Time 0.188 (0.252)	Data 0.000 (0.055)	Loss 0.0136 (0.0139)	
+Epoch: [476][20/38]	Time 0.184 (0.222)	Data 0.000 (0.029)	Loss 0.0112 (0.0156)	
+Epoch: [476][30/38]	Time 0.187 (0.211)	Data 0.000 (0.020)	Loss 0.0000 (0.0127)	
+Number of proper clusters: 102
+Epoch: [477][10/38]	Time 0.193 (0.270)	Data 0.000 (0.075)	Loss 0.0389 (0.0168)	
+Epoch: [477][20/38]	Time 0.188 (0.231)	Data 0.000 (0.040)	Loss 0.0000 (0.0115)	
+Epoch: [477][30/38]	Time 0.186 (0.217)	Data 0.000 (0.027)	Loss 0.0174 (0.0136)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.558)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.561)
+Test: 	Time 3.572	Prec@1 96.075	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.367)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.178)
+Test: 	Time 3.188	Prec@1 77.036	Prec@5 94.603
+Number of proper clusters: 102
+Epoch: [478][10/37]	Time 0.187 (0.249)	Data 0.000 (0.060)	Loss 0.0232 (0.0236)	
+Epoch: [478][20/37]	Time 0.195 (0.222)	Data 0.000 (0.032)	Loss 0.0270 (0.0194)	
+Epoch: [478][30/37]	Time 0.185 (0.211)	Data 0.000 (0.021)	Loss 0.0101 (0.0157)	
+Number of proper clusters: 102
+Epoch: [479][10/38]	Time 0.208 (0.269)	Data 0.000 (0.058)	Loss 0.0007 (0.0133)	
+Epoch: [479][20/38]	Time 0.189 (0.233)	Data 0.000 (0.031)	Loss 0.0000 (0.0097)	
+Epoch: [479][30/38]	Time 0.186 (0.218)	Data 0.000 (0.021)	Loss 0.0357 (0.0108)	
+Number of proper clusters: 102
+Epoch: [480][10/38]	Time 0.208 (0.299)	Data 0.000 (0.089)	Loss 0.0394 (0.0195)	
+Epoch: [480][20/38]	Time 0.193 (0.248)	Data 0.000 (0.047)	Loss 0.0014 (0.0153)	
+Epoch: [480][30/38]	Time 0.187 (0.228)	Data 0.000 (0.032)	Loss 0.0822 (0.0196)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.150)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.085)
+Test: 	Time 3.094	Prec@1 94.995	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.989)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.931)
+Test: 	Time 2.940	Prec@1 78.116	Prec@5 94.210
+Number of proper clusters: 102
+Epoch: [481][10/38]	Time 0.189 (0.269)	Data 0.000 (0.082)	Loss 0.0064 (0.0182)	
+Epoch: [481][20/38]	Time 0.186 (0.230)	Data 0.000 (0.043)	Loss 0.0575 (0.0170)	
+Epoch: [481][30/38]	Time 0.201 (0.219)	Data 0.000 (0.029)	Loss 0.0025 (0.0216)	
+Number of proper clusters: 102
+Epoch: [482][10/37]	Time 0.187 (0.269)	Data 0.001 (0.071)	Loss 0.0060 (0.0047)	
+Epoch: [482][20/37]	Time 0.189 (0.230)	Data 0.000 (0.037)	Loss 0.0274 (0.0089)	
+Epoch: [482][30/37]	Time 0.212 (0.218)	Data 0.000 (0.025)	Loss 0.0165 (0.0097)	
+Number of proper clusters: 102
+Epoch: [483][10/38]	Time 0.194 (0.239)	Data 0.000 (0.044)	Loss 0.0087 (0.0183)	
+Epoch: [483][20/38]	Time 0.188 (0.215)	Data 0.000 (0.023)	Loss 0.0078 (0.0134)	
+Epoch: [483][30/38]	Time 0.186 (0.206)	Data 0.000 (0.016)	Loss 0.0035 (0.0163)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.933)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.794)
+Test: 	Time 3.804	Prec@1 93.229	Prec@5 98.724
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.493)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.542)
+Test: 	Time 3.553	Prec@1 77.625	Prec@5 94.995
+Number of proper clusters: 102
+Epoch: [484][10/38]	Time 0.192 (0.256)	Data 0.000 (0.067)	Loss 0.0037 (0.0216)	
+Epoch: [484][20/38]	Time 0.186 (0.223)	Data 0.000 (0.035)	Loss 0.0000 (0.0167)	
+Epoch: [484][30/38]	Time 0.185 (0.212)	Data 0.000 (0.024)	Loss 0.0089 (0.0151)	
+Number of proper clusters: 102
+Epoch: [485][10/38]	Time 0.194 (0.270)	Data 0.000 (0.070)	Loss 0.0035 (0.0126)	
+Epoch: [485][20/38]	Time 0.187 (0.231)	Data 0.000 (0.037)	Loss 0.0033 (0.0121)	
+Epoch: [485][30/38]	Time 0.191 (0.218)	Data 0.000 (0.025)	Loss 0.0022 (0.0103)	
+Number of proper clusters: 102
+Epoch: [486][10/38]	Time 0.187 (0.262)	Data 0.000 (0.066)	Loss 0.0235 (0.0088)	
+Epoch: [486][20/38]	Time 0.190 (0.227)	Data 0.000 (0.035)	Loss 0.0024 (0.0088)	
+Epoch: [486][30/38]	Time 0.211 (0.218)	Data 0.000 (0.024)	Loss 0.0116 (0.0081)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.204)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.949)
+Test: 	Time 2.958	Prec@1 95.584	Prec@5 99.117
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.944)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.293)
+Test: 	Time 3.303	Prec@1 78.214	Prec@5 94.799
+Number of proper clusters: 102
+Epoch: [487][10/37]	Time 0.191 (0.245)	Data 0.000 (0.056)	Loss 0.0250 (0.0154)	
+Epoch: [487][20/37]	Time 0.187 (0.218)	Data 0.000 (0.030)	Loss 0.0204 (0.0143)	
+Epoch: [487][30/37]	Time 0.188 (0.208)	Data 0.000 (0.020)	Loss 0.0015 (0.0193)	
+Number of proper clusters: 102
+Epoch: [488][10/38]	Time 0.190 (0.249)	Data 0.000 (0.047)	Loss 0.0231 (0.0167)	
+Epoch: [488][20/38]	Time 0.188 (0.220)	Data 0.000 (0.025)	Loss 0.0101 (0.0121)	
+Epoch: [488][30/38]	Time 0.186 (0.209)	Data 0.000 (0.017)	Loss 0.0213 (0.0126)	
+Number of proper clusters: 102
+Epoch: [489][10/37]	Time 0.187 (0.250)	Data 0.001 (0.061)	Loss 0.0027 (0.0067)	
+Epoch: [489][20/37]	Time 0.215 (0.225)	Data 0.000 (0.032)	Loss 0.0077 (0.0064)	
+Epoch: [489][30/37]	Time 0.209 (0.219)	Data 0.000 (0.022)	Loss 0.0024 (0.0072)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.647)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.393)
+Test: 	Time 3.402	Prec@1 94.603	Prec@5 98.528
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.446)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.996)
+Test: 	Time 3.005	Prec@1 77.821	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [490][10/37]	Time 0.185 (0.255)	Data 0.000 (0.068)	Loss 0.0000 (0.0032)	
+Epoch: [490][20/37]	Time 0.186 (0.222)	Data 0.001 (0.036)	Loss 0.0000 (0.0039)	
+Epoch: [490][30/37]	Time 0.185 (0.211)	Data 0.000 (0.024)	Loss 0.0064 (0.0102)	
+Number of proper clusters: 102
+Epoch: [491][10/37]	Time 0.190 (0.244)	Data 0.000 (0.050)	Loss 0.0021 (0.0134)	
+Epoch: [491][20/37]	Time 0.189 (0.217)	Data 0.000 (0.026)	Loss 0.0028 (0.0109)	
+Epoch: [491][30/37]	Time 0.186 (0.208)	Data 0.000 (0.018)	Loss 0.0328 (0.0120)	
+Number of proper clusters: 102
+Epoch: [492][10/38]	Time 0.188 (0.257)	Data 0.000 (0.070)	Loss 0.0049 (0.0059)	
+Epoch: [492][20/38]	Time 0.189 (0.225)	Data 0.001 (0.037)	Loss 0.0702 (0.0095)	
+Epoch: [492][30/38]	Time 0.189 (0.214)	Data 0.000 (0.025)	Loss 0.0064 (0.0100)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.941)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.486)
+Test: 	Time 3.496	Prec@1 95.289	Prec@5 99.019
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.896)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.215)
+Test: 	Time 3.225	Prec@1 78.606	Prec@5 94.897
+Number of proper clusters: 102
+Epoch: [493][10/38]	Time 0.190 (0.246)	Data 0.000 (0.057)	Loss 0.0844 (0.0243)	
+Epoch: [493][20/38]	Time 0.188 (0.218)	Data 0.000 (0.030)	Loss 0.0075 (0.0271)	
+Epoch: [493][30/38]	Time 0.186 (0.208)	Data 0.000 (0.020)	Loss 0.0020 (0.0245)	
+Number of proper clusters: 102
+Epoch: [494][10/37]	Time 0.190 (0.242)	Data 0.000 (0.046)	Loss 0.0093 (0.0245)	
+Epoch: [494][20/37]	Time 0.190 (0.217)	Data 0.000 (0.024)	Loss 0.0707 (0.0225)	
+Epoch: [494][30/37]	Time 0.187 (0.208)	Data 0.000 (0.017)	Loss 0.0021 (0.0187)	
+Number of proper clusters: 102
+Epoch: [495][10/38]	Time 0.191 (0.256)	Data 0.000 (0.062)	Loss 0.0219 (0.0270)	
+Epoch: [495][20/38]	Time 0.187 (0.224)	Data 0.000 (0.033)	Loss 0.0176 (0.0210)	
+Epoch: [495][30/38]	Time 0.198 (0.214)	Data 0.000 (0.022)	Loss 0.0047 (0.0182)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.933)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.036)
+Test: 	Time 3.045	Prec@1 95.093	Prec@5 99.215
+Evaluation: Forward Embedding Calculation (Time Elapsed 3.188)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.917)
+Test: 	Time 2.926	Prec@1 75.466	Prec@5 94.308
+Number of proper clusters: 102
+Epoch: [496][10/38]	Time 0.187 (0.237)	Data 0.000 (0.051)	Loss 0.0000 (0.0114)	
+Epoch: [496][20/38]	Time 0.187 (0.214)	Data 0.000 (0.027)	Loss 0.0000 (0.0126)	
+Epoch: [496][30/38]	Time 0.186 (0.206)	Data 0.000 (0.018)	Loss 0.0007 (0.0162)	
+Number of proper clusters: 102
+Epoch: [497][10/38]	Time 0.189 (0.256)	Data 0.000 (0.061)	Loss 0.0242 (0.0106)	
+Epoch: [497][20/38]	Time 0.191 (0.224)	Data 0.000 (0.032)	Loss 0.0040 (0.0242)	
+Epoch: [497][30/38]	Time 0.187 (0.212)	Data 0.000 (0.022)	Loss 0.0000 (0.0192)	
+Number of proper clusters: 102
+Epoch: [498][10/38]	Time 0.190 (0.243)	Data 0.000 (0.052)	Loss 0.0327 (0.0110)	
+Epoch: [498][20/38]	Time 0.186 (0.217)	Data 0.000 (0.027)	Loss 0.0039 (0.0150)	
+Epoch: [498][30/38]	Time 0.212 (0.210)	Data 0.000 (0.019)	Loss 0.0000 (0.0129)	
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.928)
+Evaluation: Softmax Probability Calculation (Time Elapsed 2.968)
+Test: 	Time 2.977	Prec@1 94.701	Prec@5 98.921
+Evaluation: Forward Embedding Calculation (Time Elapsed 2.851)
+Evaluation: Softmax Probability Calculation (Time Elapsed 3.297)
+Test: 	Time 3.309	Prec@1 76.644	Prec@5 94.014
+Number of proper clusters: 102
+Epoch: [499][10/38]	Time 0.187 (0.243)	Data 0.000 (0.055)	Loss 0.0008 (0.0108)	
+Epoch: [499][20/38]	Time 0.187 (0.217)	Data 0.000 (0.029)	Loss 0.0060 (0.0098)	
+Epoch: [499][30/38]	Time 0.184 (0.207)	Data 0.000 (0.020)	Loss 0.0120 (0.0096)	
+Done

@@ -1,8 +1,8 @@
-#PBS -N magnet_loss_train_flowers      # Name of the job
+#PBS -N softmax_loss_train_Flowers      # Name of the job
 #PBS -j oe                      # Join output and error in single file
 #PBS -l walltime=3:00:00:00     # walltime requested
 #PBS -l mem=16GB                # memory requested
-#PBS -l nodes=1:pascal:ppn=16:gpus=1    # nodes requested: Processor per node: gpus requested
+#PBS -l nodes=1:pascal:ppn=16:gpus=2   # nodes requested: Processor per node: gpus requested
 #PBS -V                         # Pass current environment variables to the script
 #PBS -S /bin/bash               # Use /bin/bash as the shell
 ##########################################
@@ -32,6 +32,6 @@ echo ------------------------------------------------------
 cd /z/home/mbanani/projects/pytorch-magnet-loss
 source set_env.sh
 
-python3 train_triplet.py --loss magnet --GAP 0.7 --lr 0.02 --dataset oxford  --L 128 --embedding_size 128 --num_epochs 500 --NUM_BATCHES 300 --experiment_name magnet_pets_triplet 
+python3 train_softmax.py --lr 0.005 --dataset flowers --batch_size 128 --experiment_name OxfordFlowers_Softmax --num_epochs 300
 
 echo Done

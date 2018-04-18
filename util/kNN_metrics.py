@@ -131,5 +131,4 @@ class softkNC_metrics(object):
             acc1 += float(self.labels[i] == order[0])
             acc5 += float(self.labels[i] in order[0:5])
 
-
         return 100.0*acc1/float(softmax_probs.shape[0]), 100.0*acc5/float(softmax_probs.shape[0])

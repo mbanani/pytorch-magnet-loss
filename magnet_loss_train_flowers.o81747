@@ -1,0 +1,32 @@
+I got allocated the
+/var/spool/torque/mom_priv/jobs/81747.blindspot.SC: line 15: following: command not found
+gpu: 0
+PBS: qsub is running on focus
+PBS: originating queue is batch
+PBS: executing queue is batch
+PBS: working directory is /z/home/mbanani/projects/pytorch-magnet-loss
+PBS: execution mode is PBS_BATCH
+PBS: job identifich_convAtter is 81747.blindspot
+PBS: job name is magnet_loss_train_flowers
+PBS: node file is /var/spool/torque/aux//81747.blindspot
+PBS: current home directory is /home/mbanani
+PBS: PATH = /z/home/mbanani/PyTorch3/bin:/z/sw/packages/cuda/8.0.61/bin:/z/home/mbanani/sw/miniconda2/bin:/z/sw/bin/:/z/sw/sbin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+------------------------------------------------------
+Namespace(D=4, GAP=0.7, K=1, L=8, M=12, NUM_BATCHES=300, annealing_factor=1.0, dataset='oxford', dist_backend='gloo', dist_url='tcp://224.66.41.62:23456', embedding_size=128, eval_epoch=3, eval_step=1000, evaluate_only=False, evaluate_train=False, experiment_name='magnet_pets_smallGap_0.02LR', log_rate=10, loss='magnet', lr=0.024, model='inception', momentum=0.9, num_epochs=500, optimizer='sgd', resume=None, save_epoch=10, weight_decay=0.0001, workers=7, world_size=1)
+
+Experiment path is :  /z/home/mbanani/projects/pytorch-magnet-loss/experiments/oxford/exp_04_17_23_37_26_oxford_magnet_pets_smallGap_0.02LR
+Traceback (most recent call last):
+  File "train_magnet.py", line 630, in <module>
+    logger      = Logger(log_dir = os.path.join(tensorboard_logdir, log_name))
+  File "/z/home/mbanani/PyTorch3/lib/python3.5/site-packages/tensorboardX/writer.py", line 240, in __init__
+    self.file_writer = FileWriter(logdir=log_dir)
+  File "/z/home/mbanani/PyTorch3/lib/python3.5/site-packages/tensorboardX/writer.py", line 184, in __init__
+    event_writer = EventFileWriter(logdir, max_queue, flush_secs)
+  File "/z/home/mbanani/PyTorch3/lib/python3.5/site-packages/tensorboardX/event_file_writer.py", line 117, in __init__
+    directory_check(self._logdir)
+  File "/z/home/mbanani/PyTorch3/lib/python3.5/site-packages/tensorboardX/event_file_writer.py", line 37, in directory_check
+    os.makedirs(path)
+  File "/z/home/mbanani/PyTorch3/lib/python3.5/os.py", line 241, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/z/home/mbanani/tensorboard_logs/exp_04_17_23_37_26_oxford_magnet_pets_smallGap_0.02LR'
+Done

@@ -66,6 +66,10 @@ class triplet_loss(nn.Module):
                 clusters.append(c)
 
         ########################## CALCULATE THE LOSS #########################
+        instances_1 = []
+        instances_2 = []
+        instances_3 = []
+
         for m in range(0, len(clusters)):
             c = clusters[m]
             for d1 in range(0, len(batch_clusters[c]) - 1):
@@ -78,12 +82,9 @@ class triplet_loss(nn.Module):
                             cN = clusters[mN]
                             for dN in range(0, len(batch_clusters[cN])):
                                 ins_iN  = batch_clusters[cN][dN]
+                                instances_1.append(ins_i1)
+                                instances_2.append(ins_i2)
+                                instances_3.append(ins_iN)
 
-                                loss += ((outputs[ins_i1] - outputs[ins_iN]).norm(p=2) - (outputs[ins_i1] - outputs[ins_i2]).norm(p=2) + self.alpha).clamp(min = 0.0)
-                                num_instances += 1.0
 
-        if num_instances == 0:
-            return loss
-            
-        loss /= num_instances
-        return loss
+        return ((outputs[instances_1] - outputs[instances_2]).norm(p=2, dim = 1) + self.alpha - (outputs[instances_1] - outputs[instances_3]).norm(p=2, dim = 1)).clamp(min = 0.0).mean()

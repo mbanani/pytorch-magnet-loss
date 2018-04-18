@@ -1,0 +1,41 @@
+I got allocated the
+/var/spool/torque/mom_priv/jobs/81672.blindspot.SC: line 15: following: command not found
+gpu: 2
+PBS: qsub is running on focus
+PBS: originating queue is batch
+PBS: executing queue is batch
+PBS: working directory is /z/home/mbanani/projects/pytorch-magnet-loss
+PBS: execution mode is PBS_BATCH
+PBS: job identifich_convAtter is 81672.blindspot
+PBS: job name is magnet_loss_train_MNIST
+PBS: node file is /var/spool/torque/aux//81672.blindspot
+PBS: current home directory is /home/mbanani
+PBS: PATH = /z/home/mbanani/PyTorch3/bin:/z/sw/packages/cuda/8.0.61/bin:/z/home/mbanani/sw/miniconda2/bin:/z/sw/bin/:/z/sw/sbin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+------------------------------------------------------
+Namespace(D=4, GAP=2.43, K=1, L=8, M=12, NUM_BATCHES=300, annealing_factor=1.0, dataset='flowers', dist_backend='gloo', dist_url='tcp://224.66.41.62:23456', embedding_size=128, eval_epoch=3, eval_step=1000, evaluate_only=False, evaluate_train=False, experiment_name='MagnetTest', log_rate=10, loss='magnet', lr=0.024, model='inception', momentum=0.9, num_epochs=100, optimizer='sgd', resume=None, save_epoch=10, weight_decay=0.0001, workers=7, world_size=1)
+
+Experiment path is :  /z/home/mbanani/projects/pytorch-magnet-loss/experiments/flowers/exp_04_17_19_15_06_flowers_MagnetTest
+#############  Read in Database   ##############
+Generating Datasets
+csv file length:  1019
+Dataset loaded in  0.003325939178466797  secs.
+Dataset size:  1019
+csv file length:  1019
+Dataset loaded in  0.002109527587890625  secs.
+Dataset size:  1019
+Generating Data Loaders
+Time taken:  0.0056667327880859375 seconds
+######## Initiate Model and Optimizer   ##############
+Time taken:  6.442989110946655 seconds
+#############  Start Training     ##############
+KNN: Forward Pass Time   4.825
+KNN: Clustering time     0.654
+Number of proper clusters: 102
+Epoch: [0][10/16]	Time 0.703 (0.781)	Data 0.000 (0.084)	Loss 4.3826 (4.4136)	
+Traceback (most recent call last):
+  File "train_magnet.py", line 619, in <module>
+    main(args)
+  File "train_magnet.py", line 134, in main
+    logger.add_scalar(args.dataset + "/STDEV " + datasplit,   stdev,   epoch * total_step)
+NameError: name 'datasplit' is not defined
+Done

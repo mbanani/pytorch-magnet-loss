@@ -1,0 +1,940 @@
+I got allocated the
+/var/spool/torque/mom_priv/jobs/81656.blindspot.SC: line 15: following: command not found
+gpu: 1
+gpu: 0
+PBS: qsub is running on focus
+PBS: originating queue is batch
+PBS: executing queue is batch
+PBS: working directory is /z/home/mbanani/projects/pytorch-magnet-loss
+PBS: execution mode is PBS_BATCH
+PBS: job identifich_convAtter is 81656.blindspot
+PBS: job name is softmax_loss_train_Pet
+PBS: node file is /var/spool/torque/aux//81656.blindspot
+PBS: current home directory is /home/mbanani
+PBS: PATH = /z/home/mbanani/PyTorch3/bin:/z/sw/packages/cuda/8.0.61/bin:/z/home/mbanani/sw/miniconda2/bin:/z/sw/bin/:/z/sw/sbin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+------------------------------------------------------
+Namespace(annealing_factor=1.0, batch_size=128, dataset='oxford', dist_backend='gloo', dist_url='tcp://224.66.41.62:23456', embedding_size=512, eval_epoch=3, eval_step=1000, evaluate_only=False, evaluate_train=False, experiment_name='OxfordPet_Softmax', log_rate=10, loss='softmax', lr=0.001, model='inception', momentum=0.9, num_epochs=300, optimizer='sgd', resume=None, save_epoch=10, weight_decay=0.0001, workers=7, world_size=1)
+
+Experiment path is :  /z/home/mbanani/projects/pytorch-magnet-loss/experiments/oxford/exp_04_17_15_21_19_oxford_OxfordPet_Softmax
+#############  Read in Database   ##############
+Generating Datasets
+csv file length:  3680
+Dataset loaded in  0.14779925346374512  secs.
+Dataset size:  3680
+NOTE: Bounding box information not provided due to missing xml files. Full images shown not object bounded (bbox cropping in pil_loader is commented).
+csv file length:  3669
+Dataset loaded in  0.04577231407165527  secs.
+Dataset size:  3669
+NOTE: Bounding box information not provided due to missing xml files. Full images shown not object bounded (bbox cropping in pil_loader is commented).
+Generating Data Loaders
+Time taken:  0.20150160789489746 seconds
+######## Initiate Model and Optimizer   ##############
+Time taken:  4.769600868225098 seconds
+#############  Start Training     ##############
+Epoch: [0][10/29]	Time 0.670 (1.336)	Data 0.000 (0.295)	Loss 4.1737 (4.3583)	Prec@1 1.562 (2.486)	Prec@5 10.156 (11.790)	
+Epoch: [0][20/29]	Time 0.524 (0.950)	Data 0.000 (0.155)	Loss 4.0989 (4.2892)	Prec@1 3.125 (2.604)	Prec@5 17.188 (12.388)	
+Evaluation: valid 	Time 8.155	Prec@1 3.107	Prec@5 12.919	
+Epoch: [1][10/29]	Time 0.525 (0.721)	Data 0.000 (0.173)	Loss 3.9916 (4.1111)	Prec@1 3.125 (3.196)	Prec@5 17.969 (15.057)	
+Epoch: [1][20/29]	Time 0.528 (0.632)	Data 0.000 (0.091)	Loss 3.9685 (4.0477)	Prec@1 3.906 (3.906)	Prec@5 17.969 (15.811)	
+Evaluation: valid 	Time 7.006	Prec@1 4.906	Prec@5 19.324	
+Epoch: [2][10/29]	Time 0.534 (0.731)	Data 0.000 (0.187)	Loss 3.9642 (3.8958)	Prec@1 2.344 (5.256)	Prec@5 16.406 (20.241)	
+Epoch: [2][20/29]	Time 0.537 (0.639)	Data 0.000 (0.098)	Loss 3.9372 (3.8996)	Prec@1 3.125 (4.650)	Prec@5 17.188 (18.936)	
+Evaluation: valid 	Time 7.476	Prec@1 7.959	Prec@5 28.318	
+Epoch: [3][10/29]	Time 0.580 (0.744)	Data 0.000 (0.182)	Loss 3.8180 (3.7347)	Prec@1 4.688 (6.392)	Prec@5 21.875 (23.295)	
+Epoch: [3][20/29]	Time 0.577 (0.653)	Data 0.000 (0.096)	Loss 3.7607 (3.7394)	Prec@1 3.906 (5.208)	Prec@5 23.438 (22.582)	
+Evaluation: valid 	Time 7.298	Prec@1 12.183	Prec@5 37.776	
+Epoch: [4][10/29]	Time 0.546 (0.754)	Data 0.000 (0.173)	Loss 3.6747 (3.6770)	Prec@1 3.125 (5.824)	Prec@5 24.219 (25.000)	
+Epoch: [4][20/29]	Time 0.576 (0.662)	Data 0.000 (0.090)	Loss 3.5870 (3.6357)	Prec@1 7.812 (6.138)	Prec@5 23.438 (25.558)	
+Evaluation: valid 	Time 7.390	Prec@1 16.789	Prec@5 46.416	
+Epoch: [5][10/29]	Time 0.588 (0.745)	Data 0.001 (0.177)	Loss 3.5274 (3.4822)	Prec@1 7.031 (8.097)	Prec@5 28.906 (30.824)	
+Epoch: [5][20/29]	Time 0.597 (0.663)	Data 0.000 (0.093)	Loss 3.2173 (3.4297)	Prec@1 13.281 (9.115)	Prec@5 41.406 (32.589)	
+Evaluation: valid 	Time 7.293	Prec@1 21.041	Prec@5 55.138	
+Epoch: [6][10/29]	Time 0.585 (0.765)	Data 0.000 (0.189)	Loss 3.3288 (3.3728)	Prec@1 10.156 (12.571)	Prec@5 35.938 (34.801)	
+Epoch: [6][20/29]	Time 0.575 (0.664)	Data 0.000 (0.099)	Loss 3.3386 (3.3390)	Prec@1 12.500 (12.128)	Prec@5 35.938 (36.682)	
+Evaluation: valid 	Time 7.221	Prec@1 25.947	Prec@5 62.224	
+Epoch: [7][10/29]	Time 0.586 (0.750)	Data 0.000 (0.179)	Loss 3.2668 (3.2130)	Prec@1 6.250 (13.991)	Prec@5 38.281 (41.335)	
+Epoch: [7][20/29]	Time 0.546 (0.658)	Data 0.000 (0.094)	Loss 3.1059 (3.2062)	Prec@1 15.625 (13.765)	Prec@5 42.969 (41.592)	
+Evaluation: valid 	Time 7.397	Prec@1 30.581	Prec@5 67.866	
+Epoch: [8][10/29]	Time 0.541 (0.744)	Data 0.000 (0.170)	Loss 3.2597 (3.1384)	Prec@1 14.844 (15.767)	Prec@5 38.281 (43.537)	
+Epoch: [8][20/29]	Time 0.534 (0.654)	Data 0.000 (0.089)	Loss 3.0039 (3.1186)	Prec@1 18.750 (16.183)	Prec@5 49.219 (43.973)	
+Evaluation: valid 	Time 7.045	Prec@1 35.078	Prec@5 72.036	
+Epoch: [9][10/29]	Time 0.538 (0.713)	Data 0.001 (0.151)	Loss 3.0682 (3.0070)	Prec@1 16.406 (18.892)	Prec@5 45.312 (48.935)	
+Epoch: [9][20/29]	Time 0.537 (0.648)	Data 0.000 (0.079)	Loss 3.0087 (2.9884)	Prec@1 17.969 (19.122)	Prec@5 52.344 (49.182)	
+Evaluation: valid 	Time 7.411	Prec@1 38.975	Prec@5 76.451	
+Epoch: [10][10/29]	Time 0.583 (0.730)	Data 0.000 (0.165)	Loss 2.7789 (2.8975)	Prec@1 25.781 (21.591)	Prec@5 51.562 (52.202)	
+Epoch: [10][20/29]	Time 0.560 (0.647)	Data 0.000 (0.086)	Loss 2.8496 (2.8749)	Prec@1 21.875 (21.540)	Prec@5 54.688 (53.609)	
+Evaluation: valid 	Time 7.399	Prec@1 42.900	Prec@5 79.477	
+Epoch: [11][10/29]	Time 0.545 (0.758)	Data 0.000 (0.189)	Loss 2.7685 (2.7554)	Prec@1 25.000 (25.497)	Prec@5 54.688 (58.594)	
+Epoch: [11][20/29]	Time 0.537 (0.663)	Data 0.000 (0.099)	Loss 2.7372 (2.7777)	Prec@1 28.125 (25.335)	Prec@5 58.594 (57.143)	
+Evaluation: valid 	Time 7.221	Prec@1 45.217	Prec@5 81.875	
+Epoch: [12][10/29]	Time 0.552 (0.752)	Data 0.000 (0.175)	Loss 2.5765 (2.7039)	Prec@1 32.031 (27.060)	Prec@5 56.250 (58.949)	
+Epoch: [12][20/29]	Time 0.578 (0.659)	Data 0.000 (0.092)	Loss 2.6462 (2.6745)	Prec@1 26.562 (27.567)	Prec@5 64.062 (60.305)	
+Evaluation: valid 	Time 7.432	Prec@1 48.624	Prec@5 83.974	
+Epoch: [13][10/29]	Time 0.574 (0.758)	Data 0.000 (0.185)	Loss 2.5832 (2.5774)	Prec@1 29.688 (29.972)	Prec@5 64.844 (63.920)	
+Epoch: [13][20/29]	Time 0.538 (0.667)	Data 0.000 (0.097)	Loss 2.6081 (2.5809)	Prec@1 35.938 (29.092)	Prec@5 59.375 (63.616)	
+Evaluation: valid 	Time 7.263	Prec@1 50.531	Prec@5 85.555	
+Epoch: [14][10/29]	Time 0.539 (0.750)	Data 0.000 (0.164)	Loss 2.4423 (2.5074)	Prec@1 31.250 (30.398)	Prec@5 69.531 (65.980)	
+Epoch: [14][20/29]	Time 0.574 (0.663)	Data 0.000 (0.086)	Loss 2.6024 (2.4867)	Prec@1 29.688 (31.138)	Prec@5 64.062 (65.997)	
+Evaluation: valid 	Time 7.325	Prec@1 53.257	Prec@5 86.945	
+Epoch: [15][10/29]	Time 0.584 (0.742)	Data 0.000 (0.177)	Loss 2.3852 (2.4278)	Prec@1 35.156 (33.736)	Prec@5 68.750 (69.105)	
+Epoch: [15][20/29]	Time 0.539 (0.658)	Data 0.000 (0.093)	Loss 2.4691 (2.4155)	Prec@1 31.250 (33.482)	Prec@5 68.750 (69.531)	
+Evaluation: valid 	Time 7.441	Prec@1 54.593	Prec@5 87.844	
+Epoch: [16][10/29]	Time 0.540 (0.736)	Data 0.000 (0.174)	Loss 2.5138 (2.3021)	Prec@1 28.906 (35.653)	Prec@5 66.406 (71.804)	
+Epoch: [16][20/29]	Time 0.547 (0.656)	Data 0.000 (0.091)	Loss 2.3968 (2.3491)	Prec@1 32.812 (34.561)	Prec@5 68.750 (70.499)	
+Evaluation: valid 	Time 7.197	Prec@1 56.201	Prec@5 88.553	
+Epoch: [17][10/29]	Time 0.542 (0.723)	Data 0.000 (0.158)	Loss 2.3388 (2.2902)	Prec@1 39.844 (38.849)	Prec@5 67.969 (72.372)	
+Epoch: [17][20/29]	Time 0.538 (0.651)	Data 0.000 (0.083)	Loss 2.2319 (2.2979)	Prec@1 36.719 (38.281)	Prec@5 76.562 (72.470)	
+Evaluation: valid 	Time 7.300	Prec@1 57.018	Prec@5 89.180	
+Epoch: [18][10/29]	Time 0.543 (0.744)	Data 0.000 (0.167)	Loss 2.1909 (2.2027)	Prec@1 41.406 (39.986)	Prec@5 74.219 (75.071)	
+Epoch: [18][20/29]	Time 0.643 (0.661)	Data 0.000 (0.087)	Loss 2.2369 (2.2011)	Prec@1 35.156 (39.993)	Prec@5 74.219 (74.740)	
+Evaluation: valid 	Time 7.507	Prec@1 58.599	Prec@5 89.997	
+Epoch: [19][10/29]	Time 0.548 (0.752)	Data 0.000 (0.177)	Loss 2.1448 (2.1447)	Prec@1 42.188 (41.122)	Prec@5 75.781 (77.202)	
+Epoch: [19][20/29]	Time 0.585 (0.665)	Data 0.000 (0.093)	Loss 2.1179 (2.1452)	Prec@1 39.844 (41.332)	Prec@5 79.688 (77.567)	
+Evaluation: valid 	Time 7.528	Prec@1 60.071	Prec@5 90.624	
+Epoch: [20][10/29]	Time 0.579 (0.748)	Data 0.001 (0.174)	Loss 1.9775 (2.1017)	Prec@1 50.000 (41.903)	Prec@5 75.781 (76.989)	
+Epoch: [20][20/29]	Time 0.540 (0.660)	Data 0.000 (0.091)	Loss 2.0480 (2.1172)	Prec@1 50.000 (41.518)	Prec@5 75.000 (76.711)	
+Evaluation: valid 	Time 7.280	Prec@1 61.079	Prec@5 91.006	
+Epoch: [21][10/29]	Time 0.586 (0.723)	Data 0.000 (0.156)	Loss 1.9767 (2.0046)	Prec@1 43.750 (46.094)	Prec@5 74.219 (78.764)	
+Epoch: [21][20/29]	Time 0.544 (0.653)	Data 0.000 (0.082)	Loss 2.1138 (2.0319)	Prec@1 41.406 (45.685)	Prec@5 79.688 (78.460)	
+Evaluation: valid 	Time 7.456	Prec@1 62.660	Prec@5 91.633	
+Epoch: [22][10/29]	Time 0.588 (0.748)	Data 0.000 (0.178)	Loss 1.8464 (1.9757)	Prec@1 50.000 (45.384)	Prec@5 79.688 (79.119)	
+Epoch: [22][20/29]	Time 0.534 (0.656)	Data 0.000 (0.094)	Loss 1.8895 (1.9836)	Prec@1 46.875 (45.126)	Prec@5 81.250 (78.869)	
+Evaluation: valid 	Time 7.352	Prec@1 62.796	Prec@5 91.551	
+Epoch: [23][10/29]	Time 0.578 (0.731)	Data 0.000 (0.154)	Loss 1.9166 (1.9649)	Prec@1 45.312 (46.733)	Prec@5 79.688 (80.398)	
+Epoch: [23][20/29]	Time 0.534 (0.649)	Data 0.000 (0.081)	Loss 2.0296 (1.9416)	Prec@1 48.438 (47.247)	Prec@5 81.250 (80.618)	
+Evaluation: valid 	Time 7.308	Prec@1 64.050	Prec@5 92.014	
+Epoch: [24][10/29]	Time 0.550 (0.748)	Data 0.000 (0.178)	Loss 1.8093 (1.9357)	Prec@1 53.125 (46.662)	Prec@5 79.688 (78.906)	
+Epoch: [24][20/29]	Time 0.541 (0.669)	Data 0.000 (0.093)	Loss 1.8958 (1.9235)	Prec@1 50.000 (47.135)	Prec@5 81.250 (79.725)	
+Evaluation: valid 	Time 7.283	Prec@1 64.868	Prec@5 92.259	
+Epoch: [25][10/29]	Time 0.577 (0.776)	Data 0.000 (0.192)	Loss 1.8756 (1.8484)	Prec@1 46.875 (48.438)	Prec@5 80.469 (81.463)	
+Epoch: [25][20/29]	Time 0.554 (0.668)	Data 0.000 (0.101)	Loss 1.9491 (1.8433)	Prec@1 48.438 (49.293)	Prec@5 80.469 (81.882)	
+Evaluation: valid 	Time 7.334	Prec@1 66.013	Prec@5 92.750	
+Epoch: [26][10/29]	Time 0.554 (0.751)	Data 0.000 (0.191)	Loss 1.7906 (1.7732)	Prec@1 51.562 (52.557)	Prec@5 79.688 (82.955)	
+Epoch: [26][20/29]	Time 0.547 (0.663)	Data 0.000 (0.100)	Loss 1.7582 (1.7797)	Prec@1 53.125 (51.525)	Prec@5 80.469 (82.552)	
+Evaluation: valid 	Time 7.415	Prec@1 66.503	Prec@5 92.750	
+Epoch: [27][10/29]	Time 0.592 (0.733)	Data 0.000 (0.161)	Loss 1.7750 (1.8022)	Prec@1 46.094 (49.716)	Prec@5 85.156 (82.741)	
+Epoch: [27][20/29]	Time 0.600 (0.657)	Data 0.000 (0.084)	Loss 1.7155 (1.7740)	Prec@1 47.656 (50.930)	Prec@5 85.156 (83.147)	
+Evaluation: valid 	Time 7.606	Prec@1 66.476	Prec@5 92.886	
+Epoch: [28][10/29]	Time 0.581 (0.742)	Data 0.001 (0.180)	Loss 1.6759 (1.7398)	Prec@1 50.781 (51.776)	Prec@5 88.281 (83.665)	
+Epoch: [28][20/29]	Time 0.576 (0.660)	Data 0.000 (0.094)	Loss 1.7332 (1.7509)	Prec@1 53.906 (51.562)	Prec@5 85.156 (83.371)	
+Evaluation: valid 	Time 7.156	Prec@1 67.403	Prec@5 93.241	
+Epoch: [29][10/29]	Time 0.595 (0.766)	Data 0.001 (0.189)	Loss 1.6431 (1.6683)	Prec@1 50.781 (52.841)	Prec@5 85.156 (85.582)	
+Epoch: [29][20/29]	Time 0.641 (0.669)	Data 0.000 (0.099)	Loss 1.7223 (1.6837)	Prec@1 55.469 (54.018)	Prec@5 86.719 (85.826)	
+Evaluation: valid 	Time 7.403	Prec@1 67.702	Prec@5 93.159	
+Epoch: [30][10/29]	Time 0.536 (0.762)	Data 0.000 (0.180)	Loss 1.7514 (1.6850)	Prec@1 52.344 (52.841)	Prec@5 83.594 (86.364)	
+Epoch: [30][20/29]	Time 0.534 (0.663)	Data 0.000 (0.094)	Loss 1.5143 (1.6849)	Prec@1 53.906 (52.641)	Prec@5 93.750 (85.714)	
+Evaluation: valid 	Time 7.073	Prec@1 67.893	Prec@5 93.377	
+Epoch: [31][10/29]	Time 0.541 (0.753)	Data 0.000 (0.185)	Loss 1.7295 (1.6645)	Prec@1 52.344 (53.480)	Prec@5 83.594 (85.653)	
+Epoch: [31][20/29]	Time 0.544 (0.665)	Data 0.000 (0.097)	Loss 1.8139 (1.6667)	Prec@1 51.562 (53.795)	Prec@5 80.469 (85.045)	
+Evaluation: valid 	Time 7.296	Prec@1 68.575	Prec@5 93.622	
+Epoch: [32][10/29]	Time 0.541 (0.752)	Data 0.000 (0.183)	Loss 1.5778 (1.6261)	Prec@1 54.688 (53.977)	Prec@5 89.062 (85.511)	
+Epoch: [32][20/29]	Time 0.579 (0.670)	Data 0.000 (0.096)	Loss 1.6587 (1.6017)	Prec@1 47.656 (55.134)	Prec@5 87.500 (86.198)	
+Evaluation: valid 	Time 7.369	Prec@1 68.684	Prec@5 93.813	
+Epoch: [33][10/29]	Time 0.535 (0.730)	Data 0.001 (0.169)	Loss 1.6978 (1.6127)	Prec@1 50.000 (53.693)	Prec@5 85.938 (84.872)	
+Epoch: [33][20/29]	Time 0.537 (0.649)	Data 0.000 (0.089)	Loss 1.5687 (1.5901)	Prec@1 50.781 (55.060)	Prec@5 86.719 (85.789)	
+Evaluation: valid 	Time 12.642	Prec@1 69.310	Prec@5 94.004	
+Epoch: [34][10/29]	Time 0.588 (0.747)	Data 0.000 (0.173)	Loss 1.5140 (1.5298)	Prec@1 56.250 (56.605)	Prec@5 88.281 (86.861)	
+Epoch: [34][20/29]	Time 0.588 (0.666)	Data 0.000 (0.091)	Loss 1.5727 (1.5249)	Prec@1 58.594 (57.515)	Prec@5 85.938 (86.607)	
+Evaluation: valid 	Time 7.700	Prec@1 69.610	Prec@5 94.167	
+Epoch: [35][10/29]	Time 0.540 (0.764)	Data 0.000 (0.206)	Loss 1.5250 (1.5298)	Prec@1 56.250 (58.310)	Prec@5 87.500 (86.293)	
+Epoch: [35][20/29]	Time 0.551 (0.670)	Data 0.000 (0.108)	Loss 1.5456 (1.5367)	Prec@1 57.812 (57.440)	Prec@5 89.844 (86.607)	
+Evaluation: valid 	Time 9.001	Prec@1 70.046	Prec@5 94.358	
+Epoch: [36][10/29]	Time 0.584 (0.748)	Data 0.000 (0.172)	Loss 1.5942 (1.5127)	Prec@1 60.156 (57.884)	Prec@5 82.812 (86.932)	
+Epoch: [36][20/29]	Time 0.573 (0.655)	Data 0.000 (0.090)	Loss 1.3918 (1.5039)	Prec@1 59.375 (57.589)	Prec@5 90.625 (87.686)	
+Evaluation: valid 	Time 10.475	Prec@1 70.428	Prec@5 94.522	
+Epoch: [37][10/29]	Time 0.536 (0.876)	Data 0.000 (0.318)	Loss 1.3938 (1.5029)	Prec@1 58.594 (56.889)	Prec@5 88.281 (86.364)	
+Epoch: [37][20/29]	Time 0.560 (0.727)	Data 0.000 (0.167)	Loss 1.5954 (1.4949)	Prec@1 52.344 (57.254)	Prec@5 84.375 (86.756)	
+Evaluation: valid 	Time 16.160	Prec@1 70.973	Prec@5 94.658	
+Epoch: [38][10/29]	Time 0.535 (0.784)	Data 0.000 (0.239)	Loss 1.5404 (1.4747)	Prec@1 55.469 (57.812)	Prec@5 85.156 (86.861)	
+Epoch: [38][20/29]	Time 0.574 (0.681)	Data 0.000 (0.125)	Loss 1.4211 (1.4709)	Prec@1 64.062 (57.924)	Prec@5 85.938 (86.905)	
+Evaluation: valid 	Time 11.544	Prec@1 71.246	Prec@5 94.740	
+Epoch: [39][10/29]	Time 0.550 (0.764)	Data 0.000 (0.207)	Loss 1.4619 (1.3922)	Prec@1 57.031 (60.582)	Prec@5 87.500 (88.778)	
+Epoch: [39][20/29]	Time 0.553 (0.668)	Data 0.000 (0.109)	Loss 1.3866 (1.4110)	Prec@1 63.281 (59.933)	Prec@5 84.375 (88.430)	
+Evaluation: valid 	Time 14.320	Prec@1 71.082	Prec@5 94.740	
+Epoch: [40][10/29]	Time 0.551 (0.881)	Data 0.000 (0.328)	Loss 1.2100 (1.3478)	Prec@1 67.188 (61.719)	Prec@5 90.625 (89.347)	
+Epoch: [40][20/29]	Time 0.585 (0.728)	Data 0.000 (0.172)	Loss 1.4922 (1.3770)	Prec@1 57.812 (60.789)	Prec@5 87.500 (89.435)	
+Evaluation: valid 	Time 10.294	Prec@1 72.472	Prec@5 94.903	
+Epoch: [41][10/29]	Time 0.544 (0.871)	Data 0.000 (0.313)	Loss 1.2514 (1.3848)	Prec@1 61.719 (61.293)	Prec@5 89.062 (87.997)	
+Epoch: [41][20/29]	Time 0.588 (0.727)	Data 0.000 (0.164)	Loss 1.7187 (1.4199)	Prec@1 50.000 (59.487)	Prec@5 82.812 (87.909)	
+Evaluation: valid 	Time 14.347	Prec@1 72.200	Prec@5 94.958	
+Epoch: [42][10/29]	Time 0.539 (0.918)	Data 0.000 (0.353)	Loss 1.2924 (1.3758)	Prec@1 60.938 (59.730)	Prec@5 89.844 (88.991)	
+Epoch: [42][20/29]	Time 0.532 (0.746)	Data 0.000 (0.185)	Loss 1.4866 (1.3748)	Prec@1 55.469 (60.119)	Prec@5 88.281 (88.914)	
+Evaluation: valid 	Time 11.173	Prec@1 72.772	Prec@5 95.040	
+Epoch: [43][10/29]	Time 0.597 (0.960)	Data 0.000 (0.387)	Loss 1.2253 (1.3710)	Prec@1 65.625 (60.369)	Prec@5 93.750 (89.276)	
+Epoch: [43][20/29]	Time 0.588 (0.774)	Data 0.000 (0.203)	Loss 1.4244 (1.3632)	Prec@1 58.594 (60.528)	Prec@5 89.062 (89.509)	
+Evaluation: valid 	Time 15.855	Prec@1 73.371	Prec@5 95.339	
+Epoch: [44][10/29]	Time 0.534 (0.964)	Data 0.000 (0.408)	Loss 1.2473 (1.3136)	Prec@1 63.281 (61.151)	Prec@5 89.844 (90.412)	
+Epoch: [44][20/29]	Time 0.537 (0.774)	Data 0.000 (0.214)	Loss 1.4568 (1.3591)	Prec@1 57.812 (59.859)	Prec@5 85.938 (89.769)	
+Evaluation: valid 	Time 12.646	Prec@1 72.908	Prec@5 95.149	
+Epoch: [45][10/29]	Time 0.533 (0.930)	Data 0.000 (0.372)	Loss 1.1593 (1.3088)	Prec@1 64.062 (62.855)	Prec@5 91.406 (90.341)	
+Epoch: [45][20/29]	Time 0.587 (0.758)	Data 0.000 (0.195)	Loss 1.5112 (1.3249)	Prec@1 56.250 (62.314)	Prec@5 88.281 (89.881)	
+Evaluation: valid 	Time 17.128	Prec@1 72.826	Prec@5 95.421	
+Epoch: [46][10/29]	Time 0.569 (0.885)	Data 0.000 (0.325)	Loss 1.1448 (1.2464)	Prec@1 68.750 (65.128)	Prec@5 89.844 (90.980)	
+Epoch: [46][20/29]	Time 0.590 (0.732)	Data 0.000 (0.170)	Loss 1.3780 (1.2732)	Prec@1 58.594 (63.504)	Prec@5 85.938 (90.216)	
+Evaluation: valid 	Time 12.365	Prec@1 73.153	Prec@5 95.448	
+Epoch: [47][10/29]	Time 0.650 (1.042)	Data 0.000 (0.480)	Loss 1.3922 (1.2548)	Prec@1 61.719 (65.270)	Prec@5 87.500 (91.406)	
+Epoch: [47][20/29]	Time 0.577 (0.816)	Data 0.000 (0.252)	Loss 1.2631 (1.2805)	Prec@1 59.375 (64.062)	Prec@5 92.969 (90.216)	
+Evaluation: valid 	Time 19.017	Prec@1 73.290	Prec@5 95.394	
+Epoch: [48][10/29]	Time 0.580 (0.895)	Data 0.000 (0.327)	Loss 1.2762 (1.3177)	Prec@1 61.719 (62.216)	Prec@5 88.281 (89.347)	
+Epoch: [48][20/29]	Time 0.538 (0.734)	Data 0.000 (0.171)	Loss 1.1659 (1.2840)	Prec@1 68.750 (63.356)	Prec@5 92.969 (90.253)	
+Evaluation: valid 	Time 14.522	Prec@1 73.617	Prec@5 95.339	
+Epoch: [49][10/29]	Time 0.542 (0.947)	Data 0.000 (0.377)	Loss 1.0123 (1.2444)	Prec@1 74.219 (63.494)	Prec@5 95.312 (90.980)	
+Epoch: [49][20/29]	Time 0.563 (0.764)	Data 0.000 (0.198)	Loss 1.1400 (1.2577)	Prec@1 64.844 (62.760)	Prec@5 93.750 (90.625)	
+Evaluation: valid 	Time 19.114	Prec@1 73.562	Prec@5 95.557	
+Epoch: [50][10/29]	Time 0.580 (0.943)	Data 0.000 (0.382)	Loss 1.1853 (1.1569)	Prec@1 68.750 (68.182)	Prec@5 92.969 (92.827)	
+Epoch: [50][20/29]	Time 0.571 (0.766)	Data 0.000 (0.200)	Loss 1.2121 (1.2238)	Prec@1 67.969 (65.365)	Prec@5 92.188 (91.481)	
+Evaluation: valid 	Time 14.288	Prec@1 73.971	Prec@5 95.612	
+Epoch: [51][10/29]	Time 0.606 (0.914)	Data 0.000 (0.357)	Loss 1.1540 (1.2350)	Prec@1 68.750 (63.494)	Prec@5 90.625 (90.767)	
+Epoch: [51][20/29]	Time 0.579 (0.752)	Data 0.000 (0.187)	Loss 1.0691 (1.2311)	Prec@1 69.531 (63.467)	Prec@5 92.969 (91.555)	
+Evaluation: valid 	Time 18.672	Prec@1 74.434	Prec@5 95.721	
+Epoch: [52][10/29]	Time 0.541 (0.895)	Data 0.000 (0.338)	Loss 1.2388 (1.2096)	Prec@1 66.406 (66.051)	Prec@5 88.281 (90.412)	
+Epoch: [52][20/29]	Time 0.585 (0.739)	Data 0.000 (0.177)	Loss 1.2329 (1.2205)	Prec@1 61.719 (65.551)	Prec@5 87.500 (90.737)	
+Evaluation: valid 	Time 14.369	Prec@1 74.816	Prec@5 95.939	
+Epoch: [53][10/29]	Time 0.551 (0.974)	Data 0.000 (0.422)	Loss 1.2763 (1.1760)	Prec@1 60.938 (65.128)	Prec@5 91.406 (92.045)	
+Epoch: [53][20/29]	Time 0.580 (0.776)	Data 0.000 (0.221)	Loss 1.0924 (1.1762)	Prec@1 63.281 (64.583)	Prec@5 91.406 (91.927)	
+Evaluation: valid 	Time 18.468	Prec@1 74.871	Prec@5 95.803	
+Epoch: [54][10/29]	Time 0.535 (0.989)	Data 0.000 (0.439)	Loss 1.3400 (1.1827)	Prec@1 65.625 (65.270)	Prec@5 89.062 (90.838)	
+Epoch: [54][20/29]	Time 0.592 (0.784)	Data 0.000 (0.230)	Loss 1.0689 (1.1865)	Prec@1 71.094 (64.807)	Prec@5 89.844 (91.406)	
+Evaluation: valid 	Time 13.486	Prec@1 74.680	Prec@5 95.993	
+Epoch: [55][10/29]	Time 0.571 (0.866)	Data 0.000 (0.295)	Loss 1.1682 (1.1560)	Prec@1 63.281 (66.477)	Prec@5 92.969 (91.832)	
+Epoch: [55][20/29]	Time 0.578 (0.720)	Data 0.000 (0.155)	Loss 1.2904 (1.1926)	Prec@1 62.500 (65.737)	Prec@5 89.844 (91.555)	
+Evaluation: valid 	Time 18.033	Prec@1 74.843	Prec@5 95.857	
+Epoch: [56][10/29]	Time 0.584 (0.983)	Data 0.000 (0.430)	Loss 1.1972 (1.1715)	Prec@1 69.531 (66.051)	Prec@5 92.188 (91.051)	
+Epoch: [56][20/29]	Time 0.577 (0.778)	Data 0.000 (0.225)	Loss 1.1774 (1.1964)	Prec@1 64.062 (65.402)	Prec@5 89.844 (90.439)	
+Evaluation: valid 	Time 11.818	Prec@1 74.625	Prec@5 95.966	
+Epoch: [57][10/29]	Time 0.587 (0.893)	Data 0.000 (0.327)	Loss 1.0294 (1.0901)	Prec@1 71.094 (68.821)	Prec@5 96.094 (93.111)	
+Epoch: [57][20/29]	Time 0.534 (0.732)	Data 0.000 (0.172)	Loss 1.1310 (1.1334)	Prec@1 68.750 (66.146)	Prec@5 89.844 (92.485)	
+Evaluation: valid 	Time 16.616	Prec@1 75.116	Prec@5 96.102	
+Epoch: [58][10/29]	Time 0.580 (0.861)	Data 0.000 (0.306)	Loss 1.3720 (1.2182)	Prec@1 60.156 (63.920)	Prec@5 83.594 (90.980)	
+Epoch: [58][20/29]	Time 0.535 (0.716)	Data 0.000 (0.160)	Loss 1.3533 (1.2115)	Prec@1 57.031 (64.174)	Prec@5 89.844 (90.588)	
+Evaluation: valid 	Time 10.472	Prec@1 74.952	Prec@5 96.130	
+Epoch: [59][10/29]	Time 0.576 (0.815)	Data 0.000 (0.245)	Loss 1.2634 (1.1767)	Prec@1 59.375 (63.920)	Prec@5 92.188 (91.548)	
+Epoch: [59][20/29]	Time 0.576 (0.689)	Data 0.000 (0.129)	Loss 1.0219 (1.1689)	Prec@1 75.000 (65.588)	Prec@5 92.188 (91.481)	
+Evaluation: valid 	Time 13.217	Prec@1 74.871	Prec@5 96.075	
+Epoch: [60][10/29]	Time 0.575 (0.840)	Data 0.000 (0.283)	Loss 1.1599 (1.1487)	Prec@1 65.625 (66.264)	Prec@5 89.062 (92.116)	
+Epoch: [60][20/29]	Time 0.535 (0.707)	Data 0.000 (0.148)	Loss 1.2195 (1.1612)	Prec@1 67.188 (66.555)	Prec@5 89.844 (91.443)	
+Evaluation: valid 	Time 10.829	Prec@1 75.797	Prec@5 96.239	
+Epoch: [61][10/29]	Time 0.574 (0.898)	Data 0.000 (0.334)	Loss 1.2824 (1.1415)	Prec@1 60.156 (66.690)	Prec@5 91.406 (91.406)	
+Epoch: [61][20/29]	Time 0.574 (0.736)	Data 0.000 (0.175)	Loss 1.1957 (1.1452)	Prec@1 63.281 (66.220)	Prec@5 89.844 (91.443)	
+Evaluation: valid 	Time 14.432	Prec@1 75.361	Prec@5 96.102	
+Epoch: [62][10/29]	Time 0.571 (0.832)	Data 0.000 (0.273)	Loss 1.0841 (1.1152)	Prec@1 68.750 (67.756)	Prec@5 91.406 (91.264)	
+Epoch: [62][20/29]	Time 0.575 (0.701)	Data 0.000 (0.143)	Loss 1.2005 (1.1396)	Prec@1 64.844 (67.374)	Prec@5 89.062 (90.699)	
+Evaluation: valid 	Time 9.927	Prec@1 75.470	Prec@5 96.239	
+Epoch: [63][10/29]	Time 0.539 (0.806)	Data 0.000 (0.238)	Loss 1.1460 (1.1293)	Prec@1 67.188 (66.832)	Prec@5 89.844 (91.548)	
+Epoch: [63][20/29]	Time 0.538 (0.686)	Data 0.000 (0.125)	Loss 1.1565 (1.1152)	Prec@1 66.406 (67.336)	Prec@5 92.188 (91.853)	
+Evaluation: valid 	Time 11.956	Prec@1 75.443	Prec@5 96.239	
+Epoch: [64][10/29]	Time 0.535 (0.815)	Data 0.000 (0.261)	Loss 1.1703 (1.1158)	Prec@1 67.969 (67.259)	Prec@5 89.062 (91.264)	
+Epoch: [64][20/29]	Time 0.558 (0.693)	Data 0.000 (0.137)	Loss 0.9728 (1.1212)	Prec@1 72.656 (66.667)	Prec@5 93.750 (91.406)	
+Evaluation: valid 	Time 9.073	Prec@1 75.961	Prec@5 96.266	
+Epoch: [65][10/29]	Time 0.535 (0.878)	Data 0.000 (0.314)	Loss 1.0022 (1.1319)	Prec@1 69.531 (66.051)	Prec@5 93.750 (91.690)	
+Epoch: [65][20/29]	Time 0.542 (0.726)	Data 0.000 (0.164)	Loss 1.2227 (1.1130)	Prec@1 64.062 (66.815)	Prec@5 92.188 (91.704)	
+Evaluation: valid 	Time 12.453	Prec@1 75.852	Prec@5 96.293	
+Epoch: [66][10/29]	Time 0.535 (0.825)	Data 0.000 (0.260)	Loss 1.0619 (1.0868)	Prec@1 70.312 (68.821)	Prec@5 93.750 (92.330)	
+Epoch: [66][20/29]	Time 0.532 (0.702)	Data 0.000 (0.137)	Loss 1.1232 (1.0984)	Prec@1 64.062 (68.415)	Prec@5 93.750 (92.336)	
+Evaluation: valid 	Time 10.430	Prec@1 76.261	Prec@5 96.375	
+Epoch: [67][10/29]	Time 0.533 (0.853)	Data 0.000 (0.296)	Loss 0.9881 (1.0468)	Prec@1 71.875 (68.963)	Prec@5 92.188 (92.756)	
+Epoch: [67][20/29]	Time 0.533 (0.714)	Data 0.000 (0.155)	Loss 1.0912 (1.0575)	Prec@1 69.531 (68.862)	Prec@5 92.969 (92.708)	
+Evaluation: valid 	Time 12.785	Prec@1 76.015	Prec@5 96.511	
+Epoch: [68][10/29]	Time 0.538 (0.742)	Data 0.001 (0.190)	Loss 1.1552 (1.0676)	Prec@1 66.406 (67.969)	Prec@5 90.625 (92.472)	
+Epoch: [68][20/29]	Time 0.534 (0.657)	Data 0.000 (0.100)	Loss 1.0559 (1.0587)	Prec@1 70.312 (69.494)	Prec@5 92.188 (92.820)	
+Evaluation: valid 	Time 10.301	Prec@1 76.370	Prec@5 96.293	
+Epoch: [69][10/29]	Time 0.578 (0.846)	Data 0.000 (0.279)	Loss 1.0939 (1.0605)	Prec@1 69.531 (68.821)	Prec@5 91.406 (93.111)	
+Epoch: [69][20/29]	Time 0.559 (0.708)	Data 0.000 (0.146)	Loss 1.0416 (1.0705)	Prec@1 67.969 (68.043)	Prec@5 91.406 (92.634)	
+Evaluation: valid 	Time 11.882	Prec@1 76.261	Prec@5 96.430	
+Epoch: [70][10/29]	Time 0.547 (0.796)	Data 0.000 (0.232)	Loss 1.2416 (1.1094)	Prec@1 67.969 (66.122)	Prec@5 89.062 (91.548)	
+Epoch: [70][20/29]	Time 0.545 (0.681)	Data 0.000 (0.122)	Loss 0.9435 (1.0933)	Prec@1 72.656 (67.001)	Prec@5 94.531 (92.039)	
+Evaluation: valid 	Time 10.155	Prec@1 76.533	Prec@5 96.375	
+Epoch: [71][10/29]	Time 0.580 (0.817)	Data 0.001 (0.253)	Loss 0.9252 (1.0226)	Prec@1 74.219 (68.608)	Prec@5 95.312 (93.395)	
+Epoch: [71][20/29]	Time 0.579 (0.698)	Data 0.000 (0.133)	Loss 1.1166 (1.0426)	Prec@1 65.625 (67.969)	Prec@5 93.750 (92.857)	
+Evaluation: valid 	Time 11.524	Prec@1 76.560	Prec@5 96.375	
+Epoch: [72][10/29]	Time 0.674 (0.811)	Data 0.000 (0.236)	Loss 1.1479 (1.0569)	Prec@1 62.500 (68.395)	Prec@5 92.969 (92.685)	
+Epoch: [72][20/29]	Time 0.534 (0.691)	Data 0.000 (0.124)	Loss 0.8922 (1.0737)	Prec@1 74.219 (67.634)	Prec@5 94.531 (92.039)	
+Evaluation: valid 	Time 9.283	Prec@1 76.560	Prec@5 96.457	
+Epoch: [73][10/29]	Time 0.584 (0.806)	Data 0.000 (0.237)	Loss 1.0239 (0.9901)	Prec@1 66.406 (69.957)	Prec@5 93.750 (94.105)	
+Epoch: [73][20/29]	Time 0.575 (0.693)	Data 0.000 (0.124)	Loss 1.0391 (1.0094)	Prec@1 65.625 (70.126)	Prec@5 92.969 (93.676)	
+Evaluation: valid 	Time 12.298	Prec@1 76.751	Prec@5 96.566	
+Epoch: [74][10/29]	Time 0.552 (0.837)	Data 0.000 (0.275)	Loss 0.9148 (1.0527)	Prec@1 70.312 (68.395)	Prec@5 96.875 (92.685)	
+Epoch: [74][20/29]	Time 0.554 (0.707)	Data 0.000 (0.144)	Loss 1.1757 (1.0267)	Prec@1 63.281 (69.531)	Prec@5 89.062 (92.708)	
+Evaluation: valid 	Time 8.159	Prec@1 76.833	Prec@5 96.675	
+Epoch: [75][10/29]	Time 0.578 (0.759)	Data 0.000 (0.186)	Loss 0.8676 (0.9976)	Prec@1 69.531 (70.170)	Prec@5 93.750 (93.537)	
+Epoch: [75][20/29]	Time 0.576 (0.670)	Data 0.000 (0.098)	Loss 0.9063 (1.0096)	Prec@1 71.875 (70.126)	Prec@5 93.750 (92.932)	
+Evaluation: valid 	Time 7.892	Prec@1 76.588	Prec@5 96.375	
+Epoch: [76][10/29]	Time 0.584 (0.774)	Data 0.000 (0.206)	Loss 1.0738 (1.0710)	Prec@1 67.188 (68.040)	Prec@5 92.969 (92.188)	
+Epoch: [76][20/29]	Time 0.539 (0.673)	Data 0.000 (0.108)	Loss 1.0868 (1.0497)	Prec@1 66.406 (68.862)	Prec@5 90.625 (92.225)	
+Evaluation: valid 	Time 8.253	Prec@1 76.915	Prec@5 96.484	
+Epoch: [77][10/29]	Time 0.577 (0.767)	Data 0.000 (0.204)	Loss 0.9267 (1.0340)	Prec@1 77.344 (68.537)	Prec@5 91.406 (93.182)	
+Epoch: [77][20/29]	Time 0.576 (0.675)	Data 0.000 (0.107)	Loss 1.0845 (1.0231)	Prec@1 67.188 (68.676)	Prec@5 92.969 (93.490)	
+Evaluation: valid 	Time 8.789	Prec@1 77.242	Prec@5 96.566	
+Epoch: [78][10/29]	Time 0.561 (0.770)	Data 0.000 (0.199)	Loss 0.9421 (0.9735)	Prec@1 71.875 (71.236)	Prec@5 94.531 (93.750)	
+Epoch: [78][20/29]	Time 0.577 (0.672)	Data 0.000 (0.104)	Loss 1.1152 (0.9917)	Prec@1 67.188 (70.052)	Prec@5 89.844 (93.378)	
+Evaluation: valid 	Time 7.778	Prec@1 77.051	Prec@5 96.511	
+Epoch: [79][10/29]	Time 0.556 (0.765)	Data 0.001 (0.188)	Loss 0.9002 (1.0168)	Prec@1 78.125 (70.810)	Prec@5 92.188 (91.832)	
+Epoch: [79][20/29]	Time 0.537 (0.669)	Data 0.000 (0.099)	Loss 1.1385 (1.0202)	Prec@1 69.531 (70.275)	Prec@5 91.406 (92.597)	
+Evaluation: valid 	Time 8.176	Prec@1 77.051	Prec@5 96.484	
+Epoch: [80][10/29]	Time 0.547 (0.760)	Data 0.000 (0.198)	Loss 0.9832 (1.0426)	Prec@1 75.000 (69.744)	Prec@5 93.750 (92.614)	
+Epoch: [80][20/29]	Time 0.539 (0.665)	Data 0.000 (0.104)	Loss 1.0834 (1.0388)	Prec@1 62.500 (69.085)	Prec@5 91.406 (92.262)	
+Evaluation: valid 	Time 7.759	Prec@1 77.433	Prec@5 96.620	
+Epoch: [81][10/29]	Time 0.576 (0.759)	Data 0.000 (0.195)	Loss 0.9041 (1.0129)	Prec@1 73.438 (69.247)	Prec@5 96.094 (93.892)	
+Epoch: [81][20/29]	Time 0.581 (0.670)	Data 0.000 (0.102)	Loss 1.0640 (1.0212)	Prec@1 68.750 (69.420)	Prec@5 94.531 (93.490)	
+Evaluation: valid 	Time 7.759	Prec@1 77.242	Prec@5 96.457	
+Epoch: [82][10/29]	Time 0.599 (0.797)	Data 0.001 (0.208)	Loss 0.9920 (1.0056)	Prec@1 67.969 (69.815)	Prec@5 92.188 (92.330)	
+Epoch: [82][20/29]	Time 0.587 (0.685)	Data 0.000 (0.109)	Loss 0.9883 (1.0144)	Prec@1 68.750 (69.606)	Prec@5 96.094 (92.411)	
+Evaluation: valid 	Time 8.173	Prec@1 77.623	Prec@5 96.620	
+Epoch: [83][10/29]	Time 0.579 (0.739)	Data 0.000 (0.170)	Loss 1.0112 (0.9521)	Prec@1 70.312 (72.869)	Prec@5 90.625 (92.969)	
+Epoch: [83][20/29]	Time 0.542 (0.651)	Data 0.000 (0.089)	Loss 0.9527 (0.9673)	Prec@1 73.438 (71.280)	Prec@5 92.969 (93.229)	
+Evaluation: valid 	Time 7.468	Prec@1 77.732	Prec@5 96.729	
+Epoch: [84][10/29]	Time 0.549 (0.737)	Data 0.000 (0.164)	Loss 0.8994 (1.0150)	Prec@1 72.656 (69.531)	Prec@5 94.531 (93.111)	
+Epoch: [84][20/29]	Time 0.561 (0.654)	Data 0.000 (0.086)	Loss 0.8506 (0.9640)	Prec@1 76.562 (71.726)	Prec@5 94.531 (93.601)	
+Evaluation: valid 	Time 7.859	Prec@1 77.705	Prec@5 96.593	
+Epoch: [85][10/29]	Time 0.544 (0.754)	Data 0.000 (0.191)	Loss 0.9946 (0.9782)	Prec@1 67.969 (70.810)	Prec@5 90.625 (93.040)	
+Epoch: [85][20/29]	Time 0.538 (0.661)	Data 0.000 (0.100)	Loss 1.1177 (0.9724)	Prec@1 67.188 (71.168)	Prec@5 91.406 (93.043)	
+Evaluation: valid 	Time 8.114	Prec@1 77.732	Prec@5 96.539	
+Epoch: [86][10/29]	Time 0.542 (0.763)	Data 0.000 (0.188)	Loss 0.8670 (0.9401)	Prec@1 70.312 (72.230)	Prec@5 94.531 (93.537)	
+Epoch: [86][20/29]	Time 0.576 (0.666)	Data 0.000 (0.099)	Loss 0.9718 (0.9499)	Prec@1 74.219 (72.433)	Prec@5 91.406 (93.378)	
+Evaluation: valid 	Time 7.816	Prec@1 77.869	Prec@5 96.675	
+Epoch: [87][10/29]	Time 0.585 (0.773)	Data 0.000 (0.210)	Loss 0.9673 (0.9407)	Prec@1 71.094 (71.946)	Prec@5 92.188 (93.608)	
+Epoch: [87][20/29]	Time 0.538 (0.673)	Data 0.000 (0.110)	Loss 0.9189 (0.9386)	Prec@1 71.875 (71.912)	Prec@5 96.094 (93.564)	
+Evaluation: valid 	Time 7.553	Prec@1 78.305	Prec@5 96.838	
+Epoch: [88][10/29]	Time 0.576 (0.736)	Data 0.000 (0.164)	Loss 1.1136 (0.9517)	Prec@1 64.062 (71.946)	Prec@5 92.188 (93.395)	
+Epoch: [88][20/29]	Time 0.580 (0.657)	Data 0.000 (0.086)	Loss 0.9005 (0.9344)	Prec@1 75.000 (72.619)	Prec@5 94.531 (93.750)	
+Evaluation: valid 	Time 7.377	Prec@1 78.032	Prec@5 96.757	
+Epoch: [89][10/29]	Time 0.579 (0.745)	Data 0.000 (0.185)	Loss 0.9051 (0.8959)	Prec@1 73.438 (72.585)	Prec@5 95.312 (94.460)	
+Epoch: [89][20/29]	Time 0.537 (0.654)	Data 0.000 (0.097)	Loss 0.8197 (0.9444)	Prec@1 75.781 (71.652)	Prec@5 94.531 (93.750)	
+Evaluation: valid 	Time 7.399	Prec@1 78.305	Prec@5 96.784	
+Epoch: [90][10/29]	Time 0.585 (0.774)	Data 0.000 (0.199)	Loss 0.8410 (0.9168)	Prec@1 75.000 (72.088)	Prec@5 95.312 (94.105)	
+Epoch: [90][20/29]	Time 0.540 (0.670)	Data 0.000 (0.104)	Loss 0.9267 (0.9291)	Prec@1 71.094 (71.763)	Prec@5 92.969 (94.085)	
+Evaluation: valid 	Time 7.412	Prec@1 78.577	Prec@5 96.675	
+Epoch: [91][10/29]	Time 0.540 (0.749)	Data 0.000 (0.180)	Loss 0.8213 (0.9581)	Prec@1 75.781 (70.455)	Prec@5 92.969 (93.750)	
+Epoch: [91][20/29]	Time 0.586 (0.661)	Data 0.000 (0.094)	Loss 0.9294 (0.9493)	Prec@1 72.656 (71.019)	Prec@5 93.750 (93.862)	
+Evaluation: valid 	Time 7.245	Prec@1 78.359	Prec@5 96.757	
+Epoch: [92][10/29]	Time 0.585 (0.736)	Data 0.000 (0.171)	Loss 1.0690 (0.9579)	Prec@1 64.844 (70.952)	Prec@5 92.188 (92.614)	
+Epoch: [92][20/29]	Time 0.581 (0.657)	Data 0.000 (0.090)	Loss 1.1248 (0.9549)	Prec@1 67.969 (71.466)	Prec@5 91.406 (92.783)	
+Evaluation: valid 	Time 7.429	Prec@1 78.141	Prec@5 96.675	
+Epoch: [93][10/29]	Time 0.549 (0.759)	Data 0.000 (0.180)	Loss 0.9525 (0.9275)	Prec@1 74.219 (72.940)	Prec@5 93.750 (93.182)	
+Epoch: [93][20/29]	Time 0.578 (0.665)	Data 0.000 (0.094)	Loss 1.0144 (0.9446)	Prec@1 72.656 (72.507)	Prec@5 92.188 (93.229)	
+Evaluation: valid 	Time 7.420	Prec@1 78.714	Prec@5 96.648	
+Epoch: [94][10/29]	Time 0.588 (0.744)	Data 0.000 (0.172)	Loss 0.9362 (0.9114)	Prec@1 73.438 (73.153)	Prec@5 94.531 (93.537)	
+Epoch: [94][20/29]	Time 0.575 (0.654)	Data 0.000 (0.090)	Loss 0.8461 (0.9128)	Prec@1 74.219 (73.251)	Prec@5 92.188 (92.746)	
+Evaluation: valid 	Time 7.227	Prec@1 78.741	Prec@5 96.838	
+Epoch: [95][10/29]	Time 0.538 (0.766)	Data 0.000 (0.185)	Loss 0.9754 (0.8931)	Prec@1 74.219 (73.722)	Prec@5 92.969 (93.963)	
+Epoch: [95][20/29]	Time 0.578 (0.668)	Data 0.000 (0.097)	Loss 0.8446 (0.9083)	Prec@1 71.875 (72.805)	Prec@5 97.656 (93.824)	
+Evaluation: valid 	Time 7.447	Prec@1 78.768	Prec@5 96.920	
+Epoch: [96][10/29]	Time 0.574 (0.755)	Data 0.000 (0.190)	Loss 0.8263 (0.9166)	Prec@1 76.562 (73.580)	Prec@5 96.875 (93.679)	
+Epoch: [96][20/29]	Time 0.573 (0.668)	Data 0.000 (0.099)	Loss 0.8983 (0.9224)	Prec@1 77.344 (73.586)	Prec@5 90.625 (93.490)	
+Evaluation: valid 	Time 7.390	Prec@1 78.768	Prec@5 96.757	
+Epoch: [97][10/29]	Time 0.581 (0.749)	Data 0.000 (0.179)	Loss 0.9519 (0.8975)	Prec@1 71.875 (73.651)	Prec@5 93.750 (94.034)	
+Epoch: [97][20/29]	Time 0.539 (0.661)	Data 0.000 (0.094)	Loss 0.9718 (0.8834)	Prec@1 71.094 (73.475)	Prec@5 92.188 (94.420)	
+Evaluation: valid 	Time 7.425	Prec@1 78.768	Prec@5 96.729	
+Epoch: [98][10/29]	Time 0.545 (0.752)	Data 0.000 (0.186)	Loss 0.9673 (0.9036)	Prec@1 71.875 (72.798)	Prec@5 92.969 (94.744)	
+Epoch: [98][20/29]	Time 0.538 (0.661)	Data 0.000 (0.098)	Loss 0.8196 (0.9286)	Prec@1 78.125 (72.024)	Prec@5 93.750 (93.787)	
+Evaluation: valid 	Time 7.275	Prec@1 78.823	Prec@5 96.838	
+Epoch: [99][10/29]	Time 0.552 (0.748)	Data 0.000 (0.177)	Loss 0.7883 (0.8381)	Prec@1 80.469 (75.639)	Prec@5 96.094 (94.744)	
+Epoch: [99][20/29]	Time 0.581 (0.659)	Data 0.000 (0.093)	Loss 0.7920 (0.8692)	Prec@1 77.344 (74.702)	Prec@5 95.312 (93.936)	
+Evaluation: valid 	Time 9.305	Prec@1 78.959	Prec@5 96.893	
+Epoch: [100][10/29]	Time 0.573 (0.805)	Data 0.000 (0.228)	Loss 0.9990 (0.9024)	Prec@1 71.875 (72.514)	Prec@5 92.188 (94.176)	
+Epoch: [100][20/29]	Time 0.571 (0.687)	Data 0.000 (0.119)	Loss 0.7345 (0.9119)	Prec@1 77.344 (72.247)	Prec@5 97.656 (94.196)	
+Evaluation: valid 	Time 8.533	Prec@1 79.122	Prec@5 96.866	
+Epoch: [101][10/29]	Time 0.538 (0.720)	Data 0.000 (0.164)	Loss 0.9692 (0.9192)	Prec@1 72.656 (71.946)	Prec@5 92.969 (93.324)	
+Epoch: [101][20/29]	Time 0.539 (0.643)	Data 0.000 (0.086)	Loss 0.9541 (0.9222)	Prec@1 74.219 (72.247)	Prec@5 92.188 (93.378)	
+Evaluation: valid 	Time 9.427	Prec@1 79.504	Prec@5 96.757	
+Epoch: [102][10/29]	Time 0.540 (0.809)	Data 0.000 (0.247)	Loss 0.9734 (0.9069)	Prec@1 70.312 (72.940)	Prec@5 91.406 (93.679)	
+Epoch: [102][20/29]	Time 0.543 (0.700)	Data 0.000 (0.129)	Loss 0.9467 (0.8901)	Prec@1 69.531 (72.693)	Prec@5 93.750 (94.234)	
+Evaluation: valid 	Time 9.672	Prec@1 79.340	Prec@5 96.757	
+Epoch: [103][10/29]	Time 0.540 (0.760)	Data 0.000 (0.192)	Loss 0.9435 (0.8857)	Prec@1 72.656 (74.361)	Prec@5 91.406 (93.963)	
+Epoch: [103][20/29]	Time 0.534 (0.667)	Data 0.000 (0.101)	Loss 0.9286 (0.9133)	Prec@1 70.312 (73.140)	Prec@5 92.188 (93.304)	
+Evaluation: valid 	Time 9.722	Prec@1 79.013	Prec@5 96.702	
+Epoch: [104][10/29]	Time 0.533 (0.789)	Data 0.000 (0.223)	Loss 0.8232 (0.8817)	Prec@1 73.438 (73.509)	Prec@5 96.094 (93.963)	
+Epoch: [104][20/29]	Time 0.579 (0.685)	Data 0.000 (0.117)	Loss 0.9195 (0.8807)	Prec@1 65.625 (73.289)	Prec@5 96.875 (94.122)	
+Evaluation: valid 	Time 9.961	Prec@1 79.150	Prec@5 96.893	
+Epoch: [105][10/29]	Time 0.536 (0.808)	Data 0.000 (0.244)	Loss 0.8651 (0.8733)	Prec@1 75.000 (74.929)	Prec@5 94.531 (94.318)	
+Epoch: [105][20/29]	Time 0.541 (0.690)	Data 0.000 (0.128)	Loss 0.8571 (0.8673)	Prec@1 78.125 (75.000)	Prec@5 92.969 (93.787)	
+Evaluation: valid 	Time 11.850	Prec@1 79.313	Prec@5 97.002	
+Epoch: [106][10/29]	Time 0.537 (0.835)	Data 0.000 (0.269)	Loss 1.1138 (0.8770)	Prec@1 67.188 (75.071)	Prec@5 91.406 (93.963)	
+Epoch: [106][20/29]	Time 0.534 (0.701)	Data 0.000 (0.141)	Loss 0.7528 (0.8637)	Prec@1 79.688 (74.740)	Prec@5 93.750 (94.010)	
+Evaluation: valid 	Time 8.820	Prec@1 79.259	Prec@5 96.920	
+Epoch: [107][10/29]	Time 0.546 (0.786)	Data 0.000 (0.218)	Loss 0.8504 (0.8781)	Prec@1 74.219 (73.793)	Prec@5 94.531 (93.892)	
+Epoch: [107][20/29]	Time 0.578 (0.680)	Data 0.000 (0.114)	Loss 0.8602 (0.8772)	Prec@1 72.656 (73.549)	Prec@5 95.312 (93.899)	
+Evaluation: valid 	Time 9.203	Prec@1 79.150	Prec@5 96.838	
+Epoch: [108][10/29]	Time 0.662 (0.806)	Data 0.000 (0.229)	Loss 0.7113 (0.8770)	Prec@1 78.906 (73.011)	Prec@5 97.656 (93.466)	
+Epoch: [108][20/29]	Time 0.573 (0.692)	Data 0.000 (0.120)	Loss 0.8228 (0.8471)	Prec@1 73.438 (73.996)	Prec@5 98.438 (94.680)	
+Evaluation: valid 	Time 8.908	Prec@1 79.177	Prec@5 96.838	
+Epoch: [109][10/29]	Time 0.589 (0.801)	Data 0.001 (0.241)	Loss 0.8691 (0.9082)	Prec@1 75.000 (73.793)	Prec@5 94.531 (94.034)	
+Epoch: [109][20/29]	Time 0.536 (0.690)	Data 0.000 (0.126)	Loss 0.9501 (0.8838)	Prec@1 74.219 (74.442)	Prec@5 92.969 (94.382)	
+Evaluation: valid 	Time 9.493	Prec@1 79.504	Prec@5 96.838	
+Epoch: [110][10/29]	Time 0.546 (0.739)	Data 0.000 (0.178)	Loss 0.8639 (0.8469)	Prec@1 73.438 (74.787)	Prec@5 94.531 (94.460)	
+Epoch: [110][20/29]	Time 0.538 (0.655)	Data 0.000 (0.094)	Loss 0.9422 (0.8423)	Prec@1 71.875 (75.112)	Prec@5 92.969 (94.717)	
+Evaluation: valid 	Time 8.530	Prec@1 79.313	Prec@5 97.138	
+Epoch: [111][10/29]	Time 0.583 (0.766)	Data 0.000 (0.197)	Loss 0.5629 (0.8121)	Prec@1 82.812 (76.065)	Prec@5 98.438 (94.673)	
+Epoch: [111][20/29]	Time 0.534 (0.669)	Data 0.000 (0.103)	Loss 0.8171 (0.8166)	Prec@1 74.219 (75.260)	Prec@5 94.531 (94.717)	
+Evaluation: valid 	Time 10.872	Prec@1 79.749	Prec@5 96.893	
+Epoch: [112][10/29]	Time 0.535 (0.799)	Data 0.000 (0.244)	Loss 0.8147 (0.8553)	Prec@1 75.000 (75.568)	Prec@5 95.312 (93.963)	
+Epoch: [112][20/29]	Time 0.566 (0.685)	Data 0.000 (0.128)	Loss 0.8613 (0.8611)	Prec@1 72.656 (74.219)	Prec@5 95.312 (94.159)	
+Evaluation: valid 	Time 9.383	Prec@1 79.586	Prec@5 96.784	
+Epoch: [113][10/29]	Time 0.542 (0.728)	Data 0.000 (0.165)	Loss 0.8783 (0.8512)	Prec@1 71.875 (74.645)	Prec@5 93.750 (93.892)	
+Epoch: [113][20/29]	Time 0.560 (0.646)	Data 0.000 (0.086)	Loss 0.8669 (0.8223)	Prec@1 73.438 (75.707)	Prec@5 95.312 (94.345)	
+Evaluation: valid 	Time 9.993	Prec@1 79.886	Prec@5 97.111	
+Epoch: [114][10/29]	Time 0.562 (0.850)	Data 0.000 (0.289)	Loss 0.8586 (0.8399)	Prec@1 71.094 (74.716)	Prec@5 93.750 (94.389)	
+Epoch: [114][20/29]	Time 0.536 (0.709)	Data 0.000 (0.151)	Loss 0.8940 (0.8332)	Prec@1 72.656 (74.777)	Prec@5 92.188 (94.717)	
+Evaluation: valid 	Time 8.296	Prec@1 79.831	Prec@5 97.029	
+Epoch: [115][10/29]	Time 0.661 (0.812)	Data 0.000 (0.235)	Loss 0.8282 (0.8146)	Prec@1 75.000 (76.776)	Prec@5 96.094 (94.460)	
+Epoch: [115][20/29]	Time 0.578 (0.695)	Data 0.000 (0.123)	Loss 0.7688 (0.8317)	Prec@1 78.906 (75.484)	Prec@5 96.875 (94.382)	
+Evaluation: valid 	Time 10.798	Prec@1 80.131	Prec@5 96.975	
+Epoch: [116][10/29]	Time 0.537 (0.754)	Data 0.000 (0.198)	Loss 0.8263 (0.8995)	Prec@1 78.125 (73.295)	Prec@5 90.625 (93.111)	
+Epoch: [116][20/29]	Time 0.577 (0.664)	Data 0.000 (0.104)	Loss 0.9186 (0.8942)	Prec@1 75.000 (73.140)	Prec@5 93.750 (93.750)	
+Evaluation: valid 	Time 9.080	Prec@1 80.158	Prec@5 96.975	
+Epoch: [117][10/29]	Time 0.538 (0.791)	Data 0.000 (0.238)	Loss 0.7740 (0.8280)	Prec@1 80.469 (75.994)	Prec@5 93.750 (94.389)	
+Epoch: [117][20/29]	Time 0.576 (0.683)	Data 0.000 (0.125)	Loss 0.7914 (0.8419)	Prec@1 78.125 (75.670)	Prec@5 95.312 (94.234)	
+Evaluation: valid 	Time 10.121	Prec@1 80.349	Prec@5 97.002	
+Epoch: [118][10/29]	Time 0.537 (0.815)	Data 0.000 (0.249)	Loss 0.8043 (0.8469)	Prec@1 77.344 (75.639)	Prec@5 91.406 (93.750)	
+Epoch: [118][20/29]	Time 0.580 (0.695)	Data 0.000 (0.131)	Loss 0.7030 (0.8546)	Prec@1 82.812 (74.591)	Prec@5 94.531 (93.713)	
+Evaluation: valid 	Time 9.069	Prec@1 80.322	Prec@5 96.975	
+Epoch: [119][10/29]	Time 0.580 (0.789)	Data 0.000 (0.229)	Loss 0.6969 (0.8636)	Prec@1 79.688 (73.011)	Prec@5 96.875 (94.105)	
+Epoch: [119][20/29]	Time 0.540 (0.679)	Data 0.000 (0.120)	Loss 0.7064 (0.8459)	Prec@1 76.562 (74.442)	Prec@5 95.312 (93.899)	
+Evaluation: valid 	Time 10.852	Prec@1 79.940	Prec@5 96.947	
+Epoch: [120][10/29]	Time 0.538 (0.818)	Data 0.000 (0.247)	Loss 0.8620 (0.8001)	Prec@1 76.562 (75.426)	Prec@5 94.531 (94.957)	
+Epoch: [120][20/29]	Time 0.535 (0.693)	Data 0.000 (0.130)	Loss 0.8320 (0.8025)	Prec@1 71.875 (75.372)	Prec@5 95.312 (94.792)	
+Evaluation: valid 	Time 9.035	Prec@1 80.158	Prec@5 97.029	
+Epoch: [121][10/29]	Time 0.581 (0.789)	Data 0.000 (0.217)	Loss 1.0052 (0.8216)	Prec@1 69.531 (75.781)	Prec@5 92.969 (94.460)	
+Epoch: [121][20/29]	Time 0.543 (0.678)	Data 0.000 (0.114)	Loss 0.7287 (0.8055)	Prec@1 82.812 (76.079)	Prec@5 96.875 (95.089)	
+Evaluation: valid 	Time 9.722	Prec@1 79.722	Prec@5 96.975	
+Epoch: [122][10/29]	Time 0.676 (0.777)	Data 0.000 (0.207)	Loss 1.0384 (0.8361)	Prec@1 67.969 (74.219)	Prec@5 92.188 (94.602)	
+Epoch: [122][20/29]	Time 0.538 (0.673)	Data 0.000 (0.108)	Loss 0.8969 (0.8259)	Prec@1 74.219 (75.074)	Prec@5 91.406 (94.196)	
+Evaluation: valid 	Time 8.969	Prec@1 80.213	Prec@5 97.111	
+Epoch: [123][10/29]	Time 0.577 (0.833)	Data 0.000 (0.276)	Loss 0.9843 (0.8105)	Prec@1 67.188 (74.361)	Prec@5 93.750 (93.679)	
+Epoch: [123][20/29]	Time 0.539 (0.701)	Data 0.000 (0.145)	Loss 0.9467 (0.8178)	Prec@1 70.312 (75.223)	Prec@5 92.188 (93.713)	
+Evaluation: valid 	Time 10.549	Prec@1 80.267	Prec@5 96.920	
+Epoch: [124][10/29]	Time 0.535 (0.771)	Data 0.000 (0.214)	Loss 0.8241 (0.8263)	Prec@1 73.438 (75.568)	Prec@5 94.531 (94.602)	
+Epoch: [124][20/29]	Time 0.536 (0.673)	Data 0.000 (0.112)	Loss 0.9049 (0.8112)	Prec@1 71.094 (75.670)	Prec@5 93.750 (94.717)	
+Evaluation: valid 	Time 9.049	Prec@1 80.540	Prec@5 97.029	
+Epoch: [125][10/29]	Time 0.537 (0.794)	Data 0.000 (0.222)	Loss 0.8441 (0.7905)	Prec@1 71.875 (75.426)	Prec@5 95.312 (94.673)	
+Epoch: [125][20/29]	Time 0.647 (0.688)	Data 0.000 (0.117)	Loss 0.6969 (0.8175)	Prec@1 78.125 (75.037)	Prec@5 95.312 (94.420)	
+Evaluation: valid 	Time 9.480	Prec@1 80.349	Prec@5 97.111	
+Epoch: [126][10/29]	Time 0.589 (0.811)	Data 0.000 (0.242)	Loss 0.7858 (0.8109)	Prec@1 72.656 (75.284)	Prec@5 96.094 (94.389)	
+Epoch: [126][20/29]	Time 0.573 (0.688)	Data 0.000 (0.127)	Loss 0.7446 (0.8292)	Prec@1 75.781 (75.000)	Prec@5 97.656 (93.824)	
+Evaluation: valid 	Time 7.599	Prec@1 80.703	Prec@5 97.247	
+Epoch: [127][10/29]	Time 0.588 (0.798)	Data 0.000 (0.220)	Loss 0.9319 (0.7922)	Prec@1 71.094 (75.213)	Prec@5 92.969 (94.460)	
+Epoch: [127][20/29]	Time 0.573 (0.683)	Data 0.000 (0.115)	Loss 0.8072 (0.8058)	Prec@1 79.688 (75.372)	Prec@5 94.531 (94.234)	
+Evaluation: valid 	Time 7.531	Prec@1 80.349	Prec@5 96.975	
+Epoch: [128][10/29]	Time 0.578 (0.765)	Data 0.000 (0.190)	Loss 0.9752 (0.8066)	Prec@1 71.875 (75.071)	Prec@5 89.062 (94.176)	
+Epoch: [128][20/29]	Time 0.538 (0.668)	Data 0.000 (0.100)	Loss 0.8820 (0.8101)	Prec@1 69.531 (75.186)	Prec@5 91.406 (94.457)	
+Evaluation: valid 	Time 7.336	Prec@1 80.131	Prec@5 97.029	
+Epoch: [129][10/29]	Time 0.539 (0.761)	Data 0.001 (0.183)	Loss 0.6973 (0.7934)	Prec@1 79.688 (75.994)	Prec@5 92.188 (94.673)	
+Epoch: [129][20/29]	Time 0.555 (0.665)	Data 0.000 (0.096)	Loss 0.6935 (0.8054)	Prec@1 80.469 (75.484)	Prec@5 93.750 (94.531)	
+Evaluation: valid 	Time 7.646	Prec@1 80.267	Prec@5 97.029	
+Epoch: [130][10/29]	Time 0.543 (0.743)	Data 0.000 (0.176)	Loss 0.6544 (0.7608)	Prec@1 79.688 (76.989)	Prec@5 97.656 (95.739)	
+Epoch: [130][20/29]	Time 0.536 (0.660)	Data 0.000 (0.092)	Loss 0.7403 (0.7768)	Prec@1 77.344 (76.339)	Prec@5 93.750 (95.015)	
+Evaluation: valid 	Time 7.432	Prec@1 80.649	Prec@5 97.274	
+Epoch: [131][10/29]	Time 0.572 (0.752)	Data 0.000 (0.187)	Loss 0.8035 (0.8065)	Prec@1 75.000 (75.639)	Prec@5 95.312 (95.170)	
+Epoch: [131][20/29]	Time 0.564 (0.662)	Data 0.000 (0.098)	Loss 0.8387 (0.8009)	Prec@1 75.000 (75.595)	Prec@5 94.531 (95.387)	
+Evaluation: valid 	Time 7.791	Prec@1 80.458	Prec@5 97.002	
+Epoch: [132][10/29]	Time 0.539 (0.751)	Data 0.000 (0.188)	Loss 0.9955 (0.8151)	Prec@1 71.875 (74.716)	Prec@5 91.406 (94.318)	
+Epoch: [132][20/29]	Time 0.536 (0.660)	Data 0.000 (0.099)	Loss 0.7482 (0.8024)	Prec@1 77.344 (75.595)	Prec@5 95.312 (94.866)	
+Evaluation: valid 	Time 7.428	Prec@1 80.594	Prec@5 97.111	
+Epoch: [133][10/29]	Time 0.581 (0.751)	Data 0.000 (0.188)	Loss 0.8694 (0.7840)	Prec@1 72.656 (75.213)	Prec@5 92.188 (94.460)	
+Epoch: [133][20/29]	Time 0.540 (0.661)	Data 0.000 (0.099)	Loss 0.7170 (0.7819)	Prec@1 77.344 (75.335)	Prec@5 98.438 (94.792)	
+Evaluation: valid 	Time 7.407	Prec@1 80.758	Prec@5 97.247	
+Epoch: [134][10/29]	Time 0.544 (0.759)	Data 0.000 (0.183)	Loss 0.7802 (0.7449)	Prec@1 76.562 (76.918)	Prec@5 95.312 (96.094)	
+Epoch: [134][20/29]	Time 0.586 (0.668)	Data 0.000 (0.096)	Loss 0.6520 (0.7640)	Prec@1 78.906 (76.637)	Prec@5 96.094 (95.499)	
+Evaluation: valid 	Time 7.276	Prec@1 80.703	Prec@5 97.274	
+Epoch: [135][10/29]	Time 0.594 (0.742)	Data 0.001 (0.163)	Loss 0.6814 (0.7381)	Prec@1 80.469 (77.486)	Prec@5 96.094 (95.810)	
+Epoch: [135][20/29]	Time 0.534 (0.656)	Data 0.000 (0.085)	Loss 0.7309 (0.7783)	Prec@1 81.250 (76.190)	Prec@5 92.969 (94.866)	
+Evaluation: valid 	Time 7.423	Prec@1 80.567	Prec@5 97.165	
+Epoch: [136][10/29]	Time 0.580 (0.761)	Data 0.000 (0.191)	Loss 0.9187 (0.7941)	Prec@1 71.875 (76.065)	Prec@5 92.969 (94.105)	
+Epoch: [136][20/29]	Time 0.580 (0.670)	Data 0.000 (0.100)	Loss 0.8311 (0.7978)	Prec@1 72.656 (76.302)	Prec@5 91.406 (93.973)	
+Evaluation: valid 	Time 7.372	Prec@1 80.676	Prec@5 97.193	
+Epoch: [137][10/29]	Time 0.552 (0.758)	Data 0.000 (0.186)	Loss 0.9073 (0.7474)	Prec@1 70.312 (78.480)	Prec@5 94.531 (95.668)	
+Epoch: [137][20/29]	Time 0.627 (0.666)	Data 0.000 (0.098)	Loss 0.7621 (0.7709)	Prec@1 75.781 (76.972)	Prec@5 91.406 (94.903)	
+Evaluation: valid 	Time 7.287	Prec@1 80.594	Prec@5 97.165	
+Epoch: [138][10/29]	Time 0.538 (0.749)	Data 0.000 (0.187)	Loss 0.7111 (0.8081)	Prec@1 74.219 (75.000)	Prec@5 97.656 (95.241)	
+Epoch: [138][20/29]	Time 0.580 (0.662)	Data 0.000 (0.098)	Loss 1.0707 (0.8144)	Prec@1 67.969 (74.814)	Prec@5 90.625 (94.792)	
+Evaluation: valid 	Time 7.475	Prec@1 80.758	Prec@5 97.111	
+Epoch: [139][10/29]	Time 0.587 (0.738)	Data 0.000 (0.172)	Loss 0.6310 (0.7779)	Prec@1 81.250 (77.273)	Prec@5 99.219 (95.170)	
+Epoch: [139][20/29]	Time 0.577 (0.657)	Data 0.000 (0.090)	Loss 0.7108 (0.7742)	Prec@1 78.125 (76.525)	Prec@5 95.312 (95.275)	
+Evaluation: valid 	Time 7.419	Prec@1 80.703	Prec@5 97.193	
+Epoch: [140][10/29]	Time 0.534 (0.743)	Data 0.000 (0.183)	Loss 0.8474 (0.7550)	Prec@1 74.219 (76.420)	Prec@5 92.188 (95.170)	
+Epoch: [140][20/29]	Time 0.539 (0.657)	Data 0.000 (0.096)	Loss 0.8768 (0.7860)	Prec@1 73.438 (75.707)	Prec@5 94.531 (94.903)	
+Evaluation: valid 	Time 7.435	Prec@1 81.003	Prec@5 97.247	
+Epoch: [141][10/29]	Time 0.576 (0.757)	Data 0.000 (0.191)	Loss 0.8137 (0.7374)	Prec@1 75.000 (77.912)	Prec@5 96.094 (95.384)	
+Epoch: [141][20/29]	Time 0.537 (0.662)	Data 0.000 (0.100)	Loss 0.8898 (0.7720)	Prec@1 75.000 (77.344)	Prec@5 94.531 (94.829)	
+Evaluation: valid 	Time 7.575	Prec@1 80.649	Prec@5 97.220	
+Epoch: [142][10/29]	Time 0.548 (0.757)	Data 0.000 (0.180)	Loss 0.8700 (0.7843)	Prec@1 71.875 (75.852)	Prec@5 95.312 (95.028)	
+Epoch: [142][20/29]	Time 0.538 (0.664)	Data 0.000 (0.094)	Loss 0.7320 (0.7674)	Prec@1 78.906 (76.860)	Prec@5 93.750 (94.978)	
+Evaluation: valid 	Time 7.523	Prec@1 80.758	Prec@5 97.138	
+Epoch: [143][10/29]	Time 0.569 (0.714)	Data 0.000 (0.152)	Loss 0.6709 (0.7370)	Prec@1 80.469 (78.551)	Prec@5 96.875 (95.526)	
+Epoch: [143][20/29]	Time 0.538 (0.639)	Data 0.000 (0.080)	Loss 0.7010 (0.7479)	Prec@1 75.781 (77.604)	Prec@5 97.656 (95.238)	
+Evaluation: valid 	Time 7.420	Prec@1 80.594	Prec@5 97.247	
+Epoch: [144][10/29]	Time 0.547 (0.738)	Data 0.000 (0.171)	Loss 0.8103 (0.7980)	Prec@1 78.125 (75.639)	Prec@5 93.750 (94.744)	
+Epoch: [144][20/29]	Time 0.575 (0.654)	Data 0.000 (0.090)	Loss 0.7625 (0.7778)	Prec@1 81.250 (76.525)	Prec@5 95.312 (94.680)	
+Evaluation: valid 	Time 7.187	Prec@1 80.948	Prec@5 97.302	
+Epoch: [145][10/29]	Time 0.543 (0.775)	Data 0.000 (0.212)	Loss 0.8472 (0.7359)	Prec@1 73.438 (77.770)	Prec@5 96.875 (95.881)	
+Epoch: [145][20/29]	Time 0.579 (0.677)	Data 0.000 (0.111)	Loss 0.6641 (0.7514)	Prec@1 81.250 (77.195)	Prec@5 92.969 (95.201)	
+Evaluation: valid 	Time 9.780	Prec@1 80.867	Prec@5 97.383	
+Epoch: [146][10/29]	Time 0.537 (0.772)	Data 0.000 (0.214)	Loss 0.8246 (0.7617)	Prec@1 75.000 (76.562)	Prec@5 92.969 (94.531)	
+Epoch: [146][20/29]	Time 0.535 (0.677)	Data 0.000 (0.112)	Loss 0.8372 (0.7745)	Prec@1 78.906 (76.414)	Prec@5 92.969 (94.271)	
+Evaluation: valid 	Time 7.780	Prec@1 80.621	Prec@5 97.138	
+Epoch: [147][10/29]	Time 0.597 (0.741)	Data 0.000 (0.176)	Loss 0.6758 (0.7662)	Prec@1 80.469 (76.349)	Prec@5 96.875 (95.455)	
+Epoch: [147][20/29]	Time 0.583 (0.661)	Data 0.000 (0.092)	Loss 0.7921 (0.7579)	Prec@1 77.344 (77.269)	Prec@5 93.750 (95.164)	
+Evaluation: valid 	Time 8.945	Prec@1 80.867	Prec@5 97.274	
+Epoch: [148][10/29]	Time 0.580 (0.768)	Data 0.000 (0.206)	Loss 0.6765 (0.7559)	Prec@1 81.250 (77.770)	Prec@5 97.656 (94.886)	
+Epoch: [148][20/29]	Time 0.538 (0.667)	Data 0.000 (0.108)	Loss 0.5612 (0.7391)	Prec@1 80.469 (77.604)	Prec@5 99.219 (95.312)	
+Evaluation: valid 	Time 8.280	Prec@1 81.439	Prec@5 97.274	
+Epoch: [149][10/29]	Time 0.585 (0.774)	Data 0.000 (0.204)	Loss 0.8425 (0.7708)	Prec@1 71.875 (76.776)	Prec@5 94.531 (95.099)	
+Epoch: [149][20/29]	Time 0.534 (0.669)	Data 0.000 (0.107)	Loss 0.8118 (0.7670)	Prec@1 77.344 (76.711)	Prec@5 94.531 (95.015)	
+Evaluation: valid 	Time 8.726	Prec@1 81.139	Prec@5 97.247	
+Epoch: [150][10/29]	Time 0.574 (0.750)	Data 0.000 (0.183)	Loss 0.7872 (0.7530)	Prec@1 75.000 (77.628)	Prec@5 93.750 (94.815)	
+Epoch: [150][20/29]	Time 0.537 (0.660)	Data 0.000 (0.096)	Loss 0.6358 (0.7415)	Prec@1 78.906 (77.827)	Prec@5 96.875 (95.387)	
+Evaluation: valid 	Time 8.883	Prec@1 80.540	Prec@5 97.438	
+Epoch: [151][10/29]	Time 0.543 (0.768)	Data 0.000 (0.211)	Loss 0.8490 (0.7564)	Prec@1 78.125 (77.841)	Prec@5 95.312 (95.455)	
+Epoch: [151][20/29]	Time 0.581 (0.670)	Data 0.000 (0.111)	Loss 0.8922 (0.7731)	Prec@1 71.094 (76.860)	Prec@5 93.750 (94.940)	
+Evaluation: valid 	Time 8.705	Prec@1 81.194	Prec@5 97.411	
+Epoch: [152][10/29]	Time 0.587 (0.750)	Data 0.000 (0.179)	Loss 0.8480 (0.7223)	Prec@1 74.219 (78.622)	Prec@5 95.312 (95.881)	
+Epoch: [152][20/29]	Time 0.534 (0.670)	Data 0.000 (0.094)	Loss 0.7357 (0.7362)	Prec@1 78.125 (78.571)	Prec@5 95.312 (95.536)	
+Evaluation: valid 	Time 8.508	Prec@1 81.112	Prec@5 97.411	
+Epoch: [153][10/29]	Time 0.579 (0.783)	Data 0.000 (0.222)	Loss 0.7224 (0.7129)	Prec@1 78.906 (78.409)	Prec@5 96.094 (96.094)	
+Epoch: [153][20/29]	Time 0.576 (0.682)	Data 0.000 (0.116)	Loss 0.5936 (0.7066)	Prec@1 81.250 (78.311)	Prec@5 97.656 (95.908)	
+Evaluation: valid 	Time 9.123	Prec@1 81.248	Prec@5 97.438	
+Epoch: [154][10/29]	Time 0.559 (0.806)	Data 0.000 (0.223)	Loss 0.7307 (0.7328)	Prec@1 76.562 (78.480)	Prec@5 95.312 (95.099)	
+Epoch: [154][20/29]	Time 0.578 (0.688)	Data 0.000 (0.117)	Loss 0.7848 (0.7360)	Prec@1 77.344 (77.902)	Prec@5 96.094 (95.275)	
+Evaluation: valid 	Time 8.197	Prec@1 81.603	Prec@5 97.547	
+Epoch: [155][10/29]	Time 0.583 (0.789)	Data 0.000 (0.227)	Loss 0.7290 (0.7627)	Prec@1 80.469 (77.202)	Prec@5 95.312 (94.886)	
+Epoch: [155][20/29]	Time 0.535 (0.681)	Data 0.000 (0.119)	Loss 0.6959 (0.7291)	Prec@1 77.344 (77.976)	Prec@5 95.312 (95.536)	
+Evaluation: valid 	Time 9.765	Prec@1 80.867	Prec@5 97.411	
+Epoch: [156][10/29]	Time 0.593 (0.797)	Data 0.000 (0.226)	Loss 0.8371 (0.7327)	Prec@1 73.438 (77.273)	Prec@5 98.438 (95.597)	
+Epoch: [156][20/29]	Time 0.587 (0.682)	Data 0.000 (0.119)	Loss 0.7390 (0.7462)	Prec@1 75.781 (77.232)	Prec@5 96.875 (95.238)	
+Evaluation: valid 	Time 7.853	Prec@1 81.766	Prec@5 97.493	
+Epoch: [157][10/29]	Time 0.581 (0.812)	Data 0.001 (0.234)	Loss 0.6959 (0.7558)	Prec@1 80.469 (75.994)	Prec@5 95.312 (94.531)	
+Epoch: [157][20/29]	Time 0.540 (0.690)	Data 0.000 (0.123)	Loss 0.6967 (0.7360)	Prec@1 78.906 (76.488)	Prec@5 96.875 (95.052)	
+Evaluation: valid 	Time 8.573	Prec@1 81.221	Prec@5 97.329	
+Epoch: [158][10/29]	Time 0.537 (0.762)	Data 0.000 (0.194)	Loss 0.8047 (0.7468)	Prec@1 76.562 (77.557)	Prec@5 96.094 (95.312)	
+Epoch: [158][20/29]	Time 0.562 (0.664)	Data 0.000 (0.102)	Loss 0.7217 (0.7464)	Prec@1 78.125 (77.902)	Prec@5 94.531 (94.792)	
+Evaluation: valid 	Time 7.828	Prec@1 81.466	Prec@5 97.383	
+Epoch: [159][10/29]	Time 0.577 (0.791)	Data 0.000 (0.226)	Loss 0.6427 (0.7264)	Prec@1 82.031 (78.693)	Prec@5 98.438 (95.099)	
+Epoch: [159][20/29]	Time 0.568 (0.687)	Data 0.000 (0.119)	Loss 0.7012 (0.7034)	Prec@1 80.469 (78.757)	Prec@5 97.656 (95.685)	
+Evaluation: valid 	Time 9.059	Prec@1 81.303	Prec@5 97.302	
+Epoch: [160][10/29]	Time 0.562 (0.755)	Data 0.000 (0.187)	Loss 0.7399 (0.7310)	Prec@1 76.562 (76.989)	Prec@5 91.406 (95.028)	
+Epoch: [160][20/29]	Time 0.536 (0.663)	Data 0.000 (0.098)	Loss 0.7780 (0.7305)	Prec@1 75.781 (77.232)	Prec@5 92.969 (95.089)	
+Evaluation: valid 	Time 8.409	Prec@1 81.439	Prec@5 97.220	
+Epoch: [161][10/29]	Time 0.548 (0.781)	Data 0.000 (0.217)	Loss 0.7109 (0.6880)	Prec@1 76.562 (78.693)	Prec@5 95.312 (95.881)	
+Epoch: [161][20/29]	Time 0.578 (0.676)	Data 0.000 (0.114)	Loss 0.7602 (0.7102)	Prec@1 75.781 (78.311)	Prec@5 96.875 (95.610)	
+Evaluation: valid 	Time 8.044	Prec@1 81.548	Prec@5 97.438	
+Epoch: [162][10/29]	Time 0.543 (0.787)	Data 0.000 (0.220)	Loss 0.8406 (0.7464)	Prec@1 73.438 (78.338)	Prec@5 94.531 (95.099)	
+Epoch: [162][20/29]	Time 0.577 (0.679)	Data 0.000 (0.115)	Loss 0.6696 (0.7306)	Prec@1 78.906 (78.311)	Prec@5 94.531 (95.052)	
+Evaluation: valid 	Time 8.190	Prec@1 81.521	Prec@5 97.383	
+Epoch: [163][10/29]	Time 0.562 (0.797)	Data 0.000 (0.220)	Loss 0.7009 (0.6984)	Prec@1 78.906 (79.332)	Prec@5 96.875 (95.597)	
+Epoch: [163][20/29]	Time 0.536 (0.682)	Data 0.000 (0.115)	Loss 0.7679 (0.7235)	Prec@1 75.000 (78.497)	Prec@5 95.312 (95.052)	
+Evaluation: valid 	Time 8.414	Prec@1 81.303	Prec@5 97.274	
+Epoch: [164][10/29]	Time 0.538 (0.782)	Data 0.000 (0.208)	Loss 0.6514 (0.7065)	Prec@1 78.906 (78.267)	Prec@5 96.875 (95.384)	
+Epoch: [164][20/29]	Time 0.582 (0.677)	Data 0.000 (0.109)	Loss 0.7577 (0.7066)	Prec@1 77.344 (77.679)	Prec@5 96.094 (95.312)	
+Evaluation: valid 	Time 7.995	Prec@1 81.603	Prec@5 97.302	
+Epoch: [165][10/29]	Time 0.597 (0.807)	Data 0.000 (0.245)	Loss 0.7908 (0.7045)	Prec@1 78.125 (79.545)	Prec@5 95.312 (95.241)	
+Epoch: [165][20/29]	Time 0.575 (0.694)	Data 0.000 (0.128)	Loss 0.6309 (0.7039)	Prec@1 79.688 (79.167)	Prec@5 95.312 (95.312)	
+Evaluation: valid 	Time 8.982	Prec@1 81.521	Prec@5 97.274	
+Epoch: [166][10/29]	Time 0.580 (0.765)	Data 0.000 (0.192)	Loss 0.5648 (0.7089)	Prec@1 85.938 (79.616)	Prec@5 96.875 (95.384)	
+Epoch: [166][20/29]	Time 0.570 (0.665)	Data 0.000 (0.101)	Loss 0.7729 (0.6808)	Prec@1 76.562 (79.762)	Prec@5 92.969 (95.573)	
+Evaluation: valid 	Time 8.006	Prec@1 81.112	Prec@5 97.274	
+Epoch: [167][10/29]	Time 0.586 (0.750)	Data 0.000 (0.189)	Loss 0.4947 (0.7056)	Prec@1 87.500 (78.409)	Prec@5 98.438 (95.881)	
+Epoch: [167][20/29]	Time 0.538 (0.658)	Data 0.000 (0.099)	Loss 1.1000 (0.7395)	Prec@1 65.625 (76.860)	Prec@5 89.844 (95.201)	
+Evaluation: valid 	Time 7.438	Prec@1 81.276	Prec@5 97.411	
+Epoch: [168][10/29]	Time 0.591 (0.747)	Data 0.000 (0.183)	Loss 0.7652 (0.6802)	Prec@1 78.125 (80.043)	Prec@5 94.531 (96.023)	
+Epoch: [168][20/29]	Time 0.535 (0.659)	Data 0.000 (0.096)	Loss 0.6797 (0.6898)	Prec@1 79.688 (79.725)	Prec@5 96.875 (95.536)	
+Evaluation: valid 	Time 7.460	Prec@1 81.412	Prec@5 97.165	
+Epoch: [169][10/29]	Time 0.535 (0.736)	Data 0.000 (0.171)	Loss 0.7333 (0.6864)	Prec@1 78.125 (79.048)	Prec@5 93.750 (95.881)	
+Epoch: [169][20/29]	Time 0.576 (0.656)	Data 0.000 (0.090)	Loss 0.5106 (0.6910)	Prec@1 85.156 (79.167)	Prec@5 96.875 (95.610)	
+Evaluation: valid 	Time 7.335	Prec@1 81.657	Prec@5 97.329	
+Epoch: [170][10/29]	Time 0.580 (0.749)	Data 0.000 (0.177)	Loss 0.6864 (0.7398)	Prec@1 80.469 (78.835)	Prec@5 96.875 (94.602)	
+Epoch: [170][20/29]	Time 0.541 (0.666)	Data 0.000 (0.093)	Loss 0.7461 (0.7336)	Prec@1 77.344 (78.385)	Prec@5 93.750 (95.015)	
+Evaluation: valid 	Time 7.534	Prec@1 81.684	Prec@5 97.356	
+Epoch: [171][10/29]	Time 0.550 (0.749)	Data 0.000 (0.183)	Loss 0.5581 (0.6415)	Prec@1 84.375 (80.824)	Prec@5 95.312 (95.668)	
+Epoch: [171][20/29]	Time 0.579 (0.663)	Data 0.000 (0.096)	Loss 0.6490 (0.6666)	Prec@1 82.031 (79.911)	Prec@5 96.094 (95.089)	
+Evaluation: valid 	Time 7.303	Prec@1 81.684	Prec@5 97.411	
+Epoch: [172][10/29]	Time 0.549 (0.746)	Data 0.000 (0.173)	Loss 0.5379 (0.7226)	Prec@1 83.594 (78.764)	Prec@5 95.312 (95.170)	
+Epoch: [172][20/29]	Time 0.588 (0.658)	Data 0.000 (0.091)	Loss 0.7340 (0.7139)	Prec@1 80.469 (78.832)	Prec@5 94.531 (95.126)	
+Evaluation: valid 	Time 7.405	Prec@1 81.603	Prec@5 97.547	
+Epoch: [173][10/29]	Time 0.538 (0.752)	Data 0.000 (0.189)	Loss 0.8063 (0.7213)	Prec@1 73.438 (78.338)	Prec@5 96.094 (95.881)	
+Epoch: [173][20/29]	Time 0.538 (0.669)	Data 0.000 (0.099)	Loss 0.7172 (0.7077)	Prec@1 75.781 (78.757)	Prec@5 93.750 (95.610)	
+Evaluation: valid 	Time 7.511	Prec@1 81.494	Prec@5 97.574	
+Epoch: [174][10/29]	Time 0.542 (0.763)	Data 0.000 (0.189)	Loss 0.6636 (0.6876)	Prec@1 78.125 (77.486)	Prec@5 96.875 (96.165)	
+Epoch: [174][20/29]	Time 0.552 (0.666)	Data 0.000 (0.099)	Loss 0.5559 (0.6862)	Prec@1 84.375 (78.609)	Prec@5 94.531 (95.610)	
+Evaluation: valid 	Time 7.238	Prec@1 81.494	Prec@5 97.411	
+Epoch: [175][10/29]	Time 0.537 (0.764)	Data 0.000 (0.199)	Loss 0.7585 (0.6479)	Prec@1 77.344 (80.611)	Prec@5 92.969 (95.668)	
+Epoch: [175][20/29]	Time 0.578 (0.671)	Data 0.000 (0.104)	Loss 0.7087 (0.6822)	Prec@1 78.125 (79.204)	Prec@5 93.750 (95.610)	
+Evaluation: valid 	Time 7.431	Prec@1 81.657	Prec@5 97.302	
+Epoch: [176][10/29]	Time 0.589 (0.752)	Data 0.000 (0.164)	Loss 0.6270 (0.6891)	Prec@1 84.375 (79.545)	Prec@5 96.875 (95.597)	
+Epoch: [176][20/29]	Time 0.538 (0.662)	Data 0.000 (0.086)	Loss 0.6390 (0.6954)	Prec@1 82.031 (79.427)	Prec@5 97.656 (95.536)	
+Evaluation: valid 	Time 7.453	Prec@1 81.657	Prec@5 97.438	
+Epoch: [177][10/29]	Time 0.562 (0.750)	Data 0.000 (0.181)	Loss 0.5262 (0.6856)	Prec@1 84.375 (79.119)	Prec@5 96.094 (95.526)	
+Epoch: [177][20/29]	Time 0.541 (0.661)	Data 0.000 (0.095)	Loss 0.7644 (0.7097)	Prec@1 78.906 (78.720)	Prec@5 96.094 (95.312)	
+Evaluation: valid 	Time 7.260	Prec@1 81.521	Prec@5 97.356	
+Epoch: [178][10/29]	Time 0.539 (0.748)	Data 0.000 (0.169)	Loss 0.6119 (0.7124)	Prec@1 82.812 (78.551)	Prec@5 94.531 (94.460)	
+Epoch: [178][20/29]	Time 0.574 (0.661)	Data 0.000 (0.088)	Loss 0.5880 (0.6911)	Prec@1 83.594 (79.241)	Prec@5 99.219 (95.201)	
+Evaluation: valid 	Time 7.559	Prec@1 81.684	Prec@5 97.520	
+Epoch: [179][10/29]	Time 0.594 (0.772)	Data 0.000 (0.202)	Loss 0.7480 (0.6805)	Prec@1 75.781 (77.770)	Prec@5 95.312 (96.165)	
+Epoch: [179][20/29]	Time 0.538 (0.672)	Data 0.000 (0.106)	Loss 0.6601 (0.6910)	Prec@1 80.469 (78.497)	Prec@5 95.312 (95.424)	
+Evaluation: valid 	Time 7.519	Prec@1 81.848	Prec@5 97.493	
+Epoch: [180][10/29]	Time 0.590 (0.722)	Data 0.000 (0.158)	Loss 0.6872 (0.7031)	Prec@1 81.250 (78.125)	Prec@5 95.312 (96.023)	
+Epoch: [180][20/29]	Time 0.538 (0.643)	Data 0.000 (0.083)	Loss 0.6590 (0.6942)	Prec@1 78.125 (78.646)	Prec@5 96.875 (95.722)	
+Evaluation: valid 	Time 7.542	Prec@1 81.412	Prec@5 97.356	
+Epoch: [181][10/29]	Time 0.537 (0.776)	Data 0.000 (0.197)	Loss 0.7710 (0.7194)	Prec@1 75.781 (77.628)	Prec@5 94.531 (95.526)	
+Epoch: [181][20/29]	Time 0.581 (0.676)	Data 0.000 (0.103)	Loss 0.6737 (0.6848)	Prec@1 78.906 (78.832)	Prec@5 94.531 (95.945)	
+Evaluation: valid 	Time 7.784	Prec@1 81.630	Prec@5 97.274	
+Epoch: [182][10/29]	Time 0.580 (0.741)	Data 0.000 (0.165)	Loss 0.6079 (0.6704)	Prec@1 78.906 (80.185)	Prec@5 96.875 (95.597)	
+Epoch: [182][20/29]	Time 0.537 (0.653)	Data 0.000 (0.087)	Loss 0.7040 (0.6825)	Prec@1 83.594 (79.874)	Prec@5 94.531 (95.461)	
+Evaluation: valid 	Time 7.375	Prec@1 80.894	Prec@5 97.574	
+Epoch: [183][10/29]	Time 0.538 (0.764)	Data 0.000 (0.192)	Loss 0.6543 (0.6796)	Prec@1 77.344 (79.759)	Prec@5 95.312 (95.312)	
+Epoch: [183][20/29]	Time 0.540 (0.670)	Data 0.000 (0.101)	Loss 0.5831 (0.6760)	Prec@1 83.594 (80.171)	Prec@5 96.094 (95.387)	
+Evaluation: valid 	Time 8.628	Prec@1 81.439	Prec@5 97.438	
+Epoch: [184][10/29]	Time 0.582 (0.770)	Data 0.000 (0.189)	Loss 0.8094 (0.7066)	Prec@1 75.000 (78.196)	Prec@5 92.188 (95.170)	
+Epoch: [184][20/29]	Time 0.580 (0.667)	Data 0.000 (0.099)	Loss 0.6535 (0.6909)	Prec@1 76.562 (78.720)	Prec@5 98.438 (95.312)	
+Evaluation: valid 	Time 7.834	Prec@1 81.766	Prec@5 97.356	
+Epoch: [185][10/29]	Time 0.580 (0.752)	Data 0.000 (0.190)	Loss 0.6490 (0.6833)	Prec@1 77.344 (79.332)	Prec@5 96.875 (95.526)	
+Epoch: [185][20/29]	Time 0.579 (0.658)	Data 0.000 (0.100)	Loss 0.7809 (0.6651)	Prec@1 72.656 (79.836)	Prec@5 95.312 (95.833)	
+Evaluation: valid 	Time 7.935	Prec@1 81.957	Prec@5 97.329	
+Epoch: [186][10/29]	Time 0.578 (0.804)	Data 0.000 (0.237)	Loss 0.6032 (0.6420)	Prec@1 82.812 (80.611)	Prec@5 96.094 (96.094)	
+Epoch: [186][20/29]	Time 0.574 (0.685)	Data 0.000 (0.124)	Loss 0.7760 (0.6411)	Prec@1 77.344 (81.064)	Prec@5 93.750 (95.796)	
+Evaluation: valid 	Time 8.638	Prec@1 81.875	Prec@5 97.383	
+Epoch: [187][10/29]	Time 0.590 (0.774)	Data 0.001 (0.202)	Loss 0.6251 (0.6510)	Prec@1 84.375 (80.185)	Prec@5 96.875 (96.236)	
+Epoch: [187][20/29]	Time 0.573 (0.677)	Data 0.000 (0.106)	Loss 0.7830 (0.6647)	Prec@1 78.906 (80.208)	Prec@5 93.750 (95.573)	
+Evaluation: valid 	Time 8.545	Prec@1 82.339	Prec@5 97.438	
+Epoch: [188][10/29]	Time 0.539 (0.768)	Data 0.000 (0.205)	Loss 0.7812 (0.6859)	Prec@1 75.781 (80.256)	Prec@5 95.312 (95.597)	
+Epoch: [188][20/29]	Time 0.540 (0.676)	Data 0.000 (0.108)	Loss 0.5719 (0.6944)	Prec@1 81.250 (79.390)	Prec@5 98.438 (96.019)	
+Evaluation: valid 	Time 8.233	Prec@1 82.257	Prec@5 97.520	
+Epoch: [189][10/29]	Time 0.538 (0.798)	Data 0.000 (0.233)	Loss 0.6644 (0.6805)	Prec@1 82.031 (78.693)	Prec@5 94.531 (95.241)	
+Epoch: [189][20/29]	Time 0.535 (0.691)	Data 0.000 (0.122)	Loss 0.6912 (0.6827)	Prec@1 78.906 (78.832)	Prec@5 95.312 (94.940)	
+Evaluation: valid 	Time 8.327	Prec@1 82.202	Prec@5 97.520	
+Epoch: [190][10/29]	Time 0.577 (0.796)	Data 0.000 (0.219)	Loss 0.6543 (0.6771)	Prec@1 78.906 (79.759)	Prec@5 98.438 (95.597)	
+Epoch: [190][20/29]	Time 0.538 (0.683)	Data 0.000 (0.115)	Loss 0.7731 (0.6812)	Prec@1 74.219 (78.423)	Prec@5 95.312 (95.759)	
+Evaluation: valid 	Time 8.162	Prec@1 81.902	Prec@5 97.356	
+Epoch: [191][10/29]	Time 0.537 (0.796)	Data 0.000 (0.227)	Loss 0.8163 (0.6592)	Prec@1 74.219 (79.759)	Prec@5 92.188 (95.739)	
+Epoch: [191][20/29]	Time 0.541 (0.689)	Data 0.000 (0.119)	Loss 0.7117 (0.6524)	Prec@1 78.125 (80.692)	Prec@5 93.750 (95.982)	
+Evaluation: valid 	Time 8.428	Prec@1 81.875	Prec@5 97.493	
+Epoch: [192][10/29]	Time 0.539 (0.810)	Data 0.000 (0.230)	Loss 0.5160 (0.6633)	Prec@1 83.594 (80.398)	Prec@5 97.656 (95.881)	
+Epoch: [192][20/29]	Time 0.580 (0.694)	Data 0.000 (0.121)	Loss 0.6125 (0.6600)	Prec@1 80.469 (80.543)	Prec@5 95.312 (95.685)	
+Evaluation: valid 	Time 8.696	Prec@1 81.902	Prec@5 97.438	
+Epoch: [193][10/29]	Time 0.547 (0.797)	Data 0.000 (0.235)	Loss 0.7977 (0.6567)	Prec@1 76.562 (80.824)	Prec@5 92.969 (96.023)	
+Epoch: [193][20/29]	Time 0.585 (0.689)	Data 0.000 (0.123)	Loss 0.6382 (0.6461)	Prec@1 82.812 (81.250)	Prec@5 95.312 (96.019)	
+Evaluation: valid 	Time 9.295	Prec@1 81.739	Prec@5 97.465	
+Epoch: [194][10/29]	Time 0.584 (0.788)	Data 0.000 (0.222)	Loss 0.7088 (0.6773)	Prec@1 75.781 (79.119)	Prec@5 95.312 (95.881)	
+Epoch: [194][20/29]	Time 0.579 (0.676)	Data 0.000 (0.116)	Loss 0.6824 (0.6715)	Prec@1 80.469 (79.241)	Prec@5 94.531 (96.205)	
+Evaluation: valid 	Time 8.354	Prec@1 81.848	Prec@5 97.438	
+Epoch: [195][10/29]	Time 0.544 (0.807)	Data 0.000 (0.245)	Loss 0.6980 (0.6952)	Prec@1 81.250 (78.977)	Prec@5 94.531 (95.455)	
+Epoch: [195][20/29]	Time 0.539 (0.689)	Data 0.000 (0.129)	Loss 0.7426 (0.6573)	Prec@1 78.125 (79.613)	Prec@5 94.531 (96.057)	
+Evaluation: valid 	Time 8.910	Prec@1 81.657	Prec@5 97.356	
+Epoch: [196][10/29]	Time 0.578 (0.803)	Data 0.000 (0.225)	Loss 0.5748 (0.6271)	Prec@1 81.250 (80.682)	Prec@5 99.219 (96.520)	
+Epoch: [196][20/29]	Time 0.573 (0.684)	Data 0.000 (0.118)	Loss 0.6349 (0.6555)	Prec@1 79.688 (79.985)	Prec@5 96.875 (96.354)	
+Evaluation: valid 	Time 8.193	Prec@1 81.630	Prec@5 97.383	
+Epoch: [197][10/29]	Time 0.599 (0.780)	Data 0.001 (0.208)	Loss 0.6727 (0.6565)	Prec@1 76.562 (79.474)	Prec@5 97.656 (96.378)	
+Epoch: [197][20/29]	Time 0.536 (0.674)	Data 0.000 (0.109)	Loss 0.6070 (0.6304)	Prec@1 78.125 (80.766)	Prec@5 96.875 (96.689)	
+Evaluation: valid 	Time 8.517	Prec@1 82.039	Prec@5 97.465	
+Epoch: [198][10/29]	Time 0.579 (0.764)	Data 0.000 (0.197)	Loss 0.5580 (0.5923)	Prec@1 82.031 (81.179)	Prec@5 97.656 (96.520)	
+Epoch: [198][20/29]	Time 0.539 (0.664)	Data 0.000 (0.104)	Loss 0.7480 (0.6235)	Prec@1 77.344 (80.432)	Prec@5 96.094 (96.466)	
+Evaluation: valid 	Time 7.873	Prec@1 82.311	Prec@5 97.547	
+Epoch: [199][10/29]	Time 0.583 (0.783)	Data 0.000 (0.212)	Loss 0.5876 (0.6358)	Prec@1 78.906 (80.540)	Prec@5 96.094 (96.236)	
+Epoch: [199][20/29]	Time 0.537 (0.677)	Data 0.000 (0.111)	Loss 0.5739 (0.6378)	Prec@1 83.594 (80.692)	Prec@5 96.094 (95.647)	
+Evaluation: valid 	Time 9.540	Prec@1 82.120	Prec@5 97.602	
+Epoch: [200][10/29]	Time 0.536 (0.792)	Data 0.000 (0.226)	Loss 0.7231 (0.6283)	Prec@1 78.906 (80.185)	Prec@5 96.094 (96.307)	
+Epoch: [200][20/29]	Time 0.539 (0.685)	Data 0.000 (0.118)	Loss 0.7177 (0.6376)	Prec@1 77.344 (79.836)	Prec@5 95.312 (96.317)	
+Evaluation: valid 	Time 8.307	Prec@1 82.120	Prec@5 97.520	
+Epoch: [201][10/29]	Time 0.583 (0.762)	Data 0.000 (0.200)	Loss 0.6065 (0.6281)	Prec@1 83.594 (81.037)	Prec@5 96.094 (96.378)	
+Epoch: [201][20/29]	Time 0.621 (0.668)	Data 0.000 (0.105)	Loss 0.6552 (0.6626)	Prec@1 76.562 (79.874)	Prec@5 98.438 (96.019)	
+Evaluation: valid 	Time 8.791	Prec@1 82.202	Prec@5 97.520	
+Epoch: [202][10/29]	Time 0.570 (0.806)	Data 0.000 (0.228)	Loss 0.5589 (0.5850)	Prec@1 80.469 (82.315)	Prec@5 98.438 (96.449)	
+Epoch: [202][20/29]	Time 0.573 (0.685)	Data 0.000 (0.120)	Loss 0.6067 (0.6227)	Prec@1 81.250 (81.250)	Prec@5 95.312 (96.243)	
+Evaluation: valid 	Time 8.632	Prec@1 81.821	Prec@5 97.356	
+Epoch: [203][10/29]	Time 0.594 (0.778)	Data 0.000 (0.207)	Loss 0.7132 (0.6345)	Prec@1 79.688 (81.605)	Prec@5 96.094 (96.449)	
+Epoch: [203][20/29]	Time 0.574 (0.672)	Data 0.000 (0.108)	Loss 0.5299 (0.6464)	Prec@1 85.156 (80.394)	Prec@5 96.875 (96.354)	
+Evaluation: valid 	Time 9.681	Prec@1 82.502	Prec@5 97.493	
+Epoch: [204][10/29]	Time 0.577 (0.771)	Data 0.000 (0.209)	Loss 0.7301 (0.6658)	Prec@1 80.469 (79.901)	Prec@5 96.875 (95.312)	
+Epoch: [204][20/29]	Time 0.540 (0.671)	Data 0.000 (0.110)	Loss 0.6703 (0.6542)	Prec@1 78.125 (80.506)	Prec@5 96.094 (95.647)	
+Evaluation: valid 	Time 8.018	Prec@1 82.257	Prec@5 97.493	
+Epoch: [205][10/29]	Time 0.540 (0.778)	Data 0.000 (0.217)	Loss 0.6917 (0.6369)	Prec@1 77.344 (80.824)	Prec@5 96.875 (96.094)	
+Epoch: [205][20/29]	Time 0.577 (0.679)	Data 0.000 (0.114)	Loss 0.7237 (0.6695)	Prec@1 82.031 (79.762)	Prec@5 93.750 (95.350)	
+Evaluation: valid 	Time 7.456	Prec@1 82.175	Prec@5 97.520	
+Epoch: [206][10/29]	Time 0.574 (0.739)	Data 0.000 (0.173)	Loss 0.7668 (0.6000)	Prec@1 75.781 (80.398)	Prec@5 93.750 (95.952)	
+Epoch: [206][20/29]	Time 0.579 (0.659)	Data 0.000 (0.091)	Loss 0.6197 (0.6331)	Prec@1 78.906 (80.543)	Prec@5 96.875 (95.610)	
+Evaluation: valid 	Time 7.460	Prec@1 82.175	Prec@5 97.547	
+Epoch: [207][10/29]	Time 0.580 (0.748)	Data 0.000 (0.180)	Loss 0.5386 (0.5745)	Prec@1 83.594 (83.026)	Prec@5 97.656 (96.804)	
+Epoch: [207][20/29]	Time 0.581 (0.665)	Data 0.000 (0.095)	Loss 0.5660 (0.5844)	Prec@1 80.469 (82.217)	Prec@5 96.875 (96.615)	
+Evaluation: valid 	Time 7.353	Prec@1 82.448	Prec@5 97.520	
+Epoch: [208][10/29]	Time 0.584 (0.738)	Data 0.001 (0.149)	Loss 0.5864 (0.6112)	Prec@1 80.469 (81.818)	Prec@5 96.875 (96.094)	
+Epoch: [208][20/29]	Time 0.541 (0.652)	Data 0.000 (0.078)	Loss 0.8667 (0.6180)	Prec@1 67.969 (81.510)	Prec@5 95.312 (96.168)	
+Evaluation: valid 	Time 7.387	Prec@1 82.311	Prec@5 97.438	
+Epoch: [209][10/29]	Time 0.602 (0.768)	Data 0.000 (0.197)	Loss 0.5331 (0.6663)	Prec@1 82.812 (80.327)	Prec@5 98.438 (95.099)	
+Epoch: [209][20/29]	Time 0.576 (0.676)	Data 0.000 (0.103)	Loss 0.6131 (0.6590)	Prec@1 78.125 (80.469)	Prec@5 95.312 (95.126)	
+Evaluation: valid 	Time 7.452	Prec@1 82.311	Prec@5 97.520	
+Epoch: [210][10/29]	Time 0.598 (0.752)	Data 0.000 (0.174)	Loss 0.5475 (0.6424)	Prec@1 84.375 (81.037)	Prec@5 96.875 (95.668)	
+Epoch: [210][20/29]	Time 0.534 (0.660)	Data 0.000 (0.091)	Loss 0.6688 (0.6373)	Prec@1 74.219 (80.655)	Prec@5 96.875 (95.945)	
+Evaluation: valid 	Time 7.470	Prec@1 82.311	Prec@5 97.683	
+Epoch: [211][10/29]	Time 0.596 (0.748)	Data 0.001 (0.181)	Loss 0.5834 (0.6006)	Prec@1 80.469 (82.031)	Prec@5 99.219 (96.875)	
+Epoch: [211][20/29]	Time 0.575 (0.663)	Data 0.000 (0.095)	Loss 0.6503 (0.6042)	Prec@1 83.594 (82.068)	Prec@5 95.312 (96.726)	
+Evaluation: valid 	Time 7.278	Prec@1 82.584	Prec@5 97.602	
+Epoch: [212][10/29]	Time 0.534 (0.719)	Data 0.000 (0.154)	Loss 0.5921 (0.6574)	Prec@1 84.375 (80.043)	Prec@5 96.094 (95.455)	
+Epoch: [212][20/29]	Time 0.581 (0.645)	Data 0.000 (0.081)	Loss 0.7020 (0.6565)	Prec@1 78.125 (79.799)	Prec@5 96.094 (95.908)	
+Evaluation: valid 	Time 7.238	Prec@1 82.175	Prec@5 97.520	
+Epoch: [213][10/29]	Time 0.548 (0.758)	Data 0.001 (0.192)	Loss 0.5856 (0.6189)	Prec@1 82.812 (80.611)	Prec@5 97.656 (96.449)	
+Epoch: [213][20/29]	Time 0.573 (0.664)	Data 0.000 (0.101)	Loss 0.5802 (0.5961)	Prec@1 81.250 (81.696)	Prec@5 97.656 (96.577)	
+Evaluation: valid 	Time 7.413	Prec@1 81.902	Prec@5 97.656	
+Epoch: [214][10/29]	Time 0.576 (0.746)	Data 0.000 (0.169)	Loss 0.6082 (0.6121)	Prec@1 83.594 (81.605)	Prec@5 95.312 (96.520)	
+Epoch: [214][20/29]	Time 0.577 (0.657)	Data 0.000 (0.089)	Loss 0.6035 (0.6100)	Prec@1 82.812 (81.064)	Prec@5 94.531 (96.243)	
+Evaluation: valid 	Time 7.315	Prec@1 82.339	Prec@5 97.547	
+Epoch: [215][10/29]	Time 0.538 (0.747)	Data 0.000 (0.186)	Loss 0.5929 (0.5880)	Prec@1 81.250 (80.895)	Prec@5 95.312 (96.733)	
+Epoch: [215][20/29]	Time 0.536 (0.658)	Data 0.000 (0.098)	Loss 0.4763 (0.5911)	Prec@1 88.281 (81.250)	Prec@5 96.094 (96.577)	
+Evaluation: valid 	Time 7.236	Prec@1 82.066	Prec@5 97.602	
+Epoch: [216][10/29]	Time 0.544 (0.756)	Data 0.000 (0.190)	Loss 0.7794 (0.6224)	Prec@1 75.000 (81.676)	Prec@5 95.312 (95.881)	
+Epoch: [216][20/29]	Time 0.531 (0.665)	Data 0.000 (0.099)	Loss 0.6400 (0.6218)	Prec@1 79.688 (81.734)	Prec@5 97.656 (95.871)	
+Evaluation: valid 	Time 7.461	Prec@1 82.693	Prec@5 97.683	
+Epoch: [217][10/29]	Time 0.537 (0.749)	Data 0.000 (0.185)	Loss 0.7240 (0.6205)	Prec@1 78.906 (82.244)	Prec@5 93.750 (95.455)	
+Epoch: [217][20/29]	Time 0.575 (0.672)	Data 0.000 (0.097)	Loss 0.6531 (0.6297)	Prec@1 83.594 (81.548)	Prec@5 95.312 (95.722)	
+Evaluation: valid 	Time 7.655	Prec@1 81.875	Prec@5 97.602	
+Epoch: [218][10/29]	Time 0.555 (0.744)	Data 0.000 (0.183)	Loss 0.5632 (0.6417)	Prec@1 82.031 (80.469)	Prec@5 99.219 (96.591)	
+Epoch: [218][20/29]	Time 0.538 (0.663)	Data 0.000 (0.096)	Loss 0.5335 (0.6308)	Prec@1 83.594 (80.580)	Prec@5 97.656 (96.354)	
+Evaluation: valid 	Time 7.649	Prec@1 82.284	Prec@5 97.547	
+Epoch: [219][10/29]	Time 0.574 (0.765)	Data 0.000 (0.204)	Loss 0.6768 (0.5759)	Prec@1 78.125 (82.955)	Prec@5 96.875 (96.875)	
+Epoch: [219][20/29]	Time 0.682 (0.670)	Data 0.000 (0.107)	Loss 0.5161 (0.5803)	Prec@1 83.594 (82.812)	Prec@5 96.875 (96.354)	
+Evaluation: valid 	Time 7.959	Prec@1 82.066	Prec@5 97.493	
+Epoch: [220][10/29]	Time 0.601 (0.778)	Data 0.000 (0.201)	Loss 0.5134 (0.5916)	Prec@1 85.938 (81.463)	Prec@5 97.656 (96.307)	
+Epoch: [220][20/29]	Time 0.574 (0.672)	Data 0.000 (0.106)	Loss 0.6911 (0.5919)	Prec@1 79.688 (82.143)	Prec@5 94.531 (96.280)	
+Evaluation: valid 	Time 7.546	Prec@1 82.175	Prec@5 97.493	
+Epoch: [221][10/29]	Time 0.577 (0.746)	Data 0.000 (0.183)	Loss 0.6281 (0.6592)	Prec@1 77.344 (80.327)	Prec@5 97.656 (95.170)	
+Epoch: [221][20/29]	Time 0.557 (0.657)	Data 0.000 (0.096)	Loss 0.6519 (0.6298)	Prec@1 81.250 (81.101)	Prec@5 96.094 (95.759)	
+Evaluation: valid 	Time 7.760	Prec@1 81.930	Prec@5 97.493	
+Epoch: [222][10/29]	Time 0.580 (0.740)	Data 0.000 (0.169)	Loss 0.5608 (0.5820)	Prec@1 82.812 (82.102)	Prec@5 94.531 (95.739)	
+Epoch: [222][20/29]	Time 0.579 (0.651)	Data 0.000 (0.088)	Loss 0.5861 (0.5834)	Prec@1 79.688 (81.845)	Prec@5 96.875 (96.429)	
+Evaluation: valid 	Time 8.028	Prec@1 82.475	Prec@5 97.574	
+Epoch: [223][10/29]	Time 0.589 (0.772)	Data 0.000 (0.206)	Loss 0.8477 (0.6256)	Prec@1 77.344 (81.179)	Prec@5 92.969 (95.810)	
+Epoch: [223][20/29]	Time 0.575 (0.675)	Data 0.000 (0.108)	Loss 0.5745 (0.6027)	Prec@1 79.688 (81.287)	Prec@5 97.656 (96.131)	
+Evaluation: valid 	Time 8.190	Prec@1 82.393	Prec@5 97.629	
+Epoch: [224][10/29]	Time 0.580 (0.785)	Data 0.000 (0.222)	Loss 0.6587 (0.6232)	Prec@1 79.688 (80.895)	Prec@5 94.531 (95.881)	
+Epoch: [224][20/29]	Time 0.537 (0.681)	Data 0.000 (0.116)	Loss 0.6335 (0.6316)	Prec@1 78.125 (80.469)	Prec@5 95.312 (95.536)	
+Evaluation: valid 	Time 7.752	Prec@1 82.311	Prec@5 97.738	
+Epoch: [225][10/29]	Time 0.540 (0.752)	Data 0.000 (0.188)	Loss 0.5748 (0.5608)	Prec@1 84.375 (83.381)	Prec@5 97.656 (96.520)	
+Epoch: [225][20/29]	Time 0.532 (0.666)	Data 0.000 (0.098)	Loss 0.6267 (0.5733)	Prec@1 78.906 (82.924)	Prec@5 94.531 (96.354)	
+Evaluation: valid 	Time 7.866	Prec@1 82.393	Prec@5 97.574	
+Epoch: [226][10/29]	Time 0.534 (0.779)	Data 0.000 (0.207)	Loss 0.5035 (0.5776)	Prec@1 86.719 (81.605)	Prec@5 96.094 (96.662)	
+Epoch: [226][20/29]	Time 0.554 (0.673)	Data 0.000 (0.109)	Loss 0.6902 (0.5771)	Prec@1 83.594 (81.920)	Prec@5 90.625 (96.354)	
+Evaluation: valid 	Time 8.323	Prec@1 82.148	Prec@5 97.465	
+Epoch: [227][10/29]	Time 0.593 (0.788)	Data 0.000 (0.224)	Loss 0.7513 (0.6281)	Prec@1 77.344 (81.179)	Prec@5 95.312 (96.094)	
+Epoch: [227][20/29]	Time 0.537 (0.681)	Data 0.000 (0.118)	Loss 0.5679 (0.6026)	Prec@1 78.125 (81.920)	Prec@5 95.312 (96.243)	
+Evaluation: valid 	Time 9.055	Prec@1 82.011	Prec@5 97.520	
+Epoch: [228][10/29]	Time 0.540 (0.778)	Data 0.000 (0.205)	Loss 0.5298 (0.5929)	Prec@1 85.938 (81.108)	Prec@5 96.094 (96.023)	
+Epoch: [228][20/29]	Time 0.581 (0.675)	Data 0.000 (0.107)	Loss 0.5660 (0.6143)	Prec@1 80.469 (80.432)	Prec@5 97.656 (95.833)	
+Evaluation: valid 	Time 8.914	Prec@1 82.175	Prec@5 97.547	
+Epoch: [229][10/29]	Time 0.545 (0.755)	Data 0.000 (0.191)	Loss 0.7653 (0.5929)	Prec@1 75.000 (82.244)	Prec@5 96.094 (95.810)	
+Epoch: [229][20/29]	Time 0.581 (0.666)	Data 0.003 (0.100)	Loss 0.5132 (0.5966)	Prec@1 86.719 (81.957)	Prec@5 98.438 (96.019)	
+Evaluation: valid 	Time 8.985	Prec@1 82.175	Prec@5 97.574	
+Epoch: [230][10/29]	Time 0.584 (0.735)	Data 0.000 (0.176)	Loss 0.7389 (0.5961)	Prec@1 75.000 (81.676)	Prec@5 92.188 (96.520)	
+Epoch: [230][20/29]	Time 0.540 (0.650)	Data 0.000 (0.092)	Loss 0.5861 (0.5822)	Prec@1 80.469 (82.180)	Prec@5 96.875 (96.763)	
+Evaluation: valid 	Time 7.527	Prec@1 82.120	Prec@5 97.547	
+Epoch: [231][10/29]	Time 0.545 (0.765)	Data 0.000 (0.192)	Loss 0.5799 (0.5982)	Prec@1 81.250 (82.386)	Prec@5 96.875 (96.165)	
+Epoch: [231][20/29]	Time 0.604 (0.672)	Data 0.000 (0.100)	Loss 0.5737 (0.6083)	Prec@1 82.031 (82.143)	Prec@5 97.656 (95.908)	
+Evaluation: valid 	Time 9.235	Prec@1 81.984	Prec@5 97.602	
+Epoch: [232][10/29]	Time 0.536 (0.761)	Data 0.000 (0.185)	Loss 0.6715 (0.6137)	Prec@1 79.688 (81.037)	Prec@5 94.531 (96.378)	
+Epoch: [232][20/29]	Time 0.569 (0.665)	Data 0.000 (0.097)	Loss 0.4370 (0.5874)	Prec@1 88.281 (81.548)	Prec@5 98.438 (96.652)	
+Evaluation: valid 	Time 7.839	Prec@1 82.284	Prec@5 97.711	
+Epoch: [233][10/29]	Time 0.538 (0.796)	Data 0.000 (0.240)	Loss 0.5116 (0.6615)	Prec@1 85.938 (80.256)	Prec@5 95.312 (94.815)	
+Epoch: [233][20/29]	Time 0.574 (0.683)	Data 0.000 (0.126)	Loss 0.5239 (0.6365)	Prec@1 84.375 (80.320)	Prec@5 96.094 (95.647)	
+Evaluation: valid 	Time 8.776	Prec@1 82.393	Prec@5 97.574	
+Epoch: [234][10/29]	Time 0.544 (0.777)	Data 0.000 (0.219)	Loss 0.7088 (0.6454)	Prec@1 78.125 (80.185)	Prec@5 96.094 (95.952)	
+Epoch: [234][20/29]	Time 0.575 (0.674)	Data 0.000 (0.115)	Loss 0.5669 (0.6422)	Prec@1 82.031 (80.097)	Prec@5 100.000 (96.019)	
+Evaluation: valid 	Time 7.787	Prec@1 82.638	Prec@5 97.738	
+Epoch: [235][10/29]	Time 0.571 (0.763)	Data 0.000 (0.193)	Loss 0.5190 (0.5739)	Prec@1 82.812 (82.386)	Prec@5 95.312 (96.094)	
+Epoch: [235][20/29]	Time 0.537 (0.670)	Data 0.000 (0.101)	Loss 0.5296 (0.5902)	Prec@1 84.375 (82.068)	Prec@5 98.438 (96.168)	
+Evaluation: valid 	Time 8.968	Prec@1 82.829	Prec@5 97.574	
+Epoch: [236][10/29]	Time 0.583 (0.793)	Data 0.000 (0.220)	Loss 0.6173 (0.5816)	Prec@1 79.688 (82.315)	Prec@5 96.875 (95.952)	
+Epoch: [236][20/29]	Time 0.534 (0.680)	Data 0.000 (0.115)	Loss 0.6200 (0.5740)	Prec@1 78.906 (81.994)	Prec@5 94.531 (96.280)	
+Evaluation: valid 	Time 7.779	Prec@1 82.502	Prec@5 97.574	
+Epoch: [237][10/29]	Time 0.541 (0.779)	Data 0.000 (0.213)	Loss 0.5985 (0.5812)	Prec@1 81.250 (82.599)	Prec@5 96.875 (96.307)	
+Epoch: [237][20/29]	Time 0.576 (0.677)	Data 0.000 (0.112)	Loss 0.8043 (0.5962)	Prec@1 74.219 (82.366)	Prec@5 92.188 (96.243)	
+Evaluation: valid 	Time 7.411	Prec@1 82.502	Prec@5 97.465	
+Epoch: [238][10/29]	Time 0.533 (0.736)	Data 0.000 (0.177)	Loss 0.6799 (0.6137)	Prec@1 76.562 (80.540)	Prec@5 96.094 (95.952)	
+Epoch: [238][20/29]	Time 0.565 (0.651)	Data 0.000 (0.093)	Loss 0.5769 (0.6003)	Prec@1 78.906 (80.878)	Prec@5 96.875 (96.131)	
+Evaluation: valid 	Time 7.168	Prec@1 82.856	Prec@5 97.574	
+Epoch: [239][10/29]	Time 0.575 (0.750)	Data 0.000 (0.187)	Loss 0.6349 (0.6080)	Prec@1 81.250 (81.676)	Prec@5 94.531 (95.810)	
+Epoch: [239][20/29]	Time 0.577 (0.655)	Data 0.000 (0.098)	Loss 0.6318 (0.6085)	Prec@1 82.812 (81.845)	Prec@5 93.750 (95.722)	
+Evaluation: valid 	Time 7.559	Prec@1 82.693	Prec@5 97.574	
+Epoch: [240][10/29]	Time 0.534 (0.747)	Data 0.000 (0.189)	Loss 0.6941 (0.6383)	Prec@1 78.906 (80.256)	Prec@5 94.531 (95.739)	
+Epoch: [240][20/29]	Time 0.538 (0.658)	Data 0.000 (0.099)	Loss 0.7557 (0.6130)	Prec@1 75.000 (81.473)	Prec@5 94.531 (95.796)	
+Evaluation: valid 	Time 7.243	Prec@1 82.420	Prec@5 97.656	
+Epoch: [241][10/29]	Time 0.600 (0.727)	Data 0.001 (0.163)	Loss 0.5127 (0.5969)	Prec@1 82.031 (81.392)	Prec@5 97.656 (97.017)	
+Epoch: [241][20/29]	Time 0.591 (0.645)	Data 0.000 (0.085)	Loss 0.7220 (0.5929)	Prec@1 74.219 (81.324)	Prec@5 93.750 (96.726)	
+Evaluation: valid 	Time 7.418	Prec@1 82.311	Prec@5 97.547	
+Epoch: [242][10/29]	Time 0.535 (0.731)	Data 0.000 (0.171)	Loss 0.5085 (0.5911)	Prec@1 85.156 (82.315)	Prec@5 96.875 (95.952)	
+Epoch: [242][20/29]	Time 0.539 (0.646)	Data 0.000 (0.090)	Loss 0.4347 (0.5695)	Prec@1 88.281 (82.924)	Prec@5 96.875 (96.540)	
+Evaluation: valid 	Time 7.271	Prec@1 82.202	Prec@5 97.465	
+Epoch: [243][10/29]	Time 0.534 (0.758)	Data 0.000 (0.188)	Loss 0.6931 (0.5993)	Prec@1 78.906 (81.463)	Prec@5 93.750 (95.952)	
+Epoch: [243][20/29]	Time 0.536 (0.660)	Data 0.000 (0.099)	Loss 0.5052 (0.5968)	Prec@1 83.594 (81.696)	Prec@5 97.656 (96.391)	
+Evaluation: valid 	Time 7.107	Prec@1 82.311	Prec@5 97.574	
+Epoch: [244][10/29]	Time 0.575 (0.733)	Data 0.000 (0.163)	Loss 0.4983 (0.5578)	Prec@1 89.844 (82.812)	Prec@5 98.438 (97.585)	
+Epoch: [244][20/29]	Time 0.535 (0.650)	Data 0.000 (0.085)	Loss 0.6182 (0.5650)	Prec@1 81.250 (82.626)	Prec@5 94.531 (97.024)	
+Evaluation: valid 	Time 7.231	Prec@1 82.093	Prec@5 97.629	
+Epoch: [245][10/29]	Time 0.544 (0.743)	Data 0.000 (0.175)	Loss 0.5980 (0.6147)	Prec@1 82.812 (81.179)	Prec@5 97.656 (96.591)	
+Epoch: [245][20/29]	Time 0.537 (0.652)	Data 0.000 (0.092)	Loss 0.6244 (0.6247)	Prec@1 78.906 (80.580)	Prec@5 96.094 (95.982)	
+Evaluation: valid 	Time 7.342	Prec@1 82.284	Prec@5 97.629	
+Epoch: [246][10/29]	Time 0.575 (0.725)	Data 0.000 (0.161)	Loss 0.6037 (0.5978)	Prec@1 82.812 (82.102)	Prec@5 96.094 (96.236)	
+Epoch: [246][20/29]	Time 0.571 (0.643)	Data 0.000 (0.084)	Loss 0.8652 (0.5977)	Prec@1 72.656 (81.994)	Prec@5 94.531 (96.354)	
+Evaluation: valid 	Time 7.261	Prec@1 82.693	Prec@5 97.602	
+Epoch: [247][10/29]	Time 0.572 (0.751)	Data 0.000 (0.180)	Loss 0.5004 (0.6046)	Prec@1 88.281 (81.463)	Prec@5 99.219 (96.023)	
+Epoch: [247][20/29]	Time 0.536 (0.661)	Data 0.000 (0.094)	Loss 0.5781 (0.6291)	Prec@1 80.469 (80.134)	Prec@5 96.094 (96.168)	
+Evaluation: valid 	Time 7.583	Prec@1 82.011	Prec@5 97.520	
+Epoch: [248][10/29]	Time 0.592 (0.744)	Data 0.000 (0.184)	Loss 0.6411 (0.5765)	Prec@1 82.031 (82.599)	Prec@5 96.094 (96.520)	
+Epoch: [248][20/29]	Time 0.574 (0.663)	Data 0.000 (0.097)	Loss 0.5831 (0.5788)	Prec@1 79.688 (82.440)	Prec@5 96.094 (96.354)	
+Evaluation: valid 	Time 7.695	Prec@1 82.366	Prec@5 97.465	
+Epoch: [249][10/29]	Time 0.581 (0.749)	Data 0.000 (0.183)	Loss 0.5320 (0.5418)	Prec@1 82.812 (83.807)	Prec@5 96.094 (97.017)	
+Epoch: [249][20/29]	Time 0.533 (0.656)	Data 0.000 (0.096)	Loss 0.4915 (0.5594)	Prec@1 85.156 (82.738)	Prec@5 95.312 (96.540)	
+Evaluation: valid 	Time 8.449	Prec@1 81.848	Prec@5 97.520	
+Epoch: [250][10/29]	Time 0.549 (0.741)	Data 0.000 (0.183)	Loss 0.5357 (0.5523)	Prec@1 82.812 (82.599)	Prec@5 98.438 (96.875)	
+Epoch: [250][20/29]	Time 0.579 (0.655)	Data 0.000 (0.096)	Loss 0.4051 (0.5690)	Prec@1 85.156 (82.254)	Prec@5 99.219 (96.726)	
+Evaluation: valid 	Time 7.583	Prec@1 82.420	Prec@5 97.520	
+Epoch: [251][10/29]	Time 0.574 (0.774)	Data 0.000 (0.203)	Loss 0.5312 (0.5336)	Prec@1 85.156 (83.452)	Prec@5 96.094 (97.088)	
+Epoch: [251][20/29]	Time 0.571 (0.670)	Data 0.000 (0.106)	Loss 0.5340 (0.5426)	Prec@1 80.469 (83.147)	Prec@5 99.219 (97.098)	
+Evaluation: valid 	Time 7.865	Prec@1 82.475	Prec@5 97.520	
+Epoch: [252][10/29]	Time 0.572 (0.740)	Data 0.000 (0.177)	Loss 0.6034 (0.5690)	Prec@1 84.375 (83.168)	Prec@5 94.531 (96.946)	
+Epoch: [252][20/29]	Time 0.537 (0.654)	Data 0.000 (0.093)	Loss 0.6215 (0.5985)	Prec@1 80.469 (81.957)	Prec@5 92.188 (96.205)	
+Evaluation: valid 	Time 7.531	Prec@1 82.775	Prec@5 97.711	
+Epoch: [253][10/29]	Time 0.575 (0.778)	Data 0.000 (0.207)	Loss 0.4860 (0.5783)	Prec@1 83.594 (81.605)	Prec@5 99.219 (96.094)	
+Epoch: [253][20/29]	Time 0.578 (0.670)	Data 0.000 (0.108)	Loss 0.4931 (0.5728)	Prec@1 86.719 (82.106)	Prec@5 96.875 (96.094)	
+Evaluation: valid 	Time 8.272	Prec@1 82.311	Prec@5 97.629	
+Epoch: [254][10/29]	Time 0.576 (0.756)	Data 0.000 (0.194)	Loss 0.5804 (0.6076)	Prec@1 82.031 (82.102)	Prec@5 96.875 (95.739)	
+Epoch: [254][20/29]	Time 0.573 (0.666)	Data 0.000 (0.102)	Loss 0.5332 (0.5650)	Prec@1 82.812 (83.408)	Prec@5 96.875 (96.168)	
+Evaluation: valid 	Time 7.838	Prec@1 82.284	Prec@5 97.493	
+Epoch: [255][10/29]	Time 0.543 (0.738)	Data 0.000 (0.176)	Loss 0.7676 (0.5845)	Prec@1 77.344 (81.534)	Prec@5 95.312 (96.875)	
+Epoch: [255][20/29]	Time 0.555 (0.650)	Data 0.000 (0.092)	Loss 0.6830 (0.5780)	Prec@1 78.125 (82.217)	Prec@5 92.969 (96.652)	
+Evaluation: valid 	Time 8.349	Prec@1 82.311	Prec@5 97.574	
+Epoch: [256][10/29]	Time 0.541 (0.778)	Data 0.000 (0.211)	Loss 0.4845 (0.5762)	Prec@1 85.938 (82.386)	Prec@5 96.875 (96.094)	
+Epoch: [256][20/29]	Time 0.575 (0.675)	Data 0.000 (0.110)	Loss 0.5832 (0.5576)	Prec@1 81.250 (82.664)	Prec@5 96.094 (96.466)	
+Evaluation: valid 	Time 7.859	Prec@1 82.420	Prec@5 97.629	
+Epoch: [257][10/29]	Time 0.572 (0.768)	Data 0.000 (0.197)	Loss 0.4136 (0.5559)	Prec@1 86.719 (83.310)	Prec@5 97.656 (97.088)	
+Epoch: [257][20/29]	Time 0.576 (0.665)	Data 0.000 (0.103)	Loss 0.5588 (0.5557)	Prec@1 82.031 (82.626)	Prec@5 97.656 (96.838)	
+Evaluation: valid 	Time 8.973	Prec@1 82.148	Prec@5 97.438	
+Epoch: [258][10/29]	Time 0.537 (0.752)	Data 0.000 (0.191)	Loss 0.5635 (0.5422)	Prec@1 81.250 (83.097)	Prec@5 96.094 (97.372)	
+Epoch: [258][20/29]	Time 0.536 (0.657)	Data 0.000 (0.100)	Loss 0.4839 (0.5515)	Prec@1 83.594 (82.738)	Prec@5 96.094 (97.024)	
+Evaluation: valid 	Time 7.865	Prec@1 82.502	Prec@5 97.629	
+Epoch: [259][10/29]	Time 0.586 (0.790)	Data 0.000 (0.230)	Loss 0.8739 (0.5848)	Prec@1 73.438 (82.670)	Prec@5 91.406 (96.307)	
+Epoch: [259][20/29]	Time 0.551 (0.679)	Data 0.000 (0.121)	Loss 0.4564 (0.5831)	Prec@1 87.500 (82.403)	Prec@5 99.219 (96.466)	
+Evaluation: valid 	Time 8.311	Prec@1 82.720	Prec@5 97.656	
+Epoch: [260][10/29]	Time 0.571 (0.759)	Data 0.000 (0.193)	Loss 0.5022 (0.5742)	Prec@1 84.375 (82.599)	Prec@5 96.875 (96.449)	
+Epoch: [260][20/29]	Time 0.533 (0.667)	Data 0.000 (0.101)	Loss 0.5063 (0.5545)	Prec@1 85.156 (83.296)	Prec@5 97.656 (96.317)	
+Evaluation: valid 	Time 7.692	Prec@1 82.366	Prec@5 97.656	
+Epoch: [261][10/29]	Time 0.583 (0.802)	Data 0.000 (0.227)	Loss 0.5744 (0.5444)	Prec@1 80.469 (82.599)	Prec@5 96.094 (96.307)	
+Epoch: [261][20/29]	Time 0.574 (0.691)	Data 0.000 (0.119)	Loss 0.5293 (0.5571)	Prec@1 81.250 (82.589)	Prec@5 96.875 (96.503)	
+Evaluation: valid 	Time 8.860	Prec@1 82.420	Prec@5 97.574	
+Epoch: [262][10/29]	Time 0.592 (0.761)	Data 0.000 (0.180)	Loss 0.5371 (0.5620)	Prec@1 81.250 (82.670)	Prec@5 97.656 (96.662)	
+Epoch: [262][20/29]	Time 0.579 (0.662)	Data 0.000 (0.094)	Loss 0.5650 (0.5613)	Prec@1 80.469 (82.887)	Prec@5 96.094 (96.801)	
+Evaluation: valid 	Time 8.100	Prec@1 82.502	Prec@5 97.629	
+Epoch: [263][10/29]	Time 0.535 (0.782)	Data 0.000 (0.222)	Loss 0.4450 (0.4999)	Prec@1 88.281 (84.233)	Prec@5 98.438 (97.159)	
+Epoch: [263][20/29]	Time 0.536 (0.677)	Data 0.000 (0.116)	Loss 0.6306 (0.5535)	Prec@1 81.250 (82.850)	Prec@5 96.875 (96.466)	
+Evaluation: valid 	Time 8.335	Prec@1 82.638	Prec@5 97.520	
+Epoch: [264][10/29]	Time 0.554 (0.731)	Data 0.000 (0.167)	Loss 0.5250 (0.5633)	Prec@1 85.156 (83.523)	Prec@5 95.312 (95.881)	
+Epoch: [264][20/29]	Time 0.539 (0.646)	Data 0.000 (0.088)	Loss 0.6025 (0.5728)	Prec@1 82.812 (82.812)	Prec@5 97.656 (96.243)	
+Evaluation: valid 	Time 7.130	Prec@1 83.074	Prec@5 97.765	
+Epoch: [265][10/29]	Time 0.565 (0.732)	Data 0.000 (0.161)	Loss 0.5737 (0.5442)	Prec@1 82.031 (83.097)	Prec@5 93.750 (96.591)	
+Epoch: [265][20/29]	Time 0.575 (0.649)	Data 0.000 (0.085)	Loss 0.6875 (0.5744)	Prec@1 76.562 (82.217)	Prec@5 95.312 (96.391)	
+Evaluation: valid 	Time 7.372	Prec@1 82.529	Prec@5 97.493	
+Epoch: [266][10/29]	Time 0.572 (0.723)	Data 0.000 (0.164)	Loss 0.5056 (0.5199)	Prec@1 83.594 (83.026)	Prec@5 96.094 (96.733)	
+Epoch: [266][20/29]	Time 0.572 (0.643)	Data 0.000 (0.086)	Loss 0.5296 (0.5375)	Prec@1 82.812 (82.924)	Prec@5 96.094 (96.466)	
+Evaluation: valid 	Time 7.423	Prec@1 82.120	Prec@5 97.602	
+Epoch: [267][10/29]	Time 0.535 (0.739)	Data 0.000 (0.173)	Loss 0.5666 (0.5524)	Prec@1 84.375 (83.452)	Prec@5 96.875 (96.946)	
+Epoch: [267][20/29]	Time 0.537 (0.650)	Data 0.000 (0.091)	Loss 0.5841 (0.5483)	Prec@1 83.594 (83.147)	Prec@5 95.312 (96.912)	
+Evaluation: valid 	Time 7.241	Prec@1 82.720	Prec@5 97.520	
+Epoch: [268][10/29]	Time 0.574 (0.752)	Data 0.000 (0.186)	Loss 0.4376 (0.5300)	Prec@1 89.062 (84.162)	Prec@5 97.656 (96.733)	
+Epoch: [268][20/29]	Time 0.575 (0.657)	Data 0.000 (0.098)	Loss 0.4431 (0.5544)	Prec@1 86.719 (83.036)	Prec@5 100.000 (96.726)	
+Evaluation: valid 	Time 6.963	Prec@1 81.930	Prec@5 97.520	
+Epoch: [269][10/29]	Time 0.575 (0.738)	Data 0.000 (0.175)	Loss 0.5106 (0.5400)	Prec@1 82.812 (83.807)	Prec@5 96.875 (96.165)	
+Epoch: [269][20/29]	Time 0.536 (0.655)	Data 0.000 (0.092)	Loss 0.4918 (0.5532)	Prec@1 85.156 (83.296)	Prec@5 99.219 (96.168)	
+Evaluation: valid 	Time 7.601	Prec@1 82.720	Prec@5 97.711	
+Epoch: [270][10/29]	Time 0.536 (0.738)	Data 0.000 (0.164)	Loss 0.6538 (0.6432)	Prec@1 79.688 (80.469)	Prec@5 95.312 (95.881)	
+Epoch: [270][20/29]	Time 0.536 (0.650)	Data 0.000 (0.086)	Loss 0.3577 (0.5883)	Prec@1 88.281 (81.920)	Prec@5 98.438 (96.317)	
+Evaluation: valid 	Time 7.285	Prec@1 82.366	Prec@5 97.602	
+Epoch: [271][10/29]	Time 0.573 (0.736)	Data 0.000 (0.168)	Loss 0.7073 (0.5814)	Prec@1 78.125 (82.173)	Prec@5 95.312 (95.952)	
+Epoch: [271][20/29]	Time 0.538 (0.651)	Data 0.000 (0.088)	Loss 0.4964 (0.5584)	Prec@1 81.250 (83.147)	Prec@5 97.656 (96.540)	
+Evaluation: valid 	Time 7.232	Prec@1 81.984	Prec@5 97.602	
+Epoch: [272][10/29]	Time 0.543 (0.745)	Data 0.000 (0.182)	Loss 0.4947 (0.5246)	Prec@1 88.281 (84.375)	Prec@5 96.875 (96.875)	
+Epoch: [272][20/29]	Time 0.544 (0.653)	Data 0.000 (0.096)	Loss 0.5389 (0.5495)	Prec@1 84.375 (83.780)	Prec@5 96.094 (96.466)	
+Evaluation: valid 	Time 7.464	Prec@1 82.775	Prec@5 97.711	
+Epoch: [273][10/29]	Time 0.557 (0.781)	Data 0.000 (0.224)	Loss 0.5863 (0.5881)	Prec@1 81.250 (82.457)	Prec@5 96.094 (95.597)	
+Epoch: [273][20/29]	Time 0.571 (0.675)	Data 0.000 (0.117)	Loss 0.5809 (0.5729)	Prec@1 85.156 (82.850)	Prec@5 93.750 (95.759)	
+Evaluation: valid 	Time 7.834	Prec@1 82.557	Prec@5 97.547	
+Epoch: [274][10/29]	Time 0.531 (0.769)	Data 0.000 (0.208)	Loss 0.4941 (0.5290)	Prec@1 87.500 (84.162)	Prec@5 97.656 (97.230)	
+Epoch: [274][20/29]	Time 0.574 (0.671)	Data 0.000 (0.109)	Loss 0.5706 (0.5643)	Prec@1 80.469 (82.812)	Prec@5 94.531 (96.391)	
+Evaluation: valid 	Time 7.681	Prec@1 83.129	Prec@5 97.629	
+Epoch: [275][10/29]	Time 0.537 (0.746)	Data 0.000 (0.180)	Loss 0.5038 (0.5307)	Prec@1 82.031 (84.517)	Prec@5 97.656 (96.449)	
+Epoch: [275][20/29]	Time 0.572 (0.657)	Data 0.000 (0.094)	Loss 0.5719 (0.5562)	Prec@1 80.469 (83.110)	Prec@5 95.312 (96.168)	
+Evaluation: valid 	Time 8.104	Prec@1 82.529	Prec@5 97.656	
+Epoch: [276][10/29]	Time 0.572 (0.776)	Data 0.000 (0.213)	Loss 0.5551 (0.5545)	Prec@1 82.031 (83.026)	Prec@5 96.094 (95.597)	
+Epoch: [276][20/29]	Time 0.575 (0.671)	Data 0.000 (0.111)	Loss 0.3558 (0.5390)	Prec@1 89.062 (83.296)	Prec@5 100.000 (96.354)	
+Evaluation: valid 	Time 7.299	Prec@1 82.120	Prec@5 97.602	
+Epoch: [277][10/29]	Time 0.534 (0.733)	Data 0.000 (0.175)	Loss 0.5611 (0.5348)	Prec@1 83.594 (83.878)	Prec@5 98.438 (96.875)	
+Epoch: [277][20/29]	Time 0.535 (0.657)	Data 0.000 (0.092)	Loss 0.6342 (0.5657)	Prec@1 78.906 (82.440)	Prec@5 96.094 (96.540)	
+Evaluation: valid 	Time 8.022	Prec@1 82.420	Prec@5 97.683	
+Epoch: [278][10/29]	Time 0.594 (0.737)	Data 0.000 (0.174)	Loss 0.5434 (0.5418)	Prec@1 84.375 (83.878)	Prec@5 95.312 (96.094)	
+Epoch: [278][20/29]	Time 0.535 (0.653)	Data 0.000 (0.091)	Loss 0.5370 (0.5352)	Prec@1 81.250 (83.780)	Prec@5 97.656 (96.615)	
+Evaluation: valid 	Time 7.661	Prec@1 82.393	Prec@5 97.629	
+Epoch: [279][10/29]	Time 0.578 (0.748)	Data 0.000 (0.186)	Loss 0.5056 (0.5332)	Prec@1 82.812 (84.446)	Prec@5 97.656 (97.230)	
+Epoch: [279][20/29]	Time 0.578 (0.665)	Data 0.000 (0.098)	Loss 0.5665 (0.5357)	Prec@1 80.469 (84.040)	Prec@5 96.094 (96.801)	
+Evaluation: valid 	Time 8.262	Prec@1 82.502	Prec@5 97.602	
+Epoch: [280][10/29]	Time 0.539 (0.728)	Data 0.000 (0.167)	Loss 0.7149 (0.5633)	Prec@1 78.125 (83.381)	Prec@5 93.750 (96.023)	
+Epoch: [280][20/29]	Time 0.537 (0.645)	Data 0.000 (0.088)	Loss 0.6538 (0.5731)	Prec@1 82.031 (83.073)	Prec@5 93.750 (95.573)	
+Evaluation: valid 	Time 7.403	Prec@1 82.666	Prec@5 97.711	
+Epoch: [281][10/29]	Time 0.587 (0.749)	Data 0.000 (0.187)	Loss 0.5752 (0.5711)	Prec@1 78.125 (82.102)	Prec@5 94.531 (95.455)	
+Epoch: [281][20/29]	Time 0.577 (0.654)	Data 0.000 (0.098)	Loss 0.5264 (0.5548)	Prec@1 82.031 (82.515)	Prec@5 97.656 (96.057)	
+Evaluation: valid 	Time 8.636	Prec@1 82.775	Prec@5 97.656	
+Epoch: [282][10/29]	Time 0.572 (0.755)	Data 0.000 (0.188)	Loss 0.5479 (0.5987)	Prec@1 84.375 (81.747)	Prec@5 96.875 (96.307)	
+Epoch: [282][20/29]	Time 0.537 (0.660)	Data 0.000 (0.099)	Loss 0.5079 (0.5818)	Prec@1 86.719 (81.920)	Prec@5 97.656 (96.429)	
+Evaluation: valid 	Time 7.802	Prec@1 82.557	Prec@5 97.629	
+Epoch: [283][10/29]	Time 0.540 (0.758)	Data 0.000 (0.198)	Loss 0.5462 (0.5197)	Prec@1 82.812 (84.588)	Prec@5 96.094 (96.804)	
+Epoch: [283][20/29]	Time 0.533 (0.661)	Data 0.000 (0.104)	Loss 0.6247 (0.5322)	Prec@1 80.469 (84.077)	Prec@5 96.094 (96.801)	
+Evaluation: valid 	Time 7.880	Prec@1 82.747	Prec@5 97.711	
+Epoch: [284][10/29]	Time 0.535 (0.792)	Data 0.000 (0.229)	Loss 0.6548 (0.5205)	Prec@1 79.688 (84.730)	Prec@5 96.875 (97.017)	
+Epoch: [284][20/29]	Time 0.532 (0.679)	Data 0.000 (0.120)	Loss 0.5167 (0.5412)	Prec@1 85.156 (84.077)	Prec@5 94.531 (96.354)	
+Evaluation: valid 	Time 8.127	Prec@1 82.720	Prec@5 97.711	
+Epoch: [285][10/29]	Time 0.533 (0.756)	Data 0.000 (0.197)	Loss 0.5240 (0.5938)	Prec@1 85.938 (81.889)	Prec@5 97.656 (96.307)	
+Epoch: [285][20/29]	Time 0.536 (0.663)	Data 0.000 (0.103)	Loss 0.6439 (0.5698)	Prec@1 80.469 (82.738)	Prec@5 95.312 (96.131)	
+Evaluation: valid 	Time 8.614	Prec@1 82.475	Prec@5 97.792	
+Epoch: [286][10/29]	Time 0.534 (0.754)	Data 0.000 (0.189)	Loss 0.4243 (0.5247)	Prec@1 85.938 (83.949)	Prec@5 100.000 (97.088)	
+Epoch: [286][20/29]	Time 0.598 (0.666)	Data 0.000 (0.099)	Loss 0.6338 (0.5349)	Prec@1 81.250 (83.854)	Prec@5 96.094 (97.284)	
+Evaluation: valid 	Time 7.655	Prec@1 82.693	Prec@5 97.629	
+Epoch: [287][10/29]	Time 0.551 (0.791)	Data 0.001 (0.208)	Loss 0.4324 (0.5216)	Prec@1 87.500 (84.233)	Prec@5 97.656 (96.946)	
+Epoch: [287][20/29]	Time 0.533 (0.678)	Data 0.000 (0.109)	Loss 0.4024 (0.5180)	Prec@1 87.500 (84.375)	Prec@5 98.438 (97.098)	
+Evaluation: valid 	Time 7.270	Prec@1 82.584	Prec@5 97.602	
+Epoch: [288][10/29]	Time 0.573 (0.729)	Data 0.000 (0.174)	Loss 0.6580 (0.5973)	Prec@1 81.250 (82.884)	Prec@5 94.531 (95.384)	
+Epoch: [288][20/29]	Time 0.577 (0.646)	Data 0.000 (0.091)	Loss 0.4696 (0.5629)	Prec@1 85.156 (83.259)	Prec@5 97.656 (96.168)	
+Evaluation: valid 	Time 7.222	Prec@1 82.938	Prec@5 97.683	
+Epoch: [289][10/29]	Time 0.533 (0.749)	Data 0.000 (0.190)	Loss 0.5912 (0.5289)	Prec@1 82.031 (83.807)	Prec@5 95.312 (96.520)	
+Epoch: [289][20/29]	Time 0.575 (0.659)	Data 0.000 (0.100)	Loss 0.4801 (0.5120)	Prec@1 86.719 (84.152)	Prec@5 95.312 (96.726)	
+Evaluation: valid 	Time 7.161	Prec@1 82.093	Prec@5 97.602	
+Epoch: [290][10/29]	Time 0.545 (0.760)	Data 0.000 (0.197)	Loss 0.5291 (0.5541)	Prec@1 84.375 (83.239)	Prec@5 96.094 (95.739)	
+Epoch: [290][20/29]	Time 0.601 (0.664)	Data 0.000 (0.103)	Loss 0.6777 (0.5505)	Prec@1 78.906 (83.296)	Prec@5 93.750 (96.019)	
+Evaluation: valid 	Time 7.263	Prec@1 82.965	Prec@5 97.738	
+Epoch: [291][10/29]	Time 0.534 (0.747)	Data 0.000 (0.190)	Loss 0.6322 (0.5269)	Prec@1 79.688 (83.949)	Prec@5 95.312 (96.591)	
+Epoch: [291][20/29]	Time 0.576 (0.657)	Data 0.000 (0.100)	Loss 0.5365 (0.5257)	Prec@1 87.500 (84.263)	Prec@5 95.312 (96.726)	
+Evaluation: valid 	Time 7.392	Prec@1 82.747	Prec@5 97.765	
+Epoch: [292][10/29]	Time 0.532 (0.741)	Data 0.000 (0.165)	Loss 0.5512 (0.6008)	Prec@1 86.719 (82.031)	Prec@5 92.969 (94.744)	
+Epoch: [292][20/29]	Time 0.536 (0.651)	Data 0.000 (0.086)	Loss 0.3967 (0.5672)	Prec@1 87.500 (82.999)	Prec@5 100.000 (95.871)	
+Evaluation: valid 	Time 7.558	Prec@1 82.938	Prec@5 97.683	
+Epoch: [293][10/29]	Time 0.546 (0.739)	Data 0.000 (0.183)	Loss 0.5909 (0.5531)	Prec@1 83.594 (82.457)	Prec@5 96.875 (96.662)	
+Epoch: [293][20/29]	Time 0.567 (0.652)	Data 0.000 (0.096)	Loss 0.4499 (0.5197)	Prec@1 84.375 (83.519)	Prec@5 99.219 (96.987)	
+Evaluation: valid 	Time 7.357	Prec@1 82.884	Prec@5 97.629	
+Epoch: [294][10/29]	Time 0.571 (0.724)	Data 0.000 (0.162)	Loss 0.4609 (0.5448)	Prec@1 89.844 (84.588)	Prec@5 97.656 (96.520)	
+Epoch: [294][20/29]	Time 0.537 (0.645)	Data 0.000 (0.085)	Loss 0.5113 (0.5315)	Prec@1 82.812 (84.263)	Prec@5 96.875 (96.726)	
+Evaluation: valid 	Time 7.158	Prec@1 82.720	Prec@5 97.629	
+Epoch: [295][10/29]	Time 0.540 (0.750)	Data 0.000 (0.176)	Loss 0.5047 (0.5175)	Prec@1 82.031 (84.375)	Prec@5 97.656 (96.733)	
+Epoch: [295][20/29]	Time 0.536 (0.657)	Data 0.000 (0.092)	Loss 0.4684 (0.5204)	Prec@1 85.156 (84.226)	Prec@5 97.656 (96.875)	
+Evaluation: valid 	Time 7.674	Prec@1 82.720	Prec@5 97.765	
+Epoch: [296][10/29]	Time 0.534 (0.741)	Data 0.000 (0.177)	Loss 0.4889 (0.5293)	Prec@1 86.719 (84.091)	Prec@5 97.656 (96.946)	
+Epoch: [296][20/29]	Time 0.577 (0.653)	Data 0.000 (0.093)	Loss 0.4774 (0.5352)	Prec@1 86.719 (83.780)	Prec@5 98.438 (96.912)	
+Evaluation: valid 	Time 7.987	Prec@1 82.775	Prec@5 97.901	
+Epoch: [297][10/29]	Time 0.533 (0.740)	Data 0.000 (0.177)	Loss 0.6870 (0.5041)	Prec@1 82.031 (84.375)	Prec@5 94.531 (97.017)	
+Epoch: [297][20/29]	Time 0.534 (0.653)	Data 0.000 (0.093)	Loss 0.5348 (0.5219)	Prec@1 85.156 (84.263)	Prec@5 98.438 (96.726)	
+Evaluation: valid 	Time 7.665	Prec@1 82.475	Prec@5 97.792	
+Epoch: [298][10/29]	Time 0.591 (0.749)	Data 0.001 (0.181)	Loss 0.4154 (0.5304)	Prec@1 87.500 (83.097)	Prec@5 96.875 (96.946)	
+Epoch: [298][20/29]	Time 0.536 (0.662)	Data 0.000 (0.095)	Loss 0.5480 (0.5125)	Prec@1 84.375 (84.040)	Prec@5 97.656 (97.247)	
+Evaluation: valid 	Time 7.381	Prec@1 82.856	Prec@5 97.602	
+Epoch: [299][10/29]	Time 0.573 (0.733)	Data 0.000 (0.174)	Loss 0.4851 (0.5560)	Prec@1 85.156 (83.097)	Prec@5 96.875 (96.307)	
+Epoch: [299][20/29]	Time 0.537 (0.649)	Data 0.000 (0.091)	Loss 0.4913 (0.5399)	Prec@1 85.938 (84.040)	Prec@5 98.438 (96.317)	
+Evaluation: valid 	Time 8.035	Prec@1 82.747	Prec@5 97.574	
+Traceback (most recent call last):
+  File "train_softmax.py", line 384, in <module>
+    main(args)
+  File "train_softmax.py", line 123, in main
+    curr_acc   = curr_wacc,
+NameError: name 'curr_wacc' is not defined
+Done
