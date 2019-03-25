@@ -29,7 +29,7 @@ def save_checkpoint(model, optimizer, curr_epoch, curr_step, args, curr_loss, cu
 
     return args
 
-def to_var(x, volatile=False):
+def to_var(x):
     if torch.cuda.is_available():
         x = x.cuda()
     return torch.autograd.Variable(x)
@@ -49,6 +49,7 @@ def accuracy(output, target, topk=(1,)):
         correct_k = correct[:k].view(-1).float().sum(0, keepdim=True)
         res.append(correct_k.mul_(100.0 / batch_size))
     return res
+
 class AverageMeter(object):
     """Computes and stores the average and current value"""
     def __init__(self):

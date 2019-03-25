@@ -321,29 +321,29 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     # logging parameters
-    parser.add_argument('--save_epoch',         type=int , default=10)
-    parser.add_argument('--eval_epoch',         type=int , default=1)
-    parser.add_argument('--eval_step',          type=int , default=1000)
-    parser.add_argument('--log_rate',           type=int, default=10)
-    parser.add_argument('--workers',            type=int, default=7)
-    parser.add_argument('--world_size',         type=int, default=1)
+    parser.add_argument('--save_epoch',         type=int ,              default = 10)
+    parser.add_argument('--eval_epoch',         type=int ,              default = 1)
+    parser.add_argument('--eval_step',          type=int ,              default = 1000)
+    parser.add_argument('--log_rate',           type=int,               default = 10)
+    parser.add_argument('--workers',            type=int,               default = 7)
+    parser.add_argument('--world_size',         type=int,               default = 1)
 
     # training parameters
-    parser.add_argument('--num_epochs',         type=int,   default=3)
-    parser.add_argument('--batch_size',         type=int,   default=256)
-    parser.add_argument('--lr',                 type=float, default=0.1)
-    parser.add_argument('--momentum',           type=float, default=0.9)
-    parser.add_argument('--weight_decay',       type=float, default=1e-4)
-    parser.add_argument('--optimizer',          type=str,   default='sgd')
-    parser.add_argument('--annealing_factor',   type=float, default=1.0)
+    parser.add_argument('--num_epochs',         type=int,               default = 3)
+    parser.add_argument('--batch_size',         type=int,               default = 256)
+    parser.add_argument('--lr',                 type=float,             default = 0.1)
+    parser.add_argument('--momentum',           type=float,             default = 0.9)
+    parser.add_argument('--weight_decay',       type=float,             default = 1e-4)
+    parser.add_argument('--optimizer',          type=str,               default = 'sgd')
+    parser.add_argument('--annealing_factor',   type=float,             default = 1.0)
 
     # experiment details
-    parser.add_argument('--dataset',            type=str, default='oxford')
-    parser.add_argument('--model',              type=str, default='inception')
-    parser.add_argument('--experiment_name',    type=str, default= 'Test')
-    parser.add_argument('--evaluate_only',      action="store_true",default=False)
-    parser.add_argument('--evaluate_train',     action="store_true",default=False)
-    parser.add_argument('--resume',             type=str, default=None)
+    parser.add_argument('--dataset',            type=str,               default = 'oxford')
+    parser.add_argument('--model',              type=str,               default = 'inception')
+    parser.add_argument('--experiment_name',    type=str,               default = 'Test')
+    parser.add_argument('--evaluate_only',      action="store_true",    default = False)
+    parser.add_argument('--evaluate_train',     action="store_true",    default = False)
+    parser.add_argument('--resume',             type=str,               default = None)
 
     parser.add_argument('--dist-url', default='tcp://224.66.41.62:23456', type=str,
                     help='url used to set up distributed training')
